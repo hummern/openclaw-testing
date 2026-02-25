@@ -223,7 +223,7 @@ document.getElementById('volume').addEventListener('input', function() {
 </script>
 
 
-<section aria-label="Additional elements - iteration 4">
+<section aria-label="Additional elements - iteration 3">
 <h2>More Elements</h2>
 ```html
 <!DOCTYPE html>
@@ -234,23 +234,22 @@ document.getElementById('volume').addEventListener('input', function() {
     <title>Document</title>
 </head>
 <body>
-    <h1 class="h5">Hello World</h1>
-    <h2 id="heading-two" class="h6" aria-label="Heading two">This is heading two</h2>
+    <h1 class="h1">Welcome to the Accessibility Checklist</h1>
+    <h2 class="h2">Accessibility Features: H5, H6</h2>
 
-    <!-- Additional tags and attributes here -->
-
-    <script>
-        // Add event listener to the element
-        document.getElementById("heading-two").addEventListener("click", function() {
-            console.log(this.textContent);
-        });
-    </script>
+    <p>
+        <img
+            src="https://picsum.photos/200/300"
+            alt="Image with alternative text for accessibility"
+            aria-label="Image description for screen readers"
+        />
+    </p>
 </body>
 </html>
 ```
 </section>
 
-<section aria-label="Additional elements - iteration 5">
+<section aria-label="Additional elements - iteration 4">
 <h2>More Elements</h2>
 ```html
 <!DOCTYPE html>
@@ -258,80 +257,68 @@ document.getElementById('volume').addEventListener('input', function() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessibility Example</title>
+    <title>H5 and H6 Tags Example</title>
     <style>
-        /* Style for accessibility */
-        .accessibility-focused {
-            cursor: not-allowed;
-            pointer-events: none;
-            opacity: 0.5;
-            transition: all 0.2s ease-out;
-            position: absolute;
+        body {
+            font-family: Arial, sans-serif;
         }
-
-        @keyframes fadein {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        
+        h1, h2, h3, h4, h5, h6 {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        
+        h2 {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        
+        h3 {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        
+        h4 {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        
+        h5 {
+            display: block;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        
+        h6 {
+            display: block;
+            font-size: 10px;
+            line-height: 14px;
         }
     </style>
 </head>
-<body class="accessibility-focused">
-    <h5 id="h5" aria-label="Heading 5">Heading 5 with Label and Alt Text</h5>
-    <h6 id="h6" aria-label="Heading 6">Heading 6 with Label and Alt Text</h6>
-
-    <!-- Additional elements here -->
-    <p>This is a paragraph with accessibility information.</p>
-    <button>Accessibility Button</button>
-    <input type="checkbox" id="abc" aria-labelledby="accessibility-legend">
-    <label for="abc">Legend Label</label>
-    <div class="icon icon-accessibility"></div>
-
-    <!-- Example elements to demonstrate accessibility -->
-    <img src="https://example.com/accessibility-example.jpg" alt="Example Image with Alt Text">
-    <table id="table-example" aria-labelledby="table-label" role="summary">
-        <thead>
-            <tr>
-                <th>Column 1</th>
-                <th>Column 2</th>
-                <!-- Add more columns here -->
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>This is a table cell.</td>
-                <td>This is another table cell with accessibility information.</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Example list item to demonstrate alt text and accessibility -->
-    <li id="list-item-accessibility" aria-label="This is an accessibility example for the 'Accessibile List Item' element." aria-live="polite">
-        This is a list item with accessibility information.
-    </li>
-
-    <!-- Example button to demonstrate focus and keyboard navigation -->
-    <button id="example-button" aria-label="Button Label" aria-controls="accessibility-controlled-button">Example Button</button>
-    <div class="icon icon-focus"></div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Example event handlers
-            $("#h5").on("click", function(event) {
-                console.log("H5 clicked");
-                event.preventDefault();
-            });
-
-            $("#h6").on("click", function(event) {
-                console.log("H6 clicked");
-                event.preventDefault();
-            });
-
-            $("#abc").on("change", function() {
-                console.log("Accessibility checkbox changed");
-            });
-        });
-    </script>
+<body>
+    <h1 class="a11y-label">H5 and H6 Tags Example</h1>
+    <p class="a11y-description">This is a paragraph with h5 and h6 tags.</p>
+    
+    <h2>Heading 2</h2>
+    <p class="a11y-description">This is another paragraph with an h2 tag.</p>
+    
+    <h3>Heading 3</h3>
+    <p class="a11y-description">This is a paragraph with an h3 tag.</p>
+    
+    <h4>Heading 4</h4>
+    <p class="a11y-description">This is another paragraph with an h4 tag.</p>
+    
+    <h5>Heading 5</h5>
+    <p class="a11y-description">This is a paragraph with an h5 tag.</p>
+    
+    <h6>Heading 6</h6>
+    <p class="a11y-description">This is another paragraph with an h6 tag.</p>
 </body>
 </html>
 ```
