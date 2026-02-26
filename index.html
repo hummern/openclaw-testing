@@ -232,93 +232,120 @@ document.getElementById('volume').addEventListener('input', function() {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <h1 class="h1">Welcome to the Accessibility Checklist</h1>
-    <h2 class="h2">Accessibility Features: H5, H6</h2>
-
-    <p>
-        <img
-            src="https://picsum.photos/200/300"
-            alt="Image with alternative text for accessibility"
-            aria-label="Image description for screen readers"
-        />
-    </p>
-</body>
-</html>
-```
-</section>
-
-<section aria-label="Additional elements - iteration 4">
-<h2>More Elements</h2>
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H5 and H6 Tags Example</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 20px;
         }
         
-        h1, h2, h3, h4, h5, h6 {
-            display: inline-block;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+            background-color: #333;
+            color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .logo {
+            margin-right: 20px;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        nav li {
             margin-right: 10px;
         }
         
-        h1 {
-            font-size: 24px;
-            line-height: 28px;
+        .nav-link {
+            color: #fff;
+            padding: 1em 2em;
+            border-bottom: none;
+            cursor: pointer;
         }
         
-        h2 {
-            font-size: 18px;
-            line-height: 22px;
+        .nav-link:hover {
+            background-color: #555;
         }
         
-        h3 {
-            font-size: 16px;
-            line-height: 20px;
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ccc;
         }
         
-        h4 {
-            font-size: 14px;
-            line-height: 18px;
+        .content {
+            flex-grow: 1;
+            margin-left: 2em;
         }
         
-        h5 {
+        h5, h6 {
             display: block;
-            font-size: 12px;
-            line-height: 16px;
+            padding: 0 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
         }
         
-        h6 {
-            display: block;
-            font-size: 10px;
-            line-height: 14px;
+        p {
+            margin-top: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <h1 class="a11y-label">H5 and H6 Tags Example</h1>
-    <p class="a11y-description">This is a paragraph with h5 and h6 tags.</p>
+    <header>
+        <nav>
+            <ul>
+                <li class="nav-link"><a href="#">Home</a></li>
+                <li class="nav-link"><a href="#">About</a></li>
+                <li class="nav-link"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <h2>Heading 2</h2>
-    <p class="a11y-description">This is another paragraph with an h2 tag.</p>
+    <section>
+        <h5>Document Title</h5>
+        <p>This is a sample document with semantic and accessible HTML elements.</p>
+        <img src="image.jpg" alt="Sample Image">
+        <p>This is another paragraph with alternative text for the image.</p>
+        
+        <h6>Heading 2</h6>
+        <p>This is another heading with subheading text.</p>
+        
+        <div class="content">
+            This is a paragraph of content.
+        </div>
+    </section>
     
-    <h3>Heading 3</h3>
-    <p class="a11y-description">This is a paragraph with an h3 tag.</p>
-    
-    <h4>Heading 4</h4>
-    <p class="a11y-description">This is another paragraph with an h4 tag.</p>
-    
-    <h5>Heading 5</h5>
-    <p class="a11y-description">This is a paragraph with an h5 tag.</p>
-    
-    <h6>Heading 6</h6>
-    <p class="a11y-description">This is another paragraph with an h6 tag.</p>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>
 ```
