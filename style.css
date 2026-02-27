@@ -1,28 +1,23 @@
-/* Default styles for the page */
-body { color: #333; font-family: Arial; }
-nav ul { list-style: none; }
-nav ul li { display: inline; margin-right: 10px; }
-ul {
-  padding: 0;
-  margin: 0;
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-a {
-  text-decoration: none;
-  color: #337ab7;
+*::before, *::after {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
 }
-a:hover {
-  color: #23527c;
+body {
+  color: #333; font-family: Arial;
 }
-
-/* Media queries for responsive design */
-@media only screen and (max-width: 768px) {
-  .main-content {
-    padding: 20px;
-    margin-bottom: 10px;
-  }
+nav ul {
+  list-style: none;
 }
-
-/* WCAG color contrast guideline */
-/* Color Contrast Ratio */
-/* Aria attributes and roles for interactive elements */
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
