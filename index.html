@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Page Title</title>
-  <link rel="stylesheet" href="[FILE: style.css]">
-  <link rel="stylesheet" href="forms.html">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<link rel="stylesheet" href="style.css">
+<noscript>
+    <link rel="stylesheet" href="style.css">
+</noscript>
 </head>
 <body>
-  <!-- HTML content here -->
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+<section id="home">
+    <!-- HTML content here -->
+    <h1>Welcome to our website!</h1>
+    <p>This is a sample page.</p>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+</section>
+
+<section id="projects">
+    <h2>Our Projects</h2>
+    <ul>
+        <li><a href="#project1">Project 1</a></li>
+        <li><a href="#project2">Project 2</a></li>
+        <li><a href="#project3">Project 3</a></li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: 123-456-7890</p>
+    <p>Email: [example@example.com](mailto:example@example.com)</p>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-[FILE: styles.css]
-body {
-  color: #333;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav a {
-  color: #333;
-  text-decoration: none;
-}
