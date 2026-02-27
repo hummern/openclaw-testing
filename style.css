@@ -1,7 +1,28 @@
-/* CSS styles here */
-body { color: #333; }
-h1, h2, h3, h4, h5, h6 { font-family: Arial, sans-serif; }
-p { margin-bottom: 20px; }
-a { text-decoration: none; color: #337ab7; }
-a:hover { color: #23527c; }
-/* Add more CSS rules as needed */
+/* global variables for layout, spacing, colors */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  font-size: 2em;
+  color: #337ab7;
+}
+
+/* global variables for spacing */
+* {
+  margin: 20px;
+}
+
+/* global variables for colors */
+h1, h2, h3 {
+  color: #337ab7;
+  font-weight: bold;
+}
