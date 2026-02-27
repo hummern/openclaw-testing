@@ -1,17 +1,36 @@
-/* CSS styles here */
-body { color: #333; }
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-table {
-  border-collapse: collapse;
+
+body, html {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
+
+nav .navbar-nav a {
+  color: #337ab7;
+  text-decoration: none;
 }
-tbody tr:nth-child(even) {
+
+nav .navbar-nav a:hover {
+  color: #23527c;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+footer {
   background-color: #f9f9f9;
+  padding: 10px;
+  text-align: center;
 }
