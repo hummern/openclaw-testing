@@ -1,43 +1,17 @@
 /* CSS styles here */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body { color: #333; }
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
-
-nav {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+table {
+  border-collapse: collapse;
 }
-
-nav a {
-    text-decoration: none;
-    color: #fff;
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
 }
-
-.nav-container {
-    max-width: 600px;
-    margin: 2rem auto;
-}
-
-.nav-link {
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-    color: #ccc;
-}
-
-/* Additional styles here */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 2rem;
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
