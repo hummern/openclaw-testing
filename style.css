@@ -1,23 +1,36 @@
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+/* Global styles */
+body {
+    color: #333;
+    font-family: Arial, sans-serif;
 }
 
-*::before, *::after {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-}
-body {
-  color: #333; font-family: Arial;
-}
 nav ul {
-  list-style: none;
+    list-style: none;
 }
+
 nav ul li {
-  display: inline;
-  margin-right: 10px;
+    display: inline;
+    margin-right: 10px;
+}
+
+/* ARIA attributes for interactive elements */
+a[aria-label] {
+    opacity: 0;
+}
+a[aria-ownedby] {
+    color: #666;
+}
+
+/* Use all HTML5 tags at least once in the content */
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+nav ul li a:hover {
+    color: #ccc;
 }
