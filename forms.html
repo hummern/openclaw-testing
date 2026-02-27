@@ -1,59 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Forms</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/a axe-forms@3.1.0/dist/axe-forms.min.js"></script>
-  <link rel="dns-prefetch" href="https://axe.run/solutions/Forms/AxesForm-3.1.0/" />
-  <link rel="icon" type="image/png" sizes="16x16" href="images/forms-icon.png">
-</head>
+<!-- Forms section -->
+<nav>
+  <ul>
+    <li><a href="#login">Login</a></li>
+    <li><a href="#register">Register</a></li>
+    <li><a href="#forgot-password">Forgot Password?</a></li>
+  </ul>
+</nav>
 <body>
-  <!-- Forms here -->
-  <div class="form-container">
-    <h2>Submit Form</h2>
-    <form id="myForm">
-      <input type="text" name="name" placeholder="Your Name">
-      <textarea name="description" placeholder="Short Description"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-</body>
-</html>
-
-[FILE: layout.html]
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Layout</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main content here -->
-  <section id="about">
-    <h1>About Us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </section>
-
-  <!-- Other sections and content here -->
-  [FILE: about.html]
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>About Us</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-</body>
+  <!-- Form content here -->
+  <h1>Login</h1>
+  <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br><br
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br
+    <button type="submit">Login</button>
+  </form>
