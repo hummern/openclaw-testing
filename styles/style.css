@@ -1,0 +1,26 @@
+/* CSS styles here */
+body { color: #333; }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    max-width: 800px;
+    margin: 40px auto;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+</style>
