@@ -225,8 +225,6 @@ document.getElementById('volume').addEventListener('input', function() {
 
 <section aria-label="Additional elements - iteration 3">
 <h2>More Elements</h2>
-Here's a basic HTML5 snippet that includes the required `h5` and `h6` tags along with their respective labels, alt text, and aria attributes for improved accessibility.
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -234,30 +232,99 @@ Here's a basic HTML5 snippet that includes the required `h5` and `h6` tags along
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessibility Example</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Optional CSS for styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 30px;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        h4 {
+            font-size: 14px;
+            margin-bottom: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        h5 {
+            font-size: 12px;
+            margin-bottom: 50px;
+            background-color: #f9f9f9;
+            color: #666;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        h6 {
+            font-size: 10px;
+            margin-bottom: 60px;
+            background-color: #f9f9f9;
+            color: #999;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
 </head>
 <body>
-    <!-- h5 tag for example heading -->
-    <h5 id="example-heading">Example Heading 5 (WCAG AA)</h5>
 
-    <!-- h6 tag for additional subheading -->
-    <h6 id="additional-subheading">Additional Subheading (AA)</h6>
+<h1>Accessibility Example</h1>
+<h2>This is a heading with subheadings</h2>
+<h3>This is a subsection, and its heading should be accessible by screen readers</h3>
+<h4>This paragraph should have an alt text for image support</h4>
+<p This is a long paragraph that can span multiple lines.</p>
 
-    <button aria-label="Show/Hide" aria-controls="example-container">
-        Show/Hide
-    </button>
-    <div id="example-container">
-        <p>This is an example paragraph that will be shown/hid using the button.</p>
-    </div>
+<h5>Additional information about accessibility features</h5>
+<h6>More detailed explanation of how the page follows WCAG 2.1 guidelines</h6>
 
-    <script src="script.js"></script>
 </body>
 </html>
 ```
-
-This HTML snippet includes all the necessary `h5` and `h6` tags, along with their respective labels, alt text, and aria attributes. The `aria-label` attribute is used to provide a text description of the element in case the user is visually impaired or using a screen reader.
-
-For improved accessibility, I've also added some basic styling and structure to make the content more readable and usable by assistive technologies such as screen readers and keyboard-navigable elements. The button has an `aria-label` attribute that describes its purpose, while the `aria-controls` attribute references the element it controls (in this case, the paragraph with id "example-container").
 </section>
 </main>
 
