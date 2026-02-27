@@ -1,8 +1,30 @@
-body { color: #333; font-family: Arial, sans-serif; }
-h1 {
-  margin-bottom: 0.75em;
+* { margin: 0; padding: 0; }
+body { color: #333; font-family: Arial; }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+nav li {
+  margin-right: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: #337ab7;
 }
 
-a {
-  text-decoration: none;
+nav a:hover {
+  color: #23527c;
+}
+
+nav .active {
+  color: #23527c;
 }
