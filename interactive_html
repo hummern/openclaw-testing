@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="style.css"></head>
+<body><h1>Interactive</h1>
+  <p>This is interactive content.</p>
+  <canvas id="interactiveCanvas"> </canvas></body>
+</html>

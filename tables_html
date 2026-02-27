@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="style.css"></head>
+<body><h1>Tables</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>John Doe</td>
+      <td>30</td>
+    </tr>
+  </table></body>
+</html>

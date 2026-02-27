@@ -1,0 +1,11 @@
+<section>
+    <article>
+      <header>
+        <h2>Article Header</h2>
+      </header>
+      <p>Article content...</p>
+      <footer>
+        Article footer
+      </footer>
+    </article>
+  </section>
