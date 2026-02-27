@@ -3,20 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <title>Forms - HTML5 Reference</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+<nav><a href="index.html">Home</a> <a href="media.html">Media</a> <a href="tables.html">Tables</a> <a href="interactive.html">Interactive</a></nav>
+<main><h1>Form Elements</h1><p>HTML5 form controls and input types.</p><form><input type="text" placeholder="Text input"><button>Submit</button></form></main>
+<footer><p> c 2026</p></footer>
+</body>
+</html>
+
+===START_HTML_FILE:media.html===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Media - HTML5 Reference</title>
+<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+<nav><a href="index.html">Home</a> <a href="forms.html">Forms</a> <a href="tables.html">Tables</a> <a href="interactive.html">Interactive</a></nav>
+<main><h1>Media Elements</h1><p>Images, audio, and video in HTML5.</p><img src="data:image/svg+xml,%3Csvg%3E%3C/svg%3E" alt="Sample image"></main>
+<footer><p> c 2026</p></footer>
+</body>
+</html>
+
+===START_HTML_FILE:tables.html===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tables - HTML5 Reference</title>
+<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+<nav><a href="index.html">Home</a> <a href="forms.html">Forms</a> <a href="media.html">Media</a> <a href="interactive.html">Interactive</a></nav>
+<main><h1>Tables</h1><p>Semantic table markup.</p><table><tr><th>Header</th></tr><tr><td>Data</td></tr></table></main>
+<footer><p> c 2026</p></footer>
+</body>
+</html>
+
+===START_HTML_FILE:interactive.html===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive - HTML5 Reference</title>
+<link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
 <nav><a href="index.html">Home</a> <a href="forms.html">Forms</a> <a href="media.html">Media</a> <a href="tables.html">Tables</a> <a href="interactive.html">Interactive</a></nav>
-<main>
-<h1>Form Elements</h1>
-<p>HTML5 form controls and input types.</p>
-<form>
-<input type="text" placeholder="Text input">
-<button>Submit</button>
-</form>
-</main>
-<footer>
-<p>&copy; 2026</p>
-</footer>
+<main><h1>Interactive Elements</h1><p>Dialog, details, and other interactive elements.</p><details><summary>Click to expand</summary><p>Hidden content shown on click.</p></details></main>
+<footer><p> c 2026</p></footer>
 </body>
 </html>
+
+===START_CSS_FILE:style.css===
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+nav { background: #333; padding: 1em; }
+nav a { color: white; margin-right: 1em; text-decoration: none; }
+main { padding: 2em; }
+h1 { font-size: 2em; margin-bottom: 0.5em; }
+h2 { font-size: 1.5em; margin: 1em 0 0.5em 0; }
+footer { background: #f0f0f0; padding: 1em; text-align: center; margin-top: 2em; }
