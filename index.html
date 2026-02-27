@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Page Title</title>
-<link rel="stylesheet" href="/styles/style.css"> <!-- note the forward slash in the link URL -->
-<base href="index.html">
-<nav>
-  <ul>
-    <li><a href="/forms">Forms</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
-</nav>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- HTML content here -->
+    <!-- Navigation links to other HTML files -->
+    <nav>
+        <ul>
+            <li><a href="[FILE: forms.html]">Forms Page</a></li>
+            <li><a href="[FILE: reports.html]">Reports Page</a></li>
+            <li><a href="[FILE: dashboard.html]">Dashboard Page</a></li>
+        </ul>
+    </nav>
+    <!-- HTML content here -->
+    <script src="script.js"></script>
 </body>
 </html>
+
+[FILE: style.css]
+/* CSS styles here */
+body { color: #333; }
+h1 {
+    font-size: 24px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
