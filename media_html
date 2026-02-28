@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="style.css"></head>
-<body><h1>Media</h1>
-  <p>This is media content.</p></body>
+<head>
+    <meta charset="UTF-8">
+    <title>Media Reference</title>
+</head>
+<body>
+    <!-- Example of a media element with audio and video -->
+    <audio id="myAudio" src="example.mp3"></audio>
+    <video id="myVideo" controls>
+        <source src="example.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- New media element example -->
+    <audio id="myAudio2" src="https://www.youtube.com/embed/UC9f8VJHgPd"></audio>
+</body>
 </html>

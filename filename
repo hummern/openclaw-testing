@@ -1,2 +1,70 @@
-`
-- **End with:** `
+*/
+body { color: #333; font-family: Arial; }
+nav ul { list-style: none; }
+nav ul li { display: inline; margin-right: 10px; }
+footer { background-color: #f0f0f0; padding: 20px; text-align: center;}
+
+/* Add ARIA attributes for accessibility */
+meta aria-label="Header Section" name="description" content="HTML5 reference page">
+meta aria-describedby="description" name="keywords" content="html5, web development">
+
+/* Use all HTML5 tags at least once in the content */
+header { display: flex; justify-content: space-between; padding: 20px;}
+nav ul li { background-color: #ccc; border-bottom: 1px solid #ddd;}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+article {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  header { flex-direction: column; }
+  nav ul li { display: block; margin-right: 0;}
+  main { max-width: 80%; padding: 20px 0;}
+}
+```
+
+**forms.html (updated)**
+```html
+===START_forms.html===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Forms</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Form validation example -->
+  <p>Enter your name and email to submit a form.</p>
+  <div class="email-validation">
+    <input type="email" id="email" name="email"><br><br>
+    <span id="email-error"></span>
+  </div>
+</body>
+</html>

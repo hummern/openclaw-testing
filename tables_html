@@ -1,15 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="style.css"></head>
-<body><h1>Tables</h1>
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-    </tr>
-    <tr>
-      <td>John Doe</td>
-      <td>30</td>
-    </tr>
-  </table></body>
+<head>
+    <meta charset="UTF-8">
+    <title>Tables Reference</title>
+</head>
+<body>
+    <!-- Example of a table with rows and columns -->
+    <table id="myTable" border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>This is the first row.</td>
+            <td>This is the second row.</td>
+            <td>This is the third row.</td>
+        </tr>
+    </table>
+
+    <!-- New table example -->
+    <table id="myTable2" border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>This is the first row.</td>
+            <td>This is the second row.</td>
+            <td>This is the third row.</td>
+        </tr>
+    </table>
+
+    <!-- Example of a table with data and formatting (multiple columns) -->
+    <table id="myTable3" border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>This is the first row.</td>
+            <td>This is the second row.</td>
+            <td>This is the third row.</td>
+        </tr>
+        <tr>
+            <td>This is the fourth row.</td>
+            <td>This is the fifth row.</td>
+            <td>This is the sixth row.</td>
+        </tr>
+    </table>
+
+    <!-- New table element with a heading -->
+    <h2 id="myHeading">My Table</h2>
+    <table id="myTable4" border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>This is the first row.</td>
+            <td>This is the second row.</td>
+            <td>This is the third row.</td>
+        </tr>
+        <tr>
+            <td>This is the fourth row.</td>
+            <td>This is the fifth row.</td>
+            <td>This is the sixth row.</td>
+        </tr>
+    </table>
+
+    <!-- New table element with a caption -->
+    <caption id="myCaption">My Caption</caption>
+    <table id="myTable5" border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>This is the first row.</td>
+            <td>This is the second row.</td>
+            <td>This is the third row.</td>
+        </tr>
+        <tr>
+            <td>This is the fourth row.</td>
+            <td>This is the fifth row.</td>
+            <td>This is the sixth row.</td>
+        </tr>
+    </table>
+
+    <!-- New table element with a legend -->
+    <legend id="myLegend">My Legend</legend>
+    <table id="myTable6" border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>This is the first row.</td>
+            <td>This is the second row.</td>
+            <td>This is the third row.</td>
+        </tr>
+    </table>
+
+    <!-- New table element with a grid -->
+    <table id="myGrid" border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+        </tr>
+        <tr>
+            <td>This is the first row.</td>
+            <td>This is the second row.</td>
+            <td>This is the third row.</td>
+            <td>This is the fourth row.</td>
+            <td>This is the fifth row.</td>
+        </tr>
+    </table>
+
+</body>
 </html>

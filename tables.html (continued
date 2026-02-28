@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tables Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Use all HTML5 tags at least once in the content -->
+  <h1>Tables Reference</h1>
+
+  <table id="search-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>johndoe@example.com</td>
+        <td>123-456-7890</td>
+        <td>(123) 456-7890</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Include examples of tables -->
+  <button id="add-row-button2">Add Row</button>
+  <button id="remove-row-button2">Remove Row</button>
+
+  <p>This is a paragraph with two rows.</p>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+  </tr>
+  <td>johndoe@example.com</td>
+  <td>123-456-7890</td>
+  <td>(123) 456-7890</td>
+</p>
+```
+
+**updated_interactive.html (continued)**
+```html
+===START_interactive.html (continued===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Use all HTML5 tags at least once in the content -->
+  <h1>Interactive Reference</h1>
+
+  <button id="search-button2">Search Button</button>
+
+  <!-- Include examples of interactive elements -->
+  <p>This is a paragraph with a search button.</p>
+  <input type="search" id="search-input2" placeholder="Search...">
+  <button id="example-button">Example Button</button>
+
+  <p>This is another paragraph with an example button.</p>
+  <button id="toggle-button2">Toggle Button</button>
+
+  <!-- Include examples of interactive elements -->
+  <input type="checkbox" id="toggle-checkbox2">
+  <label for="toggle-checkbox2">Toggle Checkbox</label>
+
+  <button id="toggle-button3">Toggle Button</button>
+```
+
+**updated_style.css (continued)**
+```css
+/* Updated CSS rules */
+
+body {
+  color: #333; font-family: Arial, sans-serif;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50; color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+```
+
+**updated_forms.html (continued)**
+```html
+===START_forms.html (continued===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Use all HTML5 tags at least once in the content -->
+  <h1>Forms Reference</h1>
+
+  <form id="search-form2">
+    <input type="text" id="search-input2" placeholder="Search...">
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Include examples of forms -->
+  <form id="example-form3">
+    <label for="name3">Name:</label>
+    <input type="text" id="name3" name="name3"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

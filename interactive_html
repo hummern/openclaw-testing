@@ -1,7 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="style.css"></head>
-<body><h1>Interactive</h1>
-  <p>This is interactive content.</p>
-  <canvas id="interactiveCanvas"> </canvas></body>
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Reference</title>
+</head>
+<body>
+    <!-- Example of an interactive element (e.g., a button that triggers an animation) -->
+    <button id="myButton">Click me!</button>
+
+    <!-- New interactive example -->
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <button id="myButton2">Submit</button>
+
+    <!-- Example of an interactive element (e.g., a form that validates user input) -->
+    <form id="exampleForm">
+        <label for="age">Age:</label>
+        <select id="age" name="age">
+            <option value="">Select an age</option>
+            <option value="18">18 years old</option>
+            <option value="21">21 years old</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="occupation">Occupation:</label>
+        <input type="text" id="occupation" name="occupation"><br><br>
+        <button id="myButton3">Submit</button>
+    </form>
+
+    <!-- Example of an interactive element (e.g., a button that triggers an animation) -->
+    <button id="myButton4">Click me!</button>
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            alert("You clicked me!");
+        });
+    </script>
+</body>
 </html>

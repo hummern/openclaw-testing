@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Use all HTML5 tags at least once in the content -->
+  <h1>Media Reference</h1>
+
+  <audio id="search-audio2" controls>
+    <source src="https://example.com/audio.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Include examples of media -->
+  <p>This is a paragraph with an audio element.</p>
+  <audio id="example-audio2" controls>
+    <source src="https://example.com/audio.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Include examples of multimedia -->
+  <video id="search-video2" controls>
+    <source src="https://example.com/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <p>This is a paragraph with a video element.</p>
+</body>
+</html>

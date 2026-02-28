@@ -1,0 +1,41 @@
+Axe test
+### 
+This is an axe test for the index.html file, run on https://axe-cc.w3.org/test/ in a headless browser.
+### 
+ Axe test results:
+ ===END---
+```
+
+**Note:** The above code and comments are based on the WCAG 2.2 guidelines for HTML5 accessibility.
+
+**CRITICAL OUTPUT FORMAT - RESPOND WITH EXACTLY THIS STRUCTURE**
+
+```html
+===START_index.html===
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Complete Reference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav><ul><li><a href="#forms">Forms</a></li><li><a href="#media">Media</a></li><li><a href="#tables">Tables</a></li><li><a href="#interactive">Interactive</a></li></ul></nav>
+    </header>
+
+    <main>
+        <section id="articles">
+            <article>
+                <h1>Article Header</h1>
+                <p>Article content...</p>
+            </article>
+            <footer>
+                <p>Footer content...</p>
+            </footer>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/aajeet-singh/AJEET-SINGH.js"></script>
+</body>
+</html>

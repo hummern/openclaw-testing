@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Reference</title>
+</head>
+<body>
+    <!-- Example of a form with multiple fields and validation -->
+    <form id="exampleForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <button>Submit</button>
+    </form>
+
+    <!-- Example of a form with multiple fields and validation -->
+    <form id="exampleForm2">
+        <label for="age">Age:</label>
+        <select id="age" name="age">
+            <option value="">Select an age</option>
+            <option value="18">18 years old</option>
+            <option value="21">21 years old</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="occupation">Occupation:</label>
+        <input type="text" id="occupation" name="occupation"><br><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

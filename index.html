@@ -2,36 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTML5 Complete Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Elements Showcase</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.a11yqa.com/axe-core.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/a11y-accordion@3.1.0/dist/a11y-accordion.min.js"></script>
 </head>
 <body>
-<h1>HTML5 Complete Reference</h1>
-<p>This page demonstrates all HTML5 tags with examples.</p>
-<nav>
-    <ul>
-        <li><a href="forms.html">Forms</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="tables.html">Tables</a></li>
-        <li><a href="interactive.html">Interactive</a></li>
-    </ul>
-</nav>
-<section>
-    <article>
-        <header>
-            <h2>Article Header</h2>
-        </header>
-        <p>Article content...</p>
-        <footer>
-            Article footer
-        </footer>
-    </article>
-</section>
+    <header>
+        <h1>HTML5 Elements Showcase</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#semantics">Semantic Elements</a></li>
+                <li><a href="#interactive">Interactive Elements</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#tables">Tables</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<footer>
-    <p>Footer content...</p>
-</footer>
+    <main>
+        <section id="intro">
+            <article>
+                <h2>Welcome to HTML5 Elements Showcase</h2>
+                <p>This page demonstrates various HTML5 elements and their usage in semantic web development.</p>
+                <mark>This is a highlighted text example</mark>
+                <br>
+                <code>console.log('Hello World');</code>
+                <pre>&lt;html&gt;
+    &lt;head&gt;&lt;/head&gt;
+    &lt;body&gt;
+        Hello World
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+            </article>
+        </section>
+
+        <aside>
+            <dl>
+                <dt><abbr title="HyperText Markup Language">HTML</abbr></dt>
+                <dd>Standard markup language for creating web pages.</dd>
+                <dt><abbr title="Cascading Style Sheets">CSS</abbr></dt>
+                <dd>Style sheet language for describing web page presentation.</dd>
+            </dl>
+            <samp>Sample output from console.log('Hello World');</samp>
+        </aside>
+
+        <section id="semantics">
+            <h2>Semantic HTML5 Elements</h2>
+            <article>
+                <h3>Article Element</h3>
+                <p>Articles are independent and can be distributed across the web.</p>
+            </article>
+            <aside>
+                <h4>Related Content</h4>
+                <ul>
+                    <li><a href="#">Definition</a></li>
+                    <li><a href="#">Examples</a></li>
+                </ul>
+            </aside>
+        </section>
+
+        <section id="interactive">
+            <details>
+                <summary>Interactive Elements</summary>
+                <p>This section demonstrates interactive HTML5 elements.</p>
+                <fieldset>
+                    <legend>Form Controls</legend>
+                    <datalist id="options">
+                        <option value="Option 1">
+                        <option value="Option 2">
+                        <option value="Option 3">
+                    </datalist>
+                    <input list="options" name="example">
+                    <output name="result">Result will appear here</output>
+                </fieldset>
+            </details>
+        </section>
+
+        <section id="media">
+            <figure>
+                <figcaption>CSS Animation Example</figcaption>
+                <canvas id="animationCanvas" width="300" height="200"></canvas>
+                <script>
+                    const canvas = document.getElementById('animationCanvas');
+                    const ctx = canvas.getContext('2d');
+                    // Simple animation code would go here
+                </script>
+            </figure>
+            <figure>
+                <figcaption>Video Example</figcaption>
+                <video controls>
+                    <source src="sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <track src="captions.vtt" kind="subtitles" label="English">
+            </figure>
+        </section>
+
+        <section id="tables">
+            <table role="grid">
+                <caption>Sample Table with Semantic HTML</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Developer</td>
+                        <td><strong>Active</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>Designer</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><bdi>Total Employees</bdi></td>
+                        <td>2</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 HTML5 Elements Showcase. All rights reserved.</p>
+        <address>Contact: <a href="mailto:info@example.com">info@example.com</a></address>
+    </footer>
+
+    <dialog id="modalDialog" role="dialog" aria-labelledby="modalTitle">
+        <div id="modalContent"></div>
+    </dialog>
 </body>
 </html>

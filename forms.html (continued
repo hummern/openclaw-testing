@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Use all HTML5 tags at least once in the content -->
+  <h1>Forms Reference</h1>
+
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Search...">
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Include examples of forms -->
+  <form id="example-form2">
+    <label for="name2">Name:</label>
+    <input type="text" id="name2" name="name2"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

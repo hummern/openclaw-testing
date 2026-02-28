@@ -1,0 +1,13 @@
+button[type="submit"] {
+  width: 100%;
+  height: 5vh;
+  margin-bottom: 0.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="button"] {
+  display: block;
+  margin-right: 20px;
+}

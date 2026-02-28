@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms Reference (updated)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Form element -->
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Submission handler for the form -->
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      console.log('Form submitted!');
+    });
+  </script>
+</body>
+</html>

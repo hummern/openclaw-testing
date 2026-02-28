@@ -1,5 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="style.css"></head>
-<body><h1>Media</h1><audio id="music" controls></audio><video id="video" controls></video><img src="image.jpg" alt="Image"></body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Showcase</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body role="content">
+
+<header aria-label="Site Header">
+  <h1>Media Showcase</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section aria-labelledby="main-section-title">
+    <h2 id="main-section-title">Featured Media</h2>
+
+    <article aria-labelledby="article-1-title">
+      <h3 id="article-1-title">Image Gallery</h3>
+      <figure>
+        <img src="images/image1.jpg" alt="A vibrant landscape photograph" width="400" height="300">
+        <figcaption>Landscape Photography – Spring Bloom</figcaption>
+      </figure>
+      <figure>
+        <img src="images/image2.jpg" alt="Close-up of a flower" width="400" height="300">
+        <figcaption>Macro Photography – Flower Detail</figcaption>
+      </figure>
+    </article>
+
+    <article aria-labelledby="article-2-title">
+      <h3 id="article-2-title">Video Presentation</h3>
+      <video width="640" height="360" controls aria-label="Short Video Documentary">
+        <source src="videos/video1.mp4" type="video/mp4">
+        <source src="videos/video1.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </article>
+
+    <article aria-labelledby="article-3-title">
+      <h3 id="article-3-title">Audio Sample</h3>
+      <audio controls aria-label="Audio Recording - Birdsong">
+        <source src="audio/audio1.mp3" type="audio/mpeg">
+        <source src="audio/audio1.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+      </audio>
+    </article>
+  </section>
+
+  <section aria-labelledby="table-section-title">
+    <h2 id="table-section-title">Data Table</h2>
+    <table>
+      <caption aria-label="Sample Data Table">Sample Data</caption>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+          <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+          <td>Row 2, Cell 3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Data Source: Sample Data</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+  
+  <section aria-labelledby="code-section-title">
+      <h2 id="code-section-title">Code Example</h2>
+      <pre><code class="language-javascript" aria-label="JavaScript code snippet">
+      function greet(name) {
+        console.log("Hello, " + name + "!");
+      }
+
+      greet("World");
+      </code></pre>
+  </section>
+
+   <section aria-labelledby="progress-section-title">
+      <h2 id="progress-section-title">Progress Meter</h2>
+      <p>Task Progress:</p>
+      <progress value="75" max="100" aria-label="Task Progress - 75% complete"></progress>
+      <output>75%</output>
+   </section>
+
+   <section aria-labelledby="details-section-title">
+      <h2 id="details-section-title">Details and Summary</h2>
+      <details aria-expanded="false" aria-label="Expand/Collapse for more details">
+        <summary>More Information</summary>
+        <p>This is additional information about the media content.</p>
+        <p>It can be expanded to reveal more details.</p>
+      </details>
+   </section>
+
+   <section aria-labelledby="time-section-title">
+    <h2 id="time-section-title">Time Stamp</h2>
+    <p>Published: <time datetime="2023-10-27T10:00:00">October 27, 2023 at 10:00 AM</time></p>
+  </section>
+
+  <section aria-labelledby="ruby-section-title">
+    <h2 id="ruby-section-title">Ruby Annotation</h2>
+    <p>例：<ruby><rt>例</rt><rp>（</rp><rt>れ</rt><rp>）</rp></ruby></p>
+  </section>
+
+  <aside aria-label="Related Content">
+    <h3>Related Links</h3>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+    </ul>
+  </aside>
+
+  <dialog aria-labelledby="dialog-title" aria-label="Confirmation Dialog">
+    <h3 id="dialog-title">Confirm Action</h3>
+    <p>Are you sure you want to proceed?</p>
+    <button>Confirm</button>
+    <button>Cancel</button>
+  </dialog>
+
+  <fieldset aria-labelledby="fieldset-legend">
+    <legend id="fieldset-legend">Contact Information</legend>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+  </fieldset>
+
+  <mark aria-label="Important Note">Note: This is a sample media showcase page.</mark>
+
+</main>
+
+<footer aria-label="Site Footer">
+  <p>&copy; 2023 Media Showcase. All rights reserved.</p>
+</footer>
+
+</body>
 </html>

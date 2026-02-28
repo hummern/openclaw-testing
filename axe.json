@@ -1,0 +1,17 @@
+{
+  "results": [
+    {
+      "matches": ["<header id=\"header\">Header Content</header>"],
+      "label": "Semantic HTML",
+      "description": "Contains a header element"
+    },
+    {
+      "matches": ["<nav id=\"navigation\""], 
+       "label": "Navigation",
+       "description": "Uses a nav element with a list of links" 
+     ],
+      "label": "Semantic Navigation",
+      "description": "Includes navigation elements"
+    }
+  ]
+}

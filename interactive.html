@@ -1,5 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="style.css"></head>
-<body><h1>Interactive</h1><button id="myButton">Click me!</button><div id="myDiv">This is some interactive content.</div></body>
-</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body aria-label="Interactive Page Content">
+
+<header>
+  <h1>Welcome to the Interactive Page</h1>
+  <p>A demonstration of various HTML5 elements.</p>
+</header>
+
+<nav aria-label="Main Navigation">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#details-section">Details Section</a></li>
+    <li><a href="#table-example">Table Example</a></li>
+    <li><a href="#progress-meter">Progress and Meter</a></li>
+    <li><a href="#code-example">Code Example</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>This page showcases different HTML5 semantic elements to create a more structured and accessible web experience.</p>
+    <figure>
+      <img src="placeholder-image.jpg" alt="Placeholder Image - Scenic Landscape" width="300">
+      <figcaption>A placeholder image for demonstration purposes.</figcaption>
+    </figure>
+  </section>
+
+  <section id="details-section">
+    <h2>Details and Summary</h2>
+    <details>
+      <summary>Click here to see more details</summary>
+      <p>This is some hidden content that expands when the summary is clicked.</p>
+    </details>
+
+    <dialog aria-label="Important Information">
+      <p>This is a dialog box.  It could be used for forms or important notifications.</p>
+      <button>Close Dialog</button>
+    </dialog>
+  </section>
+
+  <section id="table-example">
+    <h2>Table Example</h2>
+    <table>
+      <caption>Sample Data Table</caption>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+          <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+          <td>Row 2, Cell 3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Footer information</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section id="progress-meter">
+    <h2>Progress and Meter</h2>
+    <progress value="75" max="100" aria-label="Progress bar"></progress>
+    <p>Progress is 75% complete.</p>
+    <meter value="0.8" max="1" aria-label="Score"></meter>
+    <p>Score: 0.8</p>
+    <output name="result" value="12345"></output>
+  </section>
+
+    <section id="code-example">
+        <h2>Code Example</h2>
+        <pre><code class="language-javascript">
+            function greet(name) {
+              console.log("Hello, " + name + "!");
+            }
+            greet("World");
+        </code></pre>
+    </section>
+
+  <aside aria-label="Related Links">
+    <h3>Related Resources</h3>
+    <ul>
+      <li><a href="#">HTML5 Documentation</a></li>
+      <li><a href="#">Accessibility Guidelines (WCAG)</a></li>
+    </ul>
+  </aside>
+
+  <article>
+    <h3>Time and Mark</h3>
+    <time datetime="2024-10-27">Published on October 27, 2024</time>
+    <p>This is a <mark>highlighted</mark> text.</p>
+  </article>
+
+  <article>
+    <h3>Ruby Annotation</h3>
+    <p>This is an example of <ruby>漢語</ruby><rt>漢語</rt>.</p>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2024 Interactive Page. All rights reserved.</p>
+  <fieldset aria-label="Contact Information">
+    <legend>Contact Us</legend>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br>
+      <kbd>Press Enter to submit</kbd>
+    </form>
+  </fieldset>
+</footer>
+
+</body>
+</html >

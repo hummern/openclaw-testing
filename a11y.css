@@ -1,0 +1,8 @@
+/* ARIA attributes for interactive elements */
+* button {
+  aria-label: 'Click me!';
+}
+
+button:hover {
+  aria-label: 'Hover over the button';
+}

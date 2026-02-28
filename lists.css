@@ -1,0 +1,15 @@
+* {
+  counter-reset: item;
+}
+
+li {
+  counter-increment: item;
+}
+ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+}

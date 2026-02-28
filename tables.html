@@ -1,10 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="style.css"></head>
-<body><h1>Tables</h1><table border="1">Tr1 <td align="center">Cell 1</td></tr><tr><td>This is a table cell with a specific width.</td></tr></table><table border="1">
-  <tbody>
-    <tr><th>Header 1</th><th>Header 2</th></tr>
-    <tr><td>This is another header cell.</td><td>This is the second cell.</td></tr>
-  </tbody>
-</table></body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tables Example</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Tables and Data</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Simple Table</h2>
+    <article>
+      <p>This is a basic HTML table demonstrating structure and content.</p>
+      <table>
+        <caption>Simple Product List</caption>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apple</td>
+            <td>$1.00</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Banana</td>
+            <td>$0.50</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>Orange</td>
+            <td>$0.75</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total items: 33</td>
+          </tr>
+        </tfoot>
+      </table>
+    </article>
+  </section>
+
+  <section>
+    <h2>Advanced Table with Sorting</h2>
+    <article>
+      <p>This table includes sorting and a more complex structure.</p>
+      <table>
+        <caption>Employee Information</caption>
+        <thead>
+          <tr>
+            <th aria-sort="ascending">Name</th>
+            <th>Job Title</th>
+            <th>Salary</th>
+            <th>Start Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice Smith</td>
+            <td>Software Engineer</td>
+            <td>$120,000</td>
+            <td><time datetime="2022-05-15">May 15, 2022</time></td>
+          </tr>
+          <tr>
+            <td>Bob Johnson</td>
+            <td>Data Scientist</td>
+            <td>$110,000</td>
+            <td><time datetime="2021-11-01">Nov 1, 2021</time></td>
+          </tr>
+          <tr>
+            <td>Charlie Brown</td>
+            <td>Project Manager</td>
+            <td>$130,000</td>
+            <td><time datetime="2020-08-20">Aug 20, 2020</time></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">Total Employees: 3</td>
+          </tr>
+        </tfoot>
+      </table>
+    </article>
+  </section>
+
+  <section>
+    <h2>Table with Details and Summary</h2>
+    <article>
+      <p>This table demonstrates usage with <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> for expandable content.</p>
+      <table>
+        <caption>Customer Orders</caption>
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Order Date</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>David Lee</td>
+            <td><time datetime="2024-01-20">Jan 20, 2024</time></td>
+            <td>
+              <details>
+                <summary>Order Contents</summary>
+                <ul>
+                  <li>Product A: 2</li>
+                  <li>Product B: 1</li>
+                </ul>
+              </details>
+            </td>
+          </tr>
+          <tr>
+            <td>Emily Chen</td>
+            <td><time datetime="2024-02-10">Feb 10, 2024</time></td>
+            <td>
+              <details>
+                <summary>Order Contents</summary>
+                <ul>
+                  <li>Product C: 3</li>
+                  <li>Product D: 1</li>
+                </ul>
+              </details>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </section>
+</main>
+
+<aside>
+  <h3>Related Content</h3>
+  <p>Explore more data presentation techniques.</p>
+  <ul>
+    <li><a href="#">Charts and Graphs</a></li>
+    <li><a href="#">Data Visualization</a></li>
+  </ul>
+</aside>
+
+<footer>
+  <p>&copy; 2024 Example Company. All rights reserved.</p>
+</footer>
+
+</body>
 </html>
