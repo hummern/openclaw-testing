@@ -3,46 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forms - Accessible Design</title>
+<title>Forms - Accessible Documentation</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="main">
+<body role="content">
 
 <header>
-  <h1>Accessible Forms Example</h1>
+  <h1>Forms Example</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 </header>
-
-<nav aria-label="Navigation">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="tables.html">Tables</a></li>
-    <li><a href="media.html">Media</a></li>
-    <li><a href="interactive.html">Interactive</a></li>
-  </ul>
-</nav>
 
 <main>
   <section>
-    <h2>Contact Form</h2>
-
+    <h2>Basic Form</h2>
     <form action="#" method="post">
       <fieldset>
         <legend>Personal Information</legend>
-
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true">
+        <input type="text" id="name" name="name" required>
         <br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true">
-        <br>
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone">
-        <br>
-
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob">
+        <input type="email" id="email" name="email" required>
         <br>
 
         <label for="message">Message:</label>
@@ -50,70 +38,108 @@
         <br>
       </fieldset>
 
-      <fieldset>
-        <legend>Feedback</legend>
-        <p>Please rate your experience:</p>
-        <meter value="0.75" max="1" label="Rating" aria-valuemin="0" aria-valuemax="1"></meter>
-        <progress value="50" max="100"></progress>
-      </fieldset>
-
-      <fieldset>
-          <legend>Agreement</legend>
-          <label for="terms">
-            <input type="checkbox" id="terms" name="terms" required>
-            I agree to the <a href="#">Terms and Conditions</a>
-          </label>
-      </fieldset>
-
       <button type="submit">Submit</button>
-      <button type="reset">Reset</button>
-
-      <output name="result"></output>
-
-      <del>This section is deprecated.</del>
-      <ins>This is an important addition.</ins>
-
-      <details>
-        <summary>More information</summary>
-        <p>This form is designed to be accessible.</p>
-      </details>
-
-      <dialog>
-        <p>Please review your submission.</p>
-      </dialog>
-
-      <time datetime="2024-01-27">Last Updated: January 27, 2024</time>
-
-      <code>
-        <pre>
-          function greet() {
-            console.log("Hello, world!");
-          }
-        </pre>
-      </code>
     </form>
   </section>
 
-  <aside>
-    <figure>
-      <img src="placeholder.png" alt="Placeholder Image" width="100" height="100">
-      <figcaption>A representative image.</figcaption>
-    </figure>
-  </aside>
+  <section>
+    <h2>Advanced Form with Validation</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Registration</legend>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" required>
+        <small>Only alphanumeric characters allowed.</small>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <br>
+
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" id="date_of_birth" name="date_of_birth">
+        <br>
+
+        <label for="terms">Agree to Terms:</label>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Terms and Conditions</label>
+        <br>
+      </fieldset>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
 
   <section>
-    <h3>Form Validation</h3>
-    <ol>
-      <li>Ensure all labels are properly associated with their inputs.</li>
-      <li>Use ARIA attributes to enhance accessibility.</li>
-      <li>Provide clear error messages.</li>
-    </ol>
+    <h2>Form with Select and Data</h2>
+    <form action="#" method="post">
+      <label for="select_options">Choose an option:</label>
+      <select id="select_options" name="select_options">
+        <option value="">Select...</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <br>
+
+      <data value="form-example">Form data</data>
+    </form>
+  </section>
+
+  <section>
+      <h2>Table Example</h2>
+      <table>
+          <caption>Sample Table</caption>
+          <colgroup>
+            <col>
+            <col span="2">
+          </colgroup>
+          <thead>
+              <tr>
+                  <th>Header 1</th>
+                  <th>Header 2</th>
+                  <th>Header 3</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Row 1, Cell 1</td>
+                  <td>Row 1, Cell 2</td>
+                  <td>Row 1, Cell 3</td>
+              </tr>
+              <tr>
+                  <td>Row 2, Cell 1</td>
+                  <td>Row 2, Cell 2</td>
+                  <td>Row 2, Cell 3</td>
+              </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Footer information</td>
+            </tr>
+          </tfoot>
+      </table>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2024 Accessible Design Examples</p>
+  <small>&copy; 2024 Accessible Documentation</small>
 </footer>
+
+<style>
+  /* Basic styling - replace with your own */
+  body { font-family: sans-serif; }
+  label { display: block; margin-bottom: 5px; }
+  input[type="text"], input[type="email"], input[type="password"], textarea, select { margin-bottom: 10px; }
+</style>
+<picture>
+  <source media="(max-width: 600px)" srcset="small.jpg">
+  <img src="large.jpg" alt="Example image">
+</picture>
 
 </body>
 </html>

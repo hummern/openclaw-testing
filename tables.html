@@ -8,174 +8,167 @@
 </head>
 <body role="content">
 
-<header aria-label="Page Header">
-  <h1>Tables Example</h1>
+<header>
+  <h1>Tables Example Page</h1>
+  <nav aria-label="Main Navigation">
+    <a href="index.html">Home</a> |
+    <a href="forms.html">Forms</a> |
+    <a href="interactive.html">Interactive</a> |
+    <a href="media.html">Media</a>
+  </nav>
 </header>
 
-<nav aria-label="Navigation">
-  <ul>
-    <li><a href="#basic-table">Basic Table</a></li>
-    <li><a href="#styled-table">Styled Table</a></li>
-    <li><a href="#complex-table">Complex Table</a></li>
-  </ul>
-</nav>
-
 <main>
-  <section id="basic-table" aria-labelledby="basic-table-heading">
-    <h2 id="basic-table-heading">Basic Table</h2>
-    <p>A simple table with data.</p>
-    <table aria-describedby="basic-table-caption">
+  <section>
+    <h2>Basic Table</h2>
+    <figure>
+      <figcaption>Simple Data Table</figcaption>
+      <table aria-label="Simple Data Table">
+        <caption>
+          Basic Table with Header and Data
+        </caption>
+        <colgroup>
+          <col>
+          <col>
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total rows: 2</td>
+          </tr>
+        </tfoot>
+      </table>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Advanced Table with Colgroups</h2>
+    <table aria-label="Advanced Table with Colgroups">
       <caption>
-        <caption id="basic-table-caption">Employee Information</caption>
+        Table with Colgroup for Styling
       </caption>
+      <colgroup>
+        <col style="width: 20%;">
+        <col style="width: 30%;">
+        <col style="width: 50%;">
+      </colgroup>
       <thead>
         <tr>
           <th>Name</th>
-          <th>Position</th>
-          <th>Salary</th>
+          <th>Age</th>
+          <th>City</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>John Doe</td>
-          <td>Software Engineer</td>
-          <td>$120,000</td>
+          <td>30</td>
+          <td>New York</td>
         </tr>
         <tr>
           <td>Jane Smith</td>
-          <td>Data Scientist</td>
-          <td>$130,000</td>
-        </tr>
-        <tr>
-          <td>Peter Jones</td>
-          <td>Project Manager</td>
-          <td>$110,000</td>
+          <td>25</td>
+          <td>Los Angeles</td>
         </tr>
       </tbody>
     </table>
   </section>
 
-  <section id="styled-table" aria-labelledby="styled-table-heading">
-    <h2 id="styled-table-heading">Styled Table</h2>
-    <p>A table with some basic styling.</p>
-    <table aria-describedby="styled-table-caption">
-      <caption>
-        <caption id="styled-table-caption">Product Sales</caption>
-      </caption>
+  <section>
+    <h2>Table with Summary Data</h2>
+    <table aria-label="Table with Summary Data">
+      <caption>Summary of Data</caption>
       <thead>
         <tr>
-          <th>Product</th>
-          <th>Units Sold</th>
-          <th>Revenue</th>
+          <th>Category</th>
+          <th>Value</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Laptop</td>
-          <td>100</td>
-          <td>$150,000</td>
+          <td>Total</td>
+          <td data-value="1000">1000</td>
         </tr>
         <tr>
-          <td>Mouse</td>
-          <td>500</td>
-          <td>$25,000</td>
+          <td>Used</td>
+          <td data-value="300">300</td>
         </tr>
         <tr>
-          <td>Keyboard</td>
-          <td>300</td>
-          <td>$45,000</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="complex-table" aria-labelledby="complex-table-heading">
-    <h2 id="complex-table-heading">Complex Table</h2>
-    <p>A more complex table with nested headers and footers.</p>
-    <table aria-describedby="complex-table-caption">
-      <caption>
-        <caption id="complex-table-caption">Website Traffic Statistics</caption>
-      </caption>
-      <thead>
-        <tr>
-          <th colspan="3">Website Traffic Data</th>
-        </tr>
-        <tr>
-          <th>Source</th>
-          <th>Visits</th>
-          <th>Bounce Rate</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Organic Search</td>
-          <td>1000</td>
-          <td>40%</td>
-        </tr>
-        <tr>
-          <td>Paid Advertising</td>
-          <td>500</td>
-          <td>60%</td>
-        </tr>
-        <tr>
-          <td>Social Media</td>
-          <td>200</td>
-          <td>30%</td>
+          <td>Remaining</td>
+          <td data-value="700">700</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="3">Total Visits: 1700</td>
+          <td colspan="2">
+            <progress value="70" max="100"></progress>
+            <output>70%</output>
+          </td>
         </tr>
       </tfoot>
     </table>
-    <bdo dir="rtl">This text is reversed.</bdo>
-    <cite>This is a quote.</cite>
-    <dfn>This is a definition term.</dfn>
-    <em>Emphasis</em>
-    <embed src="data:text/html;utf8,<b>Embedded HTML</b>" type="text/html" />
-    <i>Italicized text</i>
-    <kbd>Ctrl+Shift+Delete</kbd>
-    <map name="examplemap">
-        <area shape="rect" coords="0,0,100,100" href="#basic-table" alt="Basic Table Link">
-    </map>
-    <meter value="0.75" max="1.0" title="75% Complete"></meter>
-    <noscript>Javascript is disabled.</noscript>
-    <optgroup label="Fruits">
-      <option value="apple">Apple</option>
-      <option value="banana">Banana</option>
-    </optgroup>
-    <q>This is a quote.</q>
-    <s>Strikethrough text</s>
-    <slot name="my-slot"></slot>
-    <sub>Subscript</sub>
-    <sup>Superscript</sup>
-    <template>
-        <p>This is a template paragraph.</p>
-    </template>
-    <u>Underlined text</u>
-    <var>Variable name</var>
-    <wbr>Word break opportunity
-    <time datetime="2023-10-27">October 27, 2023</time>
-    <mark>Marked text</mark>
-    <ruby>
-      <rt>日本語</rt>
-      <rp>(</rp>にほんご<rp>)</rp>
-    </ruby>
-    <code>code</code>
+  </section>
+
+  <section>
+    <h2>Data Table with Details and Summary</h2>
+    <details>
+      <summary>Data Table Details</summary>
+      <table>
+        <thead>
+          <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Col 1</td>
+            <td>Row 1, Col 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  </section>
+
+  <section>
+    <h2>Table Using Time and Mark</h2>
     <pre>
       <code>
-        function helloWorld() {
-          console.log("Hello, world!");
-        }
+        &lt;time datetime="2023-10-27"&gt;October 27, 2023&lt;/time&gt;
       </code>
     </pre>
+    <mark>Important Date</mark>
   </section>
 </main>
 
-<footer aria-label="Page Footer">
-  <p>&copy; 2023 Example Website</p>
+<aside>
+  <h3>Additional Information</h3>
+  <p>This page demonstrates different types of tables using semantic HTML elements.</p>
+</aside>
+
+<footer>
+  <small>&copy; 2024 Example Website. All rights reserved.</small>
+  <span aria-label="Last Updated">Last Updated: 2024-10-27</span>
 </footer>
 
 </body>
-</html
+</html>

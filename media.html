@@ -3,122 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Gallery</title>
+<title>Media Examples</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="complementary">
+  <header>
+    <h1>Media Gallery</h1>
+  </header>
 
-<header>
-  <h1>Media Gallery</h1>
-</header>
+  <nav aria-label="Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="interactive.html">Interactive Elements</a></li>
+      <li><a href="tables.html">Tables</a></li>
+    </ul>
+  </nav>
 
-<nav aria-label="Navigation">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="tables.html">Tables</a></li>
-    <li><a href="forms.html">Forms</a></li>
-    <li><a href="interactive.html">Interactive</a></li>
-  </ul>
-</nav>
-
-<main>
-  <section>
-    <h2>Images</h2>
-    <figure>
-      <img src="image1.jpg" alt="A beautiful landscape" width="300" height="200">
-      <figcaption>Landscape View</figcaption>
-    </figure>
-
-    <figure>
-      <img src="image2.jpg" alt="A close-up of a flower" width="300" height="200">
-      <figcaption>Flower Close-up</figcaption>
-    </figure>
-
-    <ins>This section highlights our gallery's image collection.</ins>
-    <del>Old Image removed</del>
-
-    <ol>
-      <li>Image 1 Description</li>
-      <li>Image 2 Description</li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>Videos</h2>
-    <video width="400" height="300" controls>
-      <source src="video1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      <param name="src" value="video1.mp4">
-      <param name="width" value="400">
-      <param name="height" value="300">
-    </video>
-
-    <time datetime="2024-01-26">Published January 26, 2024</time>
-  </section>
-
-  <section>
-    <h2>Audio</h2>
-    <audio controls>
-      <source src="audio1.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-      <param name="src" value="audio1.mp3">
-    </audio>
-  </section>
-
-  <section>
-    <h2>Progress and Meter</h2>
-    <progress value="50" max="100"></progress>
-    <meter value="0.75" max="1" title="75% Complete"></meter>
-  </section>
-    
+  <main>
     <section>
-      <h2>Code Snippets</h2>
-      <pre><code>
-function greet(name) {
-  return "Hello, " + name + "!";
-}
-</code></pre>
-    </section>
+      <h2>Images and Figures</h2>
 
-    <section>
-      <h2>Details and Summary</h2>
+      <figure>
+        <img src="placeholder-image.jpg" alt="A descriptive image" width="300" height="200">
+        <figcaption>Image Caption:  This is a sample image.</figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source media="(max-width: 600px)" srcset="image-small.jpg">
+          <source media="(max-width: 900px)" srcset="image-medium.jpg">
+          <img src="image-large.jpg" alt="Responsive Image">
+        </picture>
+      </figure>
+
       <details>
-        <summary>Click to Reveal Details</summary>
-        <p>This is some hidden content.</p>
+        <summary>Image Details</summary>
+        <p>Further information about the images used.</p>
       </details>
-    </section>
-  
-    <section>
-      <h2>Tables</h2>
-      <table>
-        <caption>Sample Data</caption>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Data 1</td>
-            <td>Data 2</td>
-          </tr>
-          <tr>
-            <td>Data 3</td>
-            <td>Data 4</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="2">Footer Data</td>
-          </tr>
-        </tfoot>
-      </table>
-    </section>
-</main>
 
-<footer>
-  <p>&copy; 2024 Media Gallery</p>
-</footer>
+    </section>
+
+    <section>
+      <h2>Audio and Video</h2>
+
+      <h3>Audio Example</h3>
+      <audio controls>
+        <source src="audio-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Video Example</h3>
+      <video width="400" height="300" controls>
+        <source src="video-file.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+
+      <object data="flash-content.swf" type="application/x-shockwave-flash" width="320" height="240">
+        <param name="movie" value="flash-content.swf">
+        <param name="quality" value="high">
+        <param name="bgcolor" value="#ffffff">
+        <p>Requires Flash Player</p>
+      </object>
+    </section>
+
+    <section>
+      <h2>Embedded Content</h2>
+      <iframe src="https://www.example.com" title="Example Website" width="600" height="400"></iframe>
+    </section>
+  </main>
+
+  <aside>
+    <h3>Related Links</h3>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>&copy; 2024 Example Website</p>
+  </footer>
+
+  <col>
+  <colgroup>
+    <col>
+    <col>
+  </colgroup>
+  <data>Data value</data>
+  <h5 id="h5-example">Heading 5</h5>
+  <h6 id="h6-example">Heading 6</h6>
+  <select>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+  </select>
+  <small>Small text</small>
+  <span id="span-example">Span text</span>
+  <style>
+    body { font-family: sans-serif; }
+  </style>
 </body>
 </html>
