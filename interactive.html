@@ -3,166 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Elements</title>
+<title>Interactive Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
-
-<header aria-label="Page Header">
-  <h1>Interactive Features</h1>
+<body>
+<header>
+  <h1>Interactive Example Page</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="tables.html">Tables</a></li>
+    </ul>
+  </nav>
 </header>
 
-<nav aria-label="Main Navigation">
-  <ul>
-    <li><a href="#details">Details Example</a></li>
-    <li><a href="#dialog">Dialog Example</a></li>
-    <li><a href="#table">Table Example</a></li>
-    <li><a href="#progress">Progress Bar</a></li>
-    <li><a href="#meter">Meter Example</a></li>
-    <li><a href="#form">Form Elements</a></li>
-  </ul>
-</nav>
-
 <main>
-  <section id="details">
-    <h2>Details Element</h2>
-    <details>
-      <summary>Click to reveal details</summary>
-      <p>This is the content of the details element.</p>
-    </details>
-  </section>
+  <section>
+    <h2>Interactive Elements</h2>
+    <p>This section demonstrates various interactive HTML elements.</p>
 
-  <section id="dialog">
-    <h2>Dialog Example</h2>
+    <h3>Interactive Form</h3>
+    <form>
+      <fieldset>
+        <legend>User Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="select">Choose a Color:</label>
+        <select id="select" name="color">
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+        </select>
+        <br>
+
+        <label for="checkbox">Subscribe to Newsletter:</label>
+        <input type="checkbox" id="checkbox" name="subscribe">
+      </fieldset>
+    </form>
+
+    <h3>Details and Summary</h3>
+    <details>
+      <summary>Click to Reveal Details</summary>
+      <p>This is some additional information that is hidden by default.</p>
+    </details>
+
+    <h3>Progress Bar</h3>
+    <progress value="50" max="100"></progress>
+
+    <h3>Meter Element</h3>
+    <meter value="0.75" min="0" max="1" label="Example"></meter>
+
+    <h3>Output Element</h3>
+    <output>Result: 0</output>
+    <small>Note: The output value is dynamically updated.</small>
+
+    <h3>Code Example</h3>
+    <pre><code>
+      function greet(name) {
+        return "Hello, " + name + "!";
+      }
+    </code></pre>
+
+    <h3>Table Example</h3>
+    <table style="width:100%">
+      <caption>Sample Table</caption>
+      <thead>
+        <tr>
+          <th scope="col">Header 1</th>
+          <th scope="col">Header 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Header 1">Data 1</td>
+          <td data-label="Header 2">Data 2</td>
+        </tr>
+        <tr>
+          <td data-label="Header 1">Data 3</td>
+          <td data-label="Header 2">Data 4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Footer</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h3>Ruby Annotation</h3>
+    <ruby>
+      <rt>にほんご</rt>
+      <rp>(</rp>
+      <rt>nihongo</rt>
+      <rp>)</rp>
+    </ruby>
+
+    <h3>Figure and Caption</h3>
+    <figure>
+      <img src="placeholder.jpg" alt="Placeholder Image" width="200">
+      <figcaption>A descriptive image</figcaption>
+    </figure>
+
+    <h3>Time Element</h3>
+    <time datetime="2023-10-27">October 27, 2023</time>
+
+    <h3>Mark Element</h3>
+    <p>This is a sentence with a <mark>highlighted word</mark>.</p>
+
+    <h3>Span and Style</h3>
+    <p>This is some <span style="color: blue;">styled text</span>.</p>
+
+    <h3>H5 and H6 Headings</h3>
+    <h5>H5 Heading</h5>
+    <h6>H6 Heading</h6>
+
+    <h3>Dialog Example</h3>
     <dialog>
       <p>This is a dialog box.</p>
       <button>Close</button>
     </dialog>
   </section>
 
-  <section id="table">
-    <h2>Table Example</h2>
-    <table>
-      <caption>
-        <figcaption>A Simple Table</figcaption>
-      </caption>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
-        </tr>
-        <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2">Footer information</td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
-
-  <section id="progress">
-    <h2>Progress Bar</h2>
-    <progress value="50" max="100"></progress>
-  </section>
-
-  <section id="meter">
-    <h2>Meter Example</h2>
-    <meter value="0.75" max="1" min="0"></meter>
-  </section>
-
-  <section id="form">
-    <h2>Form Elements</h2>
-    <form>
-      <fieldset>
-        <legend>Basic Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-
-        <label for="range">Range:</label>
-        <input type="range" id="range" name="range" min="0" max="100"><br><br>
-
-        <output name="rangeOutput" value="0"></output>
-
-        <kbd>Press Enter to submit.</kbd>
-
-        <pre><code>code example</code></pre>
-
-        <mark>Important Note</mark>
-
-        <time datetime="2024-10-27">Published on October 27, 2024</time>
-
-        <var>x</var> = <var>y</var> + <var>z</var>
-
-        <bdo dir="rtl">This text is displayed right-to-left.</bdo>
-
-        <cite>Example Citation</cite>
-
-        <dfn>Definition of a term</dfn>
-
-        <em>Emphasis</em>
-
-        <i>Italic text</i>
-
-        <q>A short quote</q>
-
-        <s>Strikethrough text</s>
-
-        <sub id="sub">Subscript</sub>
-
-        <sup id="sup">Superscript</sub>
-
-        <wbr>Word Break Opportunity
-
-        <template>
-          <p>Template content</p>
-        </template>
-
-        <u id="u">Underline</u>
-
-        <slot name="mySlot"></slot>
-
-      </fieldset>
-    </form>
-  </section>
-
-  <figure>
-    <img src="placeholder.jpg" alt="Placeholder Image" width="200" height="150">
-    <figcaption>A descriptive caption for the image</figcaption>
-  </figure>
-
   <aside>
     <h3>Sidebar Content</h3>
-    <p>This is some related content.</p>
+    <p>This is additional content in the sidebar.</p>
   </aside>
-
-  <article>
-    <h2>Article Title</h2>
-    <p>Article content.</p>
-  </article>
-
-  <ruby>
-    <rt>Ruby text</rt>
-    <rp>(</rp>
-    <rt>Alternative pronunciation</rt>
-    <rp>)</rp>
-  </ruby>
 </main>
 
-<footer aria-label="Footer">
-  <p>&copy; 2024 Example Website</p>
+<footer>
+  <p>&copy; 2023 Example Website</p>
 </footer>
 
 </body>

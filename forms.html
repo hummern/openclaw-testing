@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forms Example</title>
+<title>Forms - Example Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body role="content">
 
 <header>
   <h1>Forms Example</h1>
-  <nav>
+  <nav aria-label="Navigation">
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
@@ -21,158 +21,107 @@
 
 <main>
   <section>
-    <h2>User Information</h2>
-    <form>
+    <h2>Basic Form</h2>
+    <form action="#" method="post">
       <fieldset>
-        <legend>Personal Details</legend>
-
+        <legend>User Information</legend>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required alt="Enter your name" aria-required="true">
+        <input type="text" id="name" name="name" required>
         <br>
-
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required alt="Enter your email" aria-required="true">
+        <input type="email" id="email" name="email" required>
         <br>
-
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" alt="Select your date of birth">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
         <br>
-
-        <label for="gender">Gender:</label>
-        <input type="radio" id="male" name="gender" value="male" alt="Male"> <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female" alt="Female"> <label for="female">Female</label>
-        <input type="radio" id="other" name="gender" value="other" alt="Other"> <label for="other">Other</label>
-        <br>
-
-        <label for="interests">Interests:</label>
-        <input type="checkbox" id="sports" name="interests" value="sports" alt="Sports"> <label for="sports">Sports</label>
-        <input type="checkbox" id="music" name="interests" value="music" alt="Music"> <label for="music">Music</label>
-        <input type="checkbox" id="reading" name="interests" value="reading" alt="Reading"> <label for="reading">Reading</label>
-        <br>
-
-        <label for="textarea">Message:</label>
-        <textarea id="textarea" name="message" rows="4" cols="50" alt="Enter your message"></textarea>
-        <br>
+        <input type="submit" value="Submit">
       </fieldset>
-
-      <fieldset>
-        <legend>Contact Information</legend>
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" alt="Enter your address">
-        <br>
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" alt="Enter your phone number">
-        <br>
-      </fieldset>
-
-      <button type="submit">Submit</button>
-      <button type="reset">Reset</button>
-
-      <output name="result" id="result"></output>
-
-      <kbd>Press Enter to submit</kbd>
     </form>
   </section>
 
   <section>
-    <h2>Example Table</h2>
+    <h2>Form with Validation</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Registration Form</legend>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" title="Only alphanumeric characters allowed" required>
+        <small>Username must contain only letters and numbers.</small>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <small>Passwords must match.</small>
+        <br>
+        <button type="submit">Register</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <section>
+    <h2>Form with Select and Data</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Choose an Option</legend>
+        <label for="options">Select an option:</label>
+        <select id="options" name="options">
+          <optgroup label="Fruits">
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="orange">Orange</option>
+          </optgroup>
+          <optgroup label="Vegetables">
+            <option value="carrot">Carrot</option>
+            <option value="broccoli">Broccoli</option>
+            <option value="spinach">Spinach</option>
+          </optgroup>
+        </select>
+        <br>
+        <data value="example">This is a data value.</data>
+        <small>Selected value will be processed.</small>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <section>
+    <h2>Table Form</h2>
     <table>
-      <caption>Sample Data</caption>
+      <caption>Form Data</caption>
+      <colgroup>
+        <col>
+        <col width="50%">
+      </colgroup>
       <thead>
         <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
+          <th>Field</th>
+          <th>Value</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
+          <th>Name</th>
+          <td><input type="text" value=""></td>
         </tr>
         <tr>
-          <td>Data 3</td>
-          <td>Data 4</td>
+          <th>Email</th>
+          <td><input type="email" value=""></td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">Footer Data</td>
+          <td colspan="2"><button>Submit</button></td>
         </tr>
       </tfoot>
     </table>
   </section>
-
-  <section>
-    <h2>Progress Bar</h2>
-    <progress value="50" max="100" alt="Progress bar"></progress>
-    <meter value="0.75" max="1" alt="Meter gauge"></meter>
-  </section>
-
-    <section>
-        <h2>Code Example</h2>
-        <pre><code>
-        function greet(name) {
-          return "Hello, " + name + "!";
-        }
-        </code></pre>
-    </section>
-
-    <section>
-        <h2>Ruby Example</h2>
-        <ruby>
-            <rt>人</rt>
-            <rp>(</rp>
-            <rt>jen</rt>
-            <rp>)</rp>
-        </ruby>
-    </section>
-
-  <article>
-      <h2>Article Section</h2>
-      <p>This is an article within the main content.</p>
-      <figure>
-        <img src="placeholder.jpg" alt="Placeholder Image">
-        <figcaption>A descriptive caption for the image.</figcaption>
-      </figure>
-  </article>
-  <aside>
-    <h2>Aside Section</h2>
-    <p>Related information or advertisements.</p>
-  </aside>
-  <details>
-    <summary>Details Summary</summary>
-    <p>Details content here.</p>
-  </details>
-
-  <dialog>
-    <p>This is a dialog box.</p>
-  </dialog>
-
-  <bdo dir="rtl">This text will be reversed.</bdo>
-  <cite>A citation example.</cite>
-  <dfn>A definition term.</dfn>
-  <em>Emphasis</em>
-  <i>Italic text</i>
-  <var>Variable name</var>
-  <u>Underlined text</u>
-  <wbr>Word break opportunity
-  <time datetime="2024-10-27">2024-10-27</time>
-  <mark>Highlighted text</mark>
-  <sub >Subscript</sub>
-  <sup >Superscript</sup>
-  <template>
-    <p>Reusable content.</p>
-  </template>
-
-  <slot name="my-slot">Default slot content</slot>
-
-  </section>
 </main>
 
 <footer>
-  <p>&copy; 2024 Example Website</p>
+  <p>&copy; 2024 Example Website. All rights reserved.</p>
 </footer>
 
 </body>
-</html >
+</html>
