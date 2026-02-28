@@ -3,124 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forms - Example Page</title>
+<title>Forms - Accessible Design</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
+<body role="main">
 
 <header>
-  <h1>Forms Example</h1>
-  <nav aria-label="Navigation">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+  <h1>Accessible Forms Example</h1>
 </header>
+
+<nav aria-label="Navigation">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="tables.html">Tables</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="interactive.html">Interactive</a></li>
+  </ul>
+</nav>
 
 <main>
   <section>
-    <h2>Basic Form</h2>
+    <h2>Contact Form</h2>
+
     <form action="#" method="post">
       <fieldset>
-        <legend>User Information</legend>
+        <legend>Personal Information</legend>
+
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required aria-required="true">
         <br>
+
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required aria-required="true">
         <br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+        <br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        <br>
+
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="4" cols="50"></textarea>
         <br>
-        <input type="submit" value="Submit">
       </fieldset>
-    </form>
-  </section>
 
-  <section>
-    <h2>Form with Validation</h2>
-    <form action="#" method="post">
       <fieldset>
-        <legend>Registration Form</legend>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" title="Only alphanumeric characters allowed" required>
-        <small>Username must contain only letters and numbers.</small>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <label for="confirm_password">Confirm Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
-        <small>Passwords must match.</small>
-        <br>
-        <button type="submit">Register</button>
+        <legend>Feedback</legend>
+        <p>Please rate your experience:</p>
+        <meter value="0.75" max="1" label="Rating" aria-valuemin="0" aria-valuemax="1"></meter>
+        <progress value="50" max="100"></progress>
       </fieldset>
-    </form>
-  </section>
 
-  <section>
-    <h2>Form with Select and Data</h2>
-    <form action="#" method="post">
       <fieldset>
-        <legend>Choose an Option</legend>
-        <label for="options">Select an option:</label>
-        <select id="options" name="options">
-          <optgroup label="Fruits">
-            <option value="apple">Apple</option>
-            <option value="banana">Banana</option>
-            <option value="orange">Orange</option>
-          </optgroup>
-          <optgroup label="Vegetables">
-            <option value="carrot">Carrot</option>
-            <option value="broccoli">Broccoli</option>
-            <option value="spinach">Spinach</option>
-          </optgroup>
-        </select>
-        <br>
-        <data value="example">This is a data value.</data>
-        <small>Selected value will be processed.</small>
-        <button type="submit">Submit</button>
+          <legend>Agreement</legend>
+          <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            I agree to the <a href="#">Terms and Conditions</a>
+          </label>
       </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+
+      <output name="result"></output>
+
+      <del>This section is deprecated.</del>
+      <ins>This is an important addition.</ins>
+
+      <details>
+        <summary>More information</summary>
+        <p>This form is designed to be accessible.</p>
+      </details>
+
+      <dialog>
+        <p>Please review your submission.</p>
+      </dialog>
+
+      <time datetime="2024-01-27">Last Updated: January 27, 2024</time>
+
+      <code>
+        <pre>
+          function greet() {
+            console.log("Hello, world!");
+          }
+        </pre>
+      </code>
     </form>
   </section>
 
+  <aside>
+    <figure>
+      <img src="placeholder.png" alt="Placeholder Image" width="100" height="100">
+      <figcaption>A representative image.</figcaption>
+    </figure>
+  </aside>
+
   <section>
-    <h2>Table Form</h2>
-    <table>
-      <caption>Form Data</caption>
-      <colgroup>
-        <col>
-        <col width="50%">
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Field</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Name</th>
-          <td><input type="text" value=""></td>
-        </tr>
-        <tr>
-          <th>Email</th>
-          <td><input type="email" value=""></td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2"><button>Submit</button></td>
-        </tr>
-      </tfoot>
-    </table>
+    <h3>Form Validation</h3>
+    <ol>
+      <li>Ensure all labels are properly associated with their inputs.</li>
+      <li>Use ARIA attributes to enhance accessibility.</li>
+      <li>Provide clear error messages.</li>
+    </ol>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2024 Example Website. All rights reserved.</p>
+  <p>&copy; 2024 Accessible Design Examples</p>
 </footer>
 
 </body>

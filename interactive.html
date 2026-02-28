@@ -3,141 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Example</title>
+<title>Interactive Elements</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body role="content">
+
 <header>
-  <h1>Interactive Example Page</h1>
-  <nav>
+  <h1>Interactive Elements Example</h1>
+  <nav aria-label="Main Navigation">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms</a></li>
-      <li><a href="media.html">Media</a></li>
-      <li><a href="tables.html">Tables</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Interactive Elements</h2>
-    <p>This section demonstrates various interactive HTML elements.</p>
-
-    <h3>Interactive Form</h3>
+    <h2>Interactive Form</h2>
     <form>
       <fieldset>
-        <legend>User Information</legend>
+        <legend>Personal Information</legend>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <br>
-        <label for="select">Choose a Color:</label>
-        <select id="select" name="color">
-          <option value="red">Red</option>
-          <option value="green">Green</option>
-          <option value="blue">Blue</option>
-        </select>
-        <br>
+        <input type="text" id="name" name="name"><br><br>
 
-        <label for="checkbox">Subscribe to Newsletter:</label>
-        <input type="checkbox" id="checkbox" name="subscribe">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br><br>
       </fieldset>
+      <button type="submit">Submit</button>
     </form>
+  </section>
+
+  <section>
+    <h2>Progress and Measurement</h2>
+    <p>Progress Bar:</p>
+    <progress value="75" max="100"></progress><br><br>
+
+    <p>Meter Example:</p>
+    <meter value="0.8" max="1" title="80% complete"></meter><br><br>
+
+    <p>Output Example:</p>
+    <output id="output"></output>
+  </section>
+
+  <section>
+    <h2>Interactive List</h2>
+    <h3>Ordered List</h3>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+
+    <h3>Unordered List</h3>
+    <ul>
+      <li>Item A</li>
+      <li>Item B</li>
+      <li>Item C</li>
+    </ul>
 
     <h3>Details and Summary</h3>
     <details>
-      <summary>Click to Reveal Details</summary>
-      <p>This is some additional information that is hidden by default.</p>
+      <summary>Click to Reveal</summary>
+      <p>This is the content inside the details element.</p>
     </details>
+  </section>
 
-    <h3>Progress Bar</h3>
-    <progress value="50" max="100"></progress>
-
-    <h3>Meter Element</h3>
-    <meter value="0.75" min="0" max="1" label="Example"></meter>
-
-    <h3>Output Element</h3>
-    <output>Result: 0</output>
-    <small>Note: The output value is dynamically updated.</small>
-
-    <h3>Code Example</h3>
-    <pre><code>
-      function greet(name) {
-        return "Hello, " + name + "!";
-      }
-    </code></pre>
-
-    <h3>Table Example</h3>
-    <table style="width:100%">
+  <section>
+    <h2>Table Example</h2>
+    <table>
       <caption>Sample Table</caption>
       <thead>
         <tr>
-          <th scope="col">Header 1</th>
-          <th scope="col">Header 2</th>
+          <th>Header 1</th>
+          <th>Header 2</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td data-label="Header 1">Data 1</td>
-          <td data-label="Header 2">Data 2</td>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
         </tr>
         <tr>
-          <td data-label="Header 1">Data 3</td>
-          <td data-label="Header 2">Data 4</td>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">Footer</td>
+          <td colspan="2">Footer Information</td>
         </tr>
       </tfoot>
     </table>
+  </section>
 
-    <h3>Ruby Annotation</h3>
-    <ruby>
-      <rt>にほんご</rt>
-      <rp>(</rp>
-      <rt>nihongo</rt>
-      <rp>)</rp>
-    </ruby>
-
-    <h3>Figure and Caption</h3>
-    <figure>
-      <img src="placeholder.jpg" alt="Placeholder Image" width="200">
-      <figcaption>A descriptive image</figcaption>
-    </figure>
-
-    <h3>Time Element</h3>
-    <time datetime="2023-10-27">October 27, 2023</time>
-
-    <h3>Mark Element</h3>
-    <p>This is a sentence with a <mark>highlighted word</mark>.</p>
-
-    <h3>Span and Style</h3>
-    <p>This is some <span style="color: blue;">styled text</span>.</p>
-
-    <h3>H5 and H6 Headings</h3>
-    <h5>H5 Heading</h5>
-    <h6>H6 Heading</h6>
-
-    <h3>Dialog Example</h3>
+  <section>
+    <h2>Interactive Dialog</h2>
     <dialog>
       <p>This is a dialog box.</p>
       <button>Close</button>
     </dialog>
   </section>
 
-  <aside>
-    <h3>Sidebar Content</h3>
-    <p>This is additional content in the sidebar.</p>
-  </aside>
+  <section>
+      <h2>Code Example</h2>
+      <pre><code>
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+greet("World");
+      </code></pre>
+  </section>
+
+  <section>
+    <h2>Ruby Annotation</h2>
+    <p>The word <ruby>株式会社</ruby> (<i>kabushiki-gaisha</i>) means "corporation" in Japanese.</p>
+  </section>
+
+  <section>
+    <h2>Marked Text</h2>
+    <p>This is some <mark>important</mark> text.</p>
+  </section>
+
+  <section>
+    <h2>Time Element</h2>
+    <p>The meeting is scheduled for <time datetime="2024-10-27T10:00:00">October 27th, 2024 at 10:00 AM</time>.</p>
+  </section>
+
+  <section>
+      <h2>Insertion and Deletion</h2>
+      <p>This text has been <ins>inserted</ins> and <del>deleted</del>.</p>
+  </section>
+
+  <section>
+      <h2>Parameter Example</h2>
+      <param name="type" value="image">
+      <img src="placeholder.jpg" alt="Placeholder Image">
+  </section>
+
+  <section>
+      <h2>Style Example</h2>
+      <p style="color: blue; font-weight: bold;">This text is styled with inline CSS.</p>
+  </section>
 </main>
 
 <footer>
-  <p>&copy; 2023 Example Website</p>
+  <p>&copy; 2024 Example Website</p>
 </footer>
 
 </body>

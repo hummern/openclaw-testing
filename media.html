@@ -6,111 +6,119 @@
 <title>Media Gallery</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="navigation">
+<body role="complementary">
 
 <header>
   <h1>Media Gallery</h1>
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms</a></li>
-      <li><a href="tables.html">Tables</a></li>
-      <li><a href="interactive.html">Interactive</a></li>
-    </ul>
-  </nav>
 </header>
+
+<nav aria-label="Navigation">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="tables.html">Tables</a></li>
+    <li><a href="forms.html">Forms</a></li>
+    <li><a href="interactive.html">Interactive</a></li>
+  </ul>
+</nav>
 
 <main>
   <section>
     <h2>Images</h2>
     <figure>
       <img src="image1.jpg" alt="A beautiful landscape" width="300" height="200">
-      <figcaption>Landscape Image</figcaption>
+      <figcaption>Landscape View</figcaption>
     </figure>
+
     <figure>
-      <img src="image2.jpg" alt="Close-up of a flower" width="300" height="200">
+      <img src="image2.jpg" alt="A close-up of a flower" width="300" height="200">
       <figcaption>Flower Close-up</figcaption>
     </figure>
 
-    <picture>
-      <source media="(max-width: 600px)" srcset="small-image.jpg">
-      <img src="large-image.jpg" alt="Responsive image">
-    </picture>
+    <ins>This section highlights our gallery's image collection.</ins>
+    <del>Old Image removed</del>
 
+    <ol>
+      <li>Image 1 Description</li>
+      <li>Image 2 Description</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Videos</h2>
+    <video width="400" height="300" controls>
+      <source src="video1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      <param name="src" value="video1.mp4">
+      <param name="width" value="400">
+      <param name="height" value="300">
+    </video>
+
+    <time datetime="2024-01-26">Published January 26, 2024</time>
   </section>
 
   <section>
     <h2>Audio</h2>
     <audio controls>
-      <source src="audio.mp3" type="audio/mpeg">
+      <source src="audio1.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
+      <param name="src" value="audio1.mp3">
     </audio>
   </section>
 
   <section>
-    <h2>Video</h2>
-    <video width="400" height="300" controls>
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support the video element.
-    </video>
+    <h2>Progress and Meter</h2>
+    <progress value="50" max="100"></progress>
+    <meter value="0.75" max="1" title="75% Complete"></meter>
   </section>
+    
+    <section>
+      <h2>Code Snippets</h2>
+      <pre><code>
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+</code></pre>
+    </section>
 
     <section>
-      <h2>Data Table</h2>
+      <h2>Details and Summary</h2>
+      <details>
+        <summary>Click to Reveal Details</summary>
+        <p>This is some hidden content.</p>
+      </details>
+    </section>
+  
+    <section>
+      <h2>Tables</h2>
       <table>
         <caption>Sample Data</caption>
-        <colgroup>
-          <col style="width: 20%;">
-          <col>
-          <col style="width: 15%;">
-        </colgroup>
         <thead>
           <tr>
             <th>Header 1</th>
             <th>Header 2</th>
-            <th>Header 3</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Data 1</td>
             <td>Data 2</td>
-            <td>Data 3</td>
           </tr>
           <tr>
+            <td>Data 3</td>
             <td>Data 4</td>
-            <td>Data 5</td>
-            <td>Data 6</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="3">Footer Data</td>
+            <td colspan="2">Footer Data</td>
           </tr>
         </tfoot>
       </table>
     </section>
-    <section>
-      <h2>Embeddings</h2>
-      <iframe src="https://www.example.com" width="600" height="400"></iframe>
-      <object data="document.pdf" type="application/pdf" width="600" height="400">
-        <p>Your browser does not support PDF viewing.</p>
-      </object>
-    </section>
-
-    <section>
-      <h2>Code Example</h2>
-      <pre><code>
-        &lt;p&gt;This is a paragraph.&lt;/p&gt;
-        &lt;code&gt;This is code within a paragraph.&lt;/code&gt;
-      </code></pre>
-    </section>
-
-
 </main>
 
 <footer>
-  <small>&copy; 2024 Media Gallery</small>
+  <p>&copy; 2024 Media Gallery</p>
 </footer>
 </body>
 </html>

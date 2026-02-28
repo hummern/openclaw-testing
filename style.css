@@ -2,36 +2,21 @@ body {
   font-family: sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  line-height: 1.2;
+  color: #0056b3;
   margin-bottom: 0.5em;
 }
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
-h4 { font-size: 1.5em; }
-h5 { font-size: 1.25em; }
-h6 { font-size: 1em; }
-
-small {
-  font-size: 0.8em;
-}
-
 a {
-  color: #007bff;
+  color: #0056b3;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-}
-
-p {
-  margin-bottom: 1em;
 }
 
 ol, ul {
@@ -46,79 +31,43 @@ strong {
   font-weight: bold;
 }
 
-em {
-  font-style: italic;
+del {
+  text-decoration: line-through;
+  color: #888;
 }
 
-/* Forms */
-input[type="text"],
-input[type="email"],
-textarea,
-select {
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 1em;
-  width: 100%;
-  box-sizing: border-box; /* Ensures padding doesn't increase width */
+ins {
+  text-decoration: underline;
+  color: #0056b3;
 }
 
-button,
-input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover,
-input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-/* Tables */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 1em;
-}
-
-th,
-td {
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-/* Media */
-picture {
-  margin-bottom: 1em;
-}
-
-/* Specific element styling (as needed, based on HTML) */
-span {
-  /*Example: Use if span needs specific styling*/
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
+pre {
+  background-color: #f0f0f0;
   padding: 1em;
+  overflow-x: auto;
 }
 
-/* Accessibility considerations */
-:focus {
-  outline: 2px solid #ffc107; /* Accessible focus indicator */
+code {
+  font-family: monospace;
 }
 
-/* Avoid content role on body tag */
-body {
-  role: null;
+figure {
+  margin: 1em 0;
 }
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+  color: #666;
+}
+
+meter {
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+```
