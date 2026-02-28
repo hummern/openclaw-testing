@@ -3,187 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Gallery</title>
+<title>Media Gallery - Accessibility Focused</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
+<body role="document">
 
 <header>
   <h1>Media Gallery</h1>
   <nav aria-label="Main Navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms</a></li>
-      <li><a href="interactive.html">Interactive</a></li>
-      <li><a href="media.html">Media</a></li>
+      <li><a href="forms.html">Forms Example</a></li>
+      <li><a href="interactive.html">Interactive Elements</a></li>
+      <li><a href="media.html">Media Gallery</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Images</h2>
-    <figure>
-      <img src="image1.jpg" alt="A scenic landscape with mountains" width="600" height="400">
-      <figcaption>Beautiful Mountain View</figcaption>
-    </figure>
+    <h2>Image and Video Showcase</h2>
 
     <figure>
-      <img src="image2.jpg" alt="Close-up of a flower" width="400" height="300">
-      <figcaption>Delicate Flower</figcaption>
+      <picture>
+        <source media="(max-width: 600px)" srcset="small_image.jpg">
+        <img src="large_image.jpg" alt="A beautiful landscape view.">
+      </picture>
+      <figcaption>A breathtaking vista captured on a sunny day.</figcaption>
     </figure>
 
+    <video controls width="640" height="360">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h3>Audio Example</h3>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <h4>Interactive Media Section</h4>
     <details>
-      <summary>Image Details</summary>
-      <p>These images were taken during a hiking trip.</p>
+      <summary>Click to see more details about the media</summary>
+      <p>This section provides more information about the media used on this page.  It’s implemented using a &lt;details&gt; element to allow users to expand or collapse the content.</p>
     </details>
+
+    <h5>Embedded Content</h5>
+    <iframe src="https://www.example.com" title="Example Website" width="480" height="320"></iframe>
+
+    <h6>Object Tag Example</h6>
+    <object data="data.pdf" type="application/pdf" width="480" height="320">
+      <param name="src" value="data.pdf">
+      <p>Your browser does not support PDFs. <a href="data.pdf">Download PDF</a></p>
+    </object>
+
+    <span aria-hidden="true">Decorative Image</span>
+    <img src="decorative.png" alt="" width="100" height="100">
+
+    <style>
+      .important {
+        font-weight: bold;
+      }
+    </style>
+
   </section>
 
   <section>
-    <h2>Videos</h2>
-    <video width="600" height="400" controls>
-      <source src="video1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <video width="600" height="400" controls>
-      <source src="video2.webm" type="video/webm">
-      Your browser does not support the video tag.
-    </video>
-  </section>
-
-  <section>
-    <h2>Audio</h2>
-    <audio controls>
-      <source src="audio1.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-
-    <audio controls>
-      <source src="audio2.ogg" type="audio/ogg">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
-
-   <section>
-    <h2>Code Example</h2>
-    <pre><code>
-&lt;p&gt;This is a paragraph of code.&lt;/p&gt;
-&lt;code&gt;let x = 10;&lt;/code&gt;
-</code></pre>
-
-    <kbd>Enter</kbd> to submit.
-  </section>
-
-  <section>
-    <h2>Mathematical Notation</h2>
-    <p>
-      E = mc<sup>2</sup>
-    </p>
-     <p><sub>a</sub>b<sub>c</sub></p>
-
-    <p>
-      This is a <sup>sup</sup> and a <sub>sub</sub>.
-    </p>
-
-    <var>x</var> = <var>y</var> + 1
-  </section>
-
-  <section>
-      <h2>Character Formatting</h2>
-      <p>This is <b>bold</b> and this is <i>italic</i>.</p>
-      <p>This is <u>underlined</u> and this is <mark>highlighted</mark>.</p>
-      <p><cite>The Adventures of Tom Sawyer</cite> by Mark Twain.</p>
-      <p>Here is a direct quote: <em>"Hello, world!"</em></p>
-      <p>This is some <dfn>definition</dfn> text.</p>
-      <p><bdo>This text is reversed.</bdo></p>
-      <p>Use the <code>kbd</code> element for keyboard input.</p>
-      <p>Here's a <code>wbr</code> element: <wbr>This will break at the &lt;wbr&gt; point.</p>
-      <p>A numbered list item.</p>
-      <q>A short quote</q>
-      <s abbr="strike">strike</s>
-      <slot>Content placeholder</slot>
-      <time datetime="2023-10-27">October 27, 2023</time>
-      <u role="button">Underline as a button</u>
-  </section>
-
-  <section>
-    <h2>Table Example</h2>
+    <h2>Media Table</h2>
     <table>
-      <caption>Sample Table</caption>
+      <caption>Media File Information</caption>
+      <colgroup>
+        <col>
+        <col style="width: 50%;">
+      </colgroup>
       <thead>
         <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
+          <th>File Type</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
+          <td>Image</td>
+          <td>JPEG</td>
         </tr>
         <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
+          <td>Video</td>
+          <td>MP4</td>
+        </tr>
+        <tr>
+          <td>Audio</td>
+          <td>MP3</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">Footer</td>
+          <td colspan="2">Media File Summary</td>
         </tr>
       </tfoot>
     </table>
   </section>
-
-    <section>
-        <h2>Progress Indicator and Output</h2>
-        <progress value="75" max="100"></progress>
-        <output name="result">75</output>
-
-        <meter value="0.8" max="1"></meter>
-    </section>
-
-    <section>
-        <h2>Dialog Example</h2>
-        <dialog open>
-          <p>This is a dialog box.</p>
-          <button>Close</button>
-        </dialog>
-    </section>
-
-    <section>
-        <h2>Fieldset and Legend</h2>
-        <fieldset>
-          <legend>Personal Information</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name">
-        </fieldset>
-    </section>
-
-    <section>
-        <h2>Other Elements</h2>
-        <col>
-        <map>
-            <area shape="rect" coords="0,0,100,100" href="#">
-        </map>
-        <noscript>
-            <p>Please enable JavaScript.</p>
-        </noscript>
-
-        <optgroup label="Fruits">
-            <option value="apple">Apple</option>
-            <option value="banana">Banana</option>
-        </optgroup>
-
-        <template>
-            <p>Template content</p>
-        </template>
-    </section>
 </main>
 
 <footer>
-  <p>&copy; 2023 My Website</p>
+  <p>&copy; 2024 Accessible Media Gallery.  <time datetime="2024-01-26">January 26, 2024</time></p>
+  <pre><code>This is a code snippet showing some HTML.</code></pre>
 </footer>
 
 </body>
-</html
+</html>

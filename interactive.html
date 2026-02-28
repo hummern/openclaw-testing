@@ -3,14 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Page</title>
+<title>Interactive Example</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Basic Styling for demonstration */
+  body { font-family: sans-serif; }
+  h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5em; }
+  table { border-collapse: collapse; width: 80%; margin: 20px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #f2f2f2; }
+</style>
 </head>
-<body role="content">
+<body role="document">
 
 <header>
-  <h1>Interactive Demo</h1>
-  <nav aria-label="Main Navigation">
+  <h1>Interactive Content Demo</h1>
+  <nav aria-label="Navigation">
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
@@ -21,174 +29,95 @@
 
 <main>
   <section>
-    <h2>Simple Calculator</h2>
-    <form>
-      <label for="num1">Number 1:</label>
-      <input type="number" id="num1" name="num1" value="0">
-      <br>
-
-      <label for="num2">Number 2:</label>
-      <input type="number" id="num2" name="num2" value="0">
-      <br>
-
-      <button type="button" onclick="calculate()">Calculate</button>
-      <br>
-
-      <output id="result"></output>
-
-      <p>
-        <code>var</code> x = 10;
+    <h2>Interactive Form</h2>
+    <form aria-label="Interactive Form">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
         <br>
-        <code>var</code> y = 20;
-      </p>
-
-      <pre>
-        <code>
-          function add(a, b) {
-            return a + b;
-          }
-        </code>
-      </pre>
-
-      <details>
-        <summary>Calculation Details</summary>
-        <p>This calculator performs a simple addition.</p>
-      </details>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+      </fieldset>
+      <button type="submit">Submit</button>
     </form>
   </section>
 
   <section>
-    <h2>Table Example</h2>
+    <h2>Interactive Table</h2>
     <table>
-      <caption id="tableCap">Sample Data</caption>
+      <caption>Sample Data</caption>
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
       <thead>
         <tr>
           <th>Header 1</th>
           <th>Header 2</th>
+          <th>Header 3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Row 1, Cell 1</td>
           <td>Row 1, Cell 2</td>
+          <td>Row 1, Cell 3</td>
         </tr>
         <tr>
           <td>Row 2, Cell 1</td>
           <td>Row 2, Cell 2</td>
+          <td>Row 2, Cell 3</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">Footer Data</td>
+          <td colspan="3">Table Footer</td>
         </tr>
       </tfoot>
     </table>
   </section>
 
   <section>
-    <h2>Progress Bar</h2>
-    <progress id="progressBar" value="50" max="100"></progress>
-    <meter id="meter" value="0.75" min="0" max="1"></meter>
-    <output id="output"></output>
+    <h2>Interactive Details and Summary</h2>
+    <details>
+      <summary>Click to Reveal Content</summary>
+      <p>This is some hidden content.</p>
+    </details>
   </section>
-
-    <section>
-      <h2>Ruby Annotation</h2>
-      <ruby>
-        <rt>日本語</rt>
-        <rp>(</rp>
-        <rt>Nihongo</rt>
-        <rp>)</rp>
-      </ruby>
-    </section>
-
-    <section>
-      <h2>Emphasis and Formatting</h2>
-      <p>This is some <strong>important</strong> text.</p>
-      <p>This is an <em>emphasized</em> word.</p>
-      <p>This is a <cite>citation</cite>.</p>
-      <p>This is a <dfn>definition</dfn>.</p>
-      <p>This is a <code>code snippet</code>.</p>
-      <p>This is a <kbd>keyboard shortcut</kbd>.</p>
-      <p>This is a <var>variable</var>.</p>
-      <p>This is a <wbr>word break.</p>
-      <p>This is a <u>underlined</u> word.</p>
-      <p>This is a <small>small</small> word.</p>
-      <p>This is a <ins>inserted</ins> word.</p>
-      <p>This is a <del>deleted</del> word.</p>
-      <p>This is a <mark>mark</mark>.</p>
-      <p>This is a <q>quote</q>.</p>
-      <p>This is a <sup>superscript</sup>.</p>
-      <p>This is a <sub>subscript</sub>.</p>
-      <p>This is a <bdo>bdo</bdo>.</p>
-    </section>
-
-     <section>
-      <h2>Embed and Template</h2>
-      <embed src="" type="" hidden>
-      <template id="template">
-         <p>This is a template.</p>
-      </template>
-    </section>
-     <section>
-      <h2>Time and Dialog</h2>
-       <time datetime="2024-10-27">October 27, 2024</time>
-       <dialog>
-          <p>This is a dialog box.</p>
-       </dialog>
-    </section>
-  <section>
-    <h2>Fieldset and Legend</h2>
-      <fieldset>
-        <legend>Personal Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-      </fieldset>
-  </section>
-
-    <aside>
-        <h3>Aside Content</h3>
-        <p>This is additional content related to the main page.</p>
-    </aside>
-
-  <figure>
-    <img src="placeholder.jpg" alt="Placeholder Image" width="200" height="150">
-    <figcaption>A placeholder image</figcaption>
-  </figure>
 
   <section>
-    <h2>Optgroup Example</h2>
-    <select multiple>
-      <optgroup label="Fruits">
-        <option value="apple">Apple</option>
-        <option value="banana">Banana</option>
-      </optgroup>
-      <optgroup label="Vegetables">
-        <option value="carrot">Carrot</option>
-        <option value="broccoli">Broccoli</option>
-      </optgroup>
-    </select>
+    <h2>Interactive Progress Bar</h2>
+    <progress value="75" max="100" aria-label="Progress"></progress>
+    <output>75% Complete</output>
   </section>
 
-    <section>
-      <h2>Slot Example</h2>
-       <slot name="my-slot"></slot>
-    </section>
+  <section>
+    <h2>Interactive Media</h2>
+    <figure>
+      <picture>
+        <source srcset="image.webp" type="image/webp">
+        <img src="image.jpg" alt="A descriptive image" width="300" height="200">
+      </picture>
+      <figcaption>Image Caption</figcaption>
+    </figure>
+    <iframe src="https://www.example.com" title="Example Website" width="600" height="400"></iframe>
+  </section>
+</main>
 
-  </main>
+<aside>
+  <h3>Sidebar</h3>
+  <p>This is a sidebar with additional information.</p>
+</aside>
 
-  <footer role="contentinfo">
-    <p>&copy; 2024 Interactive Demo</p>
-  </footer>
-
-  <script>
-    function calculate() {
-      const num1 = parseFloat(document.getElementById("num1").value);
-      const num2 = parseFloat(document.getElementById("num2").value);
-      const result = num1 + num2;
-      document.getElementById("result").value = result;
-    }
-  </script>
+<footer>
+  <p>&copy; 2024 Interactive Example</p>
+  <time datetime="2024-10-27">Last updated: October 27, 2024</time>
+</footer>
 
 </body>
 </html>

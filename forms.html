@@ -5,120 +5,170 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Forms Example</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Basic styling - replace with your CSS */
+  body { font-family: sans-serif; }
+  label { display: block; margin-bottom: 5px; }
+  input[type="text"], input[type="email"], textarea { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; box-sizing: border-box; }
+  button, input[type="submit"] { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+</style>
 </head>
-<body role="content">
+<body role="document">
 
-<header aria-label="Site Header">
-    <h1>Forms and Accessibility Demo</h1>
-    <nav aria-label="Main Navigation">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+<header>
+  <h1>Forms Example</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
-    <section aria-labelledby="form-section-title">
-        <h2 id="form-section-title">Registration Form</h2>
+  <section>
+    <h2>Contact Form</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
 
-        <form action="#" method="post">
-            <fieldset aria-describedby="form-description">
-                <legend>Personal Information</legend>
-                <p id="form-description">Please provide your details to proceed.</p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true">
 
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required aria-required="true">
-                <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required aria-required="true">
-                <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" aria-label="Your message"></textarea>
+      </fieldset>
 
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob">
-                <br>
+      <fieldset>
+        <legend>Additional Details</legend>
 
-                <label for="gender">Gender:</label>
-                <label><input type="radio" name="gender" value="male"> Male</label>
-                <label><input type="radio" name="gender" value="female"> Female</label>
-                <label><input type="radio" name="gender" value="other"> Other</label>
-                <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
 
-                <label for="interests">Interests:</label>
-                <input type="checkbox" id="interests-sports" name="interests" value="sports">
-                <label for="interests-sports">Sports</label>
-                <input type="checkbox" id="interests-music" name="interests" value="music">
-                <label for="interests-music">Music</label>
-                <input type="checkbox" id="interests-reading" name="interests" value="reading">
-                <label for="interests-reading">Reading</label>
-                <br>
+        <label>Select a topic:</label>
+        <select id="topic" name="topic">
+          <option value="general">General</option>
+          <option value="feedback">Feedback</option>
+          <option value="support">Support</option>
+        </select>
 
-                <label for="comments">Comments:</label>
-                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
-                <br>
-            </fieldset>
+        <p>Do you agree to the terms and conditions?</p>
+        <input type="checkbox" id="terms" name="terms" aria-describedby="terms-description">
+        <span id="terms-description" aria-live="polite">By checking this box, you agree to our terms and conditions.</span>
+      </fieldset>
 
-            <fieldset aria-describedby="feedback-description">
-                <legend>Feedback</legend>
-                <p id="feedback-description">Rate your experience:</p>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
-                <label for="rating">Rating:</label>
-                <meter id="rating" name="rating" min="0" max="5" step="0.5" value="3.5"></meter>
-                <output name="rating-output"></output>
-                <br>
-            </fieldset>
+  <section>
+    <h2>Table Example</h2>
+    <table>
+      <caption>Sample Data</caption>
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+          <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+          <td>Row 2, Cell 3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Data Summary</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
 
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-        </form>
-    </section>
+  <section>
+    <h2>Progress Bar</h2>
+    <progress value="75" max="100" aria-label="Progress"></progress>
+  </section>
 
-    <section aria-labelledby="table-section-title">
-        <h2 id="table-section-title">Example Table</h2>
-        <table>
-            <caption id="table-caption">Sample Data</caption>
-            <thead>
-                <tr>
-                    <th>Header 1</th>
-                    <th>Header 2</th>
-                    <th>Header 3</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Row 1, Cell 1</td>
-                    <td>Row 1, Cell 2</td>
-                    <td>Row 1, Cell 3</td>
-                </tr>
-                <tr>
-                    <td>Row 2, Cell 1</td>
-                    <td>Row 2, Cell 2</td>
-                    <td>Row 2, Cell 3</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3">Footer Information</td>
-                </tr>
-            </tfoot>
-        </table>
-    </section>
+  <section>
+    <h2>Output Example</h2>
+    <output name="result" value="42"></output>
+  </section>
+
+  <section>
+    <h2>Code Example</h2>
+    <pre><code class="language-javascript">
+      function greet(name) {
+        console.log("Hello, " + name + "!");
+      }
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Details and Summary</h2>
+    <details>
+      <summary>Click to reveal details</summary>
+      <p>This is some hidden content.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Iframe Example</h2>
+    <iframe srcdoc="<h1>Hello from iframe</h1>" width="300" height="200" title="Simple Iframe"></iframe>
+  </section>
+
+  <section>
+    <h2>Object Example</h2>
+    <object data="data.pdf" type="application/pdf" width="500" height="300">
+      <p>This browser does not support PDFs.</p>
+    </object>
+  </section>
+
+  <section>
+    <h2>Picture Example</h2>
+    <picture>
+        <source media="(max-width: 600px)" srcset="image-small.jpg">
+        <source media="(max-width: 1200px)" srcset="image-medium.jpg">
+        <img src="image-large.jpg" alt="A beautiful landscape" width="640" height="480">
+    </picture>
+  </section>
+
+  <section>
+    <h2>Time Example</h2>
+    <time datetime="2023-10-27T10:00:00">Published on October 27, 2023</time>
+  </section>
+
+  <section>
+    <h2>Mark Example</h2>
+    <p>This is a sentence with <mark>important</mark> words highlighted.</p>
+  </section>
+
+  <section>
+    <h2>Ruby Example</h2>
+    <p>This is a word in <ruby><rt>にほん</rt><rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>.</p>
+  </section>
 </main>
 
-<aside aria-label="Related Content">
-    <h3>Related Links</h3>
-    <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-    </ul>
-</aside>
-
-<footer aria-label="Site Footer">
-    <p>&copy; 2024 Example Website</p>
-    <time datetime="2024-10-27T12:00:00">Last Updated: October 27, 2024</time>
+<footer>
+  <p>&copy; 2023 Example Forms</p>
 </footer>
-
 </body>
 </html>
