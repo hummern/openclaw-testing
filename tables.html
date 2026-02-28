@@ -6,160 +6,176 @@
 <title>Tables Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body role="content">
 
-<header>
-  <h1>Tables and Data</h1>
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+<header aria-label="Page Header">
+  <h1>Tables Example</h1>
 </header>
 
+<nav aria-label="Navigation">
+  <ul>
+    <li><a href="#basic-table">Basic Table</a></li>
+    <li><a href="#styled-table">Styled Table</a></li>
+    <li><a href="#complex-table">Complex Table</a></li>
+  </ul>
+</nav>
+
 <main>
-  <section>
-    <h2>Simple Table</h2>
-    <article>
-      <p>This is a basic HTML table demonstrating structure and content.</p>
-      <table>
-        <caption>Simple Product List</caption>
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Apple</td>
-            <td>$1.00</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>Banana</td>
-            <td>$0.50</td>
-            <td>15</td>
-          </tr>
-          <tr>
-            <td>Orange</td>
-            <td>$0.75</td>
-            <td>8</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3">Total items: 33</td>
-          </tr>
-        </tfoot>
-      </table>
-    </article>
+  <section id="basic-table" aria-labelledby="basic-table-heading">
+    <h2 id="basic-table-heading">Basic Table</h2>
+    <p>A simple table with data.</p>
+    <table aria-describedby="basic-table-caption">
+      <caption>
+        <caption id="basic-table-caption">Employee Information</caption>
+      </caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>Software Engineer</td>
+          <td>$120,000</td>
+        </tr>
+        <tr>
+          <td>Jane Smith</td>
+          <td>Data Scientist</td>
+          <td>$130,000</td>
+        </tr>
+        <tr>
+          <td>Peter Jones</td>
+          <td>Project Manager</td>
+          <td>$110,000</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
-  <section>
-    <h2>Advanced Table with Sorting</h2>
-    <article>
-      <p>This table includes sorting and a more complex structure.</p>
-      <table>
-        <caption>Employee Information</caption>
-        <thead>
-          <tr>
-            <th aria-sort="ascending">Name</th>
-            <th>Job Title</th>
-            <th>Salary</th>
-            <th>Start Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Alice Smith</td>
-            <td>Software Engineer</td>
-            <td>$120,000</td>
-            <td><time datetime="2022-05-15">May 15, 2022</time></td>
-          </tr>
-          <tr>
-            <td>Bob Johnson</td>
-            <td>Data Scientist</td>
-            <td>$110,000</td>
-            <td><time datetime="2021-11-01">Nov 1, 2021</time></td>
-          </tr>
-          <tr>
-            <td>Charlie Brown</td>
-            <td>Project Manager</td>
-            <td>$130,000</td>
-            <td><time datetime="2020-08-20">Aug 20, 2020</time></td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="4">Total Employees: 3</td>
-          </tr>
-        </tfoot>
-      </table>
-    </article>
+  <section id="styled-table" aria-labelledby="styled-table-heading">
+    <h2 id="styled-table-heading">Styled Table</h2>
+    <p>A table with some basic styling.</p>
+    <table aria-describedby="styled-table-caption">
+      <caption>
+        <caption id="styled-table-caption">Product Sales</caption>
+      </caption>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Units Sold</th>
+          <th>Revenue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Laptop</td>
+          <td>100</td>
+          <td>$150,000</td>
+        </tr>
+        <tr>
+          <td>Mouse</td>
+          <td>500</td>
+          <td>$25,000</td>
+        </tr>
+        <tr>
+          <td>Keyboard</td>
+          <td>300</td>
+          <td>$45,000</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
-  <section>
-    <h2>Table with Details and Summary</h2>
-    <article>
-      <p>This table demonstrates usage with <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> for expandable content.</p>
-      <table>
-        <caption>Customer Orders</caption>
-        <thead>
-          <tr>
-            <th>Customer</th>
-            <th>Order Date</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>David Lee</td>
-            <td><time datetime="2024-01-20">Jan 20, 2024</time></td>
-            <td>
-              <details>
-                <summary>Order Contents</summary>
-                <ul>
-                  <li>Product A: 2</li>
-                  <li>Product B: 1</li>
-                </ul>
-              </details>
-            </td>
-          </tr>
-          <tr>
-            <td>Emily Chen</td>
-            <td><time datetime="2024-02-10">Feb 10, 2024</time></td>
-            <td>
-              <details>
-                <summary>Order Contents</summary>
-                <ul>
-                  <li>Product C: 3</li>
-                  <li>Product D: 1</li>
-                </ul>
-              </details>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
+  <section id="complex-table" aria-labelledby="complex-table-heading">
+    <h2 id="complex-table-heading">Complex Table</h2>
+    <p>A more complex table with nested headers and footers.</p>
+    <table aria-describedby="complex-table-caption">
+      <caption>
+        <caption id="complex-table-caption">Website Traffic Statistics</caption>
+      </caption>
+      <thead>
+        <tr>
+          <th colspan="3">Website Traffic Data</th>
+        </tr>
+        <tr>
+          <th>Source</th>
+          <th>Visits</th>
+          <th>Bounce Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Organic Search</td>
+          <td>1000</td>
+          <td>40%</td>
+        </tr>
+        <tr>
+          <td>Paid Advertising</td>
+          <td>500</td>
+          <td>60%</td>
+        </tr>
+        <tr>
+          <td>Social Media</td>
+          <td>200</td>
+          <td>30%</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total Visits: 1700</td>
+        </tr>
+      </tfoot>
+    </table>
+    <bdo dir="rtl">This text is reversed.</bdo>
+    <cite>This is a quote.</cite>
+    <dfn>This is a definition term.</dfn>
+    <em>Emphasis</em>
+    <embed src="data:text/html;utf8,<b>Embedded HTML</b>" type="text/html" />
+    <i>Italicized text</i>
+    <kbd>Ctrl+Shift+Delete</kbd>
+    <map name="examplemap">
+        <area shape="rect" coords="0,0,100,100" href="#basic-table" alt="Basic Table Link">
+    </map>
+    <meter value="0.75" max="1.0" title="75% Complete"></meter>
+    <noscript>Javascript is disabled.</noscript>
+    <optgroup label="Fruits">
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+    </optgroup>
+    <q>This is a quote.</q>
+    <s>Strikethrough text</s>
+    <slot name="my-slot"></slot>
+    <sub>Subscript</sub>
+    <sup>Superscript</sup>
+    <template>
+        <p>This is a template paragraph.</p>
+    </template>
+    <u>Underlined text</u>
+    <var>Variable name</var>
+    <wbr>Word break opportunity
+    <time datetime="2023-10-27">October 27, 2023</time>
+    <mark>Marked text</mark>
+    <ruby>
+      <rt>日本語</rt>
+      <rp>(</rp>にほんご<rp>)</rp>
+    </ruby>
+    <code>code</code>
+    <pre>
+      <code>
+        function helloWorld() {
+          console.log("Hello, world!");
+        }
+      </code>
+    </pre>
   </section>
 </main>
 
-<aside>
-  <h3>Related Content</h3>
-  <p>Explore more data presentation techniques.</p>
-  <ul>
-    <li><a href="#">Charts and Graphs</a></li>
-    <li><a href="#">Data Visualization</a></li>
-  </ul>
-</aside>
-
-<footer>
-  <p>&copy; 2024 Example Company. All rights reserved.</p>
+<footer aria-label="Page Footer">
+  <p>&copy; 2023 Example Website</p>
 </footer>
 
 </body>
-</html>
+</html

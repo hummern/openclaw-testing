@@ -3,120 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Example</title>
+<title>Interactive Elements</title>
 <link rel="stylesheet" href="style.css">
-<style>
-  /* Basic Styling for demonstration */
-  body { font-family: sans-serif; }
-  h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5em; }
-  table { border-collapse: collapse; width: 80%; margin: 20px 0; }
-  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-  th { background-color: #f2f2f2; }
-</style>
 </head>
-<body role="document">
+<body role="content">
 
-<header>
-  <h1>Interactive Content Demo</h1>
-  <nav aria-label="Navigation">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+<header aria-label="Page Header">
+  <h1>Interactive Features</h1>
 </header>
 
+<nav aria-label="Main Navigation">
+  <ul>
+    <li><a href="#details">Details Example</a></li>
+    <li><a href="#dialog">Dialog Example</a></li>
+    <li><a href="#table">Table Example</a></li>
+    <li><a href="#progress">Progress Bar</a></li>
+    <li><a href="#meter">Meter Example</a></li>
+    <li><a href="#form">Form Elements</a></li>
+  </ul>
+</nav>
+
 <main>
-  <section>
-    <h2>Interactive Form</h2>
-    <form aria-label="Interactive Form">
-      <fieldset>
-        <legend>Personal Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <br>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea>
-      </fieldset>
-      <button type="submit">Submit</button>
-    </form>
+  <section id="details">
+    <h2>Details Element</h2>
+    <details>
+      <summary>Click to reveal details</summary>
+      <p>This is the content of the details element.</p>
+    </details>
   </section>
 
-  <section>
-    <h2>Interactive Table</h2>
+  <section id="dialog">
+    <h2>Dialog Example</h2>
+    <dialog>
+      <p>This is a dialog box.</p>
+      <button>Close</button>
+    </dialog>
+  </section>
+
+  <section id="table">
+    <h2>Table Example</h2>
     <table>
-      <caption>Sample Data</caption>
-      <colgroup>
-        <col>
-        <col>
-        <col>
-      </colgroup>
+      <caption>
+        <figcaption>A Simple Table</figcaption>
+      </caption>
       <thead>
         <tr>
           <th>Header 1</th>
           <th>Header 2</th>
-          <th>Header 3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Row 1, Cell 1</td>
           <td>Row 1, Cell 2</td>
-          <td>Row 1, Cell 3</td>
         </tr>
         <tr>
           <td>Row 2, Cell 1</td>
           <td>Row 2, Cell 2</td>
-          <td>Row 2, Cell 3</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="3">Table Footer</td>
+          <td colspan="2">Footer information</td>
         </tr>
       </tfoot>
     </table>
   </section>
 
-  <section>
-    <h2>Interactive Details and Summary</h2>
-    <details>
-      <summary>Click to Reveal Content</summary>
-      <p>This is some hidden content.</p>
-    </details>
+  <section id="progress">
+    <h2>Progress Bar</h2>
+    <progress value="50" max="100"></progress>
   </section>
 
-  <section>
-    <h2>Interactive Progress Bar</h2>
-    <progress value="75" max="100" aria-label="Progress"></progress>
-    <output>75% Complete</output>
+  <section id="meter">
+    <h2>Meter Example</h2>
+    <meter value="0.75" max="1" min="0"></meter>
   </section>
 
-  <section>
-    <h2>Interactive Media</h2>
-    <figure>
-      <picture>
-        <source srcset="image.webp" type="image/webp">
-        <img src="image.jpg" alt="A descriptive image" width="300" height="200">
-      </picture>
-      <figcaption>Image Caption</figcaption>
-    </figure>
-    <iframe src="https://www.example.com" title="Example Website" width="600" height="400"></iframe>
+  <section id="form">
+    <h2>Form Elements</h2>
+    <form>
+      <fieldset>
+        <legend>Basic Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="range">Range:</label>
+        <input type="range" id="range" name="range" min="0" max="100"><br><br>
+
+        <output name="rangeOutput" value="0"></output>
+
+        <kbd>Press Enter to submit.</kbd>
+
+        <pre><code>code example</code></pre>
+
+        <mark>Important Note</mark>
+
+        <time datetime="2024-10-27">Published on October 27, 2024</time>
+
+        <var>x</var> = <var>y</var> + <var>z</var>
+
+        <bdo dir="rtl">This text is displayed right-to-left.</bdo>
+
+        <cite>Example Citation</cite>
+
+        <dfn>Definition of a term</dfn>
+
+        <em>Emphasis</em>
+
+        <i>Italic text</i>
+
+        <q>A short quote</q>
+
+        <s>Strikethrough text</s>
+
+        <sub id="sub">Subscript</sub>
+
+        <sup id="sup">Superscript</sub>
+
+        <wbr>Word Break Opportunity
+
+        <template>
+          <p>Template content</p>
+        </template>
+
+        <u id="u">Underline</u>
+
+        <slot name="mySlot"></slot>
+
+      </fieldset>
+    </form>
   </section>
+
+  <figure>
+    <img src="placeholder.jpg" alt="Placeholder Image" width="200" height="150">
+    <figcaption>A descriptive caption for the image</figcaption>
+  </figure>
+
+  <aside>
+    <h3>Sidebar Content</h3>
+    <p>This is some related content.</p>
+  </aside>
+
+  <article>
+    <h2>Article Title</h2>
+    <p>Article content.</p>
+  </article>
+
+  <ruby>
+    <rt>Ruby text</rt>
+    <rp>(</rp>
+    <rt>Alternative pronunciation</rt>
+    <rp>)</rp>
+  </ruby>
 </main>
 
-<aside>
-  <h3>Sidebar</h3>
-  <p>This is a sidebar with additional information.</p>
-</aside>
-
-<footer>
-  <p>&copy; 2024 Interactive Example</p>
-  <time datetime="2024-10-27">Last updated: October 27, 2024</time>
+<footer aria-label="Footer">
+  <p>&copy; 2024 Example Website</p>
 </footer>
 
 </body>

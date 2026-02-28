@@ -3,112 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Gallery - Accessibility Focused</title>
+<title>Media Gallery</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="document">
+<body role="content">
 
 <header>
   <h1>Media Gallery</h1>
   <nav aria-label="Main Navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms Example</a></li>
-      <li><a href="interactive.html">Interactive Elements</a></li>
-      <li><a href="media.html">Media Gallery</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="media.html">Media</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Image and Video Showcase</h2>
+    <h2>Images & Videos</h2>
 
     <figure>
-      <picture>
-        <source media="(max-width: 600px)" srcset="small_image.jpg">
-        <img src="large_image.jpg" alt="A beautiful landscape view.">
-      </picture>
-      <figcaption>A breathtaking vista captured on a sunny day.</figcaption>
+      <img src="image1.jpg" alt="A scenic landscape view" width="600" height="400">
+      <figcaption>Beautiful Landscape</figcaption>
     </figure>
 
-    <video controls width="640" height="360">
-      <source src="video.mp4" type="video/mp4">
+    <video width="600" height="400" controls>
+      <source src="video1.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
-    <h3>Audio Example</h3>
-    <audio controls>
-      <source src="audio.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+    <section>
+      <h3>Audio Example</h3>
+      <audio controls>
+        <source src="audio1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <var>Sound Quality: Excellent</var>
+    </section>
+    <dfn>Important Note:</dfn> Ensure appropriate licensing for all media.
 
-    <h4>Interactive Media Section</h4>
+    <pre>
+      <code>
+        function greet(name) {
+          return "Hello, " + name + "!";
+        }
+      </code>
+    </pre>
+
+    <p>
+      This is a <em>sample</em> paragraph using <em>em</em> tags for emphasis.  
+      The <cite>Example Media Gallery</cite> includes various formats.
+      We've included a <kbd>keyboard</kbd> example for demonstration.
+    </p>
+
+    <p>
+      <bdo dir="rtl">This text will be right-to-left</bdo>.  
+      Here's a <var>variable</var> for demonstration.
+    </p>
+
+    <subscript>subscript text</sub>
+    <sup>superscript text</sup>
+
+    <ins>Inserted text</ins>
+    <del>Deleted text</del>
+    <mark>Marked text</mark>
+
+    <ruby>
+      <rt>Ru</rt>
+      <rp>(</rp>
+      <rt>Ruby</rt>
+      <rp>)</rp>
+    </ruby>
+
+    <time datetime="2024-01-26">January 26, 2024</time>
+    
     <details>
-      <summary>Click to see more details about the media</summary>
-      <p>This section provides more information about the media used on this page.  It’s implemented using a &lt;details&gt; element to allow users to expand or collapse the content.</p>
+      <summary>More Information</summary>
+      <p>This is additional content.</p>
     </details>
-
-    <h5>Embedded Content</h5>
-    <iframe src="https://www.example.com" title="Example Website" width="480" height="320"></iframe>
-
-    <h6>Object Tag Example</h6>
-    <object data="data.pdf" type="application/pdf" width="480" height="320">
-      <param name="src" value="data.pdf">
-      <p>Your browser does not support PDFs. <a href="data.pdf">Download PDF</a></p>
-    </object>
-
-    <span aria-hidden="true">Decorative Image</span>
-    <img src="decorative.png" alt="" width="100" height="100">
-
-    <style>
-      .important {
-        font-weight: bold;
-      }
-    </style>
-
   </section>
 
   <section>
-    <h2>Media Table</h2>
+    <h2>Table Example</h2>
     <table>
-      <caption>Media File Information</caption>
-      <colgroup>
-        <col>
-        <col style="width: 50%;">
-      </colgroup>
+      <caption>Sample Data</caption>
       <thead>
         <tr>
-          <th>File Type</th>
-          <th>Description</th>
+          <th>Header 1</th>
+          <th>Header 2</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Image</td>
-          <td>JPEG</td>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
         </tr>
         <tr>
-          <td>Video</td>
-          <td>MP4</td>
-        </tr>
-        <tr>
-          <td>Audio</td>
-          <td>MP3</td>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">Media File Summary</td>
+          <td colspan="2">Footer Information</td>
         </tr>
       </tfoot>
     </table>
+    <meter value="0.8" max="1.0"></meter>
+    <progress value="50" max="100"></progress>
+    <output name="result"></output>
+    <slot name="user-info"></slot>
+    <template>
+      <p>This is a template paragraph.</p>
+    </template>
+    <q>A wise quote.</q>
+    <s>Strikethrough text</s>
+    <u>Underline text</u>
+    <wbr>Word<wbr>Break
   </section>
 </main>
 
+<aside>
+  <h3>Related Links</h3>
+  <ul>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+  </ul>
+</aside>
+
 <footer>
-  <p>&copy; 2024 Accessible Media Gallery.  <time datetime="2024-01-26">January 26, 2024</time></p>
-  <pre><code>This is a code snippet showing some HTML.</code></pre>
+  <p>&copy; 2024 Media Gallery</p>
 </footer>
 
 </body>

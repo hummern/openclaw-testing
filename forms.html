@@ -5,17 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Forms Example</title>
 <link rel="stylesheet" href="style.css">
-<style>
-  /* Basic styling - replace with your CSS */
-  body { font-family: sans-serif; }
-  label { display: block; margin-bottom: 5px; }
-  input[type="text"], input[type="email"], textarea { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; box-sizing: border-box; }
-  button, input[type="submit"] { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
-  table { border-collapse: collapse; width: 100%; }
-  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-</style>
 </head>
-<body role="document">
+<body>
 
 <header>
   <h1>Forms Example</h1>
@@ -30,74 +21,83 @@
 
 <main>
   <section>
-    <h2>Contact Form</h2>
-    <form action="#" method="post">
+    <h2>User Information</h2>
+    <form>
       <fieldset>
-        <legend>Personal Information</legend>
+        <legend>Personal Details</legend>
 
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true">
+        <input type="text" id="name" name="name" required alt="Enter your name" aria-required="true">
+        <br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true">
+        <input type="email" id="email" name="email" required alt="Enter your email" aria-required="true">
+        <br>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" aria-label="Your message"></textarea>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" alt="Select your date of birth">
+        <br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" alt="Male"> <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" alt="Female"> <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" alt="Other"> <label for="other">Other</label>
+        <br>
+
+        <label for="interests">Interests:</label>
+        <input type="checkbox" id="sports" name="interests" value="sports" alt="Sports"> <label for="sports">Sports</label>
+        <input type="checkbox" id="music" name="interests" value="music" alt="Music"> <label for="music">Music</label>
+        <input type="checkbox" id="reading" name="interests" value="reading" alt="Reading"> <label for="reading">Reading</label>
+        <br>
+
+        <label for="textarea">Message:</label>
+        <textarea id="textarea" name="message" rows="4" cols="50" alt="Enter your message"></textarea>
+        <br>
       </fieldset>
 
       <fieldset>
-        <legend>Additional Details</legend>
+        <legend>Contact Information</legend>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" alt="Enter your address">
+        <br>
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone">
-
-        <label>Select a topic:</label>
-        <select id="topic" name="topic">
-          <option value="general">General</option>
-          <option value="feedback">Feedback</option>
-          <option value="support">Support</option>
-        </select>
-
-        <p>Do you agree to the terms and conditions?</p>
-        <input type="checkbox" id="terms" name="terms" aria-describedby="terms-description">
-        <span id="terms-description" aria-live="polite">By checking this box, you agree to our terms and conditions.</span>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" alt="Enter your phone number">
+        <br>
       </fieldset>
 
       <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+
+      <output name="result" id="result"></output>
+
+      <kbd>Press Enter to submit</kbd>
     </form>
   </section>
 
   <section>
-    <h2>Table Example</h2>
+    <h2>Example Table</h2>
     <table>
       <caption>Sample Data</caption>
-      <colgroup>
-        <col>
-        <col>
-        <col>
-      </colgroup>
       <thead>
         <tr>
           <th>Header 1</th>
           <th>Header 2</th>
-          <th>Header 3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
-          <td>Row 1, Cell 3</td>
+          <td>Data 1</td>
+          <td>Data 2</td>
         </tr>
         <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
-          <td>Row 2, Cell 3</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="3">Data Summary</td>
+          <td colspan="2">Footer Data</td>
         </tr>
       </tfoot>
     </table>
@@ -105,70 +105,74 @@
 
   <section>
     <h2>Progress Bar</h2>
-    <progress value="75" max="100" aria-label="Progress"></progress>
+    <progress value="50" max="100" alt="Progress bar"></progress>
+    <meter value="0.75" max="1" alt="Meter gauge"></meter>
   </section>
 
-  <section>
-    <h2>Output Example</h2>
-    <output name="result" value="42"></output>
-  </section>
+    <section>
+        <h2>Code Example</h2>
+        <pre><code>
+        function greet(name) {
+          return "Hello, " + name + "!";
+        }
+        </code></pre>
+    </section>
 
-  <section>
-    <h2>Code Example</h2>
-    <pre><code class="language-javascript">
-      function greet(name) {
-        console.log("Hello, " + name + "!");
-      }
-    </code></pre>
-  </section>
+    <section>
+        <h2>Ruby Example</h2>
+        <ruby>
+            <rt>人</rt>
+            <rp>(</rp>
+            <rt>jen</rt>
+            <rp>)</rp>
+        </ruby>
+    </section>
 
-  <section>
-    <h2>Details and Summary</h2>
-    <details>
-      <summary>Click to reveal details</summary>
-      <p>This is some hidden content.</p>
-    </details>
-  </section>
+  <article>
+      <h2>Article Section</h2>
+      <p>This is an article within the main content.</p>
+      <figure>
+        <img src="placeholder.jpg" alt="Placeholder Image">
+        <figcaption>A descriptive caption for the image.</figcaption>
+      </figure>
+  </article>
+  <aside>
+    <h2>Aside Section</h2>
+    <p>Related information or advertisements.</p>
+  </aside>
+  <details>
+    <summary>Details Summary</summary>
+    <p>Details content here.</p>
+  </details>
 
-  <section>
-    <h2>Iframe Example</h2>
-    <iframe srcdoc="<h1>Hello from iframe</h1>" width="300" height="200" title="Simple Iframe"></iframe>
-  </section>
+  <dialog>
+    <p>This is a dialog box.</p>
+  </dialog>
 
-  <section>
-    <h2>Object Example</h2>
-    <object data="data.pdf" type="application/pdf" width="500" height="300">
-      <p>This browser does not support PDFs.</p>
-    </object>
-  </section>
+  <bdo dir="rtl">This text will be reversed.</bdo>
+  <cite>A citation example.</cite>
+  <dfn>A definition term.</dfn>
+  <em>Emphasis</em>
+  <i>Italic text</i>
+  <var>Variable name</var>
+  <u>Underlined text</u>
+  <wbr>Word break opportunity
+  <time datetime="2024-10-27">2024-10-27</time>
+  <mark>Highlighted text</mark>
+  <sub >Subscript</sub>
+  <sup >Superscript</sup>
+  <template>
+    <p>Reusable content.</p>
+  </template>
 
-  <section>
-    <h2>Picture Example</h2>
-    <picture>
-        <source media="(max-width: 600px)" srcset="image-small.jpg">
-        <source media="(max-width: 1200px)" srcset="image-medium.jpg">
-        <img src="image-large.jpg" alt="A beautiful landscape" width="640" height="480">
-    </picture>
-  </section>
+  <slot name="my-slot">Default slot content</slot>
 
-  <section>
-    <h2>Time Example</h2>
-    <time datetime="2023-10-27T10:00:00">Published on October 27, 2023</time>
-  </section>
-
-  <section>
-    <h2>Mark Example</h2>
-    <p>This is a sentence with <mark>important</mark> words highlighted.</p>
-  </section>
-
-  <section>
-    <h2>Ruby Example</h2>
-    <p>This is a word in <ruby><rt>にほん</rt><rp>（</rp><rt>にほん</rt><rp>）</rp></ruby>.</p>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2023 Example Forms</p>
+  <p>&copy; 2024 Example Website</p>
 </footer>
+
 </body>
-</html>
+</html >
