@@ -3,156 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Showcase</title>
+<title>Media Gallery</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
 
-<header aria-label="Site Header">
-  <h1>Media Showcase</h1>
+<header>
+  <h1>Media Gallery</h1>
   <nav aria-label="Main Navigation">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="interactive.html">Interactive</a></li>
+      <li><a href="media.html">Media</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <section aria-labelledby="main-section-title">
-    <h2 id="main-section-title">Featured Media</h2>
+  <section>
+    <h2>Images</h2>
+    <figure>
+      <img src="image1.jpg" alt="A scenic landscape with mountains" width="600" height="400">
+      <figcaption>Beautiful Mountain View</figcaption>
+    </figure>
 
-    <article aria-labelledby="article-1-title">
-      <h3 id="article-1-title">Image Gallery</h3>
-      <figure>
-        <img src="images/image1.jpg" alt="A vibrant landscape photograph" width="400" height="300">
-        <figcaption>Landscape Photography – Spring Bloom</figcaption>
-      </figure>
-      <figure>
-        <img src="images/image2.jpg" alt="Close-up of a flower" width="400" height="300">
-        <figcaption>Macro Photography – Flower Detail</figcaption>
-      </figure>
-    </article>
+    <figure>
+      <img src="image2.jpg" alt="Close-up of a flower" width="400" height="300">
+      <figcaption>Delicate Flower</figcaption>
+    </figure>
 
-    <article aria-labelledby="article-2-title">
-      <h3 id="article-2-title">Video Presentation</h3>
-      <video width="640" height="360" controls aria-label="Short Video Documentary">
-        <source src="videos/video1.mp4" type="video/mp4">
-        <source src="videos/video1.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
-    </article>
-
-    <article aria-labelledby="article-3-title">
-      <h3 id="article-3-title">Audio Sample</h3>
-      <audio controls aria-label="Audio Recording - Birdsong">
-        <source src="audio/audio1.mp3" type="audio/mpeg">
-        <source src="audio/audio1.ogg" type="audio/ogg">
-        Your browser does not support the audio tag.
-      </audio>
-    </article>
+    <details>
+      <summary>Image Details</summary>
+      <p>These images were taken during a hiking trip.</p>
+    </details>
   </section>
 
-  <section aria-labelledby="table-section-title">
-    <h2 id="table-section-title">Data Table</h2>
+  <section>
+    <h2>Videos</h2>
+    <video width="600" height="400" controls>
+      <source src="video1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video width="600" height="400" controls>
+      <source src="video2.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section>
+    <h2>Audio</h2>
+    <audio controls>
+      <source src="audio1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <audio controls>
+      <source src="audio2.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+   <section>
+    <h2>Code Example</h2>
+    <pre><code>
+&lt;p&gt;This is a paragraph of code.&lt;/p&gt;
+&lt;code&gt;let x = 10;&lt;/code&gt;
+</code></pre>
+
+    <kbd>Enter</kbd> to submit.
+  </section>
+
+  <section>
+    <h2>Mathematical Notation</h2>
+    <p>
+      E = mc<sup>2</sup>
+    </p>
+     <p><sub>a</sub>b<sub>c</sub></p>
+
+    <p>
+      This is a <sup>sup</sup> and a <sub>sub</sub>.
+    </p>
+
+    <var>x</var> = <var>y</var> + 1
+  </section>
+
+  <section>
+      <h2>Character Formatting</h2>
+      <p>This is <b>bold</b> and this is <i>italic</i>.</p>
+      <p>This is <u>underlined</u> and this is <mark>highlighted</mark>.</p>
+      <p><cite>The Adventures of Tom Sawyer</cite> by Mark Twain.</p>
+      <p>Here is a direct quote: <em>"Hello, world!"</em></p>
+      <p>This is some <dfn>definition</dfn> text.</p>
+      <p><bdo>This text is reversed.</bdo></p>
+      <p>Use the <code>kbd</code> element for keyboard input.</p>
+      <p>Here's a <code>wbr</code> element: <wbr>This will break at the &lt;wbr&gt; point.</p>
+      <p>A numbered list item.</p>
+      <q>A short quote</q>
+      <s abbr="strike">strike</s>
+      <slot>Content placeholder</slot>
+      <time datetime="2023-10-27">October 27, 2023</time>
+      <u role="button">Underline as a button</u>
+  </section>
+
+  <section>
+    <h2>Table Example</h2>
     <table>
-      <caption aria-label="Sample Data Table">Sample Data</caption>
+      <caption>Sample Table</caption>
       <thead>
         <tr>
           <th>Header 1</th>
           <th>Header 2</th>
-          <th>Header 3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Row 1, Cell 1</td>
           <td>Row 1, Cell 2</td>
-          <td>Row 1, Cell 3</td>
         </tr>
         <tr>
           <td>Row 2, Cell 1</td>
           <td>Row 2, Cell 2</td>
-          <td>Row 2, Cell 3</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="3">Data Source: Sample Data</td>
+          <td colspan="2">Footer</td>
         </tr>
       </tfoot>
     </table>
   </section>
-  
-  <section aria-labelledby="code-section-title">
-      <h2 id="code-section-title">Code Example</h2>
-      <pre><code class="language-javascript" aria-label="JavaScript code snippet">
-      function greet(name) {
-        console.log("Hello, " + name + "!");
-      }
 
-      greet("World");
-      </code></pre>
-  </section>
+    <section>
+        <h2>Progress Indicator and Output</h2>
+        <progress value="75" max="100"></progress>
+        <output name="result">75</output>
 
-   <section aria-labelledby="progress-section-title">
-      <h2 id="progress-section-title">Progress Meter</h2>
-      <p>Task Progress:</p>
-      <progress value="75" max="100" aria-label="Task Progress - 75% complete"></progress>
-      <output>75%</output>
-   </section>
+        <meter value="0.8" max="1"></meter>
+    </section>
 
-   <section aria-labelledby="details-section-title">
-      <h2 id="details-section-title">Details and Summary</h2>
-      <details aria-expanded="false" aria-label="Expand/Collapse for more details">
-        <summary>More Information</summary>
-        <p>This is additional information about the media content.</p>
-        <p>It can be expanded to reveal more details.</p>
-      </details>
-   </section>
+    <section>
+        <h2>Dialog Example</h2>
+        <dialog open>
+          <p>This is a dialog box.</p>
+          <button>Close</button>
+        </dialog>
+    </section>
 
-   <section aria-labelledby="time-section-title">
-    <h2 id="time-section-title">Time Stamp</h2>
-    <p>Published: <time datetime="2023-10-27T10:00:00">October 27, 2023 at 10:00 AM</time></p>
-  </section>
+    <section>
+        <h2>Fieldset and Legend</h2>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+        </fieldset>
+    </section>
 
-  <section aria-labelledby="ruby-section-title">
-    <h2 id="ruby-section-title">Ruby Annotation</h2>
-    <p>例：<ruby><rt>例</rt><rp>（</rp><rt>れ</rt><rp>）</rp></ruby></p>
-  </section>
+    <section>
+        <h2>Other Elements</h2>
+        <col>
+        <map>
+            <area shape="rect" coords="0,0,100,100" href="#">
+        </map>
+        <noscript>
+            <p>Please enable JavaScript.</p>
+        </noscript>
 
-  <aside aria-label="Related Content">
-    <h3>Related Links</h3>
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-    </ul>
-  </aside>
+        <optgroup label="Fruits">
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+        </optgroup>
 
-  <dialog aria-labelledby="dialog-title" aria-label="Confirmation Dialog">
-    <h3 id="dialog-title">Confirm Action</h3>
-    <p>Are you sure you want to proceed?</p>
-    <button>Confirm</button>
-    <button>Cancel</button>
-  </dialog>
-
-  <fieldset aria-labelledby="fieldset-legend">
-    <legend id="fieldset-legend">Contact Information</legend>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-  </fieldset>
-
-  <mark aria-label="Important Note">Note: This is a sample media showcase page.</mark>
-
+        <template>
+            <p>Template content</p>
+        </template>
+    </section>
 </main>
 
-<footer aria-label="Site Footer">
-  <p>&copy; 2023 Media Showcase. All rights reserved.</p>
+<footer>
+  <p>&copy; 2023 My Website</p>
 </footer>
 
 </body>
-</html>
+</html

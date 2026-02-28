@@ -1,92 +1,149 @@
 body {
   font-family: sans-serif;
-  font-size: 1.2rem;
   line-height: 1.6;
-  color: #212529; /* Dark gray - good contrast */
-  background-color: #f8f9fa; /* Light gray background */
+  color: #333;
+  background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #212529;
   font-weight: bold;
   margin-bottom: 0.5em;
+  color: #222;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+p {
+  margin-bottom: 1em;
 }
 
 a {
-  color: #007bff; /* Standard blue link color */
+  color: #007bff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline;
 }
 
-button,
-input[type="submit"] {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  font-size: 1rem;
+b, strong {
   font-weight: bold;
-  border-radius: 0.25rem;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  background-color: #0056b3;
+i, em {
+  font-style: italic;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
+small {
+  font-size: 0.8em;
 }
 
-.error {
-  color: #dc3545; /* Red for error messages */
+mark {
+  background-color: yellow;
 }
 
-.success {
-  color: #28a745; /* Green for success messages */
-}
-
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(1px);
-  height: 1px;
-  overflow: hidden;
-  width: 1px;
-  white-space: nowrap;
-  word-wrap: normal;
-}
-
-/* For accessible form labels */
-label {
-    display: block;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  display: block;
-  width: 100%;
-  padding: 0.5em;
+blockquote {
+  border-left: 3px solid #ccc;
+  padding-left: 1em;
   margin-bottom: 1em;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  font-style: italic;
 }
 
-fieldset {
-    border: 1px solid #ced4da;
-    padding: 1em;
-    margin-bottom: 1em;
-    legend {
-        font-weight: bold;
-        margin-bottom: 0.5em;
-    }
+pre {
+  background-color: #f4f4f4;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+code {
+  font-family: monospace;
+}
+
+abbr, acronym {
+  text-decoration: underline;
+  cursor: help;
+}
+
+address {
+  font-style: normal;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+cite {
+  font-style: italic;
+}
+
+bdo {
+  direction: rtl;
+}
+
+var {
+  font-style: italic;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: 0.8em;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+wbr {
+  visibility: hidden;
+}
+
+slot {
+  display: contents;
+}
+
+template {
+  display: none;
+}
+
+col {
+  display: contents; /* Prevents collapsing */
+}
+
+map {
+  display: inline; /* or block, as needed */
+}
+
+embed {
+    display: block;
+}
+
+noscript {
+  display: none;
+}
+
+output {
+  display: inline-block;
+}
+
+track {
+    display:none;
+}
+
+u {
+  text-decoration: underline;
+}
+
+q {
+  display: inline;
+  quotes: '"';
+}
+
+s {
+  text-decoration: line-through;
 }

@@ -6,127 +6,189 @@
 <title>Interactive Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body aria-label="Interactive Page Content">
+<body role="content">
 
 <header>
-  <h1>Welcome to the Interactive Page</h1>
-  <p>A demonstration of various HTML5 elements.</p>
+  <h1>Interactive Demo</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<nav aria-label="Main Navigation">
-  <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#details-section">Details Section</a></li>
-    <li><a href="#table-example">Table Example</a></li>
-    <li><a href="#progress-meter">Progress and Meter</a></li>
-    <li><a href="#code-example">Code Example</a></li>
-  </ul>
-</nav>
-
 <main>
-  <section id="introduction">
-    <h2>Introduction</h2>
-    <p>This page showcases different HTML5 semantic elements to create a more structured and accessible web experience.</p>
-    <figure>
-      <img src="placeholder-image.jpg" alt="Placeholder Image - Scenic Landscape" width="300">
-      <figcaption>A placeholder image for demonstration purposes.</figcaption>
-    </figure>
+  <section>
+    <h2>Simple Calculator</h2>
+    <form>
+      <label for="num1">Number 1:</label>
+      <input type="number" id="num1" name="num1" value="0">
+      <br>
+
+      <label for="num2">Number 2:</label>
+      <input type="number" id="num2" name="num2" value="0">
+      <br>
+
+      <button type="button" onclick="calculate()">Calculate</button>
+      <br>
+
+      <output id="result"></output>
+
+      <p>
+        <code>var</code> x = 10;
+        <br>
+        <code>var</code> y = 20;
+      </p>
+
+      <pre>
+        <code>
+          function add(a, b) {
+            return a + b;
+          }
+        </code>
+      </pre>
+
+      <details>
+        <summary>Calculation Details</summary>
+        <p>This calculator performs a simple addition.</p>
+      </details>
+    </form>
   </section>
 
-  <section id="details-section">
-    <h2>Details and Summary</h2>
-    <details>
-      <summary>Click here to see more details</summary>
-      <p>This is some hidden content that expands when the summary is clicked.</p>
-    </details>
-
-    <dialog aria-label="Important Information">
-      <p>This is a dialog box.  It could be used for forms or important notifications.</p>
-      <button>Close Dialog</button>
-    </dialog>
-  </section>
-
-  <section id="table-example">
+  <section>
     <h2>Table Example</h2>
     <table>
-      <caption>Sample Data Table</caption>
+      <caption id="tableCap">Sample Data</caption>
       <thead>
         <tr>
           <th>Header 1</th>
           <th>Header 2</th>
-          <th>Header 3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Row 1, Cell 1</td>
           <td>Row 1, Cell 2</td>
-          <td>Row 1, Cell 3</td>
         </tr>
         <tr>
           <td>Row 2, Cell 1</td>
           <td>Row 2, Cell 2</td>
-          <td>Row 2, Cell 3</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="3">Footer information</td>
+          <td colspan="2">Footer Data</td>
         </tr>
       </tfoot>
     </table>
   </section>
 
-  <section id="progress-meter">
-    <h2>Progress and Meter</h2>
-    <progress value="75" max="100" aria-label="Progress bar"></progress>
-    <p>Progress is 75% complete.</p>
-    <meter value="0.8" max="1" aria-label="Score"></meter>
-    <p>Score: 0.8</p>
-    <output name="result" value="12345"></output>
+  <section>
+    <h2>Progress Bar</h2>
+    <progress id="progressBar" value="50" max="100"></progress>
+    <meter id="meter" value="0.75" min="0" max="1"></meter>
+    <output id="output"></output>
   </section>
 
-    <section id="code-example">
-        <h2>Code Example</h2>
-        <pre><code class="language-javascript">
-            function greet(name) {
-              console.log("Hello, " + name + "!");
-            }
-            greet("World");
-        </code></pre>
+    <section>
+      <h2>Ruby Annotation</h2>
+      <ruby>
+        <rt>日本語</rt>
+        <rp>(</rp>
+        <rt>Nihongo</rt>
+        <rp>)</rp>
+      </ruby>
     </section>
 
-  <aside aria-label="Related Links">
-    <h3>Related Resources</h3>
-    <ul>
-      <li><a href="#">HTML5 Documentation</a></li>
-      <li><a href="#">Accessibility Guidelines (WCAG)</a></li>
-    </ul>
-  </aside>
+    <section>
+      <h2>Emphasis and Formatting</h2>
+      <p>This is some <strong>important</strong> text.</p>
+      <p>This is an <em>emphasized</em> word.</p>
+      <p>This is a <cite>citation</cite>.</p>
+      <p>This is a <dfn>definition</dfn>.</p>
+      <p>This is a <code>code snippet</code>.</p>
+      <p>This is a <kbd>keyboard shortcut</kbd>.</p>
+      <p>This is a <var>variable</var>.</p>
+      <p>This is a <wbr>word break.</p>
+      <p>This is a <u>underlined</u> word.</p>
+      <p>This is a <small>small</small> word.</p>
+      <p>This is a <ins>inserted</ins> word.</p>
+      <p>This is a <del>deleted</del> word.</p>
+      <p>This is a <mark>mark</mark>.</p>
+      <p>This is a <q>quote</q>.</p>
+      <p>This is a <sup>superscript</sup>.</p>
+      <p>This is a <sub>subscript</sub>.</p>
+      <p>This is a <bdo>bdo</bdo>.</p>
+    </section>
 
-  <article>
-    <h3>Time and Mark</h3>
-    <time datetime="2024-10-27">Published on October 27, 2024</time>
-    <p>This is a <mark>highlighted</mark> text.</p>
-  </article>
+     <section>
+      <h2>Embed and Template</h2>
+      <embed src="" type="" hidden>
+      <template id="template">
+         <p>This is a template.</p>
+      </template>
+    </section>
+     <section>
+      <h2>Time and Dialog</h2>
+       <time datetime="2024-10-27">October 27, 2024</time>
+       <dialog>
+          <p>This is a dialog box.</p>
+       </dialog>
+    </section>
+  <section>
+    <h2>Fieldset and Legend</h2>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </fieldset>
+  </section>
 
-  <article>
-    <h3>Ruby Annotation</h3>
-    <p>This is an example of <ruby>漢語</ruby><rt>漢語</rt>.</p>
-  </article>
-</main>
+    <aside>
+        <h3>Aside Content</h3>
+        <p>This is additional content related to the main page.</p>
+    </aside>
 
-<footer>
-  <p>&copy; 2024 Interactive Page. All rights reserved.</p>
-  <fieldset aria-label="Contact Information">
-    <legend>Contact Us</legend>
-    <form>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br>
-      <kbd>Press Enter to submit</kbd>
-    </form>
-  </fieldset>
-</footer>
+  <figure>
+    <img src="placeholder.jpg" alt="Placeholder Image" width="200" height="150">
+    <figcaption>A placeholder image</figcaption>
+  </figure>
+
+  <section>
+    <h2>Optgroup Example</h2>
+    <select multiple>
+      <optgroup label="Fruits">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+      </optgroup>
+      <optgroup label="Vegetables">
+        <option value="carrot">Carrot</option>
+        <option value="broccoli">Broccoli</option>
+      </optgroup>
+    </select>
+  </section>
+
+    <section>
+      <h2>Slot Example</h2>
+       <slot name="my-slot"></slot>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2024 Interactive Demo</p>
+  </footer>
+
+  <script>
+    function calculate() {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      const result = num1 + num2;
+      document.getElementById("result").value = result;
+    }
+  </script>
 
 </body>
-</html >
+</html>
