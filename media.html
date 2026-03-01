@@ -3,117 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Page</title>
+<title>Media Gallery</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="complementary">
-  <header>
-    <h1>Media Examples</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="forms.html">Forms</a></li>
-        <li><a href="tables.html">Tables</a></li>
-        <li><a href="interactive.html">Interactive</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>Audio and Video</h2>
-      <article>
-        <h3>Audio Example</h3>
-        <audio controls>
-          <source src="audio/example.mp3" type="audio/mpeg">
-          <a href="audio/example.mp3">Your browser does not support the audio element.</a>
-        </audio>
-        <details>
-          <summary>Audio Details</summary>
-          <p>This is an example audio file. <code>.mp3</code> format.</p>
-        </details>
-      </article>
+<header>
+  <h1>Media Gallery</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tables.html">Tables</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="interactive.html">Interactive</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <article>
-        <h3>Video Example</h3>
-        <video controls width="640" height="360">
-          <source src="video/example.mp4" type="video/mp4">
-          <a href="video/example.mp4">Your browser does not support the video element.</a>
-        </video>
-        <figcaption>A short video example.</figcaption>
-      </article>
+<main>
+  <section>
+    <h2>Images</h2>
+    <figure>
+      <picture>
+        <source media="(max-width: 600px)" srcset="images/small.jpg" type="image/jpeg">
+        <source media="(max-width: 1200px)" srcset="images/medium.jpg" type="image/jpeg">
+        <img src="images/large.jpg" alt="A beautiful landscape" width="800" height="600">
+      </picture>
+      <figcaption>A scenic view.</figcaption>
+    </figure>
 
-      <article>
-        <h3>Embed Example</h3>
-        <embed src="https://www.youtube.com/embed/dQw4w9WgXcQ" type="application/x-shockwave-flash" width="640" height="360">
-        <p>Requires Flash Player. <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Watch on YouTube</a></p>
-      </article>
+    <figure>
+      <img src="images/image2.jpg" alt="Another image" width="400" height="300">
+      <figcaption>Caption for image 2.</figcaption>
+    </figure>
+  </section>
 
-      <article>
-        <h3>Image Gallery</h3>
-        <figure>
-          <img src="images/image1.jpg" alt="Image 1 Description" width="200" height="150">
-          <figcaption>Description of Image 1.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/image2.jpg" alt="Image 2 Description" width="200" height="150">
-          <figcaption>Description of Image 2.</figcaption>
-        </figure>
-        <area shape="rect" coords="0,0,100,50" href="image1.jpg" alt="link to image1">
-        <map name="image-map">
-          </map>
-      </article>
-      
-      <article>
-        <h3>Marquee - Simulating animation</h3>
-        <pre>
-&lt;marquee&gt;This is a simulated marquee effect.&lt;/marquee&gt;
-        </pre>
-      </article>
-    </section>
+  <section>
+    <h2>Videos</h2>
+    <article>
+      <h3>Video 1</h3>
+      <video width="640" height="360" controls>
+        <source src="videos/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Description of video 1.</p>
+    </article>
 
-    <section>
-      <h2>Other Media Elements</h2>
-      <article>
-        <h3>Time Example</h3>
-        <p>The time is: <time datetime="2023-10-27T10:00:00">October 27, 2023, 10:00 AM</time></p>
+    <article>
+      <h3>Video 2</h3>
+      <video width="640" height="360" controls>
+        <source src="videos/video2.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+       <p>Description of video 2.</p>
+    </article>
+  </section>
 
-        <p>Mark: <span>This is a </span><mark>highlighted</mark><span> section.</p>
+  <section>
+    <h2>Audio</h2>
+    <audio controls>
+      <source src="audio/audio1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <p>Audio description</p>
+  </section>
 
-        <p>Ruby: <ruby>漢<rt>kan</rt></ruby> <ruby>字<rt>ji</rt></ruby></p>
-      </article>
-      <article>
-        <h3>Code Example</h3>
-        <pre><code>
-function greet(name) {
-  console.log("Hello, " + name + "!");
-}
-greet("World");
-        </code></pre>
+  <section>
+    <h2>Embeddings</h2>
+    <iframe src="https://www.example.com" width="600" height="400" title="Example Website"></iframe>
+  </section>
+</main>
 
-        <kbd>Enter</kbd> to submit.
-      </article>
-    </section>
-  </main>
+<aside>
+  <h3>Related Links</h3>
+  <ul>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+  </ul>
+</aside>
 
-  <footer>
-    <p>&copy; 2023 Media Examples</p>
-  </footer>
+<footer>
+  <p>&copy; 2024 Media Gallery</p>
+</footer>
 
-  <template id="my-template">
-    <p>This is a template.</p>
-  </template>
-    <bdo dir="rtl">This text will be right-to-left.</bdo>
-    <cite>Example Cite</cite>
-    <dfn>Definition</dfn>
-    <em>Emphasis</em>
-    <i>Italic</i>
-    <q>Quote Example</q>
-    <s>Strikethrough</s>
-    <sub id="subscript">Subscript</sub>
-    <sup id="superscript">Superscript</sub>
-    <u>Underline</u>
-    <wbr>Word Break Opportunity
-    <var>Variable</var>
-  </body>
+<b style="display: none;">This is important but hidden content</b>
+<h5 style="font-style: italic;">A smaller heading</h5>
+<h6 data-aria-label="Another heading">Even smaller heading</h6>
+<details>
+  <summary>Click to Reveal</summary>
+  <p>Hidden content revealed.</p>
+</details>
+<dialog>
+  <p>Dialog content</p>
+</dialog>
+<ruby>H<rt>平</rt>日<rp>日</rp></ruby>
+<code>code</code>
+<pre>preformatted text</pre>
+<time datetime="2024-10-27">October 27, 2024</time>
+<mark>Marked text</mark>
+<del>Deleted text</del>
+<ins>Inserted text</ins>
+<object data="data.pdf" type="application/pdf"></object>
+<param name="author" value="Example Author"></param>
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ol>
+</body>
 </html>

@@ -9,166 +9,157 @@
 <body role="content">
 
 <header>
-  <h1>Tables Example Page</h1>
-  <nav aria-label="Main Navigation">
-    <a href="index.html">Home</a> |
-    <a href="forms.html">Forms</a> |
-    <a href="interactive.html">Interactive</a> |
-    <a href="media.html">Media</a>
+  <h1>Tables Example</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="interactive.html">Interactive</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="tables.html">Tables</a></li>
+    </ul>
   </nav>
 </header>
 
 <main>
   <section>
     <h2>Basic Table</h2>
-    <figure>
-      <figcaption>Simple Data Table</figcaption>
-      <table aria-label="Simple Data Table">
-        <caption>
-          Basic Table with Header and Data
-        </caption>
-        <colgroup>
-          <col>
-          <col>
-          <col>
-        </colgroup>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Data 1</td>
-            <td>Data 2</td>
-            <td>Data 3</td>
-          </tr>
-          <tr>
-            <td>Data 4</td>
-            <td>Data 5</td>
-            <td>Data 6</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3">Total rows: 2</td>
-          </tr>
-        </tfoot>
-      </table>
-    </figure>
-  </section>
+    <p>This is a simple table demonstrating the structure of a <code>table</code> element.</p>
 
-  <section>
-    <h2>Advanced Table with Colgroups</h2>
-    <table aria-label="Advanced Table with Colgroups">
-      <caption>
-        Table with Colgroup for Styling
-      </caption>
-      <colgroup>
-        <col style="width: 20%;">
-        <col style="width: 30%;">
-        <col style="width: 50%;">
-      </colgroup>
+    <table>
+      <caption>Simple Product List</caption>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>City</th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>John Doe</td>
-          <td>30</td>
-          <td>New York</td>
+          <td>Apple</td>
+          <td>$1.00</td>
+          <td>10</td>
         </tr>
         <tr>
-          <td>Jane Smith</td>
-          <td>25</td>
-          <td>Los Angeles</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Table with Summary Data</h2>
-    <table aria-label="Table with Summary Data">
-      <caption>Summary of Data</caption>
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Total</td>
-          <td data-value="1000">1000</td>
+          <td>Banana</td>
+          <td>$0.50</td>
+          <td>15</td>
         </tr>
         <tr>
-          <td>Used</td>
-          <td data-value="300">300</td>
-        </tr>
-        <tr>
-          <td>Remaining</td>
-          <td data-value="700">700</td>
+          <td>Orange</td>
+          <td>$0.75</td>
+          <td>8</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">
-            <progress value="70" max="100"></progress>
-            <output>70%</output>
-          </td>
+          <td colspan="3">Total Items: 33</td>
         </tr>
       </tfoot>
     </table>
+
+    <figure>
+      <img src="placeholder.png" alt="Illustration of a table" width="300" height="200">
+      <figcaption>Example of a table visual representation.</figcaption>
+    </figure>
   </section>
 
   <section>
-    <h2>Data Table with Details and Summary</h2>
-    <details>
-      <summary>Data Table Details</summary>
-      <table>
-        <thead>
-          <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Row 1, Col 1</td>
-            <td>Row 1, Col 2</td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
+    <h2>Advanced Table with <em>data</em> and <em>ins</em>/<em>del</em></h2>
+    <p>This table shows price changes with insertion and deletion.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Old Price</th>
+          <th>New Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Book</td>
+          <td>$20.00</td>
+          <ins>Revised: $18.00</ins>
+        </tr>
+        <tr>
+          <td>Pen</td>
+          <td>$1.00</td>
+          <del>Old: $1.00</del> <em>Now: $0.80</em>
+        </tr>
+        <tr>
+          <td>Notebook</td>
+          <td>$5.00</td>
+          <ins>Reduced: $4.50</ins>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+   <section>
+    <h2>Table with <code>summary</code> and <code>details</code></h2>
+      <details>
+          <summary>Table Information</summary>
+          <p>This table is dynamically generated from data.</p>
+          <ul>
+              <li><b>Created:</b> <time datetime="2024-10-27">October 27, 2024</time></li>
+              <li><b>Source:</b> JSON data</li>
+          </ul>
+      </details>
   </section>
 
   <section>
-    <h2>Table Using Time and Mark</h2>
-    <pre>
-      <code>
-        &lt;time datetime="2023-10-27"&gt;October 27, 2023&lt;/time&gt;
-      </code>
-    </pre>
-    <mark>Important Date</mark>
+    <h2>Another Table</h2>
+    <p>This table showcases a different formatting approach and includes a <code>picture</code> element.</p>
+
+    <table aria-label="Customer Data">
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>123</td>
+          <td>John Doe</td>
+          <td>john.doe@example.com</td>
+        </tr>
+        <tr>
+          <td>456</td>
+          <td>Jane Smith</td>
+          <td>jane.smith@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <picture>
+      <source srcset="image-small.jpg" media="(max-width: 600px)">
+      <img src="image-large.jpg" alt="Diagram of Table Structure">
+    </picture>
   </section>
 </main>
 
 <aside>
   <h3>Additional Information</h3>
-  <p>This page demonstrates different types of tables using semantic HTML elements.</p>
+  <p>This is an <code>aside</code> section providing supplementary details.</p>
+  <pre><code>
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;...&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+    &lt;/table&gt;
+  </code></pre>
 </aside>
 
 <footer>
-  <small>&copy; 2024 Example Website. All rights reserved.</small>
-  <span aria-label="Last Updated">Last Updated: 2024-10-27</span>
+  <p>Copyright 2024 - Example Website</p>
+  <p>Last Updated: <time datetime="2024-10-27T10:00:00">10:00 AM, October 27, 2024</time></p>
 </footer>
 
 </body>
-</html>
+</html

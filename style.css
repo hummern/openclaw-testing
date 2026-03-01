@@ -1,16 +1,23 @@
 body {
   font-family: sans-serif;
-  font-size: 1rem;
   line-height: 1.6;
   color: #333;
-  background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  color: #0056b3;
   line-height: 1.2;
-  margin-bottom: 0.5em;
 }
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+b { font-weight: bolder; }
 
 a {
   color: #007bff;
@@ -21,96 +28,58 @@ a:hover {
   text-decoration: underline;
 }
 
-strong {
-  font-weight: bold;
+ol, ul {
+  margin-left: 2em;
 }
 
-em {
-  font-style: italic;
-}
-
-code {
-  font-family: monospace;
-  background-color: #f0f0f0;
-  padding: 2px 5px;
-  border-radius: 3px;
-}
-
-pre {
-  background-color: #f0f0f0;
-  padding: 10px;
-  overflow-x: auto;
-}
-
-/* Table Styles */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 1em;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-/* Form Styles */
-label {
-  display: block;
+li {
   margin-bottom: 0.5em;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
+strong {
+  font-weight: bolder;
 }
 
-button,
-input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  border-radius: 3px;
+del {
+  text-decoration: line-through;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  background-color: #0056b3;
+ins {
+  text-decoration: underline;
 }
 
-/* Media Styles */
-img {
-  max-width: 100%;
-  height: auto;
+figure {
+  margin: 1em 0;
 }
 
-/* Accessible Typography */
-small {
-  font-size: 0.8em;
+picture {
+    display: block;
 }
 
-/* Semantic Tags */
-area, bdo, cite, dfn, em, embed, i, kbd, map, noscript, optgroup, q, s, slot, sub, sup, template, u, var, wbr, track {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+iframe, object {
+    border: 1px solid #ccc;
+}
+
+param {
+    display: none;
+}
+
+style {
+    display: none;
+}
+
+data {
+    display: none;
+}
+
+track {
+    display: none;
 }

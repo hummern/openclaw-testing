@@ -3,197 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Elements</title>
+<title>Interactive Elements - Accessible Design</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
-  <header>
-    <h1>Interactive Elements Example</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>Interactive Form</h2>
-      <form>
-        <fieldset>
-          <legend>Personal Information</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name"><br><br>
+<header>
+  <h1>Interactive Elements and Accessibility</h1>
+  <p>Explore interactive HTML elements and their accessibility features.</p>
+</header>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email"><br><br>
+<nav aria-label="Navigation">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="forms.html">Forms</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="tables.html">Tables</a></li>
+  </ul>
+</nav>
 
-          <label for="message">Message:</label>
-          <textarea id="message" name="message"></textarea><br><br>
+<main>
+  <section>
+    <h2>Interactive Examples</h2>
 
-          <input type="submit" value="Submit">
-        </fieldset>
-      </form>
-    </section>
+    <h3>Accordions</h3>
+    <details>
+      <summary>What is an Accordion?</summary>
+      <p>An accordion is a vertically stacked list of expandable sections.  Each section has a summary (heading) and content.</p>
+    </details>
 
-    <section>
-      <h2>Interactive Table</h2>
-      <table>
-        <caption>Sample Data</caption>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Row 1, Cell 1</td>
-            <td>Row 1, Cell 2</td>
-            <td>Row 1, Cell 3</td>
-          </tr>
-          <tr>
-            <td>Row 2, Cell 1</td>
-            <td>Row 2, Cell 2</td>
-            <td>Row 2, Cell 3</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3">Footer Information</td>
-          </tr>
-        </tfoot>
-      </table>
-    </section>
+    <details>
+      <summary>Accordion Section 2</summary>
+      <p>This is the content for accordion section 2. Use <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> to create them.</p>
+    </details>
 
-    <section>
-      <h2>Interactive Details and Summary</h2>
-      <details>
-        <summary>Click to Reveal</summary>
-        <p>This is some hidden content.</p>
-      </details>
-    </section>
+    <h3>Interactive Dialog</h3>
+    <dialog id="myDialog">
+      <p>This is a dialog box.  You can use it for alerts or to collect user input.</p>
+      <button onclick="document.getElementById('myDialog').close()">Close</button>
+    </dialog>
+    <button onclick="document.getElementById('myDialog').showModal()">Show Dialog</button>
 
-    <section>
-      <h2>Interactive Dialog</h2>
-      <dialog>
-        <p>This is a dialog box.</p>
-        <button>Close</button>
-      </dialog>
-    </section>
+    <h3>Progress Bar</h3>
+    <progress value="50" max="100" aria-label="Progress"></progress>
 
-    <section>
-      <h2>Interactive Progress Bar</h2>
-      <progress value="50" max="100"></progress>
-    </section>
+    <h3>Interactive Table</h3>
+    <table>
+      <caption>Sample Data Table</caption>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+          <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+          <td>Row 2, Cell 3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Table Footer</td>
+        </tr>
+      </tfoot>
+    </table>
 
-    <section>
-      <h2>Interactive Meter</h2>
-      <meter value="75" max="100" title="75%"></meter>
-    </section>
+    <h3>Meter Example</h3>
+    <meter value="0.75" max="1" aria-label="Meter Example"></meter>
 
-    <section>
-      <h2>Interactive Code Example</h2>
-      <pre><code>
+    <h3>Fieldset and Legend</h3>
+    <fieldset>
+      <legend>Contact Information</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </fieldset>
+
+    <h3>Code Example</h3>
+    <pre>
+      <code>
         function greet(name) {
           console.log("Hello, " + name + "!");
         }
-      </code></pre>
-    </section>
+      </code>
+    </pre>
 
-    <section>
-      <h2>Interactive Math Expression</h2>
-      <ruby>
-        <rt>π</rt>
-        <rp>π</rp>
-      </ruby>
-    </section>
+    <h3>Marked Text</h3>
+    <p>This text has a <strong>marked</strong> section.  Use the <code>&lt;mark&gt;</code> tag to highlight important words.</p>
 
-    <section>
-      <h2>Interactive Definition</h2>
-      <dfn>Definition</dfn> of a term.
-    </section>
-
-    <section>
-        <h2>Interactive Output</h2>
-        <output name="result">0</output>
-    </section>
-
-    <section>
-        <h2>Interactive Emphasis</h2>
-        <em aria-label="Emphasized text">This text is emphasized.</em>
-        <strong aria-label="Strong text">This text is strong.</strong>
-        <i aria-label="Italic text">This text is italic.</i>
-        <small aria-label="Small text">This text is small.</small>
-        <bdo dir="rtl">Right-to-left direction</bdo>
-        <cite>Citation</cite>
-        <q>Quote</q>
-        <s aria-label="Strike-through text">Strike-through text</s>
-        <sub aria-label="Subscript text">Subscript text</sub>
-        <sup aria-label="Superscript text">Superscript text</sub>
-        <var aria-label="Variable text">Variable text</var>
-        <wbr>Word break opportunity</wbr>
-    </section>
-
-    <section>
-        <h2>Interactive Area</h2>
-        <map name="map">
-            <area shape="rect" coords="0,0,100,100" href="#" alt="Area 1"/>
-        </map>
-    </section>
-
-     <section>
-        <h2>Interactive Noscript</h2>
-        <noscript>Javascript is not enabled.</noscript>
-    </section>
-
-      <section>
-        <h2>Interactive Optgroup</h2>
-        <select>
-            <optgroup label="Fruits">
-              <option value="apple">Apple</option>
-              <option value="banana">Banana</option>
-            </optgroup>
-            <optgroup label="Vegetables">
-              <option value="carrot">Carrot</option>
-              <option value="broccoli">Broccoli</option>
-            </optgroup>
-        </select>
-      </section>
-
-    <section>
-      <h2>Interactive Time</h2>
-      <time datetime="2023-10-27">October 27, 2023</time>
-    </section>
-
-    <section>
-      <h2>Interactive Mark</h2>
-      <p><mark>Highlighted text</mark></p>
-    </section>
-
-    <section>
-      <h2>Interactive Embed</h2>
-        <embed src="audio.mp3" type="audio/mpeg" width="200" height="50">
-    </section>
-  </main>
+    <h3>Ruby Annotation</h3>
+    <p>Here's an example of <em>ruby</em> annotation:</p>
+    <ruby>
+      <rt>日本語</rt>
+      <rp>(</rp>
+      <rt>Japanese</rt>
+      <rp>)</rp>
+    </ruby>
+  </section>
 
   <aside>
-    <h3>Sidebar</h3>
-    <p>This is some additional content.</p>
+    <h3>Additional Resources</h3>
+    <ul>
+      <li><a href="https://www.w3.org/TR/html5/" target="_blank" rel="noopener noreferrer">HTML5 Specification</a></li>
+      <li><a href="https://www.w3.org/WAI/tutorials/page-structure/" target="_blank" rel="noopener noreferrer">Page Structure Tutorial</a></li>
+    </ul>
   </aside>
 
   <figure>
-    <img src="image.jpg" alt="A descriptive image" width="200" height="150">
-    <figcaption>A sample image.</figcaption>
+    <img src="placeholder.png" alt="Placeholder Image" width="200" height="150">
+    <figcaption>A placeholder image demonstrating the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements.</figcaption>
   </figure>
 
-  <slot name="place-holder"></slot>
+  <h5 id="timeExample">Time Example</h5>
+  <time datetime="2023-10-27T10:00:00">Published on October 27, 2023 at 10:00 AM</time>
 
-  <footer>
-    <p>&copy; 2023 Example Website</p>
-  </footer>
+  <h6 id="dataExample">Data Example</h6>
+  <data value="42">The Answer</data>
+
+  <del datetime="2023-10-26">Previous Date</del>
+  <ins datetime="2023-10-27">Current Date</ins>
+
+  <picture>
+    <source media="(max-width: 600px)" srcset="small.jpg">
+    <img src="large.jpg" alt="Responsive Image" width="300" height="200">
+  </picture>
+
+  <object data="document.pdf" type="application/pdf"></object>
+  <param name="width" value="500">
+  <param name="height" value="300">
+
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+
+</main>
+
+<footer>
+  <p>&copy; 2023 Accessible Design Examples</p>
+</footer>
+
 </body>
-</html>
+</html >
