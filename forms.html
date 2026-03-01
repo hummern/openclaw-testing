@@ -6,120 +6,191 @@
 <title>Forms Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
+<body>
+  <header>
+    <h1>Forms and Input</h1>
+  </header>
 
-<header>
-  <h1>Forms Example</h1>
-  <nav aria-label="Navigation">
+  <nav aria-label="Main Navigation">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
     </ul>
   </nav>
-</header>
 
-<main>
-  <section>
-    <h2>Contact Form</h2>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Personal Information</legend>
+  <main>
+    <section>
+      <h2>Basic Form</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required="required" aria-required="true"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required="required" aria-required="true"><br><br>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
 
-        <label for="newsletter">Subscribe to Newsletter:</label>
-        <input type="checkbox" id="newsletter" name="newsletter"><br><br>
+    <section>
+      <h2>Form with Validation</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Account Details</legend>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" title="Only alphanumeric characters allowed" required><br><br>
 
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select><br><br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required><br><br>
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob"><br><br>
+          <label for="confirm_password">Confirm Password:</label>
+          <input type="password" id="confirm_password" name="confirm_password" required><br><br>
 
-        <label for="rating">Rating:</label>
-        <meter id="rating" name="rating" value="0.75" max="1" min="0" aria-valuemin="0" aria-valuemax="1" title="Current Rating"></meter><br><br>
+          <mark>Please confirm your password matches.</mark>
 
-        <label for="progress">Upload Progress:</label>
-        <progress id="progress" name="progress" value="50" max="100"></progress><br><br>
+          <button type="submit">Register</button>
+        </fieldset>
+      </form>
+    </section>
 
-        <output name="upload_result"></output><br><br>
+    <section>
+      <h2>Radio and Checkbox Example</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Preferences</legend>
+          <p>Select your preferred programming language:</p>
+          <input type="radio" id="python" name="language" value="python">
+          <label for="python">Python</label><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-      </fieldset>
+          <input type="radio" id="javascript" name="language" value="javascript">
+          <label for="javascript">JavaScript</label><br>
 
-      <button type="submit">Submit</button>
-      <button type="reset">Reset</button>
+          <input type="radio" id="java" name="language" value="java">
+          <label for="java">Java</label><br>
 
-      <p><strong>Note:</strong> All fields are required.</p>
-    </form>
-  </section>
+          <p>Select your interests:</p>
+          <input type="checkbox" id="webdev" name="interests" value="webdev">
+          <label for="webdev">Web Development</label><br>
 
-  <section>
-    <h2>Sample Table</h2>
-    <table>
-      <caption>Sample Data</caption>
-      <colgroup>
-        <col>
-        <col>
-        <col>
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Row 1, Column 1</td>
-          <td>Row 1, Column 2</td>
-          <td>Row 1, Column 3</td>
-        </tr>
-        <tr>
-          <td>Row 2, Column 1</td>
-          <td>Row 2, Column 2</td>
-          <td>Row 2, Column 3</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Data Summary</td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
+          <input type="checkbox" id="gamedev" name="interests" value="gamedev">
+          <label for="gamedev">Game Development</label><br>
 
-  <section>
-    <h2>Dynamic Content</h2>
-    <picture>
-      <source media="(max-width: 600px)" srcset="image-small.jpg">
-      <source media="(max-width: 1200px)" srcset="image-medium.jpg">
-      <img src="image-large.jpg" alt="A beautiful landscape" width="400" height="300">
-    </picture>
-  </section>
-</main>
+          <input type="checkbox" id="machinelearning" name="interests" value="machinelearning">
+          <label for="machinelearning">Machine Learning</label><br>
+        </fieldset>
+      </form>
+    </section>
 
-<footer>
-  <p>&copy; 2024 Example Forms</p>
-  <details>
-    <summary>More Information</summary>
-    <p>This is an example forms page.</p>
-  </details>
-</footer>
+    <section>
+        <h2>Table Example</h2>
+        <table>
+            <caption>Sample Data</caption>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                </tr>
+                <tr>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Footer Information</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
 
+    <section>
+      <h2>Advanced Form Elements</h2>
+      <form>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time"><br><br>
+
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number"><br><br>
+
+        <label for="range">Range:</label>
+        <input type="range" id="range" name="range"><br><br>
+
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="file">File:</label>
+        <input type="file" id="file" name="file"><br><br>
+
+        <label for="url">URL:</label>
+        <input type="url" id="url" name="url"><br><br>
+
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search"><br><br>
+
+        <label for="tel">Telephone:</label>
+        <input type="tel" id="tel" name="tel"><br><br>
+      </form>
+    </section>
+
+    <section>
+        <h2>Structural Form Elements</h2>
+        <details>
+            <summary>More Details</summary>
+            <p>This is some detailed content.</p>
+        </details>
+        <dialog>
+          <p>This is a dialog box</p>
+        </dialog>
+    </section>
+  </main>
+
+  <aside>
+    <p>This is an aside, providing supplemental information.</p>
+    <pre><code>This is some code block.</code></pre>
+    <kbd>Ctrl+Enter</kbd>
+  </aside>
+
+  <footer>
+    <p>&copy; 2024 Example Website</p>
+  </footer>
+
+  <bdo dir="rtl">This text is reversed.</bdo>
+  <cite>Example Source</cite>
+  <dfn>Definition</dfn>
+  <em>Emphasis</em>
+  <i>Italic text</i>
+  <embed src="#" type="application/pdf">
+  <wbr>
+  <q>Quote Example</q>
+  <rp>(</rp>
+  <rp>)</rp>
+  <s>Strikethrough</s>
+  <s id="s_id">Subscript</s>
+  <slot>Slot Placeholder</slot>
+  <span id="span_id">Span</span>
+  <sub>Subscript</sub>
+  <sup>Superscript</sup>
+  <template>Template Content</template>
+  <u>Underline</u>
+  <var>Variable</var>
 </body>
 </html>

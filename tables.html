@@ -6,198 +6,140 @@
 <title>Tables Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="presentation">
+<body role="content">
 
 <header>
   <h1>Tables Example</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="interactive.html">Interactive</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="tables.html">Tables</a></li>
+    </ul>
+  </nav>
 </header>
-
-<nav aria-label="Navigation">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="forms.html">Forms</a></li>
-    <li><a href="interactive.html">Interactive Elements</a></li>
-    <li><a href="media.html">Media Elements</a></li>
-  </ul>
-</nav>
 
 <main>
   <section>
-    <h2>Basic Table</h2>
-    <p>This is a basic HTML table demonstrating structure and data presentation.</p>
+    <h2>Simple Table</h2>
 
-    <table aria-label="Basic Table">
-      <caption>
-        <h5 aria-labelledby="basic-table-caption">Basic Table</h5>
-      </caption>
-      <colgroup>
-        <col>
-        <col>
-        <col>
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 5</td>
-          <td>Data 6</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Table Footer</td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
-
-  <section>
-    <h2>Advanced Table with Colgroup</h2>
-    <p>This table utilizes &lt;colgroup&gt; for column formatting.</p>
-
-    <table aria-label="Advanced Table">
-      <caption>
-        <h5 aria-labelledby="advanced-table-caption">Advanced Table with Colgroup</h5>
-      </caption>
-      <colgroup>
-        <col style="width: 20%;">
-        <col style="width: 50%;">
-        <col style="width: 30%;">
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Item A</td>
-          <td>A detailed description of Item A.</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>Item B</td>
-          <td>Another description for Item B.</td>
-          <td>25</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Data Table</h2>
-    <p>A table displaying data with specific data attributes.</p>
-    
-    <table aria-label="Data Table">
-        <caption>
-          <h5 aria-labelledby="data-table-caption">Data Table</h5>
-        </caption>
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <data value="product-1">Item 1</data>
-          <data value="price-1">19.99</data>
-          <data value="quantity-1">5</data>
-        </tr>
-        <tr>
-          <data value="product-2">Item 2</data>
-          <data value="price-2">29.99</data>
-          <data value="quantity-2">10</data>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Nested Tables</h2>
-    <p>Demonstrates tables within tables - use with caution as it can reduce accessibility.</p>
-
-      <table aria-label="Nested Table">
-        <caption>
-          <h5 aria-labelledby="nested-table-caption">Nested Table</h5>
-        </caption>
+    <figure>
+      <figcaption>A simple table illustrating basic structure.</figcaption>
+      <table>
+        <caption>Simple Table</caption>
         <thead>
           <tr>
-            <th>Category</th>
-            <th>Details</th>
+            <th>Header 1</th>
+            <th>Header 2</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Fruits</td>
-            <td>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Fruit</th>
-                    <th>Color</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Apple</td>
-                    <td>Red</td>
-                  </tr>
-                  <tr>
-                    <td>Banana</td>
-                    <td>Yellow</td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+          </tr>
+          <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
           </tr>
         </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Footer Data</td>
+          </tr>
+        </tfoot>
       </table>
+    </figure>
+
+    <h2>Table with <em>Complex</em> Data</h2>
+    <p>This table demonstrates <code>multiple</code> data types and <em>formatting</em>.</p>
+
+    <table aria-describedby="table-description">
+      <caption id="table-description">Table with diverse data.</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Score</th>
+          <th>Date</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice <var>Smith</var></td>
+          <td>30</td>
+          <td><mark>95</mark></td>
+          <td><time datetime="2024-10-27">2024-10-27</time></td>
+          <td>
+            <details>
+              <summary>More Info</summary>
+              <p>Additional details about Alice.</p>
+            </details>
+          </td>
+        </tr>
+        <tr>
+          <td>Bob <em>Jones</em></td>
+          <td>25</td>
+          <td>88</td>
+          <td><time datetime="2024-10-26">2024-10-26</time></td>
+          <td>
+              <q>Great job!</q>
+          </td>
+        </tr>
+        <tr>
+          <td>Charlie <sub>Brown</sub></td>
+          <td>40</td>
+          <td>75</td>
+          <td><time datetime="2024-10-25">2024-10-25</time></td>
+          <td>
+            <pre><code>print("Hello")</code></pre>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Average Score: 82.67</td>
+        </tr>
+      </tfoot>
+    </table>
+
   </section>
+
+  <aside>
+    <p>This is an aside section containing related information.</p>
+    <bdo dir="rtl">This text is reversed.</bdo>
+    <cite>A relevant quote.</cite>
+    <dfn>A defined term.</dfn>
+    <i >Italic text.</i>
+    <kbd>Press Ctrl+Enter</kbd>
+    <map name="example">
+      <area shape="rect" coords="0,0,100,100" href="#">
+    </map>
+    <optgroup label="Fruits">
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+    </optgroup>
+    <q>A short quote.</q>
+    <rp>(</rp><abbr>abbr</abbr><rp>)</rp>
+    <s>Strikethrough text.</s>
+    <slot></slot>
+    <span>Span text.</span>
+    <sub >Subscript.</sub>
+    <sup>Superscript.</sup>
+    <template>
+      <p>This is a template.</p>
+    </template>
+    <u>Underline text.</u>
+    <var>Variable name.</var>
+    <wbr>Word break opportunity.
+  </aside>
 </main>
-
-<figure>
-  <img src="placeholder.jpg" alt="Placeholder Image">
-  <figcaption><h6 aria-labelledby="figure-caption">Placeholder Figure</h6></figcaption>
-</figure>
-
-
-<time datetime="2024-01-26">Published on January 26, 2024</time>
-
-<pre><code>
-  This is a code block.
-  It preserves whitespace.
-</code></pre>
-
-<details>
-  <summary aria-controls="details-summary">Details Summary</summary>
-  <p>Some hidden content.</p>
-</details>
-
-<dialog aria-labelledby="dialog-title">
-  <h5 id="dialog-title">Dialog Box</h5>
-  <p>This is a dialog box.</p>
-</dialog>
-
-
 
 <footer>
   <p>&copy; 2024 Example Website</p>
 </footer>
-
 </body>
 </html>

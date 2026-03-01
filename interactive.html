@@ -3,125 +3,124 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Elements - Example</title>
+<title>Interactive Elements Example</title>
 <link rel="stylesheet" href="style.css">
-<style>
-  meter {
-    width: 100%;
-  }
-  progress {
-    width: 100%;
-  }
-</style>
 </head>
-<body role="content">
+<body role="main">
 
-<header>
+<header aria-label="Page Header">
   <h1>Interactive Elements</h1>
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
 </header>
 
+<nav aria-label="Navigation">
+  <ul>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+  </ul>
+</nav>
+
 <main>
-  <section>
-    <h2>Interactive Form Elements</h2>
+  <section aria-labelledby="interactiveSectionTitle">
+    <h2 id="interactiveSectionTitle">Interactive Components</h2>
+
+    <details>
+      <summary>Details Summary</summary>
+      <p>This is the content of the details element.</p>
+    </details>
+
+    <figure aria-label="Interactive Image">
+      <img src="interactive-image.jpg" alt="Interactive Image Example" width="200" height="150">
+      <figcaption>Interactive Image Caption</figcaption>
+    </figure>
+
+    <dialog aria-labelledby="dialogTitle">
+      <h3 id="dialogTitle">Dialog Box</h3>
+      <p>This is the content of the dialog box.</p>
+      <button>Close</button>
+    </dialog>
+
+    <fieldset aria-labelledby="fieldsetLegend">
+      <legend id="fieldsetLegend">Form Fieldset</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </fieldset>
 
     <form>
-      <fieldset>
-        <legend>User Information</legend>
-
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true">
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-
-        <label for="rating">Rating:</label>
-        <meter id="rating" name="rating" value="0.75" min="0" max="1" step="0.05" aria-valuemin="0" aria-valuemax="1">
-          75%
-        </meter>
-        <p>Please rate this page.</p>
-
-
-        <label for="progress">Upload Progress:</label>
-        <progress id="progress" name="progress" value="50" max="100" aria-valuemin="0" aria-valuemax="100"></progress>
-        <p>File Uploading</p>
-
-        <label for="result">Calculation Result:</label>
-        <output id="result" name="result"></output>
-        <p>Calculation Result Display</p>
-      </fieldset>
-
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
       <button type="submit">Submit</button>
     </form>
 
-    <details>
-      <summary>Details about this section</summary>
-      <p>This is a detailed explanation.</p>
-    </details>
-  </section>
+    <pre><code>
+      function greet(name) {
+        return "Hello, " + name + "!";
+      }
+    </code></pre>
 
-  <section>
-    <h2>Data Tables</h2>
-    <h3>Example Table</h3>
-    <table>
-      <caption>Sample Data Table</caption>
-      <colgroup>
-        <col>
-        <col>
-        <col>
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 5</td>
-          <td>Data 6</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Total entries: 2</td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
+    <kbd>Ctrl+Enter</kbd> to submit.
 
-  <section>
-    <h2>Code Example</h2>
-    <pre>
-<code>
-  function greet(name) {
-    return "Hello, " + name + "!";
-  }
+    <time datetime="2024-10-27">Published on October 27, 2024</time>
+    <mark>Important Note</mark>
+    <ruby>漢<rt>kan</rt></ruby>
+    <bdo dir="rtl">This text is reversed</bdo>
+    <cite>Example Cite</cite>
+    <dfn>Definition</dfn>
+    <em>Emphasis</em>
+    <i role="presentation">Italic</i>
+    <embed src="somefile.swf" type="application/x-shockwave-flash" width="400" height="200">
+    <span>Span element</span>
+    <sub role="presentation">Subscript</sub>
+    <sup role="presentation">Superscript</sub>
+    <template>
+      <p>Reusable content</p>
+    </template>
+    <u>Underline</u>
+    <var>Variable</var>
+    <wbr>Word break opportunity
+    <q>Quote</q>
+    <rp>(</rp>
+    <s role="presentation">Strikethrough</s>
 
-  console.log(greet("World"));
-</code>
-    </pre>
-  </section>
+    <section aria-labelledby="tableSectionTitle">
+      <h3 id="tableSectionTitle">Table Example</h3>
+      <table aria-label="Example Table">
+        <caption>Table Caption</caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+          </tr>
+          <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Footer</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
 
-  <section>
-    <h2>Time and Marked Text</h2>
-    <p>This is a <mark>highlighted</mark> text example.</p>
-    <p>The time is: <time datetime="2024-10-27T10:00:00">October 27, 2024 10:00 AM</time></p>
+     <meter value="0.75" max="1"></meter>
+     <progress value="50" max="100"></progress>
+     <output>50</output>
+
   </section>
 </main>
+
+<aside aria-label="Sidebar">
+    <h3>Sidebar Content</h3>
+    <p>This is some additional content in the sidebar.</p>
+</aside>
 
 <footer>
   <p>&copy; 2024 Example Website</p>
