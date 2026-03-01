@@ -6,205 +6,174 @@
 <title>Interactive Elements</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
+<body role="region" aria-label="Interactive Content">
 
 <header>
-  <h1>Interactive Elements Demo</h1>
+  <h1>Interactive Elements Example</h1>
   <nav aria-label="Main Navigation">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms</a></li>
-      <li><a href="media.html">Media</a></li>
-      <li><a href="tables.html">Tables</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Interactive Form Elements</h2>
-
-    <form>
+    <h2>Interactive Form</h2>
+    <form action="#" method="post">
       <fieldset>
-        <legend>Personal Information</legend>
-
+        <legend>User Information</legend>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" aria-labelledby="name"><br><br>
-
+        <input type="text" id="name" name="name" required>
+        <br>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" aria-labelledby="email"><br><br>
-
+        <input type="email" id="email" name="email">
+        <br>
         <label for="message">Message:</label>
-        <textarea id="message" name="message" aria-labelledby="message"></textarea><br><br>
-
-        <button type="submit">Submit</button>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
       </fieldset>
+      <button type="submit">Submit</button>
     </form>
-
-    <section>
-        <h2>Progress and Meter</h2>
-        <progress value="50" max="100" aria-label="Progress"></progress>
-        <meter value="0.75" max="1" aria-label="Overall Performance"></meter>
-    </section>
-
-    <section>
-      <h2>Preformatted Text and Code</h2>
-      <pre>
-        <code>
-          function greet() {
-            console.log("Hello, world!");
-          }
-        </code>
-      </pre>
-    </section>
-
-     <section>
-       <h2>Definitions and Quotations</h2>
-       <dfn aria-label="Important Term">Semantic HTML</dfn> is key for accessibility.
-       <q cite="Shakespeare">To be or not to be, that is the question.</q>
-     </section>
-
-     <section>
-      <h2>Keyboard Input</h2>
-      <kbd>Ctrl</kbd> + <kbd>S</kbd> to save your work.
-     </section>
-
-     <section>
-       <h2>Ruby Annotation</h2>
-       <ruby>
-         <rt>Romaji</rt>
-         <rp>(</rp>
-         <rt>Japanese</rt>
-         <rp>)</rp>
-         <rp>：</rp>
-         <rt>は</rt>
-         <rp>：</rp>
-         <rt>wa</rt>
-       </ruby>
-     </section>
-
-     <section>
-       <h2>Subscript and Superscript</h2>
-       H<sub>2</sub>O is water.  x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup>.
-     </section>
-   </section>
+  </section>
 
   <section>
-    <h2>Simple Table</h2>
-    <table>
+    <h2>Progress Indicator</h2>
+    <progress value="50" max="100" aria-valuetext="50% Complete"></progress>
+    <p>Progress: <output name="progress" value="50">50</output>%</p>
+  </section>
+
+  <section>
+    <h2>Interactive Table</h2>
+    <table aria-label="Interactive Data Table">
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
       <caption>Sample Data</caption>
       <thead>
         <tr>
           <th>Header 1</th>
           <th>Header 2</th>
+          <th>Header 3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
         </tr>
         <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">Footer</td>
+          <td colspan="3">Total Records: 2</td>
         </tr>
       </tfoot>
     </table>
   </section>
 
   <section>
-    <h2>Time Element</h2>
-    <time datetime="2023-10-27T10:00:00">Published on October 27, 2023</time>
+    <h2>Details and Summary</h2>
+    <details>
+      <summary>Click to Reveal</summary>
+      <p>This is some hidden content.</p>
+    </details>
   </section>
-    
-    <section>
-        <h2>Marked Text</h2>
-        <p>This is some <mark>important</mark> text that needs to be highlighted.</p>
-    </section>
-    <section>
-        <h2>Span and U Elements</h2>
-        <p>This is a <span>span</span> element.  This is <u>underlined</u> text.</p>
-    </section>
-    <section>
-      <h2>BDO</h2>
-      <bdo dir="rtl">Right-to-Left Text</bdo>
-    </section>
-    <section>
-      <h2>Cite</h2>
-      <cite>The Hitchhiker's Guide to the Galaxy</cite> is a great book.
-    </section>
-    <section>
-      <h2>Col</h2>
-        <table border="1">
-          <col>
-          <col>
-          <tr><td>A</td><td>B</td></tr>
-        </table>
-    </section>
-    <section>
-      <h2>Embed</h2>
-        <embed src="https://www.youtube.com/embed/dQw4w9WgXcQ" type="application/x-shockwave-flash" width="480" height="360">
-    </section>
-    <section>
-      <h2>I</h2>
-      <i>Italic text</i>
-    </section>
-    <section>
-       <h2>Map</h2>
-       <img src="example.jpg" alt="Map" usemap="#map">
-       <map name="map">
-         <area shape="rect" coords="0,0,100,100" href="link1.html">
-       </map>
-    </section>
-    <section>
-      <h2>Noscript</h2>
-       <noscript>JavaScript is not enabled.</noscript>
-    </section>
-    <section>
-      <h2>Optgroup</h2>
-      <select>
-        <optgroup label="Fruits">
-          <option value="apple">Apple</option>
-          <option value="banana">Banana</option>
-        </optgroup>
-        <optgroup label="Vegetables">
-          <option value="carrot">Carrot</option>
-          <option value="broccoli">Broccoli</option>
-        </optgroup>
-      </select>
-    </section>
-     <section>
-      <h2>Q</h2>
-      <p>As <q>Albert Einstein</q> said, "Imagination is more important than knowledge."</p>
-    </section>
-    <section>
-      <h2>S</h2>
-      <p>This is <s>strikethrough</s> text.</p>
-    </section>
-    <section>
-      <h2>Slot</h2>
-       <template>
-        <p>This is a slot.</p>
-       </template>
-    </section>
-    <section>
-      <h2>Var</h2>
-      <p>The value of x is <var>x</var>.</p>
-    </section>
-    <section>
-      <h2>Wbr</h2>
-      <p>This is a <wbr>long&amp;nbsp;word.</p>
-    </section>
+
+  <section>
+    <h2>Code Example</h2>
+    <pre><code>
+      function greet(name) {
+        console.log("Hello, " + name + "!");
+      }
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Time Element</h2>
+    <time datetime="2024-10-27T10:00:00">Published on October 27, 2024</time>
+  </section>
+  
+  <section>
+    <h2>Marked Text</h2>
+    <p>This is a sentence with <mark>important</mark> words.</p>
+  </section>
+
+  <section>
+    <h2>Ruby Annotation</h2>
+    <p>The word "你好" is written as <ruby>
+      <rt>你好</rt>
+      <rp>(</rp>
+      <rt>nǐ hǎo</rt>
+      <rp>)</rp>
+    </ruby>.</p>
+  </section>
+
+  <section>
+    <h2>Keyboard Input</h2>
+    <p>Press <code>Ctrl+Enter</code> to submit.</p>
+  </section>
+  
+  <section>
+    <h2>Meter Element</h2>
+    <meter value="0.75" max="1" aria-valuetext="75%"></meter>
+  </section>
+
+  <section>
+    <h2>Dialog Element</h2>
+    <dialog aria-label="Confirmation Dialog">
+      <p>Are you sure you want to proceed?</p>
+      <button>Confirm</button>
+      <button>Cancel</button>
+    </dialog>
+  </section>
+
+  <section>
+    <h2>Iframe Example</h2>
+    <iframe src="https://www.example.com" title="Example Website" width="400" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>H5 Heading</h2>
+    <h5>This is an H5 heading.</h5>
+  </section>
+
+  <section>
+    <h2>H6 Heading</h2>
+    <h6>This is an H6 heading.</h6>
+  </section>
+
+  <section>
+    <h2>Small Text</h2>
+    <small>This is some small text.</small>
+  </section>
+
+  <section>
+    <h2>Data Element</h2>
+    <data value="12345">Some data</data>
+  </section>
+
+  <section>
+    <h2>Style Section</h2>
+    <style>
+      h2 {
+        color: navy;
+      }
+    </style>
+  </section>
 
 </main>
 
 <footer>
-  <p>&copy; 2023 Interactive Elements Demo</p>
+  <p>&copy; 2024 Example Website</p>
 </footer>
 </body>
 </html>
