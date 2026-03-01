@@ -3,169 +3,150 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Examples</title>
+<title>Media Content</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body role="content">
 
 <header>
-  <h1>Media Examples</h1>
+  <h1>Media Showcase</h1>
   <nav aria-label="Main Navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms</a></li>
       <li><a href="tables.html">Tables</a></li>
-      <li><a href="interactive.html">Interactive</a></li>
+      <li><a href="interactive.html">Interactive Elements</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Audio</h2>
-    <audio controls preload="auto">
-      <source src="audio/example.mp3" type="audio/mpeg">
-      <source src="audio/example.ogg" type="audio/ogg">
+    <h2>Audio Example</h2>
+    <audio controls>
+      <source src="audio/sample.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
-      <track label="English" kind="subtitles" src="audio/example.srt" srclang="en" default>
+      <track src="audio/sample.vtt" kind="subtitles" srclang="en" label="English">
     </audio>
+    <p>This is a sample audio file.  Use the controls above to play and adjust the volume.  Subtitles are available in English.</p>
   </section>
 
   <section>
-    <h2>Video</h2>
-    <video width="640" height="360" controls preload="auto">
-      <source src="video/example.mp4" type="video/mp4">
-      <source src="video/example.webm" type="video/webm">
+    <h2>Video Example</h2>
+    <video width="640" height="360" controls>
+      <source src="video/sample.mp4" type="video/mp4">
       Your browser does not support the video element.
-      <track label="English" kind="captions" src="video/example.vtt" srclang="en" default>
+      <track src="video/sample.vtt" kind="subtitles" srclang="en" label="English">
     </video>
+    <figcaption>This is a sample video. Subtitles are available in English.</figcaption>
   </section>
 
   <section>
-    <h2>Images and Figures</h2>
+    <h2>Image Gallery</h2>
     <figure>
-      <img src="images/example.jpg" alt="A descriptive image" width="300" height="200">
-      <figcaption>A caption for the image</figcaption>
+      <img src="images/image1.jpg" alt="Description of Image 1" width="300" height="200">
+      <figcaption>Image 1 - A beautiful landscape</figcaption>
     </figure>
 
     <figure>
-        <img src="images/another_example.png" alt="Another descriptive image">
-        <figcaption>A second image with a caption</figcaption>
+      <img src="images/image2.jpg" alt="Description of Image 2" width="300" height="200">
+      <figcaption>Image 2 - A close-up of a flower</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/image3.jpg" alt="Description of Image 3" width="300" height="200">
+      <figcaption>Image 3 - An abstract design</figcaption>
     </figure>
   </section>
 
   <section>
-    <h2>Progress Indicators</h2>
-    <h3>Meter</h3>
-    <meter id="myMeter" value="0.75" max="1" title="Progress: 75%"></meter>
-    <p>Progress: <output name="progressOutput">0.75</output> / 1</p>
-
-    <h3>Progress Bar</h3>
-    <progress value="60" max="100"></progress>
-  </section>
-
-  <section>
-    <h2>Time</h2>
-    <time datetime="2024-01-26T10:00:00">Published on January 26, 2024 at 10:00 AM</time>
-  </section>
-
-  <section>
-    <h2>Code Examples</h2>
+    <h2>Code Snippet</h2>
     <pre><code>
-      function greet(name) {
-        console.log("Hello, " + name + "!");
-      }
+&lt;p&gt;This is a code snippet.&lt;/p&gt;
+&lt;code&gt;console.log("Hello, world!");&lt;/code&gt;
+<kbd>Press Enter to continue.&lt;/kbd&gt;
     </code></pre>
   </section>
 
   <section>
-    <h2>Mathematical Notation</h2>
+    <h2>Other Elements</h2>
+    <p>Here are a few other HTML5 elements to demonstrate their usage.</p>
+
+    <details>
+      <summary>Click here for more information</summary>
+      <p>This is some additional information within the <code>&lt;details&gt;</code> element.</p>
+    </details>
+
+    <dialog>
+      <p>This is a dialog box.</p>
+      <button>Close</button>
+    </dialog>
+
+    <fieldset>
+      <legend>Form Section</legend>
+      <input type="text" name="name" placeholder="Enter your name">
+    </fieldset>
+
+    <time datetime="2024-01-26">Published on January 26, 2024</time>
+
+    <mark>Important note</mark>
+
     <ruby>
-      <rt>e</rt>
-      <rp>(</rp>
-      <rt>x</rt>
-      <rp>)</rp>
-      <sup>2</sup>
+      <rt>日本語</rt>
+      <rp>(</rp>Japanese<rp>)</rp>
     </ruby>
+
+    <bdo dir="rtl">This text is reversed.</bdo>
+
+    <var>x</var> = <var>y</var> + <var>z</var>
+
+    <wbr>This is a word break opportunity.
+
+    <q>This is a quote.</q>
+
+    <cite>A reference to a work.</cite>
+
+    <dfn>A term being defined.</dfn>
+
+    <small>Small text.</small>
+
+    <span style="font-style: italic;">Italic text.</span>
+
+    <span style="font-weight: bold;">Bold text.</span>
+
+    <area shape="rect" coords="0,0,100,100" href="#home" alt="Home Area">
+    <embed src="audio/sample.mp3" type="audio/mpeg" width="200" height="50">
+
+    <output name="result">Result goes here</output>
   </section>
 
-   <section>
-     <h2>Inline Graphics</h2>
-     <kbd>Ctrl+Shift+C</kbd>
-   </section>
-
-   <section>
-     <h2>Object Embedding</h2>
-     <object data="data/example.pdf" type="application/pdf" width="600" height="400">
-        <p>Your browser does not support PDF viewing.</p>
-     </object>
-   </section>
-
-  <section>
-      <h2>Iframe</h2>
-      <iframe src="https://www.example.com" width="600" height="400" title="Example Website"></iframe>
-  </section>
-   <section>
-      <h2>NoScript</h2>
-      <noscript>
-         <p>JavaScript is disabled. Please enable it for the full experience.</p>
-      </noscript>
-   </section>
-
-   <section>
-      <h2>Colgroups and Tables</h2>
-      <colgroup>
-          <col width="50%">
-          <col width="50%">
-      </colgroup>
-      <table>
-          <caption>Example Table</caption>
-          <thead>
-              <tr>
-                  <th>Header 1</th>
-                  <th>Header 2</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Row 1, Cell 1</td>
-                  <td>Row 1, Cell 2</td>
-              </tr>
-              <tr>
-                  <td>Row 2, Cell 1</td>
-                  <td>Row 2, Cell 2</td>
-              </tr>
-          </tbody>
-          <tfoot>
-              <tr>
-                  <th colspan="2">Footer</th>
-              </tr>
-          </tfoot>
-      </table>
-   </section>
-
-   <section>
-        <h2>Data and Details</h2>
-        <details>
-            <summary>About this Section</summary>
-            <p>This section contains details about media examples.</p>
-            <data value="12345">Important Data</data>
-        </details>
-   </section>
-
-   <section>
-        <h2>Dialog</h2>
-        <dialog>
-            <p>This is a dialog box.</p>
-        </dialog>
-   </section>
-
-  </section>
+  <table border="1">
+    <caption>Sample Table</caption>
+    <thead>
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Row 1, Cell 1</td>
+        <td>Row 1, Cell 2</td>
+      </tr>
+      <tr>
+        <td>Row 2, Cell 1</td>
+        <td>Row 2, Cell 2</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Footer</td>
+      </tr>
+    </tfoot>
+  </table>
 </main>
 
 <footer>
-  <p>&copy; 2024 Example Website</p>
+  <p>&copy; 2024 My Website</p>
 </footer>
-
-</body>
-</html>
+</body >
+</html >

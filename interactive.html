@@ -3,174 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Elements</title>
+<title>Interactive Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
+<body role="presentation">
 
-<header>
-  <h1>Interactive Elements Demo</h1>
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="#introduction">Introduction</a></li>
-      <li><a href="#forms">Forms</a></li>
-      <li><a href="#tables">Tables</a></li>
-      <li><a href="#media">Media Elements</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <h1>Interactive Demonstration</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <section id="introduction">
-    <h2>Introduction to Interactive Features</h2>
-    <p>This section showcases various interactive HTML elements.</p>
-    <figure>
-      <img src="placeholder.png" alt="Interactive Elements Illustration" width="300" height="200">
-      <figcaption>Illustration of Interactive Elements</figcaption>
-    </figure>
-  </section>
+  <main>
+    <section>
+      <h2>Interactive Form</h2>
+      <form>
+        <fieldset>
+          <legend>User Information</legend>
 
-  <section id="forms">
-    <h2>Interactive Forms</h2>
-    <form>
-      <fieldset>
-        <legend>User Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
 
-        <label for="comment">Comment:</label>
-        <textarea id="comment" name="comment"></textarea><br><br>
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob">
+
+          <label for="comment">Comments:</label>
+          <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+        </fieldset>
 
         <button type="submit">Submit</button>
-      </fieldset>
-    </form>
-
-    <details>
-      <summary>More Form Elements</summary>
-      <p>Additional form elements can be added here.</p>
-    </details>
-  </section>
-
-  <section id="tables">
-    <h2>Interactive Tables</h2>
-    <table>
-      <caption>Sample Data</caption>
-      <colgroup>
-        <col>
-        <col>
-        <col>
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 5</td>
-          <td>Data 6</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Footer Information</td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
-
-  <section id="media">
-    <h2>Interactive Media</h2>
-    <h3>Audio Example</h3>
-    <audio controls>
-      <source src="placeholder.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-
-    <h3>Video Example</h3>
-    <video width="360" height="240" controls>
-      <source src="placeholder.mp4" type="video/mp4">
-      Your browser does not support the video element.
-    </video>
-    <p>Progress bar:</p>
-    <progress value="50" max="100"></progress>
-    <meter value="0.75" min="0" max="1"></meter>
-    <output name="result"></output>
-    <pre><code>Code snippet</code></pre>
-  </section>
-    <section>
-    <h5 id="subscript_test">Subscript Example</h5>
-    <p><sub>This is subscript text</sub></p>
-  </section>
-
-    <section>
-        <h6 id="ruby_test">Ruby Example</h6>
-        <ruby>
-            <rt>漢</rt>
-            <rp>(</rp>かん<rp>)</rp>
-        </ruby>
+      </form>
     </section>
 
     <section>
+      <h2>Interactive Data Table</h2>
+      <table aria-describedby="table-description">
+        <caption>Monthly Sales Data</caption>
+        <thead role="row">
+          <tr>
+            <th scope="col">Month</th>
+            <th scope="col">Sales</th>
+          </tr>
+        </thead>
+        <tbody role="row">
+          <tr>
+            <td scope="row">January</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td scope="row">February</td>
+            <td>$1,200</td>
+          </tr>
+          <tr>
+            <td scope="row">March</td>
+            <td>$1,500</td>
+          </tr>
+        </tbody>
+        <tfoot role="row">
+            <tr>
+                <th>Total</th>
+                <th role="row"> $3,700</th>
+            </tr>
+        </tfoot>
+      </table>
+      <p id="table-description" aria-live="polite">This table displays monthly sales data.</p>
+    </section>
+
+    <section>
+      <h2>Interactive Content</h2>
+      <article>
+        <h3>A Sample Article</h3>
+        <p>This is a sample article with some <strong>important</strong> information.  <mark>Pay attention!</mark>  See how <em>emphasis</em> is used?</p>
+        <figure>
+          <img src="placeholder.jpg" alt="Placeholder Image" width="200" height="150">
+          <figcaption>A relevant image.</figcaption>
+        </figure>
+        <pre><code>This is a code snippet:
+        int x = 10;
+        System.out.println(x);
+        </code></pre>
+        <q>This is a quote from someone.</q>
+        <cite>Source of the quote.</cite>
+        <kbd>Press Ctrl+Enter</kbd>
+      </article>
+      <aside>
+        <h3>Related Information</h3>
+        <p>This is some related information in an aside.</p>
+      </aside>
+    </section>
+
+    <section>
+      <h2>Dynamic Content with Details</h2>
+      <details>
+        <summary>Click to Reveal</summary>
+        <p>This is the content of the details element.</p>
+      </details>
+    </section>
+
+    <section>
+       <h2>Interactive Elements</h2>
+       <p> This section showcases some additional interactive HTML elements. </p>
+       <small>This is small text.</small>
+       <bdo dir="rtl">This text will be displayed right-to-left.</bdo>
+       <var>x</var> = <var>y</var> + <var>z</var>
+       <dfn>This is a definition term.</dfn>
+       <wbr> Word break opportunity.
+       <slot name="interactive-element"></slot>
+       <template>
+         <p>Template content here.</p>
+       </template>
+       <u role="presentation">Underline</u>
+       <i role="presentation">Italicized text</i>
+       <span aria-label="span-element">A span element.</span>
+       <area shape="rect" coords="0,0,100,100" href="#" alt="Area Link">
+       <map name="mapname">
+           <area shape="circle" coords="50,50,25" href="#">
+       </map>
+       <optgroup label="Fruits">
+           <option value="apple">Apple</option>
+           <option value="banana">Banana</option>
+       </optgroup>
+       <progress value="50" max="100"></progress>
+       <meter value="0.75" max="1"></meter>
        <time datetime="2024-01-01">January 1, 2024</time>
+       <output name="result"></output>
     </section>
+  </main>
 
-    <section>
-        <mark>Highlighted text</mark>
-    </section>
-
-    <section>
-        <kbd>Ctrl+Shift+A</kbd>
-    </section>
-
-    <section>
-      <dialog>
-        <p>This is a dialog box.</p>
-      </dialog>
-    </section>
-
-    <section>
-      <object data="placeholder.pdf" type="application/pdf">
-        <p>Your browser doesn't support PDF viewing.</p>
-      </object>
-    </section>
-
-    <section>
-      <ol>
-        <li>Item 1</li>
-        <li>Item 2</li>
-      </ol>
-    </section>
-
-    <section>
-      <param name="name" value="value"></param>
-    </section>
-
-    <section>
-      <rp>(accent mark)</rp>
-    </section>
-
-    <section>
-        <style>
-            body { font-family: sans-serif; }
-        </style>
-    </section>
-</main>
-
-<footer role="contentinfo">
-  <p>&copy; 2024 Interactive Elements Demo</p>
-</footer>
+  <footer>
+    <p>&copy; 2024 Interactive Example</p>
+  </footer>
 
 </body>
-</html >
+</html>

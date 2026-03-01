@@ -10,156 +10,191 @@
 
 <header>
   <h1>Tables Example</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms</a></li>
-      <li><a href="interactive.html">Interactive</a></li>
-      <li><a href="media.html">Media</a></li>
-      <li><a href="tables.html">Tables</a></li>
-    </ul>
+  <nav aria-label="Main Navigation">
+    <a href="#">Home</a> |
+    <a href="#">About</a> |
+    <a href="#">Contact</a>
   </nav>
 </header>
 
 <main>
   <section>
     <h2>Basic Table</h2>
-    <p>This is a simple table demonstrating the structure of a <code>table</code> element.</p>
-
-    <table>
-      <caption>Simple Product List</caption>
-      <thead>
-        <tr>
-          <th>Product Name</th>
-          <th>Price</th>
-          <th>Quantity</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Apple</td>
-          <td>$1.00</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>Banana</td>
-          <td>$0.50</td>
-          <td>15</td>
-        </tr>
-        <tr>
-          <td>Orange</td>
-          <td>$0.75</td>
-          <td>8</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Total Items: 33</td>
-        </tr>
-      </tfoot>
-    </table>
-
     <figure>
-      <img src="placeholder.png" alt="Illustration of a table" width="300" height="200">
-      <figcaption>Example of a table visual representation.</figcaption>
+      <figcaption>A simple table structure.</figcaption>
+      <table>
+        <caption>Basic Table</caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+          </tr>
+          <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total Rows: 2</td>
+          </tr>
+        </tfoot>
+      </table>
+      <img src="placeholder.png" alt="Placeholder image of a table" width="200" height="150">
     </figure>
   </section>
 
   <section>
-    <h2>Advanced Table with <em>data</em> and <em>ins</em>/<em>del</em></h2>
-    <p>This table shows price changes with insertion and deletion.</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Old Price</th>
-          <th>New Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Book</td>
-          <td>$20.00</td>
-          <ins>Revised: $18.00</ins>
-        </tr>
-        <tr>
-          <td>Pen</td>
-          <td>$1.00</td>
-          <del>Old: $1.00</del> <em>Now: $0.80</em>
-        </tr>
-        <tr>
-          <td>Notebook</td>
-          <td>$5.00</td>
-          <ins>Reduced: $4.50</ins>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-   <section>
-    <h2>Table with <code>summary</code> and <code>details</code></h2>
-      <details>
-          <summary>Table Information</summary>
-          <p>This table is dynamically generated from data.</p>
-          <ul>
-              <li><b>Created:</b> <time datetime="2024-10-27">October 27, 2024</time></li>
-              <li><b>Source:</b> JSON data</li>
-          </ul>
-      </details>
+    <h2>Advanced Table with Details</h2>
+    <details>
+      <summary>Click to Expand Details</summary>
+      <p>This table demonstrates using a <code>details</code> element to expand content.</p>
+      <table>
+        <caption>Advanced Table</caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span role="presentation">John Doe</span></td>
+            <td>30</td>
+            <td>New York</td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>25</td>
+            <td>Los Angeles</td>
+          </tr>
+        </tbody>
+      </table>
+      <var>Important Note:</var> Data accuracy not guaranteed.
+    </details>
   </section>
 
   <section>
-    <h2>Another Table</h2>
-    <p>This table showcases a different formatting approach and includes a <code>picture</code> element.</p>
-
-    <table aria-label="Customer Data">
+    <h2>Table with <em>Emphasis</em> and <strong>Strong Emphasis</strong></h2>
+    <table>
+      <caption>Emphasized Data</caption>
       <thead>
         <tr>
-          <th>Customer ID</th>
-          <th>Name</th>
-          <th>Email</th>
+          <th>Column 1</th>
+          <th>Column 2</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>123</td>
-          <td>John Doe</td>
-          <td>john.doe@example.com</td>
-        </tr>
-        <tr>
-          <td>456</td>
-          <td>Jane Smith</td>
-          <td>jane.smith@example.com</td>
+          <td>Value <em>with emphasis</em></td>
+          <td>Value <strong>with strong emphasis</strong></td>
         </tr>
       </tbody>
     </table>
+    <kbd>Enter</kbd> to submit.
+  </section>
 
-    <picture>
-      <source srcset="image-small.jpg" media="(max-width: 600px)">
-      <img src="image-large.jpg" alt="Diagram of Table Structure">
-    </picture>
+  <section>
+    <h2>Complex Table with <code>Code</code></h2>
+    <pre><code>
+    function greet(name) {
+      return "Hello, " + name + "!";
+    }
+    </code></pre>
+  </section>
+   <section>
+    <h2>Table with <code>area, bdo, cite, dfn, embed, i, map, optgroup, q, s, slot, small, span, template, u, var, wbr</code> tags</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>area</code></td>
+                <td>Defines an area in an image map.</td>
+            </tr>
+            <tr>
+                <td><code>bdo</code></td>
+                <td>Defines the writing direction.</td>
+            </tr>
+            <tr>
+                <td><code>cite</code></td>
+                <td>Specifies an URL reference.</td>
+            </tr>
+             <tr>
+                <td><code>dfn</code></td>
+                <td>Defines a term.</td>
+            </tr>
+            <tr>
+                <td><code>embed</code></td>
+                <td>Embeds external content.</td>
+            </tr>
+             <tr>
+                <td><code>i</code></td>
+                <td>Specifies emphasized text.</td>
+            </tr>
+            <tr>
+                <td><code>map</code></td>
+                <td>Defines a coordinate map.</td>
+            </tr>
+            <tr>
+                <td><code>optgroup</code></td>
+                <td>Groups related options in a drop-down list.</td>
+            </tr>
+            <tr>
+                <td><code>q</code></td>
+                <td>Marks a quote</td>
+            </tr>
+            <tr>
+                <td><code>s</code></td>
+                <td>Strikes through text.</td>
+            </tr>
+            <tr>
+                <td><code>slot</code></td>
+                <td>Specifies a slot in a web component</td>
+            </tr>
+            <tr>
+                <td><code>small</code></td>
+                <td>Specifies small text.</td>
+            </tr>
+            <tr>
+                <td><code>span</code></td>
+                <td>Container for inline elements.</td>
+            </tr>
+            <tr>
+                <td><code>template</code></td>
+                <td>Defines a reusable template.</td>
+            </tr>
+            <tr>
+                <td><code>u</code></td>
+                <td>Specifies underlined text.</td>
+            </tr>
+            <tr>
+                <td><code>var</code></td>
+                <td>Specifies a variable.</td>
+            </tr>
+             <tr>
+                <td><code>wbr</code></td>
+                <td>Specifies where the browser may break a line.</td>
+            </tr>
+        </tbody>
+    </table>
   </section>
 </main>
 
-<aside>
-  <h3>Additional Information</h3>
-  <p>This is an <code>aside</code> section providing supplementary details.</p>
-  <pre><code>
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;...&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-    &lt;/table&gt;
-  </code></pre>
-</aside>
-
-<footer>
-  <p>Copyright 2024 - Example Website</p>
-  <p>Last Updated: <time datetime="2024-10-27T10:00:00">10:00 AM, October 27, 2024</time></p>
+<footer role="contentinfo">
+  <p>Copyright &copy; 2024 Example Corp. <time datetime="2024-01-26">January 26, 2024</time></p>
+  <mark>Disclaimer: All content is for demonstration purposes only.</mark>
 </footer>
-
 </body>
 </html

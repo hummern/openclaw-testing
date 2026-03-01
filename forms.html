@@ -3,15 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forms Example</title>
+<title>Forms - Accessible HTML5 Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body role="content">
 
 <header>
-  <h1>Forms Example</h1>
-  <nav aria-label="Navigation">
-    <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a>
+  <h1>Forms Demo</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="interactive.html">Interactive</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="tables.html">Tables</a></li>
+    </ul>
   </nav>
 </header>
 
@@ -20,42 +25,70 @@
     <h2>Contact Form</h2>
     <form action="#" method="post">
       <fieldset>
-        <legend>User Information</legend>
+        <legend>Personal Information</legend>
 
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true">
+        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
+        <small>Required</small>
         <br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true">
+        <input type="email" id="email" name="email" required aria-required="true" placeholder="Your Email">
+        <small>Must be a valid email address</small>
+        <br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+        <small>Optional</small>
+        <br>
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+        <br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+
+        <br>
+
+        <label for="interests">Interests:</label>
+        <select id="interests" name="interests" multiple aria-multiselectable="true">
+          <optgroup label="Hobbies">
+            <option value="reading">Reading</option>
+            <option value="hiking">Hiking</option>
+          </optgroup>
+          <optgroup label="Technology">
+            <option value="programming">Programming</option>
+            <option value="webdesign">Web Design</option>
+          </optgroup>
+        </select>
+
         <br>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50" aria-label="Enter your message"></textarea>
+        <textarea id="message" name="message" rows="4" cols="50" aria-label="Your Message"></textarea>
+        <small>Tell us more!</small>
         <br>
-
-        <label for="newsletter">Subscribe to Newsletter:</label>
-        <input type="checkbox" id="newsletter" name="newsletter" aria-label="Subscribe to our newsletter">
       </fieldset>
 
       <fieldset>
-        <legend>Additional Information</legend>
-
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
+        <legend>Address</legend>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
         <br>
-
-        <label>Select your interests:</label><br>
-        <input type="checkbox" id="interest1" name="interest1" value="sports">
-        <label for="interest1">Sports</label><br>
-        <input type="checkbox" id="interest2" name="interest2" value="music">
-        <label for="interest2">Music</label><br>
-        <input type="checkbox" id="interest3" name="interest3" value="movies">
-        <label for="interest3">Movies</label><br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+        <br>
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state">
+        <br>
+        <label for="zip">Zip Code:</label>
+        <input type="text" id="zip" name="zip">
       </fieldset>
 
       <button type="submit">Submit</button>
@@ -64,74 +97,79 @@
   </section>
 
   <section>
-    <h2>Progress Bar Example</h2>
-    <progress max="100" value="75" aria-label="Progress towards completion"></progress>
-    <p>Progress: <output id="progressValue">75%</output></p>
-  </section>
+    <h2>More Form Elements</h2>
+    <p>
+      <em>Example:</em>  This is emphasized text. <cite>Reference to a work</cite>.
+      <small>Small text.</small>
+      <var>Variable text.</var>
+      <bdo>Bidirectional text override.</bdo>
+      <dfn>Definition.</dfn>
+      <span class="highlight">Highlighted text.</span>
+      <ins>Inserted text.</ins>
+      <del>Deleted text.</del>
+      <mark>Marked text.</mark>
+      <q>A short quotation.</q>
+      <abbr title="HyperText Markup Language">HTML</abbr>
+      <sup>Superscript</sup> <sub>Subscript</sub>
+      <wbr>Word break opportunity.
+      <kbd>Keyboard input.</kbd>
+      <code>Code snippet.</code>
+      <pre>Preformatted text.</pre>
+      <time datetime="2023-10-27">October 27, 2023</time>
+      <ruby>漢 <rt>kan</rt>字</ruby>
+      <slot>Content slot</slot>
+      <template> Template content </template>
+      <area shape="rect" coords="0,0,100,100" href="#" alt="Example Area">
+      <u role="button">Underline role</u>
+      <i role="alert">Italic role</i>
+      <map name="mapname">
+         <area shape="rect" coords="0,0,100,100" href="#" alt="Example Area">
+      </map>
+    </p>
 
-  <section>
-    <h2>Table Example</h2>
     <table>
-      <caption>Sample Data Table</caption>
-      <colgroup>
-        <col>
-        <col>
-        <col>
-      </colgroup>
+      <caption>Sample Table</caption>
       <thead>
         <tr>
           <th>Header 1</th>
           <th>Header 2</th>
-          <th>Header 3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 5</td>
-          <td>Data 6</td>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="3">Total Rows: 2</td>
+          <td colspan="2">Footer</td>
         </tr>
       </tfoot>
     </table>
   </section>
 
-  <section>
-    <h2>Meter Example</h2>
-    <meter value="0.8" max="1.0" aria-label="Resource Usage"></meter>
-    <p>Resource usage: 80%</p>
-  </section>
+  <figure>
+    <img src="placeholder.jpg" alt="Placeholder Image" width="200" height="150">
+    <figcaption>A placeholder image.</figcaption>
+  </figure>
 
-  <section>
-    <h2>Details and Summary Example</h2>
-    <details>
-      <summary>Click to view more details</summary>
-      <p>This is some additional information.</p>
-    </details>
-  </section>
+  <details>
+    <summary>Details Summary</summary>
+    <p>Details content.</p>
+  </details>
+
+  <dialog>
+    <p>Dialog content.</p>
+  </dialog>
+
+  <progress value="50" max="100" aria-valuetext="50% Complete"></progress>
+  <meter value="0.75" max="1" aria-valuetext="75%"></meter>
+  <output name="result" value="10">Result</output>
 </main>
 
-<aside>
-  <h3>Aside Content</h3>
-  <p>This is some additional content displayed in the aside.</p>
-  <figure>
-    <img src="placeholder.jpg" alt="Placeholder Image">
-    <figcaption>A Placeholder Image</figcaption>
-  </figure>
-</aside>
-
 <footer>
-  <p>&copy; 2024 Example Website</p>
-  <time datetime="2024-10-27">Last Updated: October 27, 2024</time>
+  <p>&copy; 2023 Accessible Forms Example</p>
 </footer>
 
 </body>
