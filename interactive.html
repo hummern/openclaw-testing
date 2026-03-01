@@ -3,182 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Elements - Accessible Demo</title>
+<title>Interactive Elements</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
-
-<header aria-label="Page Header">
-  <h1>Interactive Elements Demo</h1>
-  <p>This page showcases various interactive HTML elements with accessibility considerations.</p>
+<body>
+<header>
+  <h1>Interactive Elements</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 </header>
-
-<nav aria-label="Main Navigation">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="forms.html">Forms</a></li>
-    <li><a href="media.html">Media</a></li>
-    <li><a href="tables.html">Tables</a></li>
-  </ul>
-</nav>
 
 <main>
   <section>
-    <h2>Interactive Accordion</h2>
-    <details>
-      <summary aria-expanded="false">What is an Accordion?</summary>
-      <p>An accordion is a vertically stacked list of elements, where only one element is visible at a time until clicked.</p>
-    </details>
-    <details>
-      <summary aria-expanded="false">Accordion Benefits</summary>
-      <p>Accordions help organize content and reduce scrolling, improving user experience.</p>
-    </details>
+    <h2>Interactive Form</h2>
+    <form>
+      <fieldset>
+        <legend>User Information</legend>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" aria-invalid="false"><br><br>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+      </fieldset>
+
+      <button type="submit" aria-pressed="false">Submit</button>
+    </form>
   </section>
 
   <section>
-    <h2>Progress Bar</h2>
-    <progress value="75" max="100" aria-label="Progress Bar"></progress>
-    <p><span>Progress: <output name="progress">75%</output></span></p>
+    <h2>Interactive Map</h2>
+    <figure>
+      <figcaption>A simple map example</figcaption>
+      <img src="map.jpg" alt="Example map" width="300" height="200">
+      <map name="map">
+        <area shape="rect" coords="0,0,100,100" href="#" alt="Area 1" title="Area 1">
+        <area shape="circle" coords="200,150,25,50" href="#" alt="Area 2" title="Area 2">
+      </map>
+    </figure>
   </section>
 
   <section>
-    <h2>Interactive Dialog</h2>
-    <dialog aria-label="Confirmation Dialog">
-      <p>Are you sure you want to proceed?</p>
-      <button>Confirm</button>
-      <button>Cancel</button>
-    </dialog>
+    <h2>Interactive Table</h2>
+    <table>
+      <caption>Sample Data</caption>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Footer Information</td>
+        </tr>
+      </tfoot>
+    </table>
   </section>
 
   <section>
-    <h2>Interactive Meter</h2>
-    <meter value="0.8" max="1" aria-label="Resource Usage"></meter>
-    <p>Resource Usage: 80%</p>
+    <h2>Interactive Progress Bar</h2>
+    <progress value="75" max="100" aria-valuemin="0" aria-valuemax="100"></progress>
+    <p>Progress: <span id="progress-value">75</span>%</p>
   </section>
 
   <section>
-    <h2>Interactive Fieldset and Legend</h2>
-    <fieldset aria-label="Interactive Options">
-      <legend>Select Options</legend>
-      <p>Choose your preference:</p>
-      <input type="radio" id="option1" name="preference" value="option1">
-      <label for="option1">Option 1</label><br>
-      <input type="radio" id="option2" name="preference" value="option2">
-      <label for="option2">Option 2</label><br>
-      <ins>Option 2 is the preferred choice.</ins>
-    </fieldset>
+    <h2>Interactive Code Example</h2>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Code Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
   </section>
-
     <section>
-      <h2>Interactive Table</h2>
-      <table>
-        <caption>Interactive Table Example</caption>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Row 1, Cell 1</td>
-            <td>Row 1, Cell 2</td>
-            <td><time datetime="2024-10-27">October 27, 2024</time></td>
-          </tr>
-          <tr>
-            <td>Row 2, Cell 1</td>
-            <td>Row 2, Cell 2</td>
-            <td>Row 2, Cell 3</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3"><em>Data Source: Example</em></td>
-          </tr>
-        </tfoot>
-      </table>
-    </section>
-
-    <section>
-      <h2>Code Example</h2>
-      <pre><code class="language-javascript">
-        function greet(name) {
-          return "Hello, " + name + "!";
-        }
-      </code></pre>
+        <h2>Interactive Math</h2>
+        <p>x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup></p>
+        <p>This is a <sub>subscript</sub> and <sup>superscript</sup> example.</p>
     </section>
     <section>
-      <h2>Ruby Annotation</h2>
-      <ruby>
-        <rt>こんにちは</rt>
-        <rp>(</rp>
-        <rt>konnichiwa</rt>
-        <rp>)</rp>
-      </ruby>
-    </section>
-
-    <section>
-        <h2>Small Text</h2>
-        <small>This is a small text example.</small>
-    </section>
-
-    <section>
-        <h2>Span Example</h2>
-        <p>This is a <span>span</span> element.</p>
-    </section>
-
-    <section>
-      <h2>Data Attribute</h2>
-      <div data-element-id="interactive-demo">This div has a data attribute.</div>
-    </section>
-
-    <section>
-      <h2>Deleted Content</h2>
-      <p>This <del>deleted</del> content is no longer relevant.</p>
+        <h2>Data attributes</h2>
+        <p>This paragraph has a <span>data-id="123"</span> and a <span>data-value="456"</span></p>
     </section>
     <section>
-      <h2>Inserted Content</h2>
-      <p>This <ins>inserted</ins> content has been added.</p>
+        <h2>Definition</h2>
+        <p>This is a <span><dfn>definition</dfn></span> of a term.</p>
     </section>
     <section>
-      <h2>Heading 6</h2>
-      <h6>This is a heading 6.</h6>
-    </section>
-
-    <section>
-      <h2>Noscript</h2>
-      <noscript>JavaScript is disabled.  Some functionality is unavailable.</noscript>
+        <h2>Ruby</h2>
+        <p>This is a <span><ruby>表記<rp>(</rp>ruby<rp>)</ruby></span> example.</p>
     </section>
     <section>
-        <h2>Object</h2>
-        <object data="example.pdf" type="application/pdf" width="400" height="300">
-          <p>Your browser does not support PDF viewing.</p>
-        </object>
+        <h2>Citation</h2>
+        <p>As <span><cite>Shakespeare</cite></span> said, "To be or not to be..."</p>
     </section>
-    <section>
-      <h2>Param</h2>
-      <object type="image/svg+xml" data="myimage.svg" width="100" height="100">
-        <param name="alternate" value="myimage.jpg">
-      </object>
+        <section>
+        <h2>Quotations</h2>
+        <p>Here is a <span><q>quote</q></span>.</p>
     </section>
-    <section>
-      <h2>Picture</h2>
-      <picture>
-        <source media="(max-width: 600px)" srcset="image-small.jpg">
-        <source media="(max-width: 1200px)" srcset="image-medium.jpg">
-        <img src="image-large.jpg" alt="A large image example">
-      </picture>
+       <section>
+        <h2>Template</h2>
+        <template id="template">
+            <p>This is a template</p>
+        </template>
+    </section>
+       <section>
+        <h2>Style</h2>
+        <style>
+            p {
+                color: blue;
+            }
+        </style>
     </section>
      <section>
-      <h2>S</h2>
-      <p>This is <s>strikethrough</s> <s data-type="deprecated">deprecated</s> text.</p>
+        <h2>Underline</h2>
+        <p>This text is <u>underlined</u>.</p>
     </section>
-  </main>
+    <section>
+        <h2>Word Break</h2>
+        <p>This is a very long word: <span>wbr</span></p>
+    </section>
+     <section>
+        <h2>Variable</h2>
+        <p>This is a <span><var>variable</var></span>.</p>
+    </section>
+     <section>
+        <h2>Embed</h2>
+        <p>This is an <span><embed src="" type="" /></span></p>
+    </section>
+    <section>
+        <h2>H5 Heading</h2>
+        <h5>H5 Heading Example</h5>
+    </section>
+    <section>
+      <h2>Time</h2>
+      <p>The event starts at <time datetime="2024-01-20T10:00:00">January 20, 2024 at 10:00 AM</time>.</p>
+    </section>
+    <section>
+      <h2>Mark</h2>
+      <p>This is an important <span><mark>highlighted</mark></span> section.</p>
+    </section>
+     <section>
+        <h2>BDO</h2>
+        <p>This text is written from <bdo dir="rtl">right to left</bdo>.</p>
+    </section>
+    <section>
+        <h2>Slot</h2>
+        <slot name="slot-name"></slot>
+    </section>
 
-  <footer aria-label="Page Footer">
-    <p>&copy; 2024 Accessible Demo</p>
-  </footer>
+</main>
+
+<slot name="footer-slot"></slot>
+
+<dialog>
+  <p>This is a dialog box.</p>
+</dialog>
+
+
+<aside>
+  <h3>Sidebar Content</h3>
+  <p>This is some additional information.</p>
+</aside>
+
+<footer aria-label="Footer">
+  <p>&copy; 2024 Interactive Elements. All rights reserved.</p>
+</footer>
 
 </body>
 </html>

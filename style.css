@@ -1,13 +1,13 @@
 body {
   font-family: sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   color: #333;
   background-color: #fff;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #222;
-  font-weight: bold;
+h1, h2, h3, h4, h5 {
+  color: #0056b3;
   margin-bottom: 0.5em;
 }
 
@@ -16,19 +16,6 @@ h2 { font-size: 2em; }
 h3 { font-size: 1.75em; }
 h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
-h6 { font-size: 1em; }
-
-small {
-  font-size: 0.8em;
-}
-
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
-}
 
 a {
   color: #007bff;
@@ -39,21 +26,13 @@ a:hover {
   text-decoration: underline;
 }
 
-del {
-  text-decoration: line-through;
-}
-
-ins {
-  text-decoration: underline;
-}
-
-span {
-  /* Default styling for span, can be overridden */
+p {
+  margin-bottom: 1em;
 }
 
 pre {
-  background-color: #f4f4f4;
-  padding: 10px;
+  background-color: #f7f7f7;
+  padding: 1em;
   overflow-x: auto;
 }
 
@@ -61,85 +40,78 @@ code {
   font-family: monospace;
 }
 
-ol, ul {
+ul, ol {
   margin-bottom: 1em;
 }
 
 li {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
 }
 
-figure {
-  margin: 1em;
-  padding: 1em;
-  border: 1px solid #ddd;
-}
-
-figcaption {
-  text-align: center;
-  font-size: 0.85em;
-  color: #666;
-}
-
-data {
-  /* Styling for data elements */
-}
-
-noscript {
-  /* Styling for noscript elements */
-}
-
-object, iframe {
-  border: none;
-}
-
-picture {
-  /* Styling for picture elements */
-}
-
-param {
-  /* Styling for param elements */
-}
-
-s {
-  text-decoration: line-through;
-}
-
-/* Accessible color contrast (example, adjust as needed) */
-:root {
-  --primary-text-color: #333;
-  --secondary-text-color: #666;
-  --primary-background-color: #fff;
-  --link-color: #007bff;
-}
-
-body {
-  color: var(--primary-text-color);
-  background-color: var(--primary-background-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--primary-text-color);
-}
-
-a {
-  color: var(--link-color);
-}
-
-/* Basic table styling */
 table {
   border-collapse: collapse;
   width: 100%;
-  margin-bottom: 1em;
 }
 
-th,
-td {
+th, td {
   padding: 0.5em;
   border: 1px solid #ddd;
 }
 
 th {
   background-color: #f2f2f2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin-bottom: 1em;
+}
+
+figcaption {
+  font-style: italic;
+  color: #666;
+  margin-top: 0.5em;
+}
+
+/* Specific styles for HTML5 tags */
+area, bdo, cite, data, dfn, embed, h5, map, ol, optgroup, q, slot, style, sub, sup, template, u, var, wbr, track {
+  /* Add any necessary styles here.  These are mainly for structure,
+     and their appearance will usually be dictated by surrounding elements. */
+}
+
+/* Forms */
+label {
+  display: block;
+  margin-bottom: 0.5em;
   font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button,
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #0056b3;
 }

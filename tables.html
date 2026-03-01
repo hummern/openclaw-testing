@@ -3,164 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tables - Sample Website</title>
+<title>Tables Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
 
-<header>
-  <h1>Tables Example</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms</a></li>
-      <li><a href="interactive.html">Interactive</a></li>
-      <li><a href="media.html">Media</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <h1>Tables Example</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <section>
-    <h2>Basic Table</h2>
-    <p>This is a simple table demonstrating basic structure.</p>
-    <table>
-      <caption>Basic Table with Header and Data</caption>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-        </tr>
-        <tr>
-          <td>Data 3</td>
-          <td>Data 4</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2">Table Footer</td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
+  <main>
+    <section>
+      <h2>Data Tables</h2>
 
-  <section>
-    <h2>Table with Colgroup</h2>
-    <p>Using <code>&lt;colgroup&gt;</code> to define column properties.</p>
-    <table border="1">
-      <colgroup>
-        <col span="2" style="width: 50%;">
-        <col style="width: 50%;">
-      </colgroup>
-      <caption>Table with Colgroup</caption>
-      <thead>
-        <tr>
-          <th>Column 1</th>
-          <th>Column 2</th>
-          <th>Column 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
-          <td>Row 1, Cell 3</td>
-        </tr>
-        <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
-          <td>Row 2, Cell 3</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+      <article>
+        <h3>Simple Data Table</h3>
+        <figure>
+          <figcaption>A basic data table.</figcaption>
+          <table>
+            <caption>
+              Simple Data Table
+            </caption>
+            <thead>
+              <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Footer Data</td>
+              </tr>
+            </tfoot>
+          </table>
+        </figure>
+      </article>
 
-  <section>
-    <h2>Complex Table with Figcaption</h2>
-    <figure>
-      <figcaption>A more complex table layout example.</figcaption>
-      <table>
-        <caption>Complex Table Example</caption>
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Price</th>
-            <th>Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Product A</td>
-            <td>$10.00</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>Product B</td>
-            <td>$20.00</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>Product C</td>
-            <td>$5.00</td>
-            <td>10</td>
-          </tr>
-        </tbody>
-      </table>
-    </figure>
-  </section>
+      <article>
+        <h3>Complex Data Table with Styling</h3>
+        <figure>
+          <figcaption>A styled data table with different data types.</figcaption>
+          <table>
+            <caption>
+              Complex Data Table with Styling
+            </caption>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Date of Birth</th>
+                <th>Score</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><var>John Doe</var></td>
+                <td>30</td>
+                <td><time datetime="1993-05-15">1993-05-15</time></td>
+                <td><meter value="0.85" min="0" max="1"></meter></td>
+                <td><mark>Active</mark></td>
+              </tr>
+              <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td><time datetime="1998-11-20">1998-11-20</time></td>
+                <td><progress value="50" max="100"></progress></td>
+                <td>Inactive</td>
+              </tr>
+              <tr>
+                <td>Peter Jones</td>
+                <td>40</td>
+                <td><time datetime="1983-03-10">1983-03-10</time></td>
+                <td>92</td>
+                <td><u role="status">Pending</u></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">Data Summary</td>
+              </tr>
+            </tfoot>
+          </table>
+        </figure>
+      </article>
+    </section>
 
-  <section>
-     <h2>Time table</h2>
-     <p>Here's a table of time data:</p>
-     <table>
-       <caption>Time Data</caption>
-       <thead>
-         <tr>
-           <th>Event</th>
-           <th>Time</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td>Meeting</td>
-           <td><time datetime="2024-10-27T09:00:00">09:00</time></td>
-         </tr>
-         <tr>
-           <td>Deadline</td>
-           <td><time datetime="2024-10-28T17:00:00">17:00</time></td>
-         </tr>
-       </tbody>
-     </table>
-  </section>
+    <section>
+      <h2>Other Table-Related Elements</h2>
 
-  <section>
-    <h2>Table with <b>b</b> and <i>i</i></h2>
-    <p>Demonstrates the use of <b>bold</b> and <i>italic</i> tags within table cells.</p>
-    <table>
-      <caption><b>Bold</b> and <i>Italic</i> Example</caption>
-      <thead>
-        <tr>
-          <th>Header</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>This is a <b>bold</b> value and this is an <i>italic</i> value.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-</main>
+      <details>
+        <summary>More Details</summary>
+        <p>
+          This is a <kbd>keyboard input</kbd> example. Here's some <code>code</code>.
+          And a ruby annotation: <ruby>例<rp>(</rp>例<rp>)</ruby>.
+        </p>
+      </details>
 
-<footer>
-  <p>&copy; 2024 Sample Website</p>
-</footer>
+      <dialog>
+        <p>This is a dialog box.</p>
+      </dialog>
+
+      <fieldset>
+        <legend>A Fieldset Example</legend>
+        <p>Some content within the fieldset.</p>
+      </fieldset>
+      <pre>
+        <code>
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+        </code>
+      </pre>
+      <slot name="example-slot">
+        This is the content of the slot.
+      </slot>
+      <bdo dir="rtl">This text will be displayed right-to-left</bdo>
+      <cite>This is a citation.</cite>
+      <data value="123">Some data.</data>
+      <dfn>Definition element</dfn>
+      <embed src="some_file.pdf" type="application/pdf" />
+      <h5 role="heading">A heading of level 5</h5>
+      <map name="map_name">
+        <area shape="rect" coords="0,0,100,100" href="#" alt="Example area"/>
+      </map>
+      <ol type="1">
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ol>
+      <optgroup label="Group 1">
+        <option value="option1">Option 1</option>
+      </optgroup>
+      <q>A quote here.</q>
+      <sub style="font-size: smaller;">Subscripted text</sub>
+      <sup style="font-size: smaller;">Superscripted text</sup>
+      <template>
+        &lt;p&gt;Template content&lt;/p&gt;
+      </template>
+      <wbr>Word break opportunity.
+      <var>Variable name</var>
+    </section>
+  </main>
+
+  <footer aria-label="Footer">
+    <p>&copy; 2023 Example. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

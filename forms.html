@@ -3,112 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forms - Accessible Web Design</title>
+<title>Forms Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="document">
+<body role="content">
 
 <header>
-  <h1>Accessible Forms</h1>
+  <h1>Forms Example</h1>
   <nav aria-label="Main Navigation">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="tables.html">Tables</a></li>
-      <li><a href="media.html">Media</a></li>
-      <li><a href="interactive.html">Interactive</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Contact Form</h2>
-    <article>
-      <p>This is an example of an accessible contact form.  Please provide your details below.</p>
-      <form method="post" action="submit.php">
-        <fieldset>
-          <legend>Personal Information</legend>
+    <h2>Contact Us</h2>
+    <form method="post" action="submit.php">
+      <fieldset>
+        <legend>Personal Information</legend>
 
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
-          <span aria-live="polite" class="error" id="name-error"></span>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true"><br><br>
 
-          <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true"><br><br>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required aria-required="true" placeholder="Your Email">
-          <span aria-live="polite" class="error" id="email-error"></span>
-
-          <br><br>
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" cols="50" aria-label="Your Message"></textarea>
-          <span aria-live="polite" class="error" id="message-error"></span>
-        </fieldset>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" aria-label="Your Message"></textarea><br><br>
 
         <fieldset>
-          <legend>Additional Information</legend>
-          <p>
-            <label for="newsletter">Subscribe to Newsletter:</label>
-            <input type="checkbox" id="newsletter" name="newsletter" aria-describedby="newsletter-info">
-            <span id="newsletter-info" class="sr-only">Stay up-to-date with our latest news.</span>
-          </p>
-
-          <p>
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender">
+          <legend>Select Options</legend>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender">
+            <optgroup label="Gender Options">
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="other">Other</option>
-            </select>
-          </p>
+            </optgroup>
+          </select><br><br>
         </fieldset>
 
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
-      </form>
+        <label>
+          <input type="checkbox" name="newsletter" value="subscribe"> Subscribe to Newsletter
+        </label><br><br>
 
-      <figure>
-        <figcaption>Example Form Structure</figcaption>
-        <img src="form_example.png" alt="Diagram showing the structure of an accessible form with fieldsets, labels, and error messages.">
-      </figure>
-    </article>
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file"><br><br>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <input type="reset" value="Reset">
+
+      <mark>Please fill out all fields.</mark>
+    </form>
   </section>
+
+  <article>
+    <h3>Form Validation Example</h3>
+    <p>
+      This is a demonstration of a simple form with validation. The <code>required</code> attribute ensures that the user provides input in certain fields. <kbd>Press Submit</kbd> to see the validation in action.
+    </p>
+
+    <figure>
+      <img src="placeholder.jpg" alt="Form Validation Example Image" width="300">
+      <figcaption>An illustration of form submission.</figcaption>
+    </figure>
+
+    <pre><code>
+&lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; required aria-required=&quot;true&gt;
+    </code></pre>
+  </article>
 
   <section>
-    <h2>Progress Example</h2>
-    <progress value="75" max="100" aria-label="Form Progress" title="75% Complete"></progress>
-    <meter value="0.8" max="1" aria-label="Form Completion Level" title="80% Complete"></meter>
-    <output>Your score is: 85</output>
+    <h2>Table Example</h2>
+    <table>
+      <caption>Form Data Summary</caption>
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Input Type</th>
+          <th>Required</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>text</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>email</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Message</td>
+          <td>textarea</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Form Information</td>
+        </tr>
+      </tfoot>
+    </table>
   </section>
 
-  <section>
-      <h2>Code Example</h2>
-      <pre><code class="language-html">&lt;label for="name"&gt;Name:&lt;/label&gt;
-&lt;input type="text" id="name" name="name"&gt;</code></pre>
-  </section>
+  <details>
+    <summary>More Information</summary>
+    <p>This form provides a basic structure for collecting user input. Remember to implement robust server-side validation for security and data integrity.</p>
+  </details>
   
+  <dialog>
+    <p>Are you sure you want to submit this form?</p>
+    <button>Confirm</button>
+    <button>Cancel</button>
+  </dialog>
+
+  <time datetime="2024-10-27">Today</time>
+
+    <data value="12345">Some Data</data>
+    <var>Variable Value</var>
+    <sub id="sub">Subscripted text</sub>
+    <sup id="sup">Superscripted text</sub>
+    <dfn>Definition</dfn>
+    <cite>Citation</cite>
+    <wbr>Word Break
+    <bdo dir="rtl">Bidirectional Override</bdo>
+    <q>Quote</q>
+    <slot>Slot</slot>
+    <template>Template</template>
+    <embed src="" type="">
+    <h5 >H5 Heading</h5>
+    <map name="mapname">
+        <area shape="rect" coords="0,0,100,100" href="#" alt="Area">
+    </map>
+
+    <style>
+    body {
+        background-color: lightblue;
+    }
+    </style>
+
+    <ruby>
+    RP
+    </ruby>
+
+
+
 </main>
 
-<footer>
-  <small>© 2024 Accessible Web Design</small>
-  <p><time datetime="2024-01-26">January 26, 2024</time> - Last Updated</p>
-  <p><mark>Important:</mark> Always use appropriate ARIA attributes for accessibility.</p>
-  <aside>
-    <h3>Related Links</h3>
-    <a href="https://www.w3.org/WAI/tutorials/forms/">WAI Forms Tutorial</a>
-  </aside>
-  <span class="data copyright">Copyright 2024</span>
-  <h6 class="data footer-details">Page information</h6>
-  <ins datetime="2024-01-27">Updated form validation</ins>
-  <del datetime="2024-01-25">Removed unnecessary field</del>
-  <object data="form_data.pdf" type="application/pdf">
-      <p>Your browser does not support the &lt;object&gt; element.</p>
-  </object>
-  <iframe src="about:blank" title="Form documentation"></iframe>
-  <noscript>JavaScript is disabled.  Please enable it for full functionality.</noscript>
-  <ruby><rt>漢</rt><rp>)</rp><rt>字</rt></ruby>
-</footer>
+<aside>
+  <h3>Related Links</h3>
+  <ul>
+    <li><a href="#">More Forms</a></li>
+    <li><a href="#">Validation Techniques</a></li>
+  </ul>
+</aside>
 
+<footer>
+  <p>&copy; 2024 Example Forms. All rights reserved.</p>
+  <meter value="0.75" max="1"></meter>
+  <progress value="50" max="100"></progress>
+  <output>50</output>
+</footer>
 </body>
 </html>
