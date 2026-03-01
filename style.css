@@ -2,12 +2,20 @@ body {
   font-family: sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #0056b3;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
 }
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
 
 a {
   color: #007bff;
@@ -18,109 +26,97 @@ a:hover {
   color: #0056b3;
 }
 
-meter {
-  display: inline-block;
-  width: 100%;
-  height: 0.5em;
-  background: #ccc;
-  border: none;
-  color: #fff;
+ol, ul {
+  margin-bottom: 1em;
 }
 
-output {
-  font-weight: bold;
+ol {
+  list-style-type: decimal;
 }
 
-/* Accessible typography and contrast */
-:root {
-  --primary-text-color: #333;
-  --primary-background-color: #fff;
-  --link-color: #007bff;
-  --heading-color: #0056b3;
+ul {
+  list-style-type: disc;
 }
 
-body {
-    color: var(--primary-text-color);
-    background-color: var(--primary-background-color);
+code {
+  font-family: monospace;
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: var(--heading-color);
+pre {
+  background-color: #f0f0f0;
+  padding: 1em;
+  overflow-x: auto;
 }
 
-a {
-    color: var(--link-color);
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-/* Example styling for some of the less common tags */
-area, bdo, cite, dfn, embed, i, kbd, map, noscript, optgroup, q, s, slot, span, sub, sup, template, u, var, wbr {
-    font-style: inherit;
-    font-weight: inherit;
-}
-
-i {
-  font-style: italic;
-}
-
-kbd {
-  font-weight: bold;
-}
-
-small {
-  font-size: 0.8em;
-}
-
-/* Add some basic styling to tables */
 table {
   border-collapse: collapse;
   width: 100%;
+  margin-bottom: 1em;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+  padding: 0.5em;
+  border: 1px solid #ccc;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #eee;
+  font-weight: bold;
 }
 
-/* Add some basic styling for forms */
-form {
-    margin-bottom: 1em;
+meter {
+  width: 100%;
 }
 
-label {
-    display: block;
-    margin-bottom: 0.5em;
+figure {
+    margin: 1em;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-    width: 100%;
-    padding: 0.5em;
-    margin-bottom: 1em;
-    border: 1px solid #ccc;
-    box-sizing: border-box; /* Important to prevent width overflow */
+figcaption {
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.5em;
 }
 
-button,
-input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 0.5em 1em;
-    border: none;
-    cursor: pointer;
+iframe {
+  border: 1px solid #ccc;
 }
 
-button:hover,
-input[type="submit"]:hover {
-    background-color: #0056b3;
+object {
+  width: 100%;
+  max-width: 100%;
+}
+
+col, colgroup {
+  display: table-column;
+}
+
+data {
+  display: inline-block;
+}
+
+noscript {
+  background-color: #f0f0f0;
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+
+rp, rp:hover {
+  color: #333;
+}
+
+style {
+  display: none;
+}
+
+track {
+    display: none; /* Hide track elements */
+}
+
+subscript {
+    vertical-align: sub;
+    font-size: 0.8em;
 }

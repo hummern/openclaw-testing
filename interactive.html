@@ -6,145 +6,171 @@
 <title>Interactive Elements</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="presentation">
-  <header>
-    <h1>Interactive Elements Showcase</h1>
-    <nav aria-label="Main Navigation">
-      <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-      </ul>
-    </nav>
-  </header>
+<body role="content">
 
-  <main>
-    <section>
-      <h2>Interactive Form</h2>
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Personal Information</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          <br>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email">
-          <br>
-          <label for="dob">Date of Birth:</label>
-          <input type="date" id="dob" name="dob">
-          <br>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" cols="50"></textarea>
-        </fieldset>
+<header>
+  <h1>Interactive Elements Demo</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#forms">Forms</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#media">Media Elements</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="introduction">
+    <h2>Introduction to Interactive Features</h2>
+    <p>This section showcases various interactive HTML elements.</p>
+    <figure>
+      <img src="placeholder.png" alt="Interactive Elements Illustration" width="300" height="200">
+      <figcaption>Illustration of Interactive Elements</figcaption>
+    </figure>
+  </section>
+
+  <section id="forms">
+    <h2>Interactive Forms</h2>
+    <form>
+      <fieldset>
+        <legend>User Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment"></textarea><br><br>
 
         <button type="submit">Submit</button>
-      </form>
+      </fieldset>
+    </form>
 
-      <p>
-        Use <code>&lt;input type="text"&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;button&gt;</code> for basic form elements.
-      </p>
+    <details>
+      <summary>More Form Elements</summary>
+      <p>Additional form elements can be added here.</p>
+    </details>
+  </section>
+
+  <section id="tables">
+    <h2>Interactive Tables</h2>
+    <table>
+      <caption>Sample Data</caption>
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Footer Information</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section id="media">
+    <h2>Interactive Media</h2>
+    <h3>Audio Example</h3>
+    <audio controls>
+      <source src="placeholder.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <h3>Video Example</h3>
+    <video width="360" height="240" controls>
+      <source src="placeholder.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+    <p>Progress bar:</p>
+    <progress value="50" max="100"></progress>
+    <meter value="0.75" min="0" max="1"></meter>
+    <output name="result"></output>
+    <pre><code>Code snippet</code></pre>
+  </section>
+    <section>
+    <h5 id="subscript_test">Subscript Example</h5>
+    <p><sub>This is subscript text</sub></p>
+  </section>
+
+    <section>
+        <h6 id="ruby_test">Ruby Example</h6>
+        <ruby>
+            <rt>漢</rt>
+            <rp>(</rp>かん<rp>)</rp>
+        </ruby>
     </section>
 
     <section>
-      <h2>Progress and Meter</h2>
-      <h3>Progress Bar</h3>
-      <progress value="50" max="100"></progress>
-      <p>This is a progress bar showing 50% completion.</p>
-      <meter value="0.75" min="0" max="1" title="Performance: Good"></meter>
-      <p>This is a meter showing performance level.</p>
-      <output name="result"></output>
+       <time datetime="2024-01-01">January 1, 2024</time>
     </section>
 
     <section>
-      <h2>Tables</h2>
-      <h3>Sample Table</h3>
-      <table>
-        <caption>Sample Data</caption>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Data 1</td>
-            <td>Data 2</td>
-            <td>Data 3</td>
-          </tr>
-          <tr>
-            <td>Data 4</td>
-            <td>Data 5</td>
-            <td>Data 6</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3">Total Records: 2</td>
-          </tr>
-        </tfoot>
-      </table>
-    </section>
-
-    <section>
-        <h2>Interactive Content</h2>
-        <details>
-            <summary>Click to Reveal More</summary>
-            <p>This is some hidden content.</p>
-        </details>
-
-        <dialog>
-            <p>This is a dialog box.</p>
-            <button onclick="this.close()">Close</button>
-        </dialog>
-
-        <figure>
-          <img src="placeholder.jpg" alt="A placeholder image" width="150" height="100">
-          <figcaption>A descriptive image.</figcaption>
-        </figure>
-
-        <pre><code>
-            This is a code block.
-            It preserves whitespace.
-        </code></pre>
-
-        <kbd>Ctrl + S</kbd>
-        <var>x</var> = <var>y</var> + <var>z</var>
-        <ins>This text is inserted.</ins>
-        <del>This text is deleted.</del>
-
-        <ruby>H<sub>2</sub>O<rt>water</rt></ruby>
-        <time datetime="2023-10-27">October 27, 2023</time>
         <mark>Highlighted text</mark>
-
-        <bdo dir="rtl">Right-to-Left</bdo>
-        <cite>A citation</cite>
-        <dfn>A definition</dfn>
-        <ins>Inserted text</ins>
-        <small>Small text</small>
-        <span>Spanned text</span>
-        <subscript>Subscript text</sub>
-        <sup>Superscript text</sup>
-        <wbr>Word break opportunity</wbr>
-        <area shape="rect" coords="0,0,100,100" href="#" alt="Area">
-        <embed src="#" type="application/pdf">
-        <em>Italic text</em>
-        <u>Underlined text</u>
-        <q>A quote</q>
-        <s>Strikethrough text</s>
-        <slot></slot>
-        <template></template>
     </section>
-  </main>
 
-  <aside>
-    <h3>Sidebar</h3>
-    <p>This is some additional information.</p>
-  </aside>
+    <section>
+        <kbd>Ctrl+Shift+A</kbd>
+    </section>
 
-  <footer>
-    <p>&copy; 2023 Example Website</p>
-  </footer>
+    <section>
+      <dialog>
+        <p>This is a dialog box.</p>
+      </dialog>
+    </section>
+
+    <section>
+      <object data="placeholder.pdf" type="application/pdf">
+        <p>Your browser doesn't support PDF viewing.</p>
+      </object>
+    </section>
+
+    <section>
+      <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ol>
+    </section>
+
+    <section>
+      <param name="name" value="value"></param>
+    </section>
+
+    <section>
+      <rp>(accent mark)</rp>
+    </section>
+
+    <section>
+        <style>
+            body { font-family: sans-serif; }
+        </style>
+    </section>
+</main>
+
+<footer role="contentinfo">
+  <p>&copy; 2024 Interactive Elements Demo</p>
+</footer>
+
 </body>
-</html>
+</html >

@@ -11,149 +11,127 @@
 <header>
   <h1>Forms Example</h1>
   <nav aria-label="Navigation">
-    <a href="#">Home</a> |
-    <a href="#">About</a> |
-    <a href="#">Contact</a>
+    <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Basic Form</h2>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name"><br><br>
+    <h2>Contact Form</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>User Information</legend>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true">
+        <br>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true">
+        <br>
 
-      <input type="submit" value="Submit">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" aria-label="Enter your message"></textarea>
+        <br>
+
+        <label for="newsletter">Subscribe to Newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter" aria-label="Subscribe to our newsletter">
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <br>
+
+        <label>Select your interests:</label><br>
+        <input type="checkbox" id="interest1" name="interest1" value="sports">
+        <label for="interest1">Sports</label><br>
+        <input type="checkbox" id="interest2" name="interest2" value="music">
+        <label for="interest2">Music</label><br>
+        <input type="checkbox" id="interest3" name="interest3" value="movies">
+        <label for="interest3">Movies</label><br>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
     </form>
   </section>
 
   <section>
-    <h2>Form with Fieldset and Legend</h2>
-    <fieldset>
-      <legend>Personal Information</legend>
-      <label for="firstname">First Name:</label>
-      <input type="text" id="firstname" name="firstname"><br><br>
-
-      <label for="lastname">Last Name:</label>
-      <input type="text" id="lastname" name="lastname"><br><br>
-    </fieldset>
-  </section>
-
-  <section>
-    <h2>Form with Validation</h2>
-    <form>
-      <label for="age">Age:</label>
-      <input type="number" id="age" name="age" min="18" max="100" required><br><br>
-
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required><br><br>
-
-      <meter id="progress" value="0.5" max="1" title="Progress"></meter><br><br>
-
-      <progress id="circular-progress" value="75" max="100"></progress>
-      <output name="result" id="result"></output>
-
-    </form>
-  </section>
-
-  <section>
-    <h2>Form with Custom Elements</h2>
-    <form>
-      <label for="terms">Terms and Conditions:</label>
-      <input type="checkbox" id="terms" name="terms" required>
-      <small>I agree to the <a href="#">terms and conditions</a></small><br><br>
-
-       <dfn>This is a definition.</dfn><br>
-       <var>x = y + z</var><br>
-       <kbd>Ctrl+Shift+Delete</kbd><br>
-       <bdo dir="rtl">This text will be right-to-left.</bdo><br>
-       <cite>A quote from a book.</cite><br>
-       <code>print("Hello, world!")</code><br>
-       <pre>This is preformatted text.</pre><br>
-       <q>A short quote.</q><br>
-       <time datetime="2023-10-26">October 26, 2023</time><br>
-       <mark>Highlighted text</mark><br>
-       <ruby>漢<rt>kan</rt></ruby><br>
-       <wbr>This text can be broken here.<br>
-       <slot>A slot for content.</slot><br>
-       <template>This is a template.</template><br>
-       <sub aria-hidden="true">Script subscript</sub><br>
-       <sup>Superscript</sup><br>
-       <u>Underline</u><br>
-       <em>Italic</em><br>
-       <b>Bold</b><br>
-       <small>Small text</small><br>
-       <ins>Inserted text</ins><br>
-       <del>Deleted text</del><br>
-       <address>Contact Information</address><br>
-       <figure>
-          <img src="image.jpg" alt="A descriptive image" width="200" height="150">
-          <figcaption>Image Caption</figcaption>
-       </figure>
-    </form>
+    <h2>Progress Bar Example</h2>
+    <progress max="100" value="75" aria-label="Progress towards completion"></progress>
+    <p>Progress: <output id="progressValue">75%</output></p>
   </section>
 
   <section>
     <h2>Table Example</h2>
     <table>
-      <caption>Sample Table</caption>
+      <caption>Sample Data Table</caption>
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
       <thead>
         <tr>
           <th>Header 1</th>
           <th>Header 2</th>
+          <th>Header 3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
         </tr>
         <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">Footer</td>
+          <td colspan="3">Total Rows: 2</td>
         </tr>
       </tfoot>
     </table>
   </section>
 
   <section>
-    <h2>Dialog Example</h2>
-    <dialog>
-      <p>This is a dialog box.</p>
-      <button>Close</button>
-    </dialog>
+    <h2>Meter Example</h2>
+    <meter value="0.8" max="1.0" aria-label="Resource Usage"></meter>
+    <p>Resource usage: 80%</p>
   </section>
-  
+
   <section>
-    <h2>Optgroup Example</h2>
-    <select multiple>
-      <optgroup label="Fruits">
-        <option value="apple">Apple</option>
-        <option value="banana">Banana</option>
-        <option value="orange">Orange</option>
-      </optgroup>
-      <optgroup label="Vegetables">
-        <option value="carrot">Carrot</option>
-        <option value="broccoli">Broccoli</option>
-      </optgroup>
-    </select>
+    <h2>Details and Summary Example</h2>
+    <details>
+      <summary>Click to view more details</summary>
+      <p>This is some additional information.</p>
+    </details>
   </section>
 </main>
 
+<aside>
+  <h3>Aside Content</h3>
+  <p>This is some additional content displayed in the aside.</p>
+  <figure>
+    <img src="placeholder.jpg" alt="Placeholder Image">
+    <figcaption>A Placeholder Image</figcaption>
+  </figure>
+</aside>
+
 <footer>
-  <p>&copy; 2023 Example Website</p>
+  <p>&copy; 2024 Example Website</p>
+  <time datetime="2024-10-27">Last Updated: October 27, 2024</time>
 </footer>
 
 </body>

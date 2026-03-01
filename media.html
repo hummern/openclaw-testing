@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Gallery</title>
+<title>Media Examples</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="presentation">
+<body>
 
 <header>
-  <h1>Media Gallery</h1>
+  <h1>Media Examples</h1>
   <nav aria-label="Main Navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="tables.html">Tables</a></li>
       <li><a href="forms.html">Forms</a></li>
+      <li><a href="tables.html">Tables</a></li>
       <li><a href="interactive.html">Interactive</a></li>
     </ul>
   </nav>
@@ -22,87 +22,149 @@
 
 <main>
   <section>
-    <h2>Image and Audio Examples</h2>
+    <h2>Audio</h2>
+    <audio controls preload="auto">
+      <source src="audio/example.mp3" type="audio/mpeg">
+      <source src="audio/example.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+      <track label="English" kind="subtitles" src="audio/example.srt" srclang="en" default>
+    </audio>
+  </section>
 
+  <section>
+    <h2>Video</h2>
+    <video width="640" height="360" controls preload="auto">
+      <source src="video/example.mp4" type="video/mp4">
+      <source src="video/example.webm" type="video/webm">
+      Your browser does not support the video element.
+      <track label="English" kind="captions" src="video/example.vtt" srclang="en" default>
+    </video>
+  </section>
+
+  <section>
+    <h2>Images and Figures</h2>
     <figure>
-      <img src="image.jpg" alt="Example Image" width="300" height="200">
-      <figcaption>A descriptive caption for the image.</figcaption>
+      <img src="images/example.jpg" alt="A descriptive image" width="300" height="200">
+      <figcaption>A caption for the image</figcaption>
     </figure>
 
-    <audio controls>
-      <source src="audio.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-      <a href="audio.mp3">Download audio</a>
-    </audio>
+    <figure>
+        <img src="images/another_example.png" alt="Another descriptive image">
+        <figcaption>A second image with a caption</figcaption>
+    </figure>
+  </section>
 
-    <video width="400" height="300" controls>
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support the video element.
-      <a href="video.mp4">Download video</a>
-    </video>
+  <section>
+    <h2>Progress Indicators</h2>
+    <h3>Meter</h3>
+    <meter id="myMeter" value="0.75" max="1" title="Progress: 75%"></meter>
+    <p>Progress: <output name="progressOutput">0.75</output> / 1</p>
 
-    <section>
-      <h3>Interactive Media</h3>
-      <details>
-        <summary>Further Details</summary>
-        <p>More information about the media presented here.</p>
-      </details>
-      <kbd>Press Enter to proceed.</kbd>
-    </section>
+    <h3>Progress Bar</h3>
+    <progress value="60" max="100"></progress>
+  </section>
 
-    <section>
-      <h3>Media Controls & Calculations</h3>
-      <meter value="0.75" max="1" label="Progress"></meter>
-      <progress value="50" max="100"></progress>
-      <output>Calculation Result: <em>Example</em></output>
-      <var>Variable Value</var>
-      <ins>Inserted Text</ins>
-      <del>Deleted Text</del>
-      <mark>Highlighted Text</mark>
-      <small>Small Text</small>
-    </section>
+  <section>
+    <h2>Time</h2>
+    <time datetime="2024-01-26T10:00:00">Published on January 26, 2024 at 10:00 AM</time>
+  </section>
 
-    <section>
-      <h3>Code and Text Formatting</h3>
-      <pre><code>
-        function greet(name) {
-          console.log("Hello, " + name + "!");
-        }
-      </code></pre>
-      <kbd>Ctrl+Shift+C</kbd> to copy the code.
-      <time datetime="2024-10-27T10:00:00">10:00 AM</time>
-      <ruby>字<rt>zi</rt></ruby>
-    </section>
-    
-    <section>
-        <h3>Complex Media</h3>
-        <map name="mapname">
-          <area shape="rect" coords="0,0,100,100" href="http://www.example.com">
-        </map>
-        <img src="image.jpg" usemap="#mapname">
-    </section>
+  <section>
+    <h2>Code Examples</h2>
+    <pre><code>
+      function greet(name) {
+        console.log("Hello, " + name + "!");
+      }
+    </code></pre>
+  </section>
 
-    <section>
-        <h3>Other HTML5 tags</h3>
-        <bdo dir="rtl">This text is reversed</bdo>
-        <cite>Source: Example Website</cite>
-        <dfn>Term Definition</dfn>
-        <embed src="embedded.swf" type="application/x-shockwave-flash" width="600" height="400">
-        <i >Italic text</i>
-        <q>A quote.</q>
-        <s>Strikethrough</s>
-        <span>Span element</span>
-        <sub >Subscript</sub>
-        <sup >Superscript</sub>
-        <template>Template Content</template>
-        <u>Underline</u>
-        <wbr>Word break opportunity.
-      </section>
+  <section>
+    <h2>Mathematical Notation</h2>
+    <ruby>
+      <rt>e</rt>
+      <rp>(</rp>
+      <rt>x</rt>
+      <rp>)</rp>
+      <sup>2</sup>
+    </ruby>
+  </section>
+
+   <section>
+     <h2>Inline Graphics</h2>
+     <kbd>Ctrl+Shift+C</kbd>
+   </section>
+
+   <section>
+     <h2>Object Embedding</h2>
+     <object data="data/example.pdf" type="application/pdf" width="600" height="400">
+        <p>Your browser does not support PDF viewing.</p>
+     </object>
+   </section>
+
+  <section>
+      <h2>Iframe</h2>
+      <iframe src="https://www.example.com" width="600" height="400" title="Example Website"></iframe>
+  </section>
+   <section>
+      <h2>NoScript</h2>
+      <noscript>
+         <p>JavaScript is disabled. Please enable it for the full experience.</p>
+      </noscript>
+   </section>
+
+   <section>
+      <h2>Colgroups and Tables</h2>
+      <colgroup>
+          <col width="50%">
+          <col width="50%">
+      </colgroup>
+      <table>
+          <caption>Example Table</caption>
+          <thead>
+              <tr>
+                  <th>Header 1</th>
+                  <th>Header 2</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Row 1, Cell 1</td>
+                  <td>Row 1, Cell 2</td>
+              </tr>
+              <tr>
+                  <td>Row 2, Cell 1</td>
+                  <td>Row 2, Cell 2</td>
+              </tr>
+          </tbody>
+          <tfoot>
+              <tr>
+                  <th colspan="2">Footer</th>
+              </tr>
+          </tfoot>
+      </table>
+   </section>
+
+   <section>
+        <h2>Data and Details</h2>
+        <details>
+            <summary>About this Section</summary>
+            <p>This section contains details about media examples.</p>
+            <data value="12345">Important Data</data>
+        </details>
+   </section>
+
+   <section>
+        <h2>Dialog</h2>
+        <dialog>
+            <p>This is a dialog box.</p>
+        </dialog>
+   </section>
+
   </section>
 </main>
 
-<footer role="contentinfo">
-  <p>&copy; 2024 Example Organization</p>
+<footer>
+  <p>&copy; 2024 Example Website</p>
 </footer>
 
 </body>
