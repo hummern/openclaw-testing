@@ -3,167 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Examples</title>
+<title>Media Gallery</title>
 <link rel="stylesheet" href="style.css">
-<style>
-  /* Basic styling for demonstration */
-  body { font-family: sans-serif; }
-  h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5em; }
-  table { border-collapse: collapse; width: 80%; margin: 20px auto; }
-  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-  th { background-color: #f2f2f2; }
-</style>
 </head>
-<body role="document">
+<body role="presentation">
 
 <header>
-  <h1>Media Examples</h1>
-  <nav>
+  <h1>Media Gallery</h1>
+  <nav aria-label="Main Navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
+      <li><a href="tables.html">Tables</a></li>
       <li><a href="forms.html">Forms</a></li>
       <li><a href="interactive.html">Interactive</a></li>
-      <li><a href="tables.html">Tables</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Audio</h2>
+    <h2>Image and Audio Examples</h2>
+
+    <figure>
+      <img src="image.jpg" alt="Example Image" width="300" height="200">
+      <figcaption>A descriptive caption for the image.</figcaption>
+    </figure>
+
     <audio controls>
-      <source src="audio/example.mp3" type="audio/mpeg">
+      <source src="audio.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
+      <a href="audio.mp3">Download audio</a>
     </audio>
-    <p>This is an example of an audio element. The <code>controls</code> attribute displays default player controls.</p>
-  </section>
 
-  <section>
-    <h2>Video</h2>
-    <video width="640" height="360" controls>
-      <source src="video/example.mp4" type="video/mp4">
+    <video width="400" height="300" controls>
+      <source src="video.mp4" type="video/mp4">
       Your browser does not support the video element.
+      <a href="video.mp4">Download video</a>
     </video>
-    <p>This is a video element.  The <code>width</code> and <code>height</code> attributes control the video dimensions.</p>
-  </section>
 
-  <section>
-    <h2>Image Gallery</h2>
-    <figure>
-      <img src="images/image1.jpg" alt="Description of image 1" width="200">
-      <figcaption>Image 1: A beautiful landscape.</figcaption>
-    </figure>
-    <figure>
-      <img src="images/image2.jpg" alt="Description of image 2" width="200">
-      <figcaption>Image 2: A close-up of a flower.</figcaption>
-    </figure>
-  </section>
+    <section>
+      <h3>Interactive Media</h3>
+      <details>
+        <summary>Further Details</summary>
+        <p>More information about the media presented here.</p>
+      </details>
+      <kbd>Press Enter to proceed.</kbd>
+    </section>
 
-  <section>
-    <h2>Iframe</h2>
-    <h3>Embedded Content</h3>
-    <iframe src="https://www.example.com" width="600" height="400" title="Example Website"></iframe>
-    <p>This displays content from another website within an iframe.</p>
-  </section>
+    <section>
+      <h3>Media Controls & Calculations</h3>
+      <meter value="0.75" max="1" label="Progress"></meter>
+      <progress value="50" max="100"></progress>
+      <output>Calculation Result: <em>Example</em></output>
+      <var>Variable Value</var>
+      <ins>Inserted Text</ins>
+      <del>Deleted Text</del>
+      <mark>Highlighted Text</mark>
+      <small>Small Text</small>
+    </section>
 
-  <section>
-    <h2>Time Element</h2>
-    <h3>Event Schedule</h3>
-    <time datetime="2024-10-27T10:00:00">October 27, 2024 at 10:00 AM</time>
-    <p>A <code>time</code> element is used to represent a specific point in time. The <code>datetime</code> attribute provides machine-readable date and time information.</p>
-  </section>
+    <section>
+      <h3>Code and Text Formatting</h3>
+      <pre><code>
+        function greet(name) {
+          console.log("Hello, " + name + "!");
+        }
+      </code></pre>
+      <kbd>Ctrl+Shift+C</kbd> to copy the code.
+      <time datetime="2024-10-27T10:00:00">10:00 AM</time>
+      <ruby>字<rt>zi</rt></ruby>
+    </section>
+    
+    <section>
+        <h3>Complex Media</h3>
+        <map name="mapname">
+          <area shape="rect" coords="0,0,100,100" href="http://www.example.com">
+        </map>
+        <img src="image.jpg" usemap="#mapname">
+    </section>
 
-  <section>
-    <h2>Progress Bar</h2>
-    <h3>Download Progress</h3>
-    <progress value="50" max="100"></progress>
-    <p>This is a progress bar showing a download at 50% completion.</p>
-  </section>
-
-  <section>
-    <h2>Output Element</h2>
-    <h3>Calculation Result</h3>
-    <output name="result" value="42"></output>
-    <p>The <code>output</code> element represents the result of a calculation. The <code>value</code> attribute holds the calculated result.</p>
-  </section>
-
-  <section>
-    <h2>Data Table</h2>
-    <h3>Sample Data</h3>
-    <table>
-      <caption>Sample Data Table</caption>
-      <colgroup>
-        <col span="3">
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 5</td>
-          <td>Data 6</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Footer Information</td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
-
-  <section>
-    <h2>Ruby Annotation</h2>
-    <h3>Japanese Example</h3>
-    <ruby>
-      <rt>ほん</rt>
-      <rp>(</rp>
-      <rt>hon</rt>
-      <rp>)</rp>
-    </ruby>
-  </section>
-
-  <section>
-    <h2>Code Example</h2>
-    <pre><code>
-      function greet(name) {
-        console.log("Hello, " + name + "!");
-      }
-    </code></pre>
-  </section>
-
-  <section>
-      <h2>H5 and H6 Headings</h2>
-      <h5>This is an H5 Heading</h5>
-      <h6>This is an H6 Heading</h6>
-  </section>
-
-  <section>
-      <h2>Param Tag</h2>
-      <object data="data.pdf" type="application/pdf" width="600" height="400">
-        <param name="src" value="data.pdf">
-        <p>This browser does not support PDFs.</p>
-      </object>
-  </section>
-
-  <section>
-      <h2>Small Tag</h2>
-      <small>This is a small piece of text.</small>
+    <section>
+        <h3>Other HTML5 tags</h3>
+        <bdo dir="rtl">This text is reversed</bdo>
+        <cite>Source: Example Website</cite>
+        <dfn>Term Definition</dfn>
+        <embed src="embedded.swf" type="application/x-shockwave-flash" width="600" height="400">
+        <i >Italic text</i>
+        <q>A quote.</q>
+        <s>Strikethrough</s>
+        <span>Span element</span>
+        <sub >Subscript</sub>
+        <sup >Superscript</sub>
+        <template>Template Content</template>
+        <u>Underline</u>
+        <wbr>Word break opportunity.
+      </section>
   </section>
 </main>
 
-<footer>
-  <p>&copy; 2024 Example Website</p>
+<footer role="contentinfo">
+  <p>&copy; 2024 Example Organization</p>
 </footer>
+
 </body>
 </html>
