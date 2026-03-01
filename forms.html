@@ -6,191 +6,135 @@
 <title>Forms Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <h1>Forms and Input</h1>
-  </header>
+<body role="content">
 
-  <nav aria-label="Main Navigation">
+<header>
+  <h1>Forms</h1>
+  <nav>
     <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
+</header>
 
-  <main>
-    <section>
-      <h2>Basic Form</h2>
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Personal Information</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required><br><br>
+<main>
+  <section>
+    <h2>Simple Form</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
 
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <br>
 
-          <button type="submit">Submit</button>
-        </fieldset>
-      </form>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <section>
+    <h2>Advanced Form</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Advanced Options</legend>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <br>
+
+        <label for="interests">Interests:</label>
+        <input type="checkbox" id="interests-reading" name="interests" value="reading">
+        <label for="interests-reading">Reading</label>
+
+        <input type="checkbox" id="interests-sports" name="interests" value="sports">
+        <label for="interests-sports">Sports</label>
+        <br>
+
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+      </fieldset>
+    </form>
+  </section>
+
+   <section>
+      <h2>Table with Form Elements</h2>
+      <table>
+        <caption>Form Data Table</caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label for="field1">Field 1:</label> <input type="text" id="field1" name="field1"></td>
+            <td><label for="field2">Field 2:</label> <select id="field2" name="field2">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+            </select></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section>
-      <h2>Form with Validation</h2>
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Account Details</legend>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" title="Only alphanumeric characters allowed" required><br><br>
+       <h2>Form with Ruby</h2>
+       <ruby>
+         <rt>你好</rt>
+         <rp>(</rp>
+         <rp>Nǐ hǎo</rp>
+         <rp>)</rp>
+       </ruby> is a Chinese greeting.
+    </section>
 
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required><br><br>
+     <section>
+         <h2>Form with Code</h2>
+         <pre><code>
+           function greet(name) {
+             console.log("Hello, " + name + "!");
+           }
+         </code></pre>
+     </section>
 
-          <label for="confirm_password">Confirm Password:</label>
-          <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+     <section>
+        <h2>Form with Progress</h2>
+        <progress value="50" max="100"></progress>
+     </section>
 
-          <mark>Please confirm your password matches.</mark>
-
-          <button type="submit">Register</button>
-        </fieldset>
-      </form>
+    <section>
+      <h2>Form with Data</h2>
+      <b role="presentation">Data:</b>
+      <data value="123">Some Data</data>
     </section>
 
     <section>
-      <h2>Radio and Checkbox Example</h2>
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Preferences</legend>
-          <p>Select your preferred programming language:</p>
-          <input type="radio" id="python" name="language" value="python">
-          <label for="python">Python</label><br>
-
-          <input type="radio" id="javascript" name="language" value="javascript">
-          <label for="javascript">JavaScript</label><br>
-
-          <input type="radio" id="java" name="language" value="java">
-          <label for="java">Java</label><br>
-
-          <p>Select your interests:</p>
-          <input type="checkbox" id="webdev" name="interests" value="webdev">
-          <label for="webdev">Web Development</label><br>
-
-          <input type="checkbox" id="gamedev" name="interests" value="gamedev">
-          <label for="gamedev">Game Development</label><br>
-
-          <input type="checkbox" id="machinelearning" name="interests" value="machinelearning">
-          <label for="machinelearning">Machine Learning</label><br>
-        </fieldset>
-      </form>
-    </section>
-
-    <section>
-        <h2>Table Example</h2>
-        <table>
-            <caption>Sample Data</caption>
-            <thead>
-                <tr>
-                    <th>Header 1</th>
-                    <th>Header 2</th>
-                    <th>Header 3</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td>Data 3</td>
-                </tr>
-                <tr>
-                    <td>Data 4</td>
-                    <td>Data 5</td>
-                    <td>Data 6</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3">Footer Information</td>
-                </tr>
-            </tfoot>
-        </table>
-    </section>
-
-    <section>
-      <h2>Advanced Form Elements</h2>
-      <form>
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date"><br><br>
-
-        <label for="time">Time:</label>
-        <input type="time" id="time" name="time"><br><br>
-
-        <label for="number">Number:</label>
-        <input type="number" id="number" name="number"><br><br>
-
-        <label for="range">Range:</label>
-        <input type="range" id="range" name="range"><br><br>
-
-        <label for="color">Color:</label>
-        <input type="color" id="color" name="color"><br><br>
-
-        <label for="file">File:</label>
-        <input type="file" id="file" name="file"><br><br>
-
-        <label for="url">URL:</label>
-        <input type="url" id="url" name="url"><br><br>
-
-        <label for="search">Search:</label>
-        <input type="search" id="search" name="search"><br><br>
-
-        <label for="tel">Telephone:</label>
-        <input type="tel" id="tel" name="tel"><br><br>
-      </form>
-    </section>
-
-    <section>
-        <h2>Structural Form Elements</h2>
-        <details>
-            <summary>More Details</summary>
-            <p>This is some detailed content.</p>
-        </details>
-        <dialog>
-          <p>This is a dialog box</p>
-        </dialog>
+       <h2>Form with Meter</h2>
+       <meter value="0.75" min="0" max="1"></meter>
     </section>
   </main>
 
   <aside>
-    <p>This is an aside, providing supplemental information.</p>
-    <pre><code>This is some code block.</code></pre>
-    <kbd>Ctrl+Enter</kbd>
+    <h3>Sidebar</h3>
+    <p>This is a sidebar with additional information.</p>
   </aside>
 
   <footer>
     <p>&copy; 2024 Example Website</p>
   </footer>
-
-  <bdo dir="rtl">This text is reversed.</bdo>
-  <cite>Example Source</cite>
-  <dfn>Definition</dfn>
-  <em>Emphasis</em>
-  <i>Italic text</i>
-  <embed src="#" type="application/pdf">
-  <wbr>
-  <q>Quote Example</q>
-  <rp>(</rp>
-  <rp>)</rp>
-  <s>Strikethrough</s>
-  <s id="s_id">Subscript</s>
-  <slot>Slot Placeholder</slot>
-  <span id="span_id">Span</span>
-  <sub>Subscript</sub>
-  <sup>Superscript</sup>
-  <template>Template Content</template>
-  <u>Underline</u>
-  <var>Variable</var>
 </body>
 </html>

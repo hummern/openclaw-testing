@@ -10,12 +10,12 @@
 
 <header>
     <h1>Media Gallery</h1>
-    <nav aria-label="Main Navigation">
+    <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="tables.html">Tables</a></li>
             <li><a href="forms.html">Forms</a></li>
-            <li><a href="interactive.html">Interactive Elements</a></li>
+            <li><a href="interactive.html">Interactive</a></li>
         </ul>
     </nav>
 </header>
@@ -25,71 +25,74 @@
         <h2>Images</h2>
         <figure>
             <img src="image1.jpg" alt="A scenic landscape" width="300">
-            <figcaption>Beautiful landscape view</figcaption>
+            <figcaption>Beautiful Landscape</figcaption>
         </figure>
+
         <figure>
             <img src="image2.jpg" alt="Close-up of a flower" width="300">
-            <figcaption>Delicate flower detail</figcaption>
+            <figcaption>Delicate Flower</figcaption>
         </figure>
 
-        <p><em>This section showcases some beautiful images.</em>  <code>View them in full resolution.</code>
-           <kbd>Press any key</kbd> to proceed.
-           <var>Image Source: Unsplash</var>
-           A <code>&lt;wbr&gt;</code> break opportunity.
-           <bdo dir="rtl">Right-to-left text</bdo>
-           A <cite>citation</cite> to a relevant work.
-           <dfn>Definition</dfn> of a term.
-           <sub id="subscript">Subscript text</sub>
-           <sup>Superscript text</sup>
-           <small>Small Text</small>
-           <ins>Inserted Text</ins>
-           <del>Deleted Text</del>
-        </p>
+        <picture>
+          <source media="(max-width: 799px)" srcset="image1_small.jpg">
+          <img src="image1.jpg" alt="A scenic landscape">
+        </picture>
+
+
+        <details>
+            <summary>Image Information</summary>
+            <p>These images are examples of landscape photography.</p>
+        </details>
     </section>
 
     <section>
-        <h2>Audio & Video</h2>
-        <article>
-            <h3>Audio Example</h3>
-            <audio controls>
-                <source src="audio.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </article>
+        <h2>Video</h2>
+        <video controls width="400">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Watch a captivating video.</p>
 
-        <article>
-            <h3>Video Example</h3>
-            <video width="400" height="300" controls>
-                <source src="video.mp4" type="video/mp4">
-                Your browser does not support the video element.
-            </video>
-        </article>
-
-        <object data="document.pdf" type="application/pdf" width="600" height="500">
-            <p>Your browser doesn't support PDF viewing.</p>
-        </object>
-
-        <embed src="flash.swf" type="application/x-shockwave-flash" width="600" height="400">
+        <b role="presentation">Video Transcript:</b>
+        <pre><code>This is a video demonstration.</code></pre>
     </section>
 
     <section>
-        <h2>Progress & Measurement</h2>
-        <progress value="50" max="100"></progress>
-        <meter value="0.75" max="1"></meter>
-        <output>Result: 75</output>
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <p>Listen to a calming audio track.</p>
+    </section>
 
-        <q>A short quote</q>
-        <rp>(</rp><rp>This is a phonetic guide)</rp>
-        <slot name="my-slot"></slot>
-        <template>
-            <p>This is a template</p>
-        </template>
+    <section>
+        <h2>Progress & Time</h2>
+        <progress value="50" max="100" title="Download Progress"></progress>
+        <time datetime="2024-01-27T10:00:00">Published: January 27, 2024</time>
+        <meter value="0.8" max="1" title="Accuracy"></meter>
+    </section>
+    <section>
+      <h2>Structured Data</h2>
+      <data value="42">The Answer</data>
+      <output>Result: 42</output>
+    </section>
 
-        <time datetime="2024-10-26">October 26, 2024</time>
-        <mark>Marked text</mark>
-        <ruby>漢<rt>kan</rt></ruby>
-        <u id="underline">Underlined text</u>
-        <span aria-hidden="true" class="decorative">Decorative Text</span>
+    <section>
+        <h2>Code Example</h2>
+        <pre>
+<code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code>
+        </pre>
     </section>
 </main>
 
@@ -102,8 +105,15 @@
 </aside>
 
 <footer>
-    <p>&copy; 2024 Media Gallery. All rights reserved.</p>
+    <p>&copy; 2024 Media Gallery</p>
+    <p><small>Last updated: <time datetime="2024-01-28T12:00:00">January 28, 2024</time></small></p>
+    <p>Contact: <a href="mailto:info@example.com">info@example.com</a></p>
 </footer>
+
+<script>
+  // Simple demo, no real functionality.
+  console.log("This is the media.html page.");
+</script>
 
 </body>
 </html>

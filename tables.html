@@ -3,143 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tables Example</title>
+<title>Tables - Sample Website</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
 
 <header>
   <h1>Tables Example</h1>
-  <nav aria-label="Main Navigation">
+  <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="forms.html">Forms</a></li>
       <li><a href="interactive.html">Interactive</a></li>
       <li><a href="media.html">Media</a></li>
-      <li><a href="tables.html">Tables</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Simple Table</h2>
-
-    <figure>
-      <figcaption>A simple table illustrating basic structure.</figcaption>
-      <table>
-        <caption>Simple Table</caption>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Row 1, Cell 1</td>
-            <td>Row 1, Cell 2</td>
-          </tr>
-          <tr>
-            <td>Row 2, Cell 1</td>
-            <td>Row 2, Cell 2</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="2">Footer Data</td>
-          </tr>
-        </tfoot>
-      </table>
-    </figure>
-
-    <h2>Table with <em>Complex</em> Data</h2>
-    <p>This table demonstrates <code>multiple</code> data types and <em>formatting</em>.</p>
-
-    <table aria-describedby="table-description">
-      <caption id="table-description">Table with diverse data.</caption>
+    <h2>Basic Table</h2>
+    <p>This is a simple table demonstrating basic structure.</p>
+    <table>
+      <caption>Basic Table with Header and Data</caption>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Score</th>
-          <th>Date</th>
-          <th>Details</th>
+          <th>Header 1</th>
+          <th>Header 2</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Alice <var>Smith</var></td>
-          <td>30</td>
-          <td><mark>95</mark></td>
-          <td><time datetime="2024-10-27">2024-10-27</time></td>
-          <td>
-            <details>
-              <summary>More Info</summary>
-              <p>Additional details about Alice.</p>
-            </details>
-          </td>
+          <td>Data 1</td>
+          <td>Data 2</td>
         </tr>
         <tr>
-          <td>Bob <em>Jones</em></td>
-          <td>25</td>
-          <td>88</td>
-          <td><time datetime="2024-10-26">2024-10-26</time></td>
-          <td>
-              <q>Great job!</q>
-          </td>
-        </tr>
-        <tr>
-          <td>Charlie <sub>Brown</sub></td>
-          <td>40</td>
-          <td>75</td>
-          <td><time datetime="2024-10-25">2024-10-25</time></td>
-          <td>
-            <pre><code>print("Hello")</code></pre>
-          </td>
+          <td>Data 3</td>
+          <td>Data 4</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="4">Average Score: 82.67</td>
+          <td colspan="2">Table Footer</td>
         </tr>
       </tfoot>
     </table>
-
   </section>
 
-  <aside>
-    <p>This is an aside section containing related information.</p>
-    <bdo dir="rtl">This text is reversed.</bdo>
-    <cite>A relevant quote.</cite>
-    <dfn>A defined term.</dfn>
-    <i >Italic text.</i>
-    <kbd>Press Ctrl+Enter</kbd>
-    <map name="example">
-      <area shape="rect" coords="0,0,100,100" href="#">
-    </map>
-    <optgroup label="Fruits">
-      <option value="apple">Apple</option>
-      <option value="banana">Banana</option>
-    </optgroup>
-    <q>A short quote.</q>
-    <rp>(</rp><abbr>abbr</abbr><rp>)</rp>
-    <s>Strikethrough text.</s>
-    <slot></slot>
-    <span>Span text.</span>
-    <sub >Subscript.</sub>
-    <sup>Superscript.</sup>
-    <template>
-      <p>This is a template.</p>
-    </template>
-    <u>Underline text.</u>
-    <var>Variable name.</var>
-    <wbr>Word break opportunity.
-  </aside>
+  <section>
+    <h2>Table with Colgroup</h2>
+    <p>Using <code>&lt;colgroup&gt;</code> to define column properties.</p>
+    <table border="1">
+      <colgroup>
+        <col span="2" style="width: 50%;">
+        <col style="width: 50%;">
+      </colgroup>
+      <caption>Table with Colgroup</caption>
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+          <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+          <td>Row 2, Cell 3</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Complex Table with Figcaption</h2>
+    <figure>
+      <figcaption>A more complex table layout example.</figcaption>
+      <table>
+        <caption>Complex Table Example</caption>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Product A</td>
+            <td>$10.00</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Product B</td>
+            <td>$20.00</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Product C</td>
+            <td>$5.00</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+  </section>
+
+  <section>
+     <h2>Time table</h2>
+     <p>Here's a table of time data:</p>
+     <table>
+       <caption>Time Data</caption>
+       <thead>
+         <tr>
+           <th>Event</th>
+           <th>Time</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>Meeting</td>
+           <td><time datetime="2024-10-27T09:00:00">09:00</time></td>
+         </tr>
+         <tr>
+           <td>Deadline</td>
+           <td><time datetime="2024-10-28T17:00:00">17:00</time></td>
+         </tr>
+       </tbody>
+     </table>
+  </section>
+
+  <section>
+    <h2>Table with <b>b</b> and <i>i</i></h2>
+    <p>Demonstrates the use of <b>bold</b> and <i>italic</i> tags within table cells.</p>
+    <table>
+      <caption><b>Bold</b> and <i>Italic</i> Example</caption>
+      <thead>
+        <tr>
+          <th>Header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>This is a <b>bold</b> value and this is an <i>italic</i> value.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </main>
 
 <footer>
-  <p>&copy; 2024 Example Website</p>
+  <p>&copy; 2024 Sample Website</p>
 </footer>
+
 </body>
 </html>

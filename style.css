@@ -1,14 +1,39 @@
 body {
   font-family: sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   color: #333;
-  background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.2;
-  color: #222;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #0056b3;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
 }
 
 a {
@@ -20,98 +45,36 @@ a:hover {
   text-decoration: underline;
 }
 
-p {
+b {
+  font-weight: bold;
+}
+
+ol, ul {
   margin-bottom: 1em;
 }
 
-strong {
-  font-weight: bold;
+ol {
+  padding-left: 2em;
 }
 
-em {
-  font-style: italic;
+ul {
+  list-style-type: disc;
+  padding-left: 2em;
 }
 
-bdo {
-  direction: rtl;
+li {
+  margin-bottom: 0.5em;
 }
 
-cite {
-  font-style: italic;
-}
-
-dfn {
-  font-weight: bold;
-}
-
-i {
-  font-style: italic;
-}
-
-kbd {
-  font-family: monospace;
-}
-
-q {
-  display: inline-block;
-}
-
-rp {
-  vertical-align: middle;
-}
-
-s {
-  text-decoration: line-through;
-}
-
-sub {
-  vertical-align: sub;
-  font-size: 0.8em;
-}
-
-sup {
-  vertical-align: super;
-  font-size: 0.8em;
-}
-
-u {
-  text-decoration: underline;
-}
-
-var {
-  font-family: var;
-}
-
-wbr {
-  white-space: pre;
-}
-
-template {
-  display: none;
-}
-
-span {
-  display: inline;
-}
-
-embed {
-  display: block;
-}
-
-slot {
-  display: inline;
-}
-
-/* Tables */
 table {
   border-collapse: collapse;
   width: 100%;
+  margin-bottom: 1em;
 }
 
-th,
-td {
+th, td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 0.5em;
   text-align: left;
 }
 
@@ -119,45 +82,59 @@ th {
   background-color: #f2f2f2;
 }
 
-/* Forms */
-label {
-  display: block;
-  margin-bottom: 5px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+figure {
+  margin-bottom: 1em;
+}
+
+/* Specific to forms.html to address the "rp" issue (not needed to be styled, just declared) */
+ruby {
+  display: inline;
+}
+
+rp {
+  display: inline;
+}
+
+/* Style for iframes */
+iframe {
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  margin: 1em 0;
 }
 
-button,
-input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
+/* Style for noscript tags */
+noscript {
+  background-color: #eee;
+  padding: 1em;
+  border: 1px solid #ccc;
+  margin: 1em 0;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  background-color: #0056b3;
+/* Style for select tags */
+select {
+  margin-bottom: 0.5em;
 }
 
-/* Media */
-video {
-    max-width: 100%;
-    height: auto;
+/* Style for picture tags */
+picture {
+  display: block;
 }
 
-/* Interactive */
-.interactive-element {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+/* Style for col and colgroup */
+colgroup, col {
+  display: contents;
+}
+
+/* Style for data attributes */
+[data-attribute] {
+    /*  No specific styling required; this is just a selector. */
+}
+
+/* Style for param tags */
+param {
+    display: none;
 }

@@ -3,127 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Elements Example</title>
+<title>Interactive Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="main">
+<body>
 
-<header aria-label="Page Header">
+<header role="banner">
   <h1>Interactive Elements</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="tables.html">Tables</a></li>
+    </ul>
+  </nav>
 </header>
 
-<nav aria-label="Navigation">
-  <ul>
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-    <li><a href="#">Link 3</a></li>
-  </ul>
-</nav>
-
 <main>
-  <section aria-labelledby="interactiveSectionTitle">
-    <h2 id="interactiveSectionTitle">Interactive Components</h2>
+  <section>
+    <h2>Interactive Examples</h2>
 
-    <details>
-      <summary>Details Summary</summary>
-      <p>This is the content of the details element.</p>
-    </details>
-
-    <figure aria-label="Interactive Image">
-      <img src="interactive-image.jpg" alt="Interactive Image Example" width="200" height="150">
-      <figcaption>Interactive Image Caption</figcaption>
+    <figure>
+      <img src="placeholder.jpg" alt="A placeholder image demonstrating interactivity">
+      <figcaption>Image demonstrating interactive features.</figcaption>
     </figure>
 
-    <dialog aria-labelledby="dialogTitle">
-      <h3 id="dialogTitle">Dialog Box</h3>
-      <p>This is the content of the dialog box.</p>
-      <button>Close</button>
-    </dialog>
-
-    <fieldset aria-labelledby="fieldsetLegend">
-      <legend id="fieldsetLegend">Form Fieldset</legend>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name">
+    <h3>Interactive Form</h3>
+    <fieldset>
+      <legend>Feedback Form</legend>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+        <br>
+        <select id="priority" name="priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
     </fieldset>
 
-    <form>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
-      <button type="submit">Submit</button>
-    </form>
+    <h3>Details and Summary</h3>
+    <details>
+      <summary>Click to reveal details</summary>
+      <p>This is the detailed content. It can contain any HTML elements.</p>
+      <pre><code>This is a code snippet.</code></pre>
+    </details>
 
+    <h3>Dialog Example</h3>
+    <dialog id="myDialog">
+      <p>This is a dialog box.</p>
+      <button onclick="document.getElementById('myDialog').close()">Close</button>
+    </dialog>
+
+    <h3>Progress Bar</h3>
+    <progress id="myProgress" value="50" max="100"></progress>
+    <p>Progress: <span id="progressValue">50</span>%</p>
+
+    <h3>Time Element</h3>
+    <time datetime="2024-01-26">Published on January 26, 2024</time>
+
+    <h3>Mark Element</h3>
+    <p>This is some <mark>important</mark> text.</p>
+
+    <h3>Ruby Annotation</h3>
+    <p>This is an example of a <ruby>ruby</ruby> annotation.</p>
+
+    <h3>Code Example</h3>
     <pre><code>
-      function greet(name) {
-        return "Hello, " + name + "!";
-      }
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
     </code></pre>
 
-    <kbd>Ctrl+Enter</kbd> to submit.
+  </section>
 
-    <time datetime="2024-10-27">Published on October 27, 2024</time>
-    <mark>Important Note</mark>
-    <ruby>漢<rt>kan</rt></ruby>
-    <bdo dir="rtl">This text is reversed</bdo>
-    <cite>Example Cite</cite>
-    <dfn>Definition</dfn>
-    <em>Emphasis</em>
-    <i role="presentation">Italic</i>
-    <embed src="somefile.swf" type="application/x-shockwave-flash" width="400" height="200">
-    <span>Span element</span>
-    <sub role="presentation">Subscript</sub>
-    <sup role="presentation">Superscript</sub>
-    <template>
-      <p>Reusable content</p>
-    </template>
-    <u>Underline</u>
-    <var>Variable</var>
-    <wbr>Word break opportunity
-    <q>Quote</q>
-    <rp>(</rp>
-    <s role="presentation">Strikethrough</s>
+  <aside>
+    <h3>Related Content</h3>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+    </ul>
+  </aside>
 
-    <section aria-labelledby="tableSectionTitle">
-      <h3 id="tableSectionTitle">Table Example</h3>
-      <table aria-label="Example Table">
-        <caption>Table Caption</caption>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Row 1, Cell 1</td>
-            <td>Row 1, Cell 2</td>
-          </tr>
-          <tr>
-            <td>Row 2, Cell 1</td>
-            <td>Row 2, Cell 2</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="2">Footer</td>
-          </tr>
-        </tfoot>
-      </table>
-    </section>
+  <section>
+    <h2>Table Example</h2>
+    <table>
+      <caption>Sample Table</caption>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Footer</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
 
-     <meter value="0.75" max="1"></meter>
-     <progress value="50" max="100"></progress>
-     <output>50</output>
+  <section>
+    <h2>Iframe Example</h2>
+    <iframe src="https://www.example.com" width="400" height="300" title="Example Website"></iframe>
+  </section>
 
+  <section>
+      <h2>No Script Example</h2>
+      <noscript>
+        <p>JavaScript is disabled. Please enable it for the full experience.</p>
+      </noscript>
   </section>
 </main>
 
-<aside aria-label="Sidebar">
-    <h3>Sidebar Content</h3>
-    <p>This is some additional content in the sidebar.</p>
-</aside>
-
 <footer>
-  <p>&copy; 2024 Example Website</p>
+  <p>&copy; 2024 Interactive Page</p>
 </footer>
 
 </body>
