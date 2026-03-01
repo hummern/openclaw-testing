@@ -3,104 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Examples</title>
+<title>Media Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="complementary">
   <header>
-    <h1>Media Gallery</h1>
+    <h1>Media Examples</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="interactive.html">Interactive</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <nav aria-label="Navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms</a></li>
-      <li><a href="interactive.html">Interactive Elements</a></li>
-      <li><a href="tables.html">Tables</a></li>
-    </ul>
-  </nav>
 
   <main>
     <section>
-      <h2>Images and Figures</h2>
-
-      <figure>
-        <img src="placeholder-image.jpg" alt="A descriptive image" width="300" height="200">
-        <figcaption>Image Caption:  This is a sample image.</figcaption>
-      </figure>
-
-      <figure>
-        <picture>
-          <source media="(max-width: 600px)" srcset="image-small.jpg">
-          <source media="(max-width: 900px)" srcset="image-medium.jpg">
-          <img src="image-large.jpg" alt="Responsive Image">
-        </picture>
-      </figure>
-
-      <details>
-        <summary>Image Details</summary>
-        <p>Further information about the images used.</p>
-      </details>
-
-    </section>
-
-    <section>
       <h2>Audio and Video</h2>
+      <article>
+        <h3>Audio Example</h3>
+        <audio controls>
+          <source src="audio/example.mp3" type="audio/mpeg">
+          <a href="audio/example.mp3">Your browser does not support the audio element.</a>
+        </audio>
+        <details>
+          <summary>Audio Details</summary>
+          <p>This is an example audio file. <code>.mp3</code> format.</p>
+        </details>
+      </article>
 
-      <h3>Audio Example</h3>
-      <audio controls>
-        <source src="audio-file.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+      <article>
+        <h3>Video Example</h3>
+        <video controls width="640" height="360">
+          <source src="video/example.mp4" type="video/mp4">
+          <a href="video/example.mp4">Your browser does not support the video element.</a>
+        </video>
+        <figcaption>A short video example.</figcaption>
+      </article>
 
-      <h3>Video Example</h3>
-      <video width="400" height="300" controls>
-        <source src="video-file.mp4" type="video/mp4">
-        Your browser does not support the video element.
-      </video>
+      <article>
+        <h3>Embed Example</h3>
+        <embed src="https://www.youtube.com/embed/dQw4w9WgXcQ" type="application/x-shockwave-flash" width="640" height="360">
+        <p>Requires Flash Player. <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Watch on YouTube</a></p>
+      </article>
 
-      <object data="flash-content.swf" type="application/x-shockwave-flash" width="320" height="240">
-        <param name="movie" value="flash-content.swf">
-        <param name="quality" value="high">
-        <param name="bgcolor" value="#ffffff">
-        <p>Requires Flash Player</p>
-      </object>
+      <article>
+        <h3>Image Gallery</h3>
+        <figure>
+          <img src="images/image1.jpg" alt="Image 1 Description" width="200" height="150">
+          <figcaption>Description of Image 1.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/image2.jpg" alt="Image 2 Description" width="200" height="150">
+          <figcaption>Description of Image 2.</figcaption>
+        </figure>
+        <area shape="rect" coords="0,0,100,50" href="image1.jpg" alt="link to image1">
+        <map name="image-map">
+          </map>
+      </article>
+      
+      <article>
+        <h3>Marquee - Simulating animation</h3>
+        <pre>
+&lt;marquee&gt;This is a simulated marquee effect.&lt;/marquee&gt;
+        </pre>
+      </article>
     </section>
 
     <section>
-      <h2>Embedded Content</h2>
-      <iframe src="https://www.example.com" title="Example Website" width="600" height="400"></iframe>
+      <h2>Other Media Elements</h2>
+      <article>
+        <h3>Time Example</h3>
+        <p>The time is: <time datetime="2023-10-27T10:00:00">October 27, 2023, 10:00 AM</time></p>
+
+        <p>Mark: <span>This is a </span><mark>highlighted</mark><span> section.</p>
+
+        <p>Ruby: <ruby>漢<rt>kan</rt></ruby> <ruby>字<rt>ji</rt></ruby></p>
+      </article>
+      <article>
+        <h3>Code Example</h3>
+        <pre><code>
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+greet("World");
+        </code></pre>
+
+        <kbd>Enter</kbd> to submit.
+      </article>
     </section>
   </main>
 
-  <aside>
-    <h3>Related Links</h3>
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-    </ul>
-  </aside>
-
   <footer>
-    <p>&copy; 2024 Example Website</p>
+    <p>&copy; 2023 Media Examples</p>
   </footer>
 
-  <col>
-  <colgroup>
-    <col>
-    <col>
-  </colgroup>
-  <data>Data value</data>
-  <h5 id="h5-example">Heading 5</h5>
-  <h6 id="h6-example">Heading 6</h6>
-  <select>
-    <option value="option1">Option 1</option>
-    <option value="option2">Option 2</option>
-  </select>
-  <small>Small text</small>
-  <span id="span-example">Span text</span>
-  <style>
-    body { font-family: sans-serif; }
-  </style>
-</body>
+  <template id="my-template">
+    <p>This is a template.</p>
+  </template>
+    <bdo dir="rtl">This text will be right-to-left.</bdo>
+    <cite>Example Cite</cite>
+    <dfn>Definition</dfn>
+    <em>Emphasis</em>
+    <i>Italic</i>
+    <q>Quote Example</q>
+    <s>Strikethrough</s>
+    <sub id="subscript">Subscript</sub>
+    <sup id="superscript">Superscript</sub>
+    <u>Underline</u>
+    <wbr>Word Break Opportunity
+    <var>Variable</var>
+  </body>
 </html>

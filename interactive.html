@@ -3,170 +3,197 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Example</title>
+<title>Interactive Elements</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
+  <header>
+    <h1>Interactive Elements Example</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1>Interactive Demonstration</h1>
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <section>
+      <h2>Interactive Form</h2>
+      <form>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
 
-<main>
-  <section>
-    <h2>Interactive Form</h2>
-    <form aria-label="Interactive Form">
-      <fieldset>
-        <legend>Personal Information</legend>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" aria-required="true"><br><br>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" aria-required="true"><br><br>
-
-        <label for="select">Select an Option:</label>
-        <select id="select" name="select">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-        </select><br><br>
-
-        <label for="comments">Comments:</label>
-        <textarea id="comments" name="comments"></textarea><br><br>
-
-        <button type="submit">Submit</button>
-      </fieldset>
-    </form>
-  </section>
-
-  <section>
-    <h2>Dynamic Table</h2>
-    <table>
-      <caption>Sample Data</caption>
-      <colgroup>
-        <col>
-        <col>
-        <col>
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 5</td>
-          <td>Data 6</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Footer Information</td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
-
-  <section>
-    <h2>Progress and Meter</h2>
-    <h3>Progress Bar</h3>
-    <progress value="75" max="100" aria-label="Progress"></progress>
-    <p>Progress: 75%</p>
-
-    <h3>Meter</h3>
-    <meter value="0.8" max="1.0" aria-label="Quality"></meter>
-    <p>Quality: 80%</p>
-  </section>
-
-  <section>
-    <h2>Code Example</h2>
-    <pre><code class="language-javascript" style="background-color: #f0f0f0; padding: 10px;">
-      function greet(name) {
-        console.log("Hello, " + name + "!");
-      }
-    </code></pre>
-  </section>
-
-  <section>
-    <h2>Interactive Details</h2>
-    <details>
-      <summary>Click to reveal content</summary>
-      <p>This is some hidden content.</p>
-    </details>
-  </section>
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+    </section>
 
     <section>
-    <h2>Image with Alt Text</h2>
-    <figure>
-      <img src="placeholder.jpg" alt="Descriptive image of a landscape" width="200" height="150">
-      <figcaption>A beautiful landscape.</figcaption>
-    </figure>
-  </section>
+      <h2>Interactive Table</h2>
+      <table>
+        <caption>Sample Data</caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+          </tr>
+          <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Footer Information</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
 
-  <section>
-    <h2>Small Text</h2>
-    <small>This is some small text.</small>
-  </section>
-    
-  <section>
-    <h2>Spanned Text</h2>
-    <p>This is <span style="font-weight: bold;">important</span> text.</p>
-  </section>
+    <section>
+      <h2>Interactive Details and Summary</h2>
+      <details>
+        <summary>Click to Reveal</summary>
+        <p>This is some hidden content.</p>
+      </details>
+    </section>
 
-  <section>
-    <h2>Heading 5</h2>
-    <h5>Heading 5</h5>
-    <h2>Heading 6</h2>
-    <h6>Heading 6</h6>
-  </section>
+    <section>
+      <h2>Interactive Dialog</h2>
+      <dialog>
+        <p>This is a dialog box.</p>
+        <button>Close</button>
+      </dialog>
+    </section>
 
-  <section>
-    <h2>Time and Mark</h2>
-    <time datetime="2023-10-27">Published on October 27, 2023</time>
-    <mark>Highlighted Text</mark>
-  </section>
+    <section>
+      <h2>Interactive Progress Bar</h2>
+      <progress value="50" max="100"></progress>
+    </section>
 
-  <section>
-    <h2>Ruby Annotation</h2>
-    <ruby>
-      <rt>漢字</rt>
-      <rp>(</rp>かんじ<rp>)</rp>
-    </ruby>
-  </section>
+    <section>
+      <h2>Interactive Meter</h2>
+      <meter value="75" max="100" title="75%"></meter>
+    </section>
 
-  <section>
-    <h2>Output</h2>
-    <output name="result"></output>
-  </section>
+    <section>
+      <h2>Interactive Code Example</h2>
+      <pre><code>
+        function greet(name) {
+          console.log("Hello, " + name + "!");
+        }
+      </code></pre>
+    </section>
 
-  <section>
-    <h2>Dialog</h2>
-    <dialog>
-      <p>This is a dialog box.</p>
-    </dialog>
-  </section>
+    <section>
+      <h2>Interactive Math Expression</h2>
+      <ruby>
+        <rt>π</rt>
+        <rp>π</rp>
+      </ruby>
+    </section>
 
+    <section>
+      <h2>Interactive Definition</h2>
+      <dfn>Definition</dfn> of a term.
+    </section>
+
+    <section>
+        <h2>Interactive Output</h2>
+        <output name="result">0</output>
+    </section>
+
+    <section>
+        <h2>Interactive Emphasis</h2>
+        <em aria-label="Emphasized text">This text is emphasized.</em>
+        <strong aria-label="Strong text">This text is strong.</strong>
+        <i aria-label="Italic text">This text is italic.</i>
+        <small aria-label="Small text">This text is small.</small>
+        <bdo dir="rtl">Right-to-left direction</bdo>
+        <cite>Citation</cite>
+        <q>Quote</q>
+        <s aria-label="Strike-through text">Strike-through text</s>
+        <sub aria-label="Subscript text">Subscript text</sub>
+        <sup aria-label="Superscript text">Superscript text</sub>
+        <var aria-label="Variable text">Variable text</var>
+        <wbr>Word break opportunity</wbr>
+    </section>
+
+    <section>
+        <h2>Interactive Area</h2>
+        <map name="map">
+            <area shape="rect" coords="0,0,100,100" href="#" alt="Area 1"/>
+        </map>
+    </section>
+
+     <section>
+        <h2>Interactive Noscript</h2>
+        <noscript>Javascript is not enabled.</noscript>
+    </section>
+
+      <section>
+        <h2>Interactive Optgroup</h2>
+        <select>
+            <optgroup label="Fruits">
+              <option value="apple">Apple</option>
+              <option value="banana">Banana</option>
+            </optgroup>
+            <optgroup label="Vegetables">
+              <option value="carrot">Carrot</option>
+              <option value="broccoli">Broccoli</option>
+            </optgroup>
+        </select>
+      </section>
+
+    <section>
+      <h2>Interactive Time</h2>
+      <time datetime="2023-10-27">October 27, 2023</time>
+    </section>
+
+    <section>
+      <h2>Interactive Mark</h2>
+      <p><mark>Highlighted text</mark></p>
+    </section>
+
+    <section>
+      <h2>Interactive Embed</h2>
+        <embed src="audio.mp3" type="audio/mpeg" width="200" height="50">
+    </section>
   </main>
+
+  <aside>
+    <h3>Sidebar</h3>
+    <p>This is some additional content.</p>
+  </aside>
+
+  <figure>
+    <img src="image.jpg" alt="A descriptive image" width="200" height="150">
+    <figcaption>A sample image.</figcaption>
+  </figure>
+
+  <slot name="place-holder"></slot>
 
   <footer>
     <p>&copy; 2023 Example Website</p>
   </footer>
-
 </body>
 </html>

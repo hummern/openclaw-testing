@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forms - Accessible Documentation</title>
+<title>Forms Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
 
 <header>
-  <h1>Forms Example</h1>
+  <h1>Forms Demo</h1>
   <nav aria-label="Main Navigation">
     <ul>
       <li><a href="#">Home</a></li>
@@ -22,124 +22,140 @@
 <main>
   <section>
     <h2>Basic Form</h2>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Personal Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required="required" aria-required="true"><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" aria-invalid="false"><br>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea>
-        <br>
-      </fieldset>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" cols="50" aria-label="Your message"></textarea><br>
 
-      <button type="submit">Submit</button>
+      <input type="submit" value="Submit" aria-label="Submit form">
     </form>
   </section>
 
   <section>
-    <h2>Advanced Form with Validation</h2>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Registration</legend>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" required>
-        <small>Only alphanumeric characters allowed.</small>
-        <br>
+    <h2>Form with Fieldset and Legend</h2>
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob"><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select><br>
 
-        <label for="confirm_password">Confirm Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
-        <br>
-
-        <label for="date_of_birth">Date of Birth:</label>
-        <input type="date" id="date_of_birth" name="date_of_birth">
-        <br>
-
-        <label for="terms">Agree to Terms:</label>
-        <input type="checkbox" id="terms" name="terms" required>
-        <label for="terms">Terms and Conditions</label>
-        <br>
-      </fieldset>
-
-      <button type="submit">Register</button>
-    </form>
+      <label for="address">Address:</label>
+      <textarea id="address" name="address"></textarea>
+    </fieldset>
   </section>
 
   <section>
-    <h2>Form with Select and Data</h2>
-    <form action="#" method="post">
-      <label for="select_options">Choose an option:</label>
-      <select id="select_options" name="select_options">
-        <option value="">Select...</option>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
-      <br>
+    <h2>Form with Checkboxes and Radio Buttons</h2>
+    <label>Select your interests:</label><br>
+    <input type="checkbox" id="interest1" name="interest1" value="reading">
+    <label for="interest1">Reading</label><br>
+    <input type="checkbox" id="interest2" name="interest2" value="sports">
+    <label for="interest2">Sports</label><br>
+    <input type="checkbox" id="interest3" name="interest3" value="music">
+    <label for="interest3">Music</label><br>
 
-      <data value="form-example">Form data</data>
-    </form>
+    <br>
+
+    <label>Choose your preferred method of contact:</label><br>
+    <input type="radio" id="contact1" name="contact" value="email" checked="checked">
+    <label for="contact1">Email</label><br>
+    <input type="radio" id="contact2" name="contact" value="phone">
+    <label for="contact2">Phone</label><br>
+  </section>
+
+  <section>
+    <h2>Advanced Form Elements</h2>
+    <details>
+      <summary>More Information</summary>
+      <p>This is a section with detailed form elements and attributes.</p>
+      <pre><code>
+        &lt;code&gt;This is some code example&lt;/code&gt;
+      </code></pre>
+    </details>
+    <figure>
+      <img src="placeholder.jpg" alt="Form Image" width="200" height="150">
+      <figcaption>A representative image for the form.</figcaption>
+    </figure>
+    <time datetime="2024-01-27">Published on January 27, 2024</time>
   </section>
 
   <section>
       <h2>Table Example</h2>
       <table>
-          <caption>Sample Table</caption>
-          <colgroup>
-            <col>
-            <col span="2">
-          </colgroup>
-          <thead>
-              <tr>
-                  <th>Header 1</th>
-                  <th>Header 2</th>
-                  <th>Header 3</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Row 1, Cell 1</td>
-                  <td>Row 1, Cell 2</td>
-                  <td>Row 1, Cell 3</td>
-              </tr>
-              <tr>
-                  <td>Row 2, Cell 1</td>
-                  <td>Row 2, Cell 2</td>
-                  <td>Row 2, Cell 3</td>
-              </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="3">Footer information</td>
-            </tr>
-          </tfoot>
+        <caption>Sample Data</caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+          </tr>
+          <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Footer Data</td>
+          </tr>
+        </tfoot>
       </table>
+  </section>
+
+  <dialog>
+    <p>This is a dialog box.</p>
+  </dialog>
+
+  <meter value="0.75" max="1.0"></meter>
+  <progress value="50" max="100"></progress>
+  <output>Result: 123</output>
+
+  <bdo dir="rtl">Right to Left</bdo>
+  <cite>Example Cite</cite>
+  <dfn>Definition</dfn>
+  <em>Emphasis</em>
+  <i>Italic Text</i>
+  <kbd>Keyboard Input</kbd>
+  <map name="mapName"></map>
+  <noscript>This will only show if JavaScript is disabled.</noscript>
+  <optgroup label="Group 1">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+  </optgroup>
+  <q>Quote here</q>
+  <s>Strikethrough</s>
+  <slot></slot>
+  <sup>Superscript</sup>
+  <sub>Subscript</sub>
+  <u>Underline</u>
+  <var>Variable</var>
+  <wbr>Word Break Opportunity</wbr>
+
   </section>
 </main>
 
 <footer>
-  <small>&copy; 2024 Accessible Documentation</small>
+  <p>Copyright 2024 - Example Forms</p>
 </footer>
-
-<style>
-  /* Basic styling - replace with your own */
-  body { font-family: sans-serif; }
-  label { display: block; margin-bottom: 5px; }
-  input[type="text"], input[type="email"], input[type="password"], textarea, select { margin-bottom: 10px; }
-</style>
-<picture>
-  <source media="(max-width: 600px)" srcset="small.jpg">
-  <img src="large.jpg" alt="Example image">
-</picture>
 
 </body>
 </html>
