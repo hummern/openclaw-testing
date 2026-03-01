@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forms - Accessible HTML5 Example</title>
+<title>Forms Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
 
 <header>
-  <h1>Forms Demo</h1>
-  <nav aria-label="Main Navigation">
+  <h1>Forms Example</h1>
+  <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="interactive.html">Interactive</a></li>
-      <li><a href="media.html">Media</a></li>
-      <li><a href="tables.html">Tables</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -28,149 +27,95 @@
         <legend>Personal Information</legend>
 
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
-        <small>Required</small>
-        <br>
+        <input type="text" id="name" name="name" required aria-label="Enter your name" placeholder="Your Name">
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true" placeholder="Your Email">
-        <small>Must be a valid email address</small>
-        <br>
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
-        <small>Optional</small>
-        <br>
-
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" name="birthday">
-        <br>
-
-        <label for="gender">Gender:</label>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label>
-
-        <br>
-
-        <label for="interests">Interests:</label>
-        <select id="interests" name="interests" multiple aria-multiselectable="true">
-          <optgroup label="Hobbies">
-            <option value="reading">Reading</option>
-            <option value="hiking">Hiking</option>
-          </optgroup>
-          <optgroup label="Technology">
-            <option value="programming">Programming</option>
-            <option value="webdesign">Web Design</option>
-          </optgroup>
-        </select>
-
-        <br>
+        <input type="email" id="email" name="email" required aria-label="Enter your email address" placeholder="Your Email">
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50" aria-label="Your Message"></textarea>
-        <small>Tell us more!</small>
-        <br>
+        <textarea id="message" name="message" aria-label="Enter your message" placeholder="Your Message"></textarea>
+
       </fieldset>
 
       <fieldset>
-        <legend>Address</legend>
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address">
-        <br>
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city">
-        <br>
-        <label for="state">State:</label>
-        <input type="text" id="state" name="state">
-        <br>
-        <label for="zip">Zip Code:</label>
-        <input type="text" id="zip" name="zip">
+        <legend>Additional Details</legend>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" aria-label="Select your country">
+          <option value="">-- Please select --</option>
+          <option value="usa">United States</option>
+          <option value="canada">Canada</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+
+        <label for="newsletter">Subscribe to Newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter" aria-label="Subscribe to our newsletter">
+
       </fieldset>
 
       <button type="submit">Submit</button>
-      <button type="reset">Reset</button>
     </form>
   </section>
 
   <section>
-    <h2>More Form Elements</h2>
-    <p>
-      <em>Example:</em>  This is emphasized text. <cite>Reference to a work</cite>.
-      <small>Small text.</small>
-      <var>Variable text.</var>
-      <bdo>Bidirectional text override.</bdo>
-      <dfn>Definition.</dfn>
-      <span class="highlight">Highlighted text.</span>
-      <ins>Inserted text.</ins>
-      <del>Deleted text.</del>
-      <mark>Marked text.</mark>
-      <q>A short quotation.</q>
-      <abbr title="HyperText Markup Language">HTML</abbr>
-      <sup>Superscript</sup> <sub>Subscript</sub>
-      <wbr>Word break opportunity.
-      <kbd>Keyboard input.</kbd>
-      <code>Code snippet.</code>
-      <pre>Preformatted text.</pre>
-      <time datetime="2023-10-27">October 27, 2023</time>
-      <ruby>漢 <rt>kan</rt>字</ruby>
-      <slot>Content slot</slot>
-      <template> Template content </template>
-      <area shape="rect" coords="0,0,100,100" href="#" alt="Example Area">
-      <u role="button">Underline role</u>
-      <i role="alert">Italic role</i>
-      <map name="mapname">
-         <area shape="rect" coords="0,0,100,100" href="#" alt="Example Area">
-      </map>
-    </p>
+    <h2>Form Validation Example</h2>
+    <form>
+      <label for="number">Enter a number between 0 and 100:</label>
+      <input type="number" id="number" name="number" min="0" max="100" aria-label="Enter a number">
+      <output id="validation-result"></output>
+    </form>
+  </section>
 
+  <section>
+    <h2>Table with Form Elements</h2>
     <table>
-      <caption>Sample Table</caption>
+      <caption>Form Input Table</caption>
       <thead>
         <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
+          <td>Name</td>
+          <td>text</td>
+          <td>User's name</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>email</td>
+          <td>User's email address</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">Footer</td>
+          <td colspan="3"><em>Note: All fields are required.</em></td>
         </tr>
       </tfoot>
     </table>
   </section>
 
-  <figure>
-    <img src="placeholder.jpg" alt="Placeholder Image" width="200" height="150">
-    <figcaption>A placeholder image.</figcaption>
-  </figure>
+  <section>
+    <h2>Details and Summary Example</h2>
+    <details>
+      <summary>Click to reveal more information</summary>
+      <p>This is some hidden content. <b>Important information!</b></p>
+    </details>
+  </section>
+ </main>
 
-  <details>
-    <summary>Details Summary</summary>
-    <p>Details content.</p>
-  </details>
+ <aside>
+    <h3>Related Links</h3>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+    </ul>
+  </aside>
 
-  <dialog>
-    <p>Dialog content.</p>
-  </dialog>
-
-  <progress value="50" max="100" aria-valuetext="50% Complete"></progress>
-  <meter value="0.75" max="1" aria-valuetext="75%"></meter>
-  <output name="result" value="10">Result</output>
-</main>
-
-<footer>
-  <p>&copy; 2023 Accessible Forms Example</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2024 Example Website. All rights reserved.</p>
+  </footer>
 </body>
 </html>

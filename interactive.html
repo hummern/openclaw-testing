@@ -6,141 +6,142 @@
 <title>Interactive Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="presentation">
+<body role="content">
 
-  <header>
-    <h1>Interactive Demonstration</h1>
-    <nav aria-label="Main Navigation">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>Interactive Example Page</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
+<main>
+  <section>
+    <h2>Interactive Form</h2>
+    <form>
+      <fieldset>
+        <legend>User Information</legend>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" aria-label="Enter your name">
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" aria-label="Enter your email address">
+        <br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" aria-label="Enter your message"></textarea>
+        <br>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Interactive Table</h2>
+    <table>
+      <caption>Sample Data</caption>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td headers="header1">Data 1</td>
+          <td headers="header2">Data 2</td>
+          <td headers="header3">Data 3</td>
+        </tr>
+        <tr>
+          <td headers="header1">Data 4</td>
+          <td headers="header2">Data 5</td>
+          <td headers="header3">Data 6</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Table Footer</td>
+        </tr>
+      </tfoot>
+    </table>
+    <b aria-live="polite">Note: Table cells use headers attributes for accessibility</b>
+  </section>
+
+  <section>
+    <h2>Interactive Details and Summary</h2>
+    <details>
+      <summary>Click to Reveal Details</summary>
+      <p>This is some detailed information that is initially hidden.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Code Example</h2>
+    <pre><code class="language-javascript">
+      function greet(name) {
+        console.log("Hello, " + name + "!");
+      }
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Progress Bar</h2>
+    <progress value="75" max="100" aria-label="Progress of task"></progress>
+  </section>
+    
+  <section>
+      <h2>Ruby Annotation</h2>
+      <p>
+        <ruby>
+          <rt>本</rt>
+          <rp>(</rp>ほん<rp>)</rp>
+        </ruby> is a ruby annotation.
+      </p>
+    </section>
+    
     <section>
-      <h2>Interactive Form</h2>
-      <form>
-        <fieldset>
-          <legend>User Information</legend>
-
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email">
-
-          <label for="dob">Date of Birth:</label>
-          <input type="date" id="dob" name="dob">
-
-          <label for="comment">Comments:</label>
-          <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-        </fieldset>
-
-        <button type="submit">Submit</button>
-      </form>
+      <h2>Time Example</h2>
+      <p>The meeting is scheduled for <time datetime="2024-01-27T10:00:00">January 27, 2024 at 10:00 AM</time>.</p>
     </section>
 
     <section>
-      <h2>Interactive Data Table</h2>
-      <table aria-describedby="table-description">
-        <caption>Monthly Sales Data</caption>
-        <thead role="row">
-          <tr>
-            <th scope="col">Month</th>
-            <th scope="col">Sales</th>
-          </tr>
-        </thead>
-        <tbody role="row">
-          <tr>
-            <td scope="row">January</td>
-            <td>$1,000</td>
-          </tr>
-          <tr>
-            <td scope="row">February</td>
-            <td>$1,200</td>
-          </tr>
-          <tr>
-            <td scope="row">March</td>
-            <td>$1,500</td>
-          </tr>
-        </tbody>
-        <tfoot role="row">
-            <tr>
-                <th>Total</th>
-                <th role="row"> $3,700</th>
-            </tr>
-        </tfoot>
-      </table>
-      <p id="table-description" aria-live="polite">This table displays monthly sales data.</p>
+        <h2>Marked Text</h2>
+        <p>This is some <mark>important</mark> text.</p>
+    </section>
+    
+    <section>
+        <h2>Output</h2>
+        <output name="result">0</output>
     </section>
 
     <section>
-      <h2>Interactive Content</h2>
-      <article>
-        <h3>A Sample Article</h3>
-        <p>This is a sample article with some <strong>important</strong> information.  <mark>Pay attention!</mark>  See how <em>emphasis</em> is used?</p>
-        <figure>
-          <img src="placeholder.jpg" alt="Placeholder Image" width="200" height="150">
-          <figcaption>A relevant image.</figcaption>
-        </figure>
-        <pre><code>This is a code snippet:
-        int x = 10;
-        System.out.println(x);
-        </code></pre>
-        <q>This is a quote from someone.</q>
-        <cite>Source of the quote.</cite>
-        <kbd>Press Ctrl+Enter</kbd>
-      </article>
-      <aside>
-        <h3>Related Information</h3>
-        <p>This is some related information in an aside.</p>
-      </aside>
+      <h2>Iframe Example</h2>
+      <iframe src="https://www.example.com" width="600" height="400" title="Example Website" aria-label="External website"></iframe>
+    </section>
+    
+    <section>
+        <h2>NoScript</h2>
+        <noscript>Your browser does not support JavaScript.</noscript>
     </section>
 
     <section>
-      <h2>Dynamic Content with Details</h2>
-      <details>
-        <summary>Click to Reveal</summary>
-        <p>This is the content of the details element.</p>
-      </details>
+        <h2>Object</h2>
+        <object data="data.pdf" type="application/pdf" width="600" height="400">
+            <p>Your browser does not support PDF files.</p>
+        </object>
     </section>
+</main>
 
-    <section>
-       <h2>Interactive Elements</h2>
-       <p> This section showcases some additional interactive HTML elements. </p>
-       <small>This is small text.</small>
-       <bdo dir="rtl">This text will be displayed right-to-left.</bdo>
-       <var>x</var> = <var>y</var> + <var>z</var>
-       <dfn>This is a definition term.</dfn>
-       <wbr> Word break opportunity.
-       <slot name="interactive-element"></slot>
-       <template>
-         <p>Template content here.</p>
-       </template>
-       <u role="presentation">Underline</u>
-       <i role="presentation">Italicized text</i>
-       <span aria-label="span-element">A span element.</span>
-       <area shape="rect" coords="0,0,100,100" href="#" alt="Area Link">
-       <map name="mapname">
-           <area shape="circle" coords="50,50,25" href="#">
-       </map>
-       <optgroup label="Fruits">
-           <option value="apple">Apple</option>
-           <option value="banana">Banana</option>
-       </optgroup>
-       <progress value="50" max="100"></progress>
-       <meter value="0.75" max="1"></meter>
-       <time datetime="2024-01-01">January 1, 2024</time>
-       <output name="result"></output>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Interactive Example</p>
-  </footer>
+<footer>
+  <p>&copy; 2024 Interactive Example</p>
+</footer>
 
 </body>
-</html>
+</html >
