@@ -7,149 +7,141 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
+  <header>
+    <h1>Media Gallery</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="interactive.html">Interactive</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1>Media Gallery</h1>
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms</a></li>
-      <li><a href="interactive.html">Interactive</a></li>
-      <li><a href="tables.html">Tables</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <section>
+      <h2>Images</h2>
+      <figure>
+        <img src="image1.jpg" alt="A beautiful landscape" width="400" height="300">
+        <figcaption>Landscape image</figcaption>
+      </figure>
+      <figure>
+        <img src="image2.jpg" alt="A close-up of a flower" width="400" height="300">
+        <figcaption>Flower close-up</figcaption>
+      </figure>
+      <picture>
+        <source media="(max-width: 600px)" srcset="image1_small.jpg">
+        <img src="image1.jpg" alt="Responsive Landscape" width="400" height="300">
+      </picture>
+    </section>
 
-<main>
-  <section>
-    <h2>Images</h2>
-    <figure>
-      <img src="image1.jpg" alt="A beautiful landscape" width="300" height="200">
-      <figcaption>Landscape Image</figcaption>
-    </figure>
-
-    <figure>
-      <img src="image2.jpg" alt="A portrait of a person" width="300" height="200">
-      <figcaption>Portrait Image</figcaption>
-    </figure>
-
-    <article>
-      <h3>Image Details</h3>
-      <p>
-        This is a collection of images showcasing various landscapes and portraits.
-        <br>
-        <mark>Note:</mark All images are copyright protected.
-      </p>
-    </article>
-
-    <pre><code>
-      &lt;img src="image.jpg" alt="Description"&gt;
-    </code></pre>
-  </section>
-
-  <section>
-    <h2>Audio and Video</h2>
-    <details>
-      <summary>Audio Player</summary>
+    <section>
+      <h2>Audio</h2>
       <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio1.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
-    </details>
+    </section>
 
-    <details>
-      <summary>Video Player</summary>
-      <video width="400" height="300" controls>
-        <source src="video.mp4" type="video/mp4">
+    <section>
+      <h2>Video</h2>
+      <video controls width="640" height="360">
+        <source src="video1.mp4" type="video/mp4">
         Your browser does not support the video element.
       </video>
-    </details>
-  </section>
+    </section>
 
-  <section>
-    <h2>Interactive Media</h2>
-    <dialog>
-      <p>This is a dialog box.</p>
-      <button>Close</button>
-    </dialog>
+    <section>
+      <h2>Embedded Content</h2>
+      <iframe src="https://www.example.com" title="Example Website" width="560" height="315"></iframe>
+      <object data="data.pdf" type="application/pdf" width="600" height="400">
+        <param name="src" value="data.pdf">
+        <p>Your browser does not support PDFs.</p>
+      </object>
 
-    <fieldset>
-      <legend>Progress Bar Example</legend>
-      <progress value="50" max="100"></progress>
-      <meter value="0.75" max="1"></meter>
-      <output>75%</output>
-    </fieldset>
-  </section>
+      <p><em>This is an emphasized statement.</em> <b>This is a bold statement.</b> <i>This is an italicized statement.</em></p>
+      <p><small>This is small text.</small></p>
+      <p>This is some <sup>superscript</sup> and <sub>subscript</sub> text.</p>
+      <p><kbd>Press Ctrl+Shift+Esc</kbd> to open Task Manager.</p>
+      <pre><code>
+        function greet(name) {
+          return "Hello, " + name + "!";
+        }
+      </code></pre>
+    </section>
 
-  <section>
-    <h2>Data & Semantics</h2>
-    <table aria-label="Example Table">
-      <caption>Example Data Table</caption>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
-        </tr>
-        <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2">Footer Information</td>
-        </tr>
-      </tfoot>
-    </table>
+    <section>
+      <h2>Tables</h2>
+        <table>
+          <caption>Sample Table</caption>
+          <colgroup>
+            <col style="width: 25%;">
+            <col>
+            <col style="width: 25%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Row 1, Cell 1</td>
+              <td>Row 1, Cell 2</td>
+              <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+              <td>Row 2, Cell 1</td>
+              <td>Row 2, Cell 2</td>
+              <td>Row 2, Cell 3</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3">Table Footer</th>
+            </tr>
+          </tfoot>
+        </table>
+    </section>
 
-    <time datetime="2024-01-26">Published on January 26, 2024</time>
-    <var>Variable Example</var>
-    <ins>Inserted Text</ins>
-    <del>Deleted Text</del>
-    <bdo dir="rtl">Right-to-Left Text</bdo>
-    <cite>Source Citation</cite>
-    <data value="123">Data Value</data>
-    <dfn>Definition Term</dfn>
-    <embed src="some_media.swf" type="application/x-shockwave-flash" width="200" height="50">
-    <h5 style="color: blue;">Secondary Heading</h5>
-    <map name="myMap">
-      <area shape="rect" coords="0,0,100,100" href="page1.html">
-    </map>
-    <ol type="1">
-      <li>Item 1</li>
-      <li>Item 2</li>
-    </ol>
-    <optgroup label="Option Group">
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-    </optgroup>
-    <q>A quotation</q>
-    <slot name="mySlot"></slot>
-    <sub id="subscript">Subscript Text</sub>
-    <sup id="superscript">Superscript Text</sub>
-    <template>Template Content</template>
-    <u>Underlined Text</u>
-    <wbr>Word Break
-  </section>
-</main>
+    <section>
+      <h2>Details & Summary</h2>
+        <details>
+          <summary>Click to show details</summary>
+          <p>Some hidden content.</p>
+        </details>
+    </section>
 
-<aside>
-  <h3>Related Links</h3>
-  <ul>
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-  </ul>
-</aside>
+    <section>
+      <h2>Ruby</h2>
+      <ruby>
+        <rt>繁體</rt>
+        <rp>(</rp>
+        <rt>Traditional</rt>
+        <rp>)</rp>
+      </ruby>
+    </section>
 
-<footer>
-  <p>&copy; 2024 Example Website</p>
-</footer>
+    <section>
+      <h2>Time</h2>
+      <p>The event starts at <time datetime="2024-01-20T10:00:00">January 20, 2024 at 10:00 AM</time>.</p>
+    </section>
 
+    <section>
+      <h2>Progress</h2>
+      <progress value="75" max="100"></progress>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Website</p>
+  </footer>
+
+  <noscript>
+    <p>JavaScript is disabled. Some features may not work correctly.</p>
+  </noscript>
 </body>
 </html>

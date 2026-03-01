@@ -1,13 +1,12 @@
 body {
   font-family: sans-serif;
-  font-size: 16px;
   line-height: 1.6;
   color: #333;
-  background-color: #fff;
 }
 
-h1, h2, h3, h4, h5 {
-  color: #0056b3;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
   margin-bottom: 0.5em;
 }
 
@@ -16,6 +15,11 @@ h2 { font-size: 2em; }
 h3 { font-size: 1.75em; }
 h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+b, strong { font-weight: bolder; }
+em, i { font-style: italic; }
+small { font-size: 0.8em; }
 
 a {
   color: #007bff;
@@ -23,29 +27,15 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #0056b3;
 }
 
 p {
   margin-bottom: 1em;
 }
 
-pre {
-  background-color: #f7f7f7;
-  padding: 1em;
-  overflow-x: auto;
-}
-
-code {
-  font-family: monospace;
-}
-
-ul, ol {
-  margin-bottom: 1em;
-}
-
-li {
-  margin-bottom: 0.5em;
+figure {
+  margin: 1em 0;
 }
 
 table {
@@ -54,12 +44,23 @@ table {
 }
 
 th, td {
-  padding: 0.5em;
   border: 1px solid #ddd;
+  padding: 0.5em;
+  text-align: left;
 }
 
 th {
   background-color: #f2f2f2;
+}
+
+pre {
+  background-color: #f8f8f8;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+code {
+  font-family: monospace;
 }
 
 img {
@@ -67,46 +68,29 @@ img {
   height: auto;
 }
 
-figure {
-  margin-bottom: 1em;
-}
-
-figcaption {
-  font-style: italic;
-  color: #666;
-  margin-top: 0.5em;
-}
-
-/* Specific styles for HTML5 tags */
-area, bdo, cite, data, dfn, embed, h5, map, ol, optgroup, q, slot, style, sub, sup, template, u, var, wbr, track {
-  /* Add any necessary styles here.  These are mainly for structure,
-     and their appearance will usually be dictated by surrounding elements. */
-}
-
-/* Forms */
+/* Form styles (minimal) */
 label {
   display: block;
   margin-bottom: 0.5em;
-  font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
+  width: 100%;
   padding: 0.5em;
+  margin-bottom: 1em;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-bottom: 1em;
-  width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Important for width */
 }
 
 button,
 input[type="submit"] {
   background-color: #007bff;
   color: #fff;
-  padding: 0.5em 1em;
   border: none;
+  padding: 0.75em 1.5em;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -115,3 +99,26 @@ button:hover,
 input[type="submit"]:hover {
   background-color: #0056b3;
 }
+
+/* Media element */
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* For iframes */
+iframe {
+  border: 1px solid #ccc;
+}
+
+/* Specific element styles based on accessibility requirements */
+rt, rp {
+    font-size: smaller;
+}
+
+s {
+    text-decoration: line-through;
+}
+
+/* No specific styles needed for col, colgroup, noscript, object, param, picture */

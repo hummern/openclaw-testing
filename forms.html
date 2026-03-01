@@ -6,172 +6,153 @@
 <title>Forms Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
+<body role="main">
 
-<header>
-  <h1>Forms Example</h1>
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <h1>Forms and Input</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <section>
-    <h2>Contact Us</h2>
-    <form method="post" action="submit.php">
-      <fieldset>
-        <legend>Personal Information</legend>
-
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true"><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true"><br><br>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50" aria-label="Your Message"></textarea><br><br>
-
+  <main>
+    <section>
+      <h2>Basic Form</h2>
+      <form action="#" method="post">
         <fieldset>
-          <legend>Select Options</legend>
-          <label for="gender">Gender:</label>
-          <select id="gender" name="gender">
-            <optgroup label="Gender Options">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </optgroup>
-          </select><br><br>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+          <label for="birthdate">Birthdate:</label>
+          <input type="date" id="birthdate" name="birthdate">
+
+          <label for="time">Preferred Time:</label>
+          <input type="time" id="time" name="time">
+
+          <mark>Required Fields</mark>
+
         </fieldset>
+      </form>
 
-        <label>
-          <input type="checkbox" name="newsletter" value="subscribe"> Subscribe to Newsletter
-        </label><br><br>
+      <p><em>This is a simple form example.</em></p>
+      <b>Please fill out the form below.</b>
 
-        <label for="file">Upload File:</label>
-        <input type="file" id="file" name="file"><br><br>
-      </fieldset>
+      <figure>
+        <img src="placeholder.jpg" alt="Form Example Image" width="300">
+        <figcaption>A visual representation of the form.</figcaption>
+      </figure>
+    </section>
 
-      <button type="submit">Submit</button>
-      <input type="reset" value="Reset">
+    <section>
+      <h2>Advanced Form Elements</h2>
+      <form>
+        <fieldset>
+          <legend>Preferences</legend>
+          <label for="newsletter">Subscribe to Newsletter:</label>
+          <input type="checkbox" id="newsletter" name="newsletter"><br><br>
 
-      <mark>Please fill out all fields.</mark>
-    </form>
-  </section>
+          <label for="favorite_color">Favorite Color:</label>
+          <select id="favorite_color" name="favorite_color">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+          </select><br><br>
 
-  <article>
-    <h3>Form Validation Example</h3>
-    <p>
-      This is a demonstration of a simple form with validation. The <code>required</code> attribute ensures that the user provides input in certain fields. <kbd>Press Submit</kbd> to see the validation in action.
-    </p>
+          <label for="rating">Rating:</label>
+          <meter id="rating" name="rating" value="0.7" max="1.0"></meter>
+          <output name="rating_output"></output>
+        </fieldset>
+      </form>
 
-    <figure>
-      <img src="placeholder.jpg" alt="Form Validation Example Image" width="300">
-      <figcaption>An illustration of form submission.</figcaption>
-    </figure>
+      <pre><code>This is a code snippet.</code></pre>
 
-    <pre><code>
-&lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
-&lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; required aria-required=&quot;true&gt;
-    </code></pre>
-  </article>
+      <details>
+        <summary>More Information</summary>
+        <p>This section provides additional details about the form elements.</p>
+      </details>
 
-  <section>
-    <h2>Table Example</h2>
-    <table>
-      <caption>Form Data Summary</caption>
-      <thead>
-        <tr>
-          <th>Field</th>
-          <th>Input Type</th>
-          <th>Required</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Name</td>
-          <td>text</td>
-          <td>Yes</td>
-        </tr>
-        <tr>
-          <td>Email</td>
-          <td>email</td>
-          <td>Yes</td>
-        </tr>
-        <tr>
-          <td>Message</td>
-          <td>textarea</td>
-          <td>No</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Form Information</td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
+       <dialog>
+        <p>This is a dialog box.</p>
+      </dialog>
 
-  <details>
-    <summary>More Information</summary>
-    <p>This form provides a basic structure for collecting user input. Remember to implement robust server-side validation for security and data integrity.</p>
-  </details>
-  
-  <dialog>
-    <p>Are you sure you want to submit this form?</p>
-    <button>Confirm</button>
-    <button>Cancel</button>
-  </dialog>
+       <time datetime="2023-10-27">Published on October 27, 2023</time>
+    </section>
+    <section>
+      <h2>Table Form</h2>
+      <table>
+        <caption>Sample Table</caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+          </tr>
+          <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Footer of the table</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <section>
+      <h2>Ruby Example</h2>
+      <ruby>
+        <rt>日本語</rt>
+        <rp>(</rp>
+        <rt>Nihongo</rt>
+        <rp>)</rp>
+      </ruby>
+    </section>
+    <section>
+      <p>
+          This is a snippet of text with <i>italics</i> and <small>small</small> text.
+      </p>
+    </section>
+    <section>
+        <object data="somefile.pdf" type="application/pdf"></object>
+        <param name="src" value="somefile.pdf">
+    </section>
+    <section>
+      <picture>
+        <source media="(max-width: 600px)" srcset="small-image.jpg">
+        <img src="large-image.jpg" alt="A descriptive image">
+      </picture>
+    </section>
+    <section>
+        <noscript>
+            <p>JavaScript is disabled. Some functionality may be limited.</p>
+        </noscript>
+    </section>
 
-  <time datetime="2024-10-27">Today</time>
+    <aside>
+      <h3>Sidebar</h3>
+      <p>This is the sidebar content.</p>
+    </aside>
+  </main>
 
-    <data value="12345">Some Data</data>
-    <var>Variable Value</var>
-    <sub id="sub">Subscripted text</sub>
-    <sup id="sup">Superscripted text</sub>
-    <dfn>Definition</dfn>
-    <cite>Citation</cite>
-    <wbr>Word Break
-    <bdo dir="rtl">Bidirectional Override</bdo>
-    <q>Quote</q>
-    <slot>Slot</slot>
-    <template>Template</template>
-    <embed src="" type="">
-    <h5 >H5 Heading</h5>
-    <map name="mapname">
-        <area shape="rect" coords="0,0,100,100" href="#" alt="Area">
-    </map>
-
-    <style>
-    body {
-        background-color: lightblue;
-    }
-    </style>
-
-    <ruby>
-    RP
-    </ruby>
-
-
-
-</main>
-
-<aside>
-  <h3>Related Links</h3>
-  <ul>
-    <li><a href="#">More Forms</a></li>
-    <li><a href="#">Validation Techniques</a></li>
-  </ul>
-</aside>
-
-<footer>
-  <p>&copy; 2024 Example Forms. All rights reserved.</p>
-  <meter value="0.75" max="1"></meter>
-  <progress value="50" max="100"></progress>
-  <output>50</output>
-</footer>
+  <footer>
+    <p>&copy; 2023 Example Website</p>
+  </footer>
 </body>
-</html>
+</html >
