@@ -15,74 +15,87 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="tables.html">Tables</a></li>
       <li><a href="media.html">Media</a></li>
-      <li><a href="interactive.html">Interactive Elements</a></li>
+      <li><a href="interactive.html">Interactive</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Form Elements and Accessibility</h2>
-    <p>This section demonstrates accessible form elements.</p>
+    <h2>Contact Form</h2>
+    <article>
+      <p>This form demonstrates accessible form elements and labels.</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
 
-    <form method="post" action="#">
-      <fieldset>
-        <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
+          <br>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
-        <br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required aria-required="true" placeholder="Your Email">
+          <br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true" placeholder="Your Email">
-        <br>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" cols="40" aria-label="Your message"></textarea>
+          <br>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50" aria-label="Your Message"></textarea>
-        <br>
-      </fieldset>
+          <label for="file">Attach File:</label>
+          <input type="file" id="file" name="file">
+          <br>
+        </fieldset>
 
-      <fieldset>
-        <legend>Feedback Options</legend>
+        <fieldset>
+          <legend>Preferences</legend>
 
-        <p>How did you hear about us?</p>
-        <ul>
-          <li>
-            <label for="checkbox1">
-              <input type="checkbox" id="checkbox1" name="source" value="social">
-              Social Media
-            </label>
-          </li>
-          <li>
-            <label for="checkbox2">
-              <input type="checkbox" id="checkbox2" name="source" value="search">
-              Search Engine
-            </label>
-          </li>
-          <li>
-            <label for="checkbox3">
-              <input type="checkbox" id="checkbox3" name="source" value="referral">
-              Referral
-            </label>
-          </li>
-        </ul>
+          <p>Select your preferred method of contact:</p>
+          <label><input type="radio" name="contact" value="email" checked aria-label="Email"> Email</label><br>
+          <label><input type="radio" name="contact" value="phone" aria-label="Phone"> Phone</label><br>
 
-        <label for="dropdown">Select an option:</label>
-        <select id="dropdown" name="option">
-          <option value="">Please select</option>
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-        </select>
-      </fieldset>
+          <p>What are you interested in?</p>
+          <label><input type="checkbox" name="interest" value="news" aria-label="News"> News</label><br>
+          <label><input type="checkbox" name="interest" value="events" aria-label="Events"> Events</label><br>
 
-      <button type="submit">Submit</button>
-      <button type="reset">Reset</button>
-    </form>
+          <p>Select a subscription frequency:</p>
+          <select id="frequency" name="frequency">
+            <optgroup label="Frequency">
+              <option value="daily">Daily</option>
+              <option value="weekly" selected>Weekly</option>
+              <option value="monthly">Monthly</option>
+            </optgroup>
+          </select>
+        </fieldset>
 
-    <h3>Example Table</h3>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+        <kbd>Press Enter to Submit</kbd>
+      </form>
+      <pre>Form Code Example</pre>
+    </article>
+    <figure>
+      <img src="placeholder.jpg" alt="Placeholder image of a form" width="300" height="200">
+      <figcaption>Example Form Layout</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Form Validation</h2>
+    <p><em>Form validation is crucial for accessibility</em></p>
+    <p><code>Use ARIA attributes</code> for more complex scenarios</p>
+    <p>Consider using a <code>meter</code> element to indicate progress if applicable</p>
+
+     <details>
+      <summary>More about Accessibility</summary>
+      <p>Providing clear instructions and error messages is paramount for users with disabilities.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Simple Data Table</h2>
     <table>
-      <caption>Summary of Data</caption>
+      <caption>Sample Data</caption>
       <thead>
         <tr>
           <th>Header 1</th>
@@ -91,67 +104,51 @@
       </thead>
       <tbody>
         <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
         </tr>
         <tr>
-          <td>Data 3</td>
-          <td>Data 4</td>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2"><em>Footer Information</em></td>
+          <td colspan="2">Footer information</td>
         </tr>
       </tfoot>
     </table>
   </section>
 
-  <aside>
-    <h5>Related Resources</h5>
-    <ul>
-      <li><a href="#">WCAG Guidelines</a></li>
-      <li><a href="#">ARIA Authoring Practices</a></li>
-    </ul>
-  </aside>
+  <section>
+    <h2>Other Elements</h2>
+    <bdo dir="rtl">This text is reversed.</bdo>
+    <cite>Example of a citation</cite>
+    <col>
+    <dfn>Definition</dfn>
+    <embed src="#" type="application/pdf">
+    <i>Italicized text</i>
+    <ins>Inserted text</ins>
+    <mark>Marked text</mark>
+    <output></output>
+    <q>A quote</q>
+    <s>Strikethrough</s>
+    <slot></slot>
+    <span class="highlight">Highlighted span</span>
+    <sub aria-hidden="true">subscript</sub>
+    <sup>superscript</sup>
+    <template></template>
+    <u>Underlined text</u>
+    <var>Variable</var>
+    <wbr>
+    <time datetime="2024-01-26">2024-01-26</time>
+    <ruby>漢<rt>漢字</rt></ruby>
+  </section>
+
 </main>
 
 <footer>
   <p>&copy; 2024 Accessible Web Design</p>
-  <time datetime="2024-01-26">Last updated: January 26, 2024</time>
 </footer>
-
-<b id="important-note">Important Note: Always test your forms with assistive technologies.</b>
-<mark>Read the following code example:</mark>
-<pre><code>
-&lt;label for="exampleInput">&lt;/label>
-&lt;input type="text" id="exampleInput" name="exampleInput"&gt;
-</code></pre>
-
-<details>
-  <summary>Form Validation Example</summary>
-  <p>Demonstrates basic form validation.</p>
-</details>
-
-<figure>
-  <img src="placeholder.png" alt="Placeholder image for example">
-  <figcaption>Example Image</figcaption>
-</figure>
-
-<object data="data.pdf" type="application/pdf" width="600" height="400">
-  <param name="src" value="data.pdf">
-  <param name="type" value="application/pdf">
-  <param name="name" value="data.pdf">
-  <param name="usemap" value="#map">
-</object>
-
-<picture>
-    <source media="(max-width: 600px)" srcset="small.jpg">
-    <img src="large.jpg" alt="A responsive image">
-</picture>
-
-<h5 id="more-info">More Information</h5>
-<h6 id="nested-heading">A Nested Heading</h6>
-
 </body>
-</html>
+</html/>

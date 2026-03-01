@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Gallery</title>
+<title>Media Examples</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="complementary">
+<body role="content">
 
 <header>
-  <h1>Media Gallery</h1>
-  <nav>
+  <h1>Media Examples</h1>
+  <nav aria-label="Main Navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="tables.html">Tables</a></li>
       <li><a href="forms.html">Forms</a></li>
+      <li><a href="tables.html">Tables</a></li>
       <li><a href="interactive.html">Interactive</a></li>
     </ul>
   </nav>
@@ -22,92 +22,146 @@
 
 <main>
   <section>
-    <h2>Images</h2>
-    <figure>
-      <picture>
-        <source media="(max-width: 600px)" srcset="images/small.jpg" type="image/jpeg">
-        <source media="(max-width: 1200px)" srcset="images/medium.jpg" type="image/jpeg">
-        <img src="images/large.jpg" alt="A beautiful landscape" width="800" height="600">
-      </picture>
-      <figcaption>A scenic view.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="images/image2.jpg" alt="Another image" width="400" height="300">
-      <figcaption>Caption for image 2.</figcaption>
-    </figure>
-  </section>
-
-  <section>
-    <h2>Videos</h2>
-    <article>
-      <h3>Video 1</h3>
-      <video width="640" height="360" controls>
-        <source src="videos/video1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p>Description of video 1.</p>
-    </article>
-
-    <article>
-      <h3>Video 2</h3>
-      <video width="640" height="360" controls>
-        <source src="videos/video2.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
-       <p>Description of video 2.</p>
-    </article>
-  </section>
-
-  <section>
     <h2>Audio</h2>
     <audio controls>
-      <source src="audio/audio1.mp3" type="audio/mpeg">
+      <source src="audio/example.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <p>Audio description</p>
+    <p>This is an example of an audio element. <code>controls</code> attribute enables playback controls.</p>
   </section>
 
   <section>
-    <h2>Embeddings</h2>
-    <iframe src="https://www.example.com" width="600" height="400" title="Example Website"></iframe>
+    <h2>Video</h2>
+    <video width="640" height="360" controls>
+      <source src="video/example.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+    <p>This is a video element.  Experiment with different <code>width</code> and <code>height</code> values.</p>
+  </section>
+
+  <section>
+    <h2>Embedded Content</h2>
+    <h3>Embed Example</h3>
+    <embed src="https://www.youtube.com/embed/dQw4w9WgXcQ" type="application/x-shockwave-flash" width="640" height="360">
+    <p>This is an example of an embedded video. Note: Flash may be required.</p>
+
+    <h3>Object Example</h3>
+    <object data="https://www.example.com/pdf.pdf" type="application/pdf" width="640" height="480">
+      <p>Your browser doesn't support PDFs. <a href="https://www.example.com/pdf.pdf">Download the PDF</a> instead.</p>
+    </object>
+  </section>
+
+  <section>
+    <h2>Captions</h2>
+    <figure>
+      <img src="images/example.jpg" alt="A descriptive image" width="300" height="200">
+      <figcaption>
+        <p>This is a figure with a <code>figcaption</code> providing a caption. <code>alt</code> text is important for accessibility.</p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Time</h2>
+    <p>Current time: <time datetime="2024-02-29T10:00:00">10:00 AM</time></p>
+  </section>
+
+  <section>
+      <h2>Code Example</h2>
+      <pre><code>
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greet("World");
+      </code></pre>
+  </section>
+  <section>
+    <h2>Keyboard Input</h2>
+    <p>Press keys on your keyboard: <kbd>Ctrl</kbd> + <kbd>Enter</kbd></p>
+  </section>
+
+  <section>
+    <h2>Quote</h2>
+    <p>A famous quote: <q>The only way to do great work is to love what you do.</q></p>
+  </section>
+
+  <section>
+    <h2>Definition</h2>
+    <p>This is a <dfn>definition</dfn> of a term.</p>
+  </section>
+   <section>
+    <h2>Subscript and Superscript</h2>
+    <p>Formula: H<sub>2</sub>O and x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup></p>
+  </section>
+
+    <section>
+        <h2>Ruby Annotation</h2>
+        <ruby>
+          <rt>漢字</rt>
+          <rp>(</rp>
+          <rt>Kanji</rt>
+          <rp>)</rp>
+        </ruby>
+      </section>
+
+  <section>
+    <h2>Span and Bdo</h2>
+    <p>This text contains a <span style="color: red;">red</span> word, and is displayed in reversed order: <bdo dir="rtl">This is reversed</bdo>.</p>
+  </section>
+
+    <section>
+      <h2>Variable</h2>
+      <p>Variable value: <var>x</var> = 5</p>
+    </section>
+
+    <section>
+      <h2>Word Break</h2>
+      <p>Long word: <wbr>ThisIsALongWordWithoutSpaces</wbr></p>
+    </section>
+
+    <section>
+      <h2>Template</h2>
+        <template id="myTemplate">
+          <p>This is a template paragraph.</p>
+        </template>
+      </section>
+
+  <section>
+    <h2>NoScript</h2>
+    <noscript>
+      <p>JavaScript is not enabled. Please enable JavaScript for the full experience.</p>
+    </noscript>
+  </section>
+
+  <section>
+    <h2>Slot</h2>
+    <slot name="mySlot"></slot>
+  </section>
+
+  <section>
+    <h2>Cite</h2>
+    <cite>Example Source</cite>
+  </section>
+  <section>
+        <h2>Optgroup</h2>
+        <select>
+            <optgroup label="Fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+            </optgroup>
+            <optgroup label="Vegetables">
+                <option value="carrot">Carrot</option>
+                <option value="broccoli">Broccoli</option>
+            </optgroup>
+        </select>
+    </section>
   </section>
 </main>
 
-<aside>
-  <h3>Related Links</h3>
-  <ul>
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-  </ul>
-</aside>
-
 <footer>
-  <p>&copy; 2024 Media Gallery</p>
+  <p>&copy; 2024 Example Website</p>
 </footer>
 
-<b style="display: none;">This is important but hidden content</b>
-<h5 style="font-style: italic;">A smaller heading</h5>
-<h6 data-aria-label="Another heading">Even smaller heading</h6>
-<details>
-  <summary>Click to Reveal</summary>
-  <p>Hidden content revealed.</p>
-</details>
-<dialog>
-  <p>Dialog content</p>
-</dialog>
-<ruby>H<rt>平</rt>日<rp>日</rp></ruby>
-<code>code</code>
-<pre>preformatted text</pre>
-<time datetime="2024-10-27">October 27, 2024</time>
-<mark>Marked text</mark>
-<del>Deleted text</del>
-<ins>Inserted text</ins>
-<object data="data.pdf" type="application/pdf"></object>
-<param name="author" value="Example Author"></param>
-<ol>
-  <li>Item 1</li>
-  <li>Item 2</li>
-</ol>
 </body>
-</html>
+</html/>

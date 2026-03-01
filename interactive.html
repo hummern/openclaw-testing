@@ -3,155 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Elements - Accessible Design</title>
+<title>Interactive Elements</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
 
 <header>
-  <h1>Interactive Elements and Accessibility</h1>
-  <p>Explore interactive HTML elements and their accessibility features.</p>
+  <h1>Interactive Elements Demo</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="tables.html">Tables</a></li>
+    </ul>
+  </nav>
 </header>
-
-<nav aria-label="Navigation">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="forms.html">Forms</a></li>
-    <li><a href="media.html">Media</a></li>
-    <li><a href="tables.html">Tables</a></li>
-  </ul>
-</nav>
 
 <main>
   <section>
-    <h2>Interactive Examples</h2>
+    <h2>Interactive Form Elements</h2>
 
-    <h3>Accordions</h3>
-    <details>
-      <summary>What is an Accordion?</summary>
-      <p>An accordion is a vertically stacked list of expandable sections.  Each section has a summary (heading) and content.</p>
-    </details>
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
 
-    <details>
-      <summary>Accordion Section 2</summary>
-      <p>This is the content for accordion section 2. Use <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> to create them.</p>
-    </details>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" aria-labelledby="name"><br><br>
 
-    <h3>Interactive Dialog</h3>
-    <dialog id="myDialog">
-      <p>This is a dialog box.  You can use it for alerts or to collect user input.</p>
-      <button onclick="document.getElementById('myDialog').close()">Close</button>
-    </dialog>
-    <button onclick="document.getElementById('myDialog').showModal()">Show Dialog</button>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" aria-labelledby="email"><br><br>
 
-    <h3>Progress Bar</h3>
-    <progress value="50" max="100" aria-label="Progress"></progress>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" aria-labelledby="message"></textarea><br><br>
 
-    <h3>Interactive Table</h3>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+
+    <section>
+        <h2>Progress and Meter</h2>
+        <progress value="50" max="100" aria-label="Progress"></progress>
+        <meter value="0.75" max="1" aria-label="Overall Performance"></meter>
+    </section>
+
+    <section>
+      <h2>Preformatted Text and Code</h2>
+      <pre>
+        <code>
+          function greet() {
+            console.log("Hello, world!");
+          }
+        </code>
+      </pre>
+    </section>
+
+     <section>
+       <h2>Definitions and Quotations</h2>
+       <dfn aria-label="Important Term">Semantic HTML</dfn> is key for accessibility.
+       <q cite="Shakespeare">To be or not to be, that is the question.</q>
+     </section>
+
+     <section>
+      <h2>Keyboard Input</h2>
+      <kbd>Ctrl</kbd> + <kbd>S</kbd> to save your work.
+     </section>
+
+     <section>
+       <h2>Ruby Annotation</h2>
+       <ruby>
+         <rt>Romaji</rt>
+         <rp>(</rp>
+         <rt>Japanese</rt>
+         <rp>)</rp>
+         <rp>：</rp>
+         <rt>は</rt>
+         <rp>：</rp>
+         <rt>wa</rt>
+       </ruby>
+     </section>
+
+     <section>
+       <h2>Subscript and Superscript</h2>
+       H<sub>2</sub>O is water.  x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup>.
+     </section>
+   </section>
+
+  <section>
+    <h2>Simple Table</h2>
     <table>
-      <caption>Sample Data Table</caption>
+      <caption>Sample Data</caption>
       <thead>
         <tr>
           <th>Header 1</th>
           <th>Header 2</th>
-          <th>Header 3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Row 1, Cell 1</td>
           <td>Row 1, Cell 2</td>
-          <td>Row 1, Cell 3</td>
         </tr>
         <tr>
           <td>Row 2, Cell 1</td>
           <td>Row 2, Cell 2</td>
-          <td>Row 2, Cell 3</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="3">Table Footer</td>
+          <td colspan="2">Footer</td>
         </tr>
       </tfoot>
     </table>
-
-    <h3>Meter Example</h3>
-    <meter value="0.75" max="1" aria-label="Meter Example"></meter>
-
-    <h3>Fieldset and Legend</h3>
-    <fieldset>
-      <legend>Contact Information</legend>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name"><br><br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
-    </fieldset>
-
-    <h3>Code Example</h3>
-    <pre>
-      <code>
-        function greet(name) {
-          console.log("Hello, " + name + "!");
-        }
-      </code>
-    </pre>
-
-    <h3>Marked Text</h3>
-    <p>This text has a <strong>marked</strong> section.  Use the <code>&lt;mark&gt;</code> tag to highlight important words.</p>
-
-    <h3>Ruby Annotation</h3>
-    <p>Here's an example of <em>ruby</em> annotation:</p>
-    <ruby>
-      <rt>日本語</rt>
-      <rp>(</rp>
-      <rt>Japanese</rt>
-      <rp>)</rp>
-    </ruby>
   </section>
 
-  <aside>
-    <h3>Additional Resources</h3>
-    <ul>
-      <li><a href="https://www.w3.org/TR/html5/" target="_blank" rel="noopener noreferrer">HTML5 Specification</a></li>
-      <li><a href="https://www.w3.org/WAI/tutorials/page-structure/" target="_blank" rel="noopener noreferrer">Page Structure Tutorial</a></li>
-    </ul>
-  </aside>
-
-  <figure>
-    <img src="placeholder.png" alt="Placeholder Image" width="200" height="150">
-    <figcaption>A placeholder image demonstrating the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements.</figcaption>
-  </figure>
-
-  <h5 id="timeExample">Time Example</h5>
-  <time datetime="2023-10-27T10:00:00">Published on October 27, 2023 at 10:00 AM</time>
-
-  <h6 id="dataExample">Data Example</h6>
-  <data value="42">The Answer</data>
-
-  <del datetime="2023-10-26">Previous Date</del>
-  <ins datetime="2023-10-27">Current Date</ins>
-
-  <picture>
-    <source media="(max-width: 600px)" srcset="small.jpg">
-    <img src="large.jpg" alt="Responsive Image" width="300" height="200">
-  </picture>
-
-  <object data="document.pdf" type="application/pdf"></object>
-  <param name="width" value="500">
-  <param name="height" value="300">
-
-  <style>
-    body {
-      font-family: sans-serif;
-    }
-  </style>
+  <section>
+    <h2>Time Element</h2>
+    <time datetime="2023-10-27T10:00:00">Published on October 27, 2023</time>
+  </section>
+    
+    <section>
+        <h2>Marked Text</h2>
+        <p>This is some <mark>important</mark> text that needs to be highlighted.</p>
+    </section>
+    <section>
+        <h2>Span and U Elements</h2>
+        <p>This is a <span>span</span> element.  This is <u>underlined</u> text.</p>
+    </section>
+    <section>
+      <h2>BDO</h2>
+      <bdo dir="rtl">Right-to-Left Text</bdo>
+    </section>
+    <section>
+      <h2>Cite</h2>
+      <cite>The Hitchhiker's Guide to the Galaxy</cite> is a great book.
+    </section>
+    <section>
+      <h2>Col</h2>
+        <table border="1">
+          <col>
+          <col>
+          <tr><td>A</td><td>B</td></tr>
+        </table>
+    </section>
+    <section>
+      <h2>Embed</h2>
+        <embed src="https://www.youtube.com/embed/dQw4w9WgXcQ" type="application/x-shockwave-flash" width="480" height="360">
+    </section>
+    <section>
+      <h2>I</h2>
+      <i>Italic text</i>
+    </section>
+    <section>
+       <h2>Map</h2>
+       <img src="example.jpg" alt="Map" usemap="#map">
+       <map name="map">
+         <area shape="rect" coords="0,0,100,100" href="link1.html">
+       </map>
+    </section>
+    <section>
+      <h2>Noscript</h2>
+       <noscript>JavaScript is not enabled.</noscript>
+    </section>
+    <section>
+      <h2>Optgroup</h2>
+      <select>
+        <optgroup label="Fruits">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+        </optgroup>
+        <optgroup label="Vegetables">
+          <option value="carrot">Carrot</option>
+          <option value="broccoli">Broccoli</option>
+        </optgroup>
+      </select>
+    </section>
+     <section>
+      <h2>Q</h2>
+      <p>As <q>Albert Einstein</q> said, "Imagination is more important than knowledge."</p>
+    </section>
+    <section>
+      <h2>S</h2>
+      <p>This is <s>strikethrough</s> text.</p>
+    </section>
+    <section>
+      <h2>Slot</h2>
+       <template>
+        <p>This is a slot.</p>
+       </template>
+    </section>
+    <section>
+      <h2>Var</h2>
+      <p>The value of x is <var>x</var>.</p>
+    </section>
+    <section>
+      <h2>Wbr</h2>
+      <p>This is a <wbr>long&amp;nbsp;word.</p>
+    </section>
 
 </main>
 
 <footer>
-  <p>&copy; 2023 Accessible Design Examples</p>
+  <p>&copy; 2023 Interactive Elements Demo</p>
 </footer>
-
 </body>
-</html >
+</html>
