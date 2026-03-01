@@ -6,10 +6,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #222;
   font-weight: bold;
-  line-height: 1.2;
   margin-bottom: 0.5em;
-  color: #0056b3;
 }
 
 h1 { font-size: 2.5em; }
@@ -19,13 +18,8 @@ h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
 
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+small {
+  font-size: 0.8em;
 }
 
 strong {
@@ -36,90 +30,103 @@ em {
   font-style: italic;
 }
 
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+span {
+  /* Default styling for span, can be overridden */
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  overflow-x: auto;
+}
+
 code {
   font-family: monospace;
 }
 
-pre {
-  background-color: #f5f5f5;
+ol, ul {
+  margin-bottom: 1em;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+figure {
+  margin: 1em;
   padding: 1em;
-  overflow-x: auto;
+  border: 1px solid #ddd;
 }
 
-small {
-  font-size: 0.8em;
+figcaption {
+  text-align: center;
+  font-size: 0.85em;
+  color: #666;
 }
 
-sub, sup {
-  vertical-align: baseline;
-  font-size: 0.8em;
+data {
+  /* Styling for data elements */
 }
 
-mark {
-  background-color: yellow;
+noscript {
+  /* Styling for noscript elements */
 }
 
-blockquote {
-  border-left: 5px solid #ccc;
-  padding: 1em;
-  margin: 1em 0;
-  font-style: italic;
-}
-
-/* Specific styles for HTML5 tags */
-
-area, bdo, cite, dfn, embed, h5, kbd, map, optgroup, q, s, slot, template, track, var, wbr, ruby {
-  /* No specific styles needed for these tags initially */
-}
-
-style {
-  /* No specific styles needed for this tag */
-}
-
-u {
-  text-decoration: underline;
-}
-
-/* Form styles */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 0.25em;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 0.75em;
-}
-
-button,
-input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
+object, iframe {
   border: none;
-  padding: 0.5em 1em;
-  border-radius: 0.25em;
-  cursor: pointer;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  background-color: #0056b3;
+picture {
+  /* Styling for picture elements */
 }
 
-/* Media styles */
-img {
-  max-width: 100%;
-  height: auto;
+param {
+  /* Styling for param elements */
 }
 
-video {
-  max-width: 100%;
-  height: auto;
+s {
+  text-decoration: line-through;
 }
 
-/* Tables */
+/* Accessible color contrast (example, adjust as needed) */
+:root {
+  --primary-text-color: #333;
+  --secondary-text-color: #666;
+  --primary-background-color: #fff;
+  --link-color: #007bff;
+}
+
+body {
+  color: var(--primary-text-color);
+  background-color: var(--primary-background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+/* Basic table styling */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -128,39 +135,11 @@ table {
 
 th,
 td {
-  border: 1px solid #ccc;
   padding: 0.5em;
+  border: 1px solid #ddd;
 }
 
 th {
   background-color: #f2f2f2;
-}
-
-/* Interactive */
-/* Add interactive element styling here */
-/* Accessible Typography Considerations */
-
-body {
-  font-size: 1rem; /* Base font size */
-}
-
-/* Adjust font size for different screen sizes, if needed */
-
-@media (max-width: 768px) {
-  body {
-    font-size: 0.9rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    font-size: 1.1rem;
-  }
-}
-
-/* Ensure sufficient contrast for all text elements */
-
-/* Example: Adjust color for a specific element */
-.element-with-low-contrast {
-  color: #000; /* Ensure sufficient contrast */
+  font-weight: bold;
 }

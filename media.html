@@ -3,164 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Examples</title>
+<title>Media Gallery</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
+<body role="presentation">
 
 <header>
-  <h1>Media Examples</h1>
-  <nav>
+  <h1>Media Gallery</h1>
+  <nav aria-label="Main Navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="forms.html">Forms</a></li>
       <li><a href="tables.html">Tables</a></li>
-      <li><a href="interactive.html">Interactive</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="interactive.html">Interactive Elements</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Audio</h2>
+    <h2>Images</h2>
+    <figure>
+      <img src="image1.jpg" alt="A scenic landscape.">
+      <figcaption>Beautiful Landscape</figcaption>
+    </figure>
+    <figure>
+      <img src="image2.jpg" alt="Close-up of a flower">
+      <figcaption>Delicate Flower</figcaption>
+    </figure>
+
+    <picture>
+      <source media="(max-width: 600px)" srcset="image1-small.jpg">
+      <source media="(max-width: 900px)" srcset="image1-medium.jpg">
+      <img src="image1.jpg" alt="Large Landscape">
+    </picture>
+  </section>
+
+  <section>
+    <h2>Videos</h2>
+    <video controls width="400">
+      <source src="video1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <object data="video2.ogv" type="video/ogg" width="400" height="300">
+      <param name="movie" value="video2.ogv" />
+      <param name="type" value="video/ogg" />
+      <a href="video2.ogv">Get the Flash Player to see this video.</a>
+    </object>
+
     <audio controls>
-      <source src="audio/example.mp3" type="audio/mpeg">
+      <source src="audio.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <p>This is an example of an audio player. 
-      <kbd>Click</kbd> on the controls to play or pause.</p>
   </section>
 
   <section>
-    <h2>Video</h2>
-    <video width="640" height="360" controls>
-      <source src="video/example.mp4" type="video/mp4">
-      Your browser does not support the video element.
-    </video>
-    <p>This is an example of a video player.  
-      <var>Note:</var> Video may not play if your browser is outdated.</p>
-  </section>
-
-  <section>
-    <h2>Image Gallery</h2>
-    <figure>
-      <img src="images/image1.jpg" alt="Image 1: Description of the image" width="300" height="200">
-      <figcaption><em>Image 1</em> - A scenic view</figcaption>
-    </figure>
-    <figure>
-      <img src="images/image2.jpg" alt="Image 2: A different image" width="300" height="200">
-      <figcaption><em>Image 2</em> - A close-up of a flower</figcaption>
-    </figure>
-  </section>
-
-  <section>
-    <h2>Embed</h2>
-    <embed src="https://www.youtube.com/embed/dQw4w9WgXcQ" type="application/x-shockwave-flash" width="480" height="360">
-    Your browser does not support the embed element.
-    <p>Embedded content. <code>Note:</code> Flash may be required.</p>
-  </section>
-
-  <section>
-    <h2>Map</h2>
-    <map name="map1">
-      <area shape="rect" coords="0,0,100,100" href="https://example.com">
-    </map>
-    <img src="images/map.jpg" alt="Map" usemap="#map1" width="200" height="150">
-  </section>
-
-  <section>
-    <h2>Time</h2>
-    <time datetime="2023-10-27T10:00:00">Published on October 27, 2023</time>
-    <p>This is an example of a time element.</p>
-  </section>
-
-  <section>
-    <h2>Mark</h2>
-    <p>This text contains <mark>important</mark> information.</p>
-  </section>
-
-  <section>
-    <h2>Sub and Sup</h2>
-    <p>H<sub>2</sub>O is water.</p>
-    <p>X<sup>2</sup> + Y<sup>2</sup> = Z<sup>2</sup></p>
-  </section>
-  <section>
-    <h2>Ruby</h2>
-    <ruby>
-      <rt>こんにちは</rt>
-      <rp>(</rp>konnichiwa<rp>)</rp>
-    </ruby>
-  </section>
-
-  <section>
-    <h2>Code</h2>
+    <h2>Audio and Text</h2>
     <pre><code>
-    function greet(name) {
-      console.log("Hello, " + name + "!");
-    }
+      function greet(name) {
+        return "Hello, " + name + "!";
+      }
     </code></pre>
+
+    <time datetime="2024-01-26">January 26, 2024</time>
+
+    <mark>Important Note!</mark>
+
+    <ruby>
+      <rt>你好</rt>
+      <rp>(</rp>
+      <rt>nǐ hǎo</rt>
+      <rp>)</rp>
+    </ruby>
+
+    <kbd>Press Enter</kbd>
+
+    <ins>This text is inserted.</ins>
+
+    <del>This text is deleted.</del>
   </section>
 
   <section>
-    <h2>DFN</h2>
-    <dfn>This is a definition.</dfn>
+      <h2>Progress & Measurement</h2>
+      <meter value="0.75" max="1" title="75% Complete"></meter>
+      <progress value="50" max="100"></progress>
+      <output>Result: 42</output>
   </section>
 
   <section>
-    <h2>Cite</h2>
-    <cite>Example Website</cite>
+      <h2>Details and Dialog</h2>
+      <details>
+        <summary>Click to Expand</summary>
+        <p>This is some hidden content.</p>
+      </details>
+
+      <dialog>
+        <p>This is a dialog box.</p>
+      </dialog>
   </section>
 
   <section>
-    <h2>Em</h2>
-    <p>This is <em>emphasized</em> text.</p>
+      <h2>Fieldsets & Tables</h2>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+      </fieldset>
+
+      <table>
+        <caption>Sample Table</caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+          </tr>
+          <tr>
+            <td>Data 3</td>
+            <td>Data 4</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Footer</td>
+          </tr>
+        </tfoot>
+      </table>
   </section>
+</main>
 
-  <section>
-    <h2>Q</h2>
-    <p>As he said: <q>Hello</q>.</p>
-  </section>
+<aside>
+  <h3>Related Links</h3>
+  <ul>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+  </ul>
+</aside>
 
-  <section>
-    <h2>U</h2>
-    <p>This is <u>underlined</u> text.</p>
-  </section>
-
-  <section>
-    <h2>Var</h2>
-    <p>The value of <em>x</em> is 5.</p>
-  </section>
-
-  <section>
-    <h2>WBR</h2>
-    <p>This is a long word that will<wbr>break here.</p>
-  </section>
-
-    <section>
-        <h2>Slot</h2>
-        <template id="myTemplate">
-            <p>Content from the template</p>
-        </template>
-    </section>
-
-    <section>
-        <h2>Style</h2>
-        <style>
-            p {
-                color: blue;
-            }
-        </style>
-    </section>
-
-    <section>
-      <h2>BDO</h2>
-      <bdo dir="rtl">Right-to-left text</bdo>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <p>&copy; 2023 Example Website</p>
-  </footer>
+<footer>
+  <p>&copy; 2024 My Website</p>
+  <noscript>
+    <p>JavaScript is disabled. Some functionality may be unavailable.</p>
+  </noscript>
+  <small>Last updated: Jan 27, 2024</small>
+  <span aria-label="Current time">Current time: 10:30 AM</span>
+  <h6 aria-hidden="true">Footer Note</h6>
+</footer>
 
 </body>
 </html>

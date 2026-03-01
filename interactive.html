@@ -3,208 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Elements</title>
+<title>Interactive Elements - Accessible Demo</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
 
-<header>
+<header aria-label="Page Header">
   <h1>Interactive Elements Demo</h1>
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+  <p>This page showcases various interactive HTML elements with accessibility considerations.</p>
 </header>
+
+<nav aria-label="Main Navigation">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="forms.html">Forms</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="tables.html">Tables</a></li>
+  </ul>
+</nav>
 
 <main>
   <section>
-    <h2>Interactive Form</h2>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Personal Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea><br><br>
-        <button type="submit">Submit</button>
-      </fieldset>
-    </form>
-  </section>
-
-  <section>
-    <h2>Interactive Table</h2>
-    <table>
-      <caption>Sample Data</caption>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
-          <td>Row 1, Cell 3</td>
-        </tr>
-        <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
-          <td>Row 2, Cell 3</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Data Source: Example</td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
-
-  <section>
-    <h2>Interactive Progress Bar</h2>
-    <progress value="75" max="100" aria-valuetext="75% Complete"></progress>
-    <p>Progress: <output name="progress">75%</output></p>
-  </section>
-
-  <section>
-    <h2>Interactive Details and Summary</h2>
+    <h2>Interactive Accordion</h2>
     <details>
-      <summary>Click to Reveal Content</summary>
-      <p>This is some hidden content that is revealed when the summary is clicked.</p>
+      <summary aria-expanded="false">What is an Accordion?</summary>
+      <p>An accordion is a vertically stacked list of elements, where only one element is visible at a time until clicked.</p>
+    </details>
+    <details>
+      <summary aria-expanded="false">Accordion Benefits</summary>
+      <p>Accordions help organize content and reduce scrolling, improving user experience.</p>
     </details>
   </section>
 
-    <section>
-        <h2>Code Example</h2>
-        <pre><code class="language-javascript">
-            function greet(name) {
-              console.log("Hello, " + name + "!");
-            }
-        </code></pre>
-    </section>
+  <section>
+    <h2>Progress Bar</h2>
+    <progress value="75" max="100" aria-label="Progress Bar"></progress>
+    <p><span>Progress: <output name="progress">75%</output></span></p>
+  </section>
 
   <section>
+    <h2>Interactive Dialog</h2>
+    <dialog aria-label="Confirmation Dialog">
+      <p>Are you sure you want to proceed?</p>
+      <button>Confirm</button>
+      <button>Cancel</button>
+    </dialog>
+  </section>
+
+  <section>
+    <h2>Interactive Meter</h2>
+    <meter value="0.8" max="1" aria-label="Resource Usage"></meter>
+    <p>Resource Usage: 80%</p>
+  </section>
+
+  <section>
+    <h2>Interactive Fieldset and Legend</h2>
+    <fieldset aria-label="Interactive Options">
+      <legend>Select Options</legend>
+      <p>Choose your preference:</p>
+      <input type="radio" id="option1" name="preference" value="option1">
+      <label for="option1">Option 1</label><br>
+      <input type="radio" id="option2" name="preference" value="option2">
+      <label for="option2">Option 2</label><br>
+      <ins>Option 2 is the preferred choice.</ins>
+    </fieldset>
+  </section>
+
+    <section>
+      <h2>Interactive Table</h2>
+      <table>
+        <caption>Interactive Table Example</caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td><time datetime="2024-10-27">October 27, 2024</time></td>
+          </tr>
+          <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3"><em>Data Source: Example</em></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section>
+      <h2>Code Example</h2>
+      <pre><code class="language-javascript">
+        function greet(name) {
+          return "Hello, " + name + "!";
+        }
+      </code></pre>
+    </section>
+    <section>
       <h2>Ruby Annotation</h2>
-      <p>This is a word with <em>ruby</em> annotation.</p>
       <ruby>
-        <rt>假</rt>
+        <rt>こんにちは</rt>
         <rp>(</rp>
-        <rt>kan</rt>
+        <rt>konnichiwa</rt>
         <rp>)</rp>
-        <rt>假</rt>
       </ruby>
-  </section>
-    
-    <section>
-        <h2>Keyboard Input</h2>
-        <p>Use the following for keyboard input:</p>
-        <kbd>Ctrl + Enter</kbd>
     </section>
 
     <section>
-      <h2>Data Visualization</h2>
-      <meter value="0.8" max="1" label="Status" aria-label="System Status"></meter>
+        <h2>Small Text</h2>
+        <small>This is a small text example.</small>
     </section>
 
     <section>
-      <h2>Inline Styles</h2>
-      <p style="color: blue;">This paragraph has inline styles.</p>
+        <h2>Span Example</h2>
+        <p>This is a <span>span</span> element.</p>
     </section>
 
     <section>
-      <h2>Defined Terms</h2>
-      <p>This is a <dfn>defined term</dfn>, also known as a <cite>citation</cite>.</p>
-    </section>
-      
-    <section>
-      <h2>Subscript and Superscript</h2>
-      <p>H<sub>2</sub>O is a chemical formula.  X<sup>2</sup> + Y<sup>2</sup> = Z<sup>2</sup></p>
-    </section>
-    
-    <section>
-       <h2>Break Opportunity</h2>
-       <p>This text has a break opportunity: <wbr>longword</wbr></p>
+      <h2>Data Attribute</h2>
+      <div data-element-id="interactive-demo">This div has a data attribute.</div>
     </section>
 
     <section>
-       <h2>Emphasis</h2>
-       <p>This is <em>emphasized</em> text and this is <strong>strong</strong> text.</p>
+      <h2>Deleted Content</h2>
+      <p>This <del>deleted</del> content is no longer relevant.</p>
     </section>
-    
     <section>
-       <h2>User Input</h2>
-       <q>This is a quotation.</q>
+      <h2>Inserted Content</h2>
+      <p>This <ins>inserted</ins> content has been added.</p>
     </section>
-    
     <section>
-      <h2>Slot Example</h2>
-      <template id="slot-template">
-         <p>Content from slot.</p>
-      </template>
-    </section>
-    
-    <section>
-      <h2>Variable</h2>
-      <p>This is a variable: <var>x</var> = 5</p>
+      <h2>Heading 6</h2>
+      <h6>This is a heading 6.</h6>
     </section>
 
     <section>
-        <h2>Area</h2>
-        <img src="placeholder.jpg" alt="Placeholder Image" usemap="#map" width="240" height="180">
-        <map name="map">
-            <area shape="rect" coords="0,0,240,180" href="#" alt="Map Area">
-        </map>
+      <h2>Noscript</h2>
+      <noscript>JavaScript is disabled.  Some functionality is unavailable.</noscript>
     </section>
-    
     <section>
-        <h2>Embed</h2>
-        <embed src="some_audio.mp3" type="audio/mpeg" width="240" height="50"></embed>
+        <h2>Object</h2>
+        <object data="example.pdf" type="application/pdf" width="400" height="300">
+          <p>Your browser does not support PDF viewing.</p>
+        </object>
     </section>
-
     <section>
-      <h2>Heading 5</h2>
-      <h5>This is a heading 5.</h5>
+      <h2>Param</h2>
+      <object type="image/svg+xml" data="myimage.svg" width="100" height="100">
+        <param name="alternate" value="myimage.jpg">
+      </object>
     </section>
-    
     <section>
-        <h2>Dialog</h2>
-        <dialog>
-            <p>This is a dialog box.</p>
-        </dialog>
+      <h2>Picture</h2>
+      <picture>
+        <source media="(max-width: 600px)" srcset="image-small.jpg">
+        <source media="(max-width: 1200px)" srcset="image-medium.jpg">
+        <img src="image-large.jpg" alt="A large image example">
+      </picture>
     </section>
-
-    <section>
-       <h2>Optgroup</h2>
-       <select>
-         <optgroup label="Fruits">
-           <option value="apple">Apple</option>
-           <option value="banana">Banana</option>
-         </optgroup>
-         <optgroup label="Vegetables">
-           <option value="carrot">Carrot</option>
-           <option value="broccoli">Broccoli</option>
-         </optgroup>
-       </select>
+     <section>
+      <h2>S</h2>
+      <p>This is <s>strikethrough</s> <s data-type="deprecated">deprecated</s> text.</p>
     </section>
+  </main>
 
-    <section>
-      <h2>BDO</h2>
-        <bdo dir="rtl">This text is right-to-left.</bdo>
-    </section>
-
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2024 Interactive Elements Demo</p>
-</footer>
+  <footer aria-label="Page Footer">
+    <p>&copy; 2024 Accessible Demo</p>
+  </footer>
 
 </body>
 </html>

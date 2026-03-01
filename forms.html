@@ -3,144 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forms - HTML5 Boilerplate</title>
+<title>Forms - Accessible Web Design</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
+<body role="document">
 
 <header>
-  <h1>Forms Example</h1>
+  <h1>Accessible Forms</h1>
   <nav aria-label="Main Navigation">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tables.html">Tables</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="interactive.html">Interactive</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Basic Form</h2>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Personal Information</legend>
+    <h2>Contact Form</h2>
+    <article>
+      <p>This is an example of an accessible contact form.  Please provide your details below.</p>
+      <form method="post" action="submit.php">
+        <fieldset>
+          <legend>Personal Information</legend>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true"><br><br>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
+          <span aria-live="polite" class="error" id="name-error"></span>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true"><br><br>
+          <br><br>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required aria-required="true" placeholder="Your Email">
+          <span aria-live="polite" class="error" id="email-error"></span>
 
-        <input type="submit" value="Submit">
-      </fieldset>
-    </form>
+          <br><br>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" cols="50" aria-label="Your Message"></textarea>
+          <span aria-live="polite" class="error" id="message-error"></span>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Information</legend>
+          <p>
+            <label for="newsletter">Subscribe to Newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter" aria-describedby="newsletter-info">
+            <span id="newsletter-info" class="sr-only">Stay up-to-date with our latest news.</span>
+          </p>
+
+          <p>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+
+      <figure>
+        <figcaption>Example Form Structure</figcaption>
+        <img src="form_example.png" alt="Diagram showing the structure of an accessible form with fieldsets, labels, and error messages.">
+      </figure>
+    </article>
   </section>
 
   <section>
-    <h2>Advanced Form</h2>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>More Details</legend>
-
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date"><br><br>
-
-        <label for="range">Range:</label>
-        <input type="range" id="range" name="range" min="0" max="100"><br><br>
-
-        <label for="number">Number:</label>
-        <input type="number" id="number" name="number" min="1" max="100"><br><br>
-
-        <label for="tel">Phone:</label>
-        <input type="tel" id="tel" name="tel"><br><br>
-
-        <label for="url">Website:</label>
-        <input type="url" id="url" name="url"><br><br>
-
-        <label for="color">Color:</label>
-        <input type="color" id="color" name="color"><br><br>
-
-        <label for="file">File:</label>
-        <input type="file" id="file" name="file"><br><br>
-
-        <label for="search">Search:</label>
-        <input type="search" id="search" name="search"><br><br>
-
-        <label for="email_confirmation">Confirm Email:</label>
-        <input type="email" id="email_confirmation" name="email_confirmation"><br><br>
-      </fieldset>
-    </form>
+    <h2>Progress Example</h2>
+    <progress value="75" max="100" aria-label="Form Progress" title="75% Complete"></progress>
+    <meter value="0.8" max="1" aria-label="Form Completion Level" title="80% Complete"></meter>
+    <output>Your score is: 85</output>
   </section>
 
   <section>
-    <h2>Form with Select and Options</h2>
-    <form action="#" method="post">
-      <label for="country">Select Country:</label>
-      <select id="country" name="country">
-        <optgroup label="Europe">
-          <option value="usa">USA</option>
-          <option value="canada">Canada</option>
-          <option value="uk">United Kingdom</option>
-        </optgroup>
-        <optgroup label="Asia">
-          <option value="japan">Japan</option>
-          <option value="china">China</option>
-        </optgroup>
-      </select><br><br>
-    </form>
+      <h2>Code Example</h2>
+      <pre><code class="language-html">&lt;label for="name"&gt;Name:&lt;/label&gt;
+&lt;input type="text" id="name" name="name"&gt;</code></pre>
   </section>
   
-  <section>
-    <h2>Form with Custom Elements</h2>
-    <form>
-        <dfn>Example Definition</dfn>
-        <var>Variable Example</var>
-        <kbd>Keyboard Input</kbd>
-        <samp>Sample Output</samp>
-        <pre>
-        <code>
-            // Code Example
-            console.log("Hello");
-        </code>
-        </pre>
-        <mark>Marked Text</mark>
-        <q>Quote Example</q>
-        <time datetime="2024-10-26">October 26, 2024</time>
-        <ruby>
-            <rt>Japanese Pronunciation</rt>
-            <rp>(</rp>日本語<rp>)</rp>
-        </ruby>
-
-    </form>
-  </section>
 </main>
 
 <footer>
-  <p>&copy; 2024 Example Forms</p>
-  <slot name="footer-content"></slot>
-  <bdo dir="rtl">Right-to-Left Demo</bdo>
+  <small>© 2024 Accessible Web Design</small>
+  <p><time datetime="2024-01-26">January 26, 2024</time> - Last Updated</p>
+  <p><mark>Important:</mark> Always use appropriate ARIA attributes for accessibility.</p>
+  <aside>
+    <h3>Related Links</h3>
+    <a href="https://www.w3.org/WAI/tutorials/forms/">WAI Forms Tutorial</a>
+  </aside>
+  <span class="data copyright">Copyright 2024</span>
+  <h6 class="data footer-details">Page information</h6>
+  <ins datetime="2024-01-27">Updated form validation</ins>
+  <del datetime="2024-01-25">Removed unnecessary field</del>
+  <object data="form_data.pdf" type="application/pdf">
+      <p>Your browser does not support the &lt;object&gt; element.</p>
+  </object>
+  <iframe src="about:blank" title="Form documentation"></iframe>
+  <noscript>JavaScript is disabled.  Please enable it for full functionality.</noscript>
+  <ruby><rt>漢</rt><rp>)</rp><rt>字</rt></ruby>
 </footer>
-
-<area shape="rect" coords="0,0,100,100" href="#" alt="Area Example">
-<embed src="" type="application/x-shockwave-flash" width="0" height="0">
-<h5>Heading 5</h5>
-<sub aria-hidden="true">Subscripted Text</sub>
-<sup aria-hidden="true">Superscripted Text</sub>
-<template>
-    <p>This is a template paragraph.</p>
-</template>
-<u>Underlined Text</u>
-<wbr>Word Break
-<cite>Citation Example</cite>
-<style>
-    body {
-        background-color: lightblue;
-    }
-</style>
 
 </body>
 </html>
