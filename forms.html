@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forms Example</title>
+<title>Forms - HTML5 Boilerplate</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body role="content">
 
 <header>
-  <h1>Forms</h1>
-  <nav>
+  <h1>Forms Example</h1>
+  <nav aria-label="Main Navigation">
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
@@ -21,23 +21,21 @@
 
 <main>
   <section>
-    <h2>Simple Form</h2>
+    <h2>Basic Form</h2>
     <form action="#" method="post">
       <fieldset>
         <legend>Personal Information</legend>
+
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
+        <input type="text" id="name" name="name" required aria-required="true"><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
+        <input type="email" id="email" name="email" required aria-required="true"><br><br>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea>
-        <br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
 
-        <button type="submit">Submit</button>
+        <input type="submit" value="Submit">
       </fieldset>
     </form>
   </section>
@@ -46,95 +44,103 @@
     <h2>Advanced Form</h2>
     <form action="#" method="post">
       <fieldset>
-        <legend>Advanced Options</legend>
+        <legend>More Details</legend>
 
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-        <br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date"><br><br>
 
-        <label for="interests">Interests:</label>
-        <input type="checkbox" id="interests-reading" name="interests" value="reading">
-        <label for="interests-reading">Reading</label>
+        <label for="range">Range:</label>
+        <input type="range" id="range" name="range" min="0" max="100"><br><br>
 
-        <input type="checkbox" id="interests-sports" name="interests" value="sports">
-        <label for="interests-sports">Sports</label>
-        <br>
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number" min="1" max="100"><br><br>
 
-        <label for="file">Upload File:</label>
-        <input type="file" id="file" name="file">
+        <label for="tel">Phone:</label>
+        <input type="tel" id="tel" name="tel"><br><br>
+
+        <label for="url">Website:</label>
+        <input type="url" id="url" name="url"><br><br>
+
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="file">File:</label>
+        <input type="file" id="file" name="file"><br><br>
+
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search"><br><br>
+
+        <label for="email_confirmation">Confirm Email:</label>
+        <input type="email" id="email_confirmation" name="email_confirmation"><br><br>
       </fieldset>
     </form>
   </section>
 
-   <section>
-      <h2>Table with Form Elements</h2>
-      <table>
-        <caption>Form Data Table</caption>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><label for="field1">Field 1:</label> <input type="text" id="field1" name="field1"></td>
-            <td><label for="field2">Field 2:</label> <select id="field2" name="field2">
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-            </select></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+  <section>
+    <h2>Form with Select and Options</h2>
+    <form action="#" method="post">
+      <label for="country">Select Country:</label>
+      <select id="country" name="country">
+        <optgroup label="Europe">
+          <option value="usa">USA</option>
+          <option value="canada">Canada</option>
+          <option value="uk">United Kingdom</option>
+        </optgroup>
+        <optgroup label="Asia">
+          <option value="japan">Japan</option>
+          <option value="china">China</option>
+        </optgroup>
+      </select><br><br>
+    </form>
+  </section>
+  
+  <section>
+    <h2>Form with Custom Elements</h2>
+    <form>
+        <dfn>Example Definition</dfn>
+        <var>Variable Example</var>
+        <kbd>Keyboard Input</kbd>
+        <samp>Sample Output</samp>
+        <pre>
+        <code>
+            // Code Example
+            console.log("Hello");
+        </code>
+        </pre>
+        <mark>Marked Text</mark>
+        <q>Quote Example</q>
+        <time datetime="2024-10-26">October 26, 2024</time>
+        <ruby>
+            <rt>Japanese Pronunciation</rt>
+            <rp>(</rp>日本語<rp>)</rp>
+        </ruby>
 
-    <section>
-       <h2>Form with Ruby</h2>
-       <ruby>
-         <rt>你好</rt>
-         <rp>(</rp>
-         <rp>Nǐ hǎo</rp>
-         <rp>)</rp>
-       </ruby> is a Chinese greeting.
-    </section>
+    </form>
+  </section>
+</main>
 
-     <section>
-         <h2>Form with Code</h2>
-         <pre><code>
-           function greet(name) {
-             console.log("Hello, " + name + "!");
-           }
-         </code></pre>
-     </section>
+<footer>
+  <p>&copy; 2024 Example Forms</p>
+  <slot name="footer-content"></slot>
+  <bdo dir="rtl">Right-to-Left Demo</bdo>
+</footer>
 
-     <section>
-        <h2>Form with Progress</h2>
-        <progress value="50" max="100"></progress>
-     </section>
+<area shape="rect" coords="0,0,100,100" href="#" alt="Area Example">
+<embed src="" type="application/x-shockwave-flash" width="0" height="0">
+<h5>Heading 5</h5>
+<sub aria-hidden="true">Subscripted Text</sub>
+<sup aria-hidden="true">Superscripted Text</sub>
+<template>
+    <p>This is a template paragraph.</p>
+</template>
+<u>Underlined Text</u>
+<wbr>Word Break
+<cite>Citation Example</cite>
+<style>
+    body {
+        background-color: lightblue;
+    }
+</style>
 
-    <section>
-      <h2>Form with Data</h2>
-      <b role="presentation">Data:</b>
-      <data value="123">Some Data</data>
-    </section>
-
-    <section>
-       <h2>Form with Meter</h2>
-       <meter value="0.75" min="0" max="1"></meter>
-    </section>
-  </main>
-
-  <aside>
-    <h3>Sidebar</h3>
-    <p>This is a sidebar with additional information.</p>
-  </aside>
-
-  <footer>
-    <p>&copy; 2024 Example Website</p>
-  </footer>
 </body>
 </html>

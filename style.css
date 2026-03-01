@@ -1,40 +1,23 @@
 body {
   font-family: sans-serif;
-  font-size: 16px;
   line-height: 1.6;
   color: #333;
+  background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 0.5em;
-}
-
-h1 {
-  font-size: 2.5em;
   color: #0056b3;
 }
 
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.75em;
-}
-
-h4 {
-  font-size: 1.5em;
-}
-
-h5 {
-  font-size: 1.25em;
-}
-
-h6 {
-  font-size: 1em;
-}
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
 
 a {
   color: #007bff;
@@ -45,96 +28,139 @@ a:hover {
   text-decoration: underline;
 }
 
-b {
+strong {
   font-weight: bold;
 }
 
-ol, ul {
-  margin-bottom: 1em;
+em {
+  font-style: italic;
 }
 
-ol {
-  padding-left: 2em;
+code {
+  font-family: monospace;
 }
 
-ul {
-  list-style-type: disc;
-  padding-left: 2em;
+pre {
+  background-color: #f5f5f5;
+  padding: 1em;
+  overflow-x: auto;
 }
 
-li {
-  margin-bottom: 0.5em;
+small {
+  font-size: 0.8em;
 }
 
+sub, sup {
+  vertical-align: baseline;
+  font-size: 0.8em;
+}
+
+mark {
+  background-color: yellow;
+}
+
+blockquote {
+  border-left: 5px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  font-style: italic;
+}
+
+/* Specific styles for HTML5 tags */
+
+area, bdo, cite, dfn, embed, h5, kbd, map, optgroup, q, s, slot, template, track, var, wbr, ruby {
+  /* No specific styles needed for these tags initially */
+}
+
+style {
+  /* No specific styles needed for this tag */
+}
+
+u {
+  text-decoration: underline;
+}
+
+/* Form styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.75em;
+}
+
+button,
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Media styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables */
 table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1em;
 }
 
-th, td {
-  border: 1px solid #ddd;
+th,
+td {
+  border: 1px solid #ccc;
   padding: 0.5em;
-  text-align: left;
 }
 
 th {
   background-color: #f2f2f2;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+/* Interactive */
+/* Add interactive element styling here */
+/* Accessible Typography Considerations */
+
+body {
+  font-size: 1rem; /* Base font size */
 }
 
-figure {
-  margin-bottom: 1em;
+/* Adjust font size for different screen sizes, if needed */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
 }
 
-/* Specific to forms.html to address the "rp" issue (not needed to be styled, just declared) */
-ruby {
-  display: inline;
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.1rem;
+  }
 }
 
-rp {
-  display: inline;
-}
+/* Ensure sufficient contrast for all text elements */
 
-/* Style for iframes */
-iframe {
-  border: 1px solid #ccc;
-  margin: 1em 0;
-}
-
-/* Style for noscript tags */
-noscript {
-  background-color: #eee;
-  padding: 1em;
-  border: 1px solid #ccc;
-  margin: 1em 0;
-}
-
-/* Style for select tags */
-select {
-  margin-bottom: 0.5em;
-}
-
-/* Style for picture tags */
-picture {
-  display: block;
-}
-
-/* Style for col and colgroup */
-colgroup, col {
-  display: contents;
-}
-
-/* Style for data attributes */
-[data-attribute] {
-    /*  No specific styling required; this is just a selector. */
-}
-
-/* Style for param tags */
-param {
-    display: none;
+/* Example: Adjust color for a specific element */
+.element-with-low-contrast {
+  color: #000; /* Ensure sufficient contrast */
 }
