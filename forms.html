@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forms - Example Website</title>
+<title>Forms Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="document">
+<body role="content">
 
 <header>
   <h1>Forms Example</h1>
-  <nav aria-label="Main Navigation">
+  <nav aria-label="Navigation">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="tables.html">Tables</a></li>
-      <li><a href="media.html">Media</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -27,124 +27,98 @@
         <legend>Personal Information</legend>
 
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true">
-        <small>Please enter your full name.</small>
-
-        <br>
+        <input type="text" id="name" name="name" required="required" aria-required="true"><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true">
-        <small>Enter a valid email address.</small>
-
-        <br>
+        <input type="email" id="email" name="email" required="required" aria-required="true"><br><br>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" cols="30" aria-label="Your message"></textarea>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
 
-        <br>
+        <label for="newsletter">Subscribe to Newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter"><br><br>
 
-        <figure>
-            <img src="placeholder.jpg" alt="Placeholder Image" width="100" height="100">
-            <figcaption>An example image.</figcaption>
-        </figure>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="rating">Rating:</label>
+        <meter id="rating" name="rating" value="0.75" max="1" min="0" aria-valuemin="0" aria-valuemax="1" title="Current Rating"></meter><br><br>
+
+        <label for="progress">Upload Progress:</label>
+        <progress id="progress" name="progress" value="50" max="100"></progress><br><br>
+
+        <output name="upload_result"></output><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
       </fieldset>
-
-      <fieldset>
-        <legend>Preferences</legend>
-        <p>Select your interests:</p>
-
-        <label for="interest1"><input type="checkbox" id="interest1" name="interest1" value="technology"> Technology</label><br>
-        <label for="interest2"><input type="checkbox" id="interest2" name="interest2" value="art"> Art</label><br>
-        <label for="interest3"><input type="checkbox" id="interest3" name="interest3" value="music"> Music</label><br>
-
-        <p>Choose a difficulty level:</p>
-        <select id="difficulty" name="difficulty">
-          <optgroup label="Difficulty Levels">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </optgroup>
-        </select>
-
-      </fieldset>
-
-      <br>
 
       <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
 
-      <output name="submit_result"></output>
-
-      <small>All fields are required.</small>
+      <p><strong>Note:</strong> All fields are required.</p>
     </form>
-
-    <details>
-      <summary>Form Information</summary>
-      <p>This form is for collecting general inquiries. Please be sure to fill all fields accurately.  Data is stored securely.</p>
-      <time datetime="2024-01-01T12:00:00">Last Updated: January 1, 2024</time>
-    </details>
-
-    <pre><code>This is a code snippet demonstrating form validation in Javascript.</code></pre>
   </section>
 
   <section>
-    <h2>More Form Elements</h2>
-    <p>Demonstrating various form elements with different attributes.</p>
+    <h2>Sample Table</h2>
+    <table>
+      <caption>Sample Data</caption>
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Column 1</td>
+          <td>Row 1, Column 2</td>
+          <td>Row 1, Column 3</td>
+        </tr>
+        <tr>
+          <td>Row 2, Column 1</td>
+          <td>Row 2, Column 2</td>
+          <td>Row 2, Column 3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Data Summary</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
 
-    <label for="search">Search:</label>
-    <input type="search" id="search" name="search" placeholder="Search...">
-
-    <br>
-
-    <label for="number">Number:</label>
-    <input type="number" id="number" name="number" min="1" max="100">
-
-    <br>
-
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date">
-
-    <br>
-
-    <label for="color">Color:</label>
-    <input type="color" id="color" name="color">
-
-    <br>
-
-    <label for="range">Range:</label>
-    <input type="range" id="range" name="range" min="0" max="100">
-
-    <meter value="50" max="100" label="Progress"></meter>
-
-    <progress value="75" max="100"></progress>
-
-    <small>Small text</small>
-    <big>Big text</big>
-    <sub>Subscript</sub>
-    <sup>Superscript</sup>
-
-    <bdo dir="rtl">Right to Left Text</bdo>
-    <cite>This is a citation.</cite>
-    <del>This text has been deleted.</del>
-    <ins>This text has been inserted.</ins>
-    <mark>Marked text</mark>
-    <ruby>漢<rt>kanji</rt></ruby>
-    <s>Strikethrough</s>
-    <small>Small</small>
-    <u>Underline</u>
-    <var>Variable</var>
-    <wbr>Word break opportunity</wbr>
-    <i>Italic</i>
-    <b>Bold</b>
-    <em>Emphasis</em>
-    <code>Code</code>
-    <kbd>Keyboard input</kbd>
-    <q>Quote</q>
-    <slot></slot>
+  <section>
+    <h2>Dynamic Content</h2>
+    <picture>
+      <source media="(max-width: 600px)" srcset="image-small.jpg">
+      <source media="(max-width: 1200px)" srcset="image-medium.jpg">
+      <img src="image-large.jpg" alt="A beautiful landscape" width="400" height="300">
+    </picture>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2024 Example Website. All rights reserved.</p>
+  <p>&copy; 2024 Example Forms</p>
+  <details>
+    <summary>More Information</summary>
+    <p>This is an example forms page.</p>
+  </details>
 </footer>
 
 </body>

@@ -3,130 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Gallery</title>
+<title>Media Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="presentation">
+<body role="content">
 
 <header>
-  <h1>Media Gallery</h1>
+  <h1>Media Showcase</h1>
   <nav aria-label="Main Navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="tables.html">Tables</a></li>
       <li><a href="forms.html">Forms</a></li>
       <li><a href="interactive.html">Interactive</a></li>
+      <li><a href="tables.html">Tables</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
   <section>
-    <h2>Images and Videos</h2>
-
+    <h2>Images and Figures</h2>
     <figure>
-      <img src="image1.jpg" alt="A scenic landscape" width="400" height="300">
-      <figcaption>Beautiful Landscape</figcaption>
+      <img src="placeholder.jpg" alt="A descriptive image" width="300" height="200">
+      <figcaption>This is a figure caption providing context.</figcaption>
     </figure>
 
-    <figure>
-      <video width="400" height="300" controls>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <figcaption>Short Demonstration Video</figcaption>
-    </figure>
-
-    <article>
-      <h3>Article about Photography</h3>
-      <p>This is an article discussing various photography techniques.  <em>Emphasized text</em> using <i>italics</i> and <strong>strong</strong> text.  A <cite>citation</cite> is provided here.</p>
-      <pre><code>This is a code snippet.
-      It preserves whitespace.
-      </code></pre>
-      <kbd>Press Ctrl+Enter</kbd> to execute.
-      <time datetime="2024-01-27">January 27, 2024</time>
-      <mark>Important Note</mark>
-    </article>
+    <picture>
+      <source media="(max-width: 600px)" srcset="image-small.jpg">
+      <source media="(min-width: 601px)" srcset="image-large.jpg">
+      <img src="image-default.jpg" alt="A responsive image">
+    </picture>
 
     <section>
-      <h2>Audio and Interactive Elements</h2>
-      <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-
-      <details>
-        <summary>More Information</summary>
-        <p>Further details about the media presented here.</p>
-      </details>
-
-      <dialog>
-        <p>This is a simple dialog box.</p>
-      </dialog>
+      <h3>Image Gallery</h3>
+      <table>
+        <caption>Image Gallery</caption>
+        <colgroup>
+          <col width="150">
+          <col width="150">
+          <col width="300">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Caption</th>
+            <th>Thumbnail</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Image 1</td>
+            <td><img src="thumb1.jpg" alt="Thumbnail 1" width="100" height="100"></td>
+            <td>A brief description of image 1.</td>
+          </tr>
+          <tr>
+            <td>Image 2</td>
+            <td><img src="thumb2.jpg" alt="Thumbnail 2" width="100" height="100"></td>
+            <td>A brief description of image 2.</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Image Gallery Footer</td>
+          </tr>
+        </tfoot>
+      </table>
     </section>
-
-    <section>
-      <h2>Advanced Media Formats</h2>
-        <object data="data.pdf" type="application/pdf" width="600" height="400">
-            <p>Your browser does not support PDF viewing.  <a href="data.pdf">Download PDF</a>.</p>
-        </object>
-
-        <embed src="flash.swf" type="application/x-shockwave-flash" width="600" height="400">
-        </section>
   </section>
 
   <section>
-     <h2>Table Example</h2>
-     <table>
-      <caption>Sample Data Table</caption>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
-        </tr>
-        <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2">Footer Information</td>
-        </tr>
-      </tfoot>
-    </table>
-    <small>Data sourced from an external API.</small>
-    <ins>Inserted content</ins>
-    <del>Deleted content</del>
-    <dfn>Definition term</dfn>
-    <wbr>
-    <bdo dir="rtl">Right to Left</bdo>
-    <slot></slot>
-    <sub aria-hidden="true">Subscript</sub>
-    <sup aria-hidden="true">Superscript</sub>
-    <template>
-    <p>This is a template.</p>
-    </template>
-    <u>Underline</u>
-    <area shape="rect" coords="0,0,100,100" href="#" alt="Alternative Text">
-    <meter value="0.75" min="0" max="1"></meter>
-    <progress value="50" max="100"></progress>
-    <output>50</output>
-    <ruby>
-        <rt>Ruby Text</rt>
-        <rp>(</rp>Ruby Information<rp>)</rp>
-    </ruby>
+    <h2>Audio and Video</h2>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      <param name="autoplay" value="false">
+    </audio>
+
+    <video width="400" height="300" controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+
+    <object data="presentation.pdf" type="application/pdf" width="600" height="400">
+      <param name="src" value="presentation.pdf">
+      <param name="type" value="application/pdf">
+      <param name="border" value="0">
+      <param name="name" value="presentation">
+    </object>
   </section>
+
+   <section>
+      <h2>Interactive Media</h2>
+      <details>
+        <summary>Click to Reveal</summary>
+        <p>This is some hidden content.</p>
+      </details>
+
+      <dialog>
+        <p>This is a dialog box.</p>
+      </dialog>
+   </section>
 </main>
 
 <footer>
-  <p>&copy; 2024 My Website. All rights reserved.</p>
+  <p>&copy; 2024 Media Page</p>
+  <p>Last updated: <time datetime="2024-10-27">October 27, 2024</time></p>
+  <noscript>JavaScript is disabled. Some features may not function correctly.</noscript>
 </footer>
+
 </body>
 </html >

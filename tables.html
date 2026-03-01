@@ -6,195 +6,198 @@
 <title>Tables Example</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
+<body role="presentation">
 
 <header>
   <h1>Tables Example</h1>
-  <nav aria-label="Main Navigation">
-    <a href="#">Home</a> |
-    <a href="#">About</a> |
-    <a href="#">Contact</a>
-  </nav>
 </header>
+
+<nav aria-label="Navigation">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="forms.html">Forms</a></li>
+    <li><a href="interactive.html">Interactive Elements</a></li>
+    <li><a href="media.html">Media Elements</a></li>
+  </ul>
+</nav>
 
 <main>
   <section>
     <h2>Basic Table</h2>
-    <figure>
-      <figcaption>A simple table structure.</figcaption>
-      <table>
-        <caption>Basic Table</caption>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Row 1, Cell 1</td>
-            <td>Row 1, Cell 2</td>
-          </tr>
-          <tr>
-            <td>Row 2, Cell 1</td>
-            <td>Row 2, Cell 2</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="2">Total Rows: 2</td>
-          </tr>
-        </tfoot>
-      </table>
-      <img src="placeholder.png" alt="Placeholder image of a table" width="200" height="150">
-    </figure>
-  </section>
+    <p>This is a basic HTML table demonstrating structure and data presentation.</p>
 
-  <section>
-    <h2>Advanced Table with Details</h2>
-    <details>
-      <summary>Click to Expand Details</summary>
-      <p>This table demonstrates using a <code>details</code> element to expand content.</p>
-      <table>
-        <caption>Advanced Table</caption>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>City</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span role="presentation">John Doe</span></td>
-            <td>30</td>
-            <td>New York</td>
-          </tr>
-          <tr>
-            <td>Jane Smith</td>
-            <td>25</td>
-            <td>Los Angeles</td>
-          </tr>
-        </tbody>
-      </table>
-      <var>Important Note:</var> Data accuracy not guaranteed.
-    </details>
-  </section>
-
-  <section>
-    <h2>Table with <em>Emphasis</em> and <strong>Strong Emphasis</strong></h2>
-    <table>
-      <caption>Emphasized Data</caption>
+    <table aria-label="Basic Table">
+      <caption>
+        <h5 aria-labelledby="basic-table-caption">Basic Table</h5>
+      </caption>
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
       <thead>
         <tr>
-          <th>Column 1</th>
-          <th>Column 2</th>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Value <em>with emphasis</em></td>
-          <td>Value <strong>with strong emphasis</strong></td>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Table Footer</td>
+        </tr>
+      </tfoot>
     </table>
-    <kbd>Enter</kbd> to submit.
   </section>
 
   <section>
-    <h2>Complex Table with <code>Code</code></h2>
-    <pre><code>
-    function greet(name) {
-      return "Hello, " + name + "!";
-    }
-    </code></pre>
+    <h2>Advanced Table with Colgroup</h2>
+    <p>This table utilizes &lt;colgroup&gt; for column formatting.</p>
+
+    <table aria-label="Advanced Table">
+      <caption>
+        <h5 aria-labelledby="advanced-table-caption">Advanced Table with Colgroup</h5>
+      </caption>
+      <colgroup>
+        <col style="width: 20%;">
+        <col style="width: 50%;">
+        <col style="width: 30%;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Item A</td>
+          <td>A detailed description of Item A.</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Item B</td>
+          <td>Another description for Item B.</td>
+          <td>25</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
-   <section>
-    <h2>Table with <code>area, bdo, cite, dfn, embed, i, map, optgroup, q, s, slot, small, span, template, u, var, wbr</code> tags</h2>
-    <table>
+
+  <section>
+    <h2>Data Table</h2>
+    <p>A table displaying data with specific data attributes.</p>
+    
+    <table aria-label="Data Table">
+        <caption>
+          <h5 aria-labelledby="data-table-caption">Data Table</h5>
+        </caption>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <data value="product-1">Item 1</data>
+          <data value="price-1">19.99</data>
+          <data value="quantity-1">5</data>
+        </tr>
+        <tr>
+          <data value="product-2">Item 2</data>
+          <data value="price-2">29.99</data>
+          <data value="quantity-2">10</data>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Nested Tables</h2>
+    <p>Demonstrates tables within tables - use with caution as it can reduce accessibility.</p>
+
+      <table aria-label="Nested Table">
+        <caption>
+          <h5 aria-labelledby="nested-table-caption">Nested Table</h5>
+        </caption>
         <thead>
-            <tr>
-                <th>Tag</th>
-                <th>Description</th>
-            </tr>
+          <tr>
+            <th>Category</th>
+            <th>Details</th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><code>area</code></td>
-                <td>Defines an area in an image map.</td>
-            </tr>
-            <tr>
-                <td><code>bdo</code></td>
-                <td>Defines the writing direction.</td>
-            </tr>
-            <tr>
-                <td><code>cite</code></td>
-                <td>Specifies an URL reference.</td>
-            </tr>
-             <tr>
-                <td><code>dfn</code></td>
-                <td>Defines a term.</td>
-            </tr>
-            <tr>
-                <td><code>embed</code></td>
-                <td>Embeds external content.</td>
-            </tr>
-             <tr>
-                <td><code>i</code></td>
-                <td>Specifies emphasized text.</td>
-            </tr>
-            <tr>
-                <td><code>map</code></td>
-                <td>Defines a coordinate map.</td>
-            </tr>
-            <tr>
-                <td><code>optgroup</code></td>
-                <td>Groups related options in a drop-down list.</td>
-            </tr>
-            <tr>
-                <td><code>q</code></td>
-                <td>Marks a quote</td>
-            </tr>
-            <tr>
-                <td><code>s</code></td>
-                <td>Strikes through text.</td>
-            </tr>
-            <tr>
-                <td><code>slot</code></td>
-                <td>Specifies a slot in a web component</td>
-            </tr>
-            <tr>
-                <td><code>small</code></td>
-                <td>Specifies small text.</td>
-            </tr>
-            <tr>
-                <td><code>span</code></td>
-                <td>Container for inline elements.</td>
-            </tr>
-            <tr>
-                <td><code>template</code></td>
-                <td>Defines a reusable template.</td>
-            </tr>
-            <tr>
-                <td><code>u</code></td>
-                <td>Specifies underlined text.</td>
-            </tr>
-            <tr>
-                <td><code>var</code></td>
-                <td>Specifies a variable.</td>
-            </tr>
-             <tr>
-                <td><code>wbr</code></td>
-                <td>Specifies where the browser may break a line.</td>
-            </tr>
+          <tr>
+            <td>Fruits</td>
+            <td>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Fruit</th>
+                    <th>Color</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Apple</td>
+                    <td>Red</td>
+                  </tr>
+                  <tr>
+                    <td>Banana</td>
+                    <td>Yellow</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
         </tbody>
-    </table>
+      </table>
   </section>
 </main>
 
-<footer role="contentinfo">
-  <p>Copyright &copy; 2024 Example Corp. <time datetime="2024-01-26">January 26, 2024</time></p>
-  <mark>Disclaimer: All content is for demonstration purposes only.</mark>
+<figure>
+  <img src="placeholder.jpg" alt="Placeholder Image">
+  <figcaption><h6 aria-labelledby="figure-caption">Placeholder Figure</h6></figcaption>
+</figure>
+
+
+<time datetime="2024-01-26">Published on January 26, 2024</time>
+
+<pre><code>
+  This is a code block.
+  It preserves whitespace.
+</code></pre>
+
+<details>
+  <summary aria-controls="details-summary">Details Summary</summary>
+  <p>Some hidden content.</p>
+</details>
+
+<dialog aria-labelledby="dialog-title">
+  <h5 id="dialog-title">Dialog Box</h5>
+  <p>This is a dialog box.</p>
+</dialog>
+
+
+
+<footer>
+  <p>&copy; 2024 Example Website</p>
 </footer>
+
 </body>
-</html
+</html>
