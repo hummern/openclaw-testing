@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Example</title>
+<title>Interactive Elements</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body role="content">
-
+<body>
 <header>
-  <h1>Interactive Example Page</h1>
+  <h1>Interactive Elements</h1>
   <nav>
     <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -24,124 +24,146 @@
     <form>
       <fieldset>
         <legend>User Information</legend>
-
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" aria-label="Enter your name">
+        <input type="text" id="name" name="name" required>
         <br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" aria-label="Enter your email address">
+        <input type="email" id="email" name="email">
         <br>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" aria-label="Enter your message"></textarea>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
         <br>
-      </fieldset>
 
-      <button type="submit">Submit</button>
+        <label for="rating">Rate this page:</label>
+        <meter id="rating" value="0.5" min="0" max="1" step="0.1" title="Rating"></meter>
+
+        <br>
+        <button type="submit">Submit</button>
+      </fieldset>
     </form>
   </section>
 
   <section>
-    <h2>Interactive Table</h2>
-    <table>
-      <caption>Sample Data</caption>
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td headers="header1">Data 1</td>
-          <td headers="header2">Data 2</td>
-          <td headers="header3">Data 3</td>
-        </tr>
-        <tr>
-          <td headers="header1">Data 4</td>
-          <td headers="header2">Data 5</td>
-          <td headers="header3">Data 6</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">Table Footer</td>
-        </tr>
-      </tfoot>
-    </table>
-    <b aria-live="polite">Note: Table cells use headers attributes for accessibility</b>
+    <h2>Interactive Image Map</h2>
+    <img src="interactive_image.jpg" alt="Interactive Image" usemap="#imagemap">
+    <map name="imagemap">
+      <area shape="rect" coords="0,0,82,53" href="#" alt="Link to Area 1">
+      <area shape="circle" coords="90,58,3" href="#" alt="Link to Area 2">
+    </map>
   </section>
 
   <section>
-    <h2>Interactive Details and Summary</h2>
+    <h2>Interactive Progress Bar</h2>
+    <progress id="myprogress" value="70" max="100"></progress>
+    <output id="progressoutput">70%</output>
+  </section>
+
+  <section>
+    <h2>Interactive Details & Summary</h2>
     <details>
-      <summary>Click to Reveal Details</summary>
-      <p>This is some detailed information that is initially hidden.</p>
+      <summary>Click to Reveal Information</summary>
+      <p>This is some detailed information about the interactive elements.</p>
     </details>
   </section>
 
   <section>
+    <h2>Interactive Dialog</h2>
+    <dialog>
+      <p>This is a dialog box with interactive content.</p>
+      <button>Close</button>
+    </dialog>
+  </section>
+
+  <section>
     <h2>Code Example</h2>
-    <pre><code class="language-javascript">
-      function greet(name) {
-        console.log("Hello, " + name + "!");
-      }
+    <pre><code>
+&lt;p&gt;This is a code example.&lt;/p&gt;
+&lt;span&gt;Some span text.&lt;/span&gt;
     </code></pre>
   </section>
 
   <section>
-    <h2>Progress Bar</h2>
-    <progress value="75" max="100" aria-label="Progress of task"></progress>
+    <h2>Ruby Annotation</h2>
+    <ruby>
+      <rt>Romaji</rt>
+      <rp>(</rp>
+      <rt>Romaji</rt>
+      <rp>)</rp>
+      <rp>が</rp>
+      <rt>ga</rt>
+      <rp>は</rp>
+      <rt>wa</rt>
+    </ruby>
   </section>
-    
   <section>
-      <h2>Ruby Annotation</h2>
-      <p>
-        <ruby>
-          <rt>本</rt>
-          <rp>(</rp>ほん<rp>)</rp>
-        </ruby> is a ruby annotation.
-      </p>
-    </section>
-    
-    <section>
-      <h2>Time Example</h2>
-      <p>The meeting is scheduled for <time datetime="2024-01-27T10:00:00">January 27, 2024 at 10:00 AM</time>.</p>
-    </section>
-
-    <section>
-        <h2>Marked Text</h2>
-        <p>This is some <mark>important</mark> text.</p>
-    </section>
-    
-    <section>
-        <h2>Output</h2>
-        <output name="result">0</output>
-    </section>
-
-    <section>
-      <h2>Iframe Example</h2>
-      <iframe src="https://www.example.com" width="600" height="400" title="Example Website" aria-label="External website"></iframe>
-    </section>
-    
-    <section>
-        <h2>NoScript</h2>
-        <noscript>Your browser does not support JavaScript.</noscript>
-    </section>
-
-    <section>
-        <h2>Object</h2>
-        <object data="data.pdf" type="application/pdf" width="600" height="400">
-            <p>Your browser does not support PDF files.</p>
-        </object>
-    </section>
+    <h2>Small and Sub/Sup</h2>
+    <small>This is small text.</small>
+    <p>x<sub>2</sub> + y<sup>2</sup> = z<sup>2</sup></p>
+  </section>
+  <section>
+    <h2>Other Semantic Elements</h2>
+    <article>
+      <h3>Article Title</h3>
+      <p>Article content here.</p>
+    </article>
+    <aside>
+      <h3>Aside Content</h3>
+      <p>Related information in the aside.</p>
+    </aside>
+    <figure>
+      <figcaption><small>Image Caption</small></figcaption>
+      <img src="placeholder.jpg" alt="Placeholder Image">
+    </figure>
+    <time datetime="2024-01-26">Published January 26, 2024</time>
+    <mark>Highlighted text</mark>
+    <bdo dir="rtl">This text is reversed.</bdo>
+    <cite>A citation.</cite>
+    <del>Deleted text</del>
+    <dfn>Definition</dfn>
+    <ins>Inserted text</ins>
+    <q>A quote.</q>
+    <s>Strikethrough</s>
+    <u>Underline</u>
+    <u>Important</u>
+    <wbr>
+    <template>
+      <p>This is a template paragraph.</p>
+    </template>
+    <slot>A slot for content.</slot>
+  </section>
+  <section>
+    <h2>Table Example</h2>
+    <table>
+      <caption>Sample Table</caption>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Footer</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
 </main>
 
 <footer>
-  <p>&copy; 2024 Interactive Example</p>
+  <p>&copy; 2024 Interactive Elements Page</p>
 </footer>
-
 </body>
-</html >
+</html>

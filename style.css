@@ -6,45 +6,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  margin-bottom: 0.5em;
-}
-
-h1 {
-  font-size: 2.5em;
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.6em;
-}
-
-h4 {
-  font-size: 1.4em;
-}
-
-h5 {
-  font-size: 1.2em;
-}
-
-h6 {
-  font-size: 1em;
-}
-
-b {
-  font-weight: bold;
-}
-
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
+  color: #0056b3;
 }
 
 a {
@@ -56,94 +18,114 @@ a:hover {
   text-decoration: underline;
 }
 
-ol {
-  margin-left: 2em;
-  padding-left: 1em;
+p {
+  margin-bottom: 1em;
 }
 
-ul {
-  list-style-type: disc;
-  margin-left: 2em;
-  padding-left: 1em;
-}
-
-code {
-  font-family: monospace;
-  background-color: #f0f0f0;
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-}
-
-pre {
-  background-color: #f0f0f0;
-  padding: 1em;
-  overflow-x: auto;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 0.5em;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
+strong, b {
   font-weight: bold;
 }
 
-colgroup {
-  display: table-column-group;
+small {
+  font-size: 0.8em;
 }
 
-col {
-  display: table-column;
-}
-
-figure {
-  margin: 1em 0;
-}
-
-figcaption {
+em, i {
   font-style: italic;
-  font-size: 0.9em;
-  text-align: center;
 }
 
-picture {
-    display: block;
+u {
+  text-decoration: underline;
 }
 
-s {
+del {
   text-decoration: line-through;
+}
+
+sub, sup {
+  vertical-align: baseline;
+  font-size: 0.8em;
+}
+
+cite {
+  font-style: italic;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+abbr[title] {
+  text-decoration: underline;
+}
+
+meter {
+  display: inline-block;
+  width: 100%;
+  height: 0.5em;
+  background-color: #eee;
+  border: none;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+
+meter[value] {
+  background-color: #4caf50;
+  color: white;
+}
+
+q {
+  display: inline-block;
+  padding: 0 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+}
+
+slot {
+  display: block;
+}
+
+template {
+  display: none;
+}
+
+wbr {
+  display: inline-block;
+}
+
+area {
+  outline: none;
+}
+
+bdo {
+  direction: rtl;
+}
+
+embed {
+  display: block;
+}
+
+map {
+  display: inline-block;
+}
+
+optgroup {
+  margin-left: 1em;
 }
 
 style {
   display: none;
 }
 
-object {
-  display: block;
-}
-
-param {
+track {
   display: none;
 }
 
-iframe {
-  display: block;
+/* Example contrast adjustments, adapt to your specific content */
+h1, h2, h3, h4, h5, h6, a, .contrast-1 {
+  color: #000000; /* Black for better contrast */
 }
 
-noscript {
-  display: block;
-  color: red;
-}
-
-data {
-  display: none;
+.contrast-2 {
+    background-color: #f0f0f0;
 }
