@@ -295,3 +295,15 @@ When using tools, follow exact parameter names:
 For WCAG tasks in this workspace:
 - Target file path is `openclaw-testing/WCAG_TASK.md` (not workspace root `WCAG_TASK.md`).
 - If missing, create it using `write` with `file_path: openclaw-testing/WCAG_TASK.md`.
+
+## WCAG Truth Guard
+
+For WCAG loop tasks, completion claims must be evidence-based.
+
+Hard rules:
+- Do not claim "changes pushed successfully" unless commit includes substantive files (`*.html`, `*.css`, `WCAG_TASK.md`, `IMPLEMENTATION_PLAN.md`).
+- A commit changing only `.openclaw/wcag-loop.log` or metadata is not valid task progress.
+- Do not ask unrelated follow-up questions (for example photo album/node checks) after WCAG loop outputs.
+
+If criteria are not met, return:
+`Error: completion criteria not met (no substantive file changes and/or missing validation evidence)`
