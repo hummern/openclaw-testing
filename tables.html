@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tables page - accessible HTML5 demo">
+  <title>Tables - Accessible HTML5 Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header role="banner">
+    <h1>Tables Page</h1>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="interactive.html">Interactive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section aria-labelledby="tables-heading">
+      <h2 id="tables-heading">Sample Data Table</h2>
+      <figure>
+        <table role="presentation">
+          <caption>Employee Records</caption>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Position</th>
+              <th scope="col">Department</th>
+              <th scope="col">Start Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>Software Engineer</td>
+              <td>Engineering</td>
+              <td>2020-06-15</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Product Manager</td>
+              <td>Product</td>
+              <td>2019-03-22</td>
+            </tr>
+            <tr>
+              <td>Alice Johnson</td>
+              <td>Designer</td>
+              <td>Design</td>
+              <td>2021-11-03</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 Accessible HTML5 Demo. All rights reserved.</p>
+  </footer>
+</body>
+</html>

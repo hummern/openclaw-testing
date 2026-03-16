@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Forms page - accessible HTML5 demo">
+  <title>Forms - Accessible HTML5 Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header role="banner">
+    <h1>Forms Page</h1>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="interactive.html">Interactive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section aria-labelledby="forms-heading">
+      <h2 id="forms-heading">Accessible Forms</h2>
+      <form>
+        <fieldset>
+          <legend>Contact Information</legend>
+          <div>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required aria-required="true">
+          </div>
+          <div>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" required aria-required="true">
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+          </div>
+          <div>
+            <label for="tel">Phone:</label>
+            <input type="tel" id="tel" name="tel">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Preferences</legend>
+          <div>
+            <label for="newsletter">Subscribe to newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter">
+          </div>
+          <div>
+            <label for="contact-method">Preferred contact method:</label>
+            <select id="contact-method" name="contact-method">
+              <option value="email">Email</option>
+              <option value="phone">Phone</option>
+              <option value="mail">Mail</option>
+            </select>
+          </div>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 Accessible HTML5 Demo. All rights reserved.</p>
+  </footer>
+</body>
+</html>
