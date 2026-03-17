@@ -2,18 +2,31 @@
 
 # WCAG AAA Autonomous Loop - OpenClaw Integration
 # Proper endpoint: POST /v1/chat/completions
+# Secrets required as environment variables - NEVER hardcode in repo
 
 OPENCLAW_HOST="127.0.0.1"
 OPENCLAW_PORT="18789"
-OPENCLAW_TOKEN="85f716d57d8d66935b81f07fa88978dcb0b4b03912fdd69ff75070451b7f08f1"
+OPENCLAW_TOKEN="${OPENCLAW_TOKEN:-}"
 OPENCLAW_API="http://${OPENCLAW_HOST}:${OPENCLAW_PORT}"
 
-TELEGRAM_BOT="8523759950:AAFugiYjVqdMbleLfUgF6pOpzBYUxZaINQM"
-TELEGRAM_CHAT_ID="8331741012"
-TELEGRAM_API="https://api.telegram.org/bot${TELEGRAM_BOT}/sendMessage"
+TELEGRAM_BOT="${TELEGRAM_BOT:-}"
+TELEGRAM_CHAT_ID="${TELEGRAM_CHAT_ID:-}"
+TELEGRAM_API=""
+
+if [ -n "$TELEGRAM_BOT" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
+  TELEGRAM_API="https://api.telegram.org/bot${TELEGRAM_BOT}/sendMessage"
+fi
+
+if [ -z "$OPENCLAW_TOKEN" ]; then
+  echo "ERROR: OPENCLAW_TOKEN is not set. Export OPENCLAW_TOKEN before running loop.sh"
+  exit 1
+fi
 
 send_telegram() {
   local msg="$1"
+  if [ -z "$TELEGRAM_API" ]; then
+    return 0
+  fi
   curl -s -X POST "$TELEGRAM_API" \
     -H 'Content-Type: application/json' \
     -d "{\"chat_id\": \"$TELEGRAM_CHAT_ID\", \"text\": \"$msg\", \"parse_mode\": \"HTML\"}" > /dev/null 2>&1 || true
@@ -31,7 +44,7 @@ call_openclaw_agent() {
   local task_description="$1"
   
   # Build deterministic task prompt
-  local task_prompt=$(cat <<EOF
+  local task_prompt=$(cat <<PROMPT
 You are in a strict Wiggum loop for WCAG AAA HTML5 task execution.
 
 TASK: $task_description
@@ -45,7 +58,7 @@ RULES:
 - Return a SHORT one-line status (success or error)
 - If you modify files, end with: DONE
 
-EOF
+PROMPT
 )
   
   # Send to OpenClaw via /v1/chat/completions endpoint
@@ -194,4 +207,3 @@ echo ""
 echo "⚠️  Loop reached 100 iterations"
 send_telegram "⚠️ OpenClaw Loop: Completed 100 iterations"
 exit 1
-

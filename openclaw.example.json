@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13"
+  },
+  "auth": {
+    "profiles": {
+      "ollama:default": {
+        "provider": "ollama",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/lfm2.5-thinking:1.2b"
+      },
+      "workspace": "/tmp/openclaw-workspace"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "__SET_OPENCLAW_GATEWAY_TOKEN_LOCALLY__"
+    },
+    "http": {
+      "endpoints": {
+        "chatCompletions": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "botToken": "__SET_TELEGRAM_BOT_TOKEN_LOCALLY__",
+      "allowFrom": [
+        "__SET_TELEGRAM_CHAT_ID_LOCALLY__"
+      ]
+    }
+  }
+}
